@@ -5,7 +5,7 @@ import './BlueBtn.css';
 
 function BlueBtn(props) {
   return (
-    <Button className='blue-btn'></Button>
+    <Button className='blue-btn'>{props.value}</Button>
   )
 }
 
