@@ -1,11 +1,11 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import './BlueBtn.css';
+import './BlueBtn.scss';
 
 
 function BlueBtn(props) {
   return (
-    <Button className='blue-btn'>{props.value}</Button>
+    <Button variant="contained" className='blue-btn'>{props.value}</Button>
   )
 }
 

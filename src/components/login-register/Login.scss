@@ -1,0 +1,28 @@
+.loginWrapper{
+    background-color: rgb(228, 230, 231);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loginContainer{
+        width: 450px;
+        height: 450px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0 0 11px rgba(33,33,33,.6);
+        
+    }
+
+    form {
+        width: 280px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

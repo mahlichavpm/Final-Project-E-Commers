@@ -1,14 +1,11 @@
 import './App.css';
-import BlueBtn from './reusibleComponents/BlueBtn';
-import CheckBoxComponent from './reusibleComponents/CheckBoxComponent';
-import Input from './reusibleComponents/Input';
+import Login from './components/login-register/Login';
+import Register from './components/login-register/Register';
 
 function App() {
   return (
     <>
-    <BlueBtn value="Hello World"/>
-    <Input/>
-    <CheckBoxComponent value="krastavica"/>
+      <Register/>
     </>
   )
 }
