@@ -1,0 +1,27 @@
+.gridBannerContainer {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px 40px 0px;
+    
+    .side{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    span{
+        font-size: 16px;
+        display: inline-block;
+        width: 93.5%;
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    
+    .link {
+        text-decoration: none;
+        
+    }
+}

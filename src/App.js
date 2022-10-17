@@ -1,11 +1,11 @@
+// import { Routes } from 'react-router';
 import './App.css';
-import Login from './components/login-register/Login';
-import Register from './components/login-register/Register';
+import CategoryPage from './components/category-page/CategoryPage';
 
 function App() {
   return (
     <>
-      <Register/>
+      <CategoryPage/>
     </>
   )
 }
