@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button';
-import './BlueBtn.css';
+import './BlueBtn.scss';
 
 
 function BlueBtn(props) {
