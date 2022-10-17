@@ -2,14 +2,13 @@ import './App.css';
 import BlueBtn from './reusibleComponents/BlueBtn';
 import CheckBoxComponent from './reusibleComponents/CheckBoxComponent';
 import Input from './reusibleComponents/Input';
+import Register from './registerPage/Form';
 
 function App() {
   return (
-    <>
-    <BlueBtn value="Hello World"/>
-    <Input/>
-    <CheckBoxComponent value="krastavica"/>
-    </>
+    <div >
+      <Register/>
+    <div/>
   )
 }
 
