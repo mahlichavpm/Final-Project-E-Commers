@@ -8,15 +8,19 @@ export default function ButtonLink (props) {
         color: 'custom',
         padding: '6px 10px',
         fontSize: '12px',
+        textTransform: 'none',
         // boxSizing: 'border-box',
         borderTop: '1px solid transparent',
         borderBottom: '1px solid transparent',
+        textDecoration: 'none',
         width: '300px',
+        borderRadius: '0px',
+        direction: 'ltl',
         '&:hover': {
             borderTop: '1px solid  rgba(34, 34, 34, 0.2)',
             borderBottom: '1px solid  rgba(34, 34, 34, 0.2)',
-            color: 'primary',
-        }
+            color: 'primary !important',
+        },
       });
     return (
         <Link color={props.color} href={props.href} startIcon={props.startIcon} endIcon={props.endIcon}>{props.name}</Link>
