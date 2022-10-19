@@ -5,7 +5,8 @@ import './App.css';
 import CategoryPage from './components/category-page/CategoryPage';
 import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
-import Home from './Home';
+import Homepage from './components/Homepage/Homepage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Navigate to={'/home'}/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/home' element={<Homepage/>}/>
         <Route path='/products' element={<CategoryPage/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
@@ -32,7 +33,5 @@ function App() {
       </Routes>
      
     </>
-  )
-}
-
-export default App;
+)}
+export default App

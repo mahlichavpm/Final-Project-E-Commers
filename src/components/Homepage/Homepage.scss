@@ -1,0 +1,27 @@
+.homepageWrapper{
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#headerLogo{
+    width: 135px;
+    height: 36px;
+}
+
+.headerWrapper{
+    display: flex !important;
+    gap: 20px;
+    align-items: baseline !important;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+}
+
+.carousel{
+    width: 900px;
+    height: 450px;
+}
