@@ -4,7 +4,6 @@ import bannerImg1 from '../../img/Banner_1.webp'
 import bannerImg2 from '../../img/Banner_2.webp'
 import bannerImg3 from '../../img/Banner_3.webp'
 import bannerImg4 from '../../img/Banner_4.webp'
-import Header from '../../reusibleComponents/Header';
 import ButtonLinkTwo from '../../reusibleComponents/ButtonLinkTwo';
 import { Stack } from '@mui/system';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
@@ -21,11 +20,12 @@ import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import ProductCardSlider from '../../reusibleComponents/ProductCardSlider';
+import { Link } from 'react-router-dom';
 
-export default function Homepage() {
+
+export default function Homepage(props) {
     return (
         <div>
-            <Header/>
             <main className='homepageWrapper'>
                 <Stack direction='row' sx={{ boxShadow: '0 2px 12px -4px rgb(0 0 0 / 10%)' }}>
                     <Stack alignItems='flex-start'
@@ -38,8 +38,14 @@ export default function Homepage() {
                                 xl: "flex"
                             }
                         }}>
-                        <ButtonLinkTwo name='Телефони, Таблети & Лаптопи' startIcon={<PhoneAndroidOutlinedIcon />} />
-                        <ButtonLinkTwo name='Компютри & Периферия' startIcon={<ComputerOutlinedIcon />} />
+                        <Link className='homepageLink' to={'/products'}>
+                            <ButtonLinkTwo
+                                name='Телефони, Таблети & Лаптопи'
+                                startIcon={<PhoneAndroidOutlinedIcon />}
+                                >
+                            </ButtonLinkTwo>
+                        </Link>
+                        <ButtonLinkTwo name='Компютри & Периферия' href={'/products'} startIcon={<ComputerOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
@@ -85,8 +91,8 @@ export default function Homepage() {
                     </Carousel>
                 </Stack>
 
-                <ProductCardSlider/>
-                <ProductCardSlider/>
+                <ProductCardSlider />
+                <ProductCardSlider />
 
 
             </main>

@@ -11,8 +11,8 @@ import ButtonLink from './ButtonLinkOne';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
-import PersonAdd from '@mui/icons-material/PersonAdd';
-import Settings from '@mui/icons-material/Settings';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 
 const StyledToolbar = styled(Toolbar)({
@@ -27,7 +27,7 @@ const StyledNav = styled(Box)({
     display: 'flex'
 })
 
-export default function Header() {
+export default function Header(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -43,7 +43,9 @@ export default function Header() {
             }}>
             <Box>
                 <StyledToolbar>
-                    <img id="headerLogo" src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg" alt="logo" />
+                    <Link to={'/home'}>
+                        <img id="headerLogo" src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg" alt="logo" />
+                    </Link>
                     <Search></Search>
                     <Stack direction="row"
                         alignItems="center"
@@ -99,23 +101,32 @@ export default function Header() {
                             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                         >
                             <MenuItem>
-                                <Avatar /> Profile
-                            </MenuItem>
-                            <MenuItem>
-                                <Avatar /> My account
+                                <Avatar /> Профил
                             </MenuItem>
                             <Divider />
                             <MenuItem>
                                 <ListItemIcon>
-                                    <PersonAdd fontSize="small" />
+                                    <FavoriteBorderIcon fontSize="small"/>
                                 </ListItemIcon>
-                                Add another account
+                                Любими
                             </MenuItem>
                             <MenuItem>
                                 <ListItemIcon>
-                                    <Settings fontSize="small" />
+                                    <ShoppingCartOutlinedIcon fontSize="small" />
                                 </ListItemIcon>
-                                Settings
+                                Количка
+                            </MenuItem>
+                            <MenuItem>
+                                <ListItemIcon>
+                                    <HistoryIcon fontSize="small" />
+                                </ListItemIcon>
+                                Моите поръчки
+                            </MenuItem>
+                            <MenuItem>
+                                <ListItemIcon>
+                                    <StarBorderIcon fontSize="small" />
+                                </ListItemIcon>
+                                Ревюта
                             </MenuItem>
                             <MenuItem>
                                 <ListItemIcon>
