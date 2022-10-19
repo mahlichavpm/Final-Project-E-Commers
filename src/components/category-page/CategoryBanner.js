@@ -4,7 +4,7 @@ import './CategoryBanner.scss';
 export default function Category (props) {
 
     return (
-        <div>
+        <div className="bannerContainer">
             <Link to={props.path}>
                 <img  className="clickableBanner" src={props.image} alt="gridbanner-img"/>
             </Link>

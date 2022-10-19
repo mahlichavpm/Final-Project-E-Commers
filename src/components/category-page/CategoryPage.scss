@@ -1,24 +1,25 @@
 .categoryWrapper {
-    padding: 20px;
+    padding: 15px 60px;
 }
 
 .categoryPageContainer{
     width:98%;
-    height: 200vh;
+    height: 500vh;
     display: flex;
+    background-color: rgb(228, 230, 231);
+
 
     .sideMenu{
         width: 15%;
         height: 300vh;
-        background-color: blue;
         display: flex;
         flex-direction: column;
         padding: 10px;
         box-sizing: border-box;
         gap: 5px;
+        margin: 10px;
 
         a{
-            color: white;
             display: inline;
         }
     }
@@ -26,8 +27,8 @@
     .contentBody{
         width: 85%;
         height: 300vh;
-        background-color: rgb(0, 195, 255);
         display: inline-block;
-        padding: 2%;
+        display: flex;
+        flex-direction: column;
     }
 }
