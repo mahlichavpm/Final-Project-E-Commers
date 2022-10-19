@@ -9,12 +9,11 @@ import styled from "@emotion/styled";
 import Search from './Search';
 import ButtonLink from './ButtonLinkOne';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
-import React, { useState } from "react";
+import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import Dropdown from 'react-bootstrap/Dropdown';
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",

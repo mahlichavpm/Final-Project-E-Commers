@@ -20,7 +20,6 @@ import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
-import ProductCard from '../../reusibleComponents/ProductCard';
 import ProductCardSlider from '../../reusibleComponents/ProductCardSlider';
 
 export default function Homepage() {

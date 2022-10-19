@@ -1,4 +1,3 @@
-// import { Routes } from 'react-router';
 import { Navigate, Route, Routes } from 'react-router';
 import { Link } from 'react-router-dom';
 import './App.css';
@@ -7,7 +6,6 @@ import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
 import Homepage from './components/Homepage/Homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return (
