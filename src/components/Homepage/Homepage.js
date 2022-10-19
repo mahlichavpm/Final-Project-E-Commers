@@ -38,7 +38,7 @@ export default function Homepage(props) {
                                 xl: "flex"
                             }
                         }}>
-                        <Link to={'/products'} >
+                        <Link className='homepageLink' to={'/products'}>
                             <ButtonLinkTwo
                                 name='Телефони, Таблети & Лаптопи'
                                 startIcon={<PhoneAndroidOutlinedIcon />}
