@@ -2,11 +2,11 @@
 import { Navigate, Route, Routes } from 'react-router';
 import { Link } from 'react-router-dom';
 import './App.css';
-<<<<<<< Updated upstream
 import CategoryPage from './components/category-page/CategoryPage';
 import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
-import Home from './Home';
+import Homepage from './components/Homepage/Homepage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Navigate to={'/home'}/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/home' element={<Homepage/>}/>
         <Route path='/products' element={<CategoryPage/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
@@ -33,19 +33,5 @@ function App() {
       </Routes>
      
     </>
-=======
-import BlueBtn from './reusibleComponents/BlueBtn';
-import CheckBoxComponent from './reusibleComponents/CheckBoxComponent';
-import Input from './reusibleComponents/Input';
-import Register from './components/login-register/Register';
-import Homepage from './components/Homepage/Homepage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-function App() {
-  return (
-    <Homepage/>
->>>>>>> Stashed changes
-  )
-}
-
+)}
 export default App
