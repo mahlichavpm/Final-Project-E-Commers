@@ -1,4 +1,4 @@
-import { AppBar, Divider, Menu, MenuItem, Toolbar } from "@mui/material";
+import { AppBar, CardMedia, Divider, IconButton, ImageListItem, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
@@ -15,6 +15,8 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuItemProduct from "./MenuItemProduct";
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -35,20 +37,26 @@ export default function Header(props) {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
-        setAnchorEl(null);
+    const handleClose = (seter) => {
+        seter(null);
+    };
+    const [wish, setWish] = React.useState(null);
+    const openWish = Boolean(wish);
+    const handleClickWish = (event) => {
+        setWish(event.currentTarget);
     };
     return (
         <AppBar position="sticky"
             sx={{
                 bgcolor: "white",
+
             }}>
             <Box>
                 <StyledToolbar>
                     <Link to={'/home'}>
                         <img id="headerLogo" src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg" alt="logo" />
                     </Link>
-                    <Search></Search>
+                    <Search />
                     <Stack direction="row"
                         alignItems="center"
                         spacing={4}
@@ -71,8 +79,8 @@ export default function Header(props) {
                             anchorEl={anchorEl}
                             id="account-menu"
                             open={open}
-                            onMouseLeave={handleClose}
-                            onClose={handleClose}
+                            onMouseLeave={() => handleClose(setAnchorEl)}
+                            onClose={() => handleClose(setAnchorEl)}
                             PaperProps={{
                                 elevation: 0,
                                 sx: {
@@ -108,7 +116,7 @@ export default function Header(props) {
                             <Divider />
                             <MenuItem>
                                 <ListItemIcon>
-                                    <FavoriteBorderIcon fontSize="small"/>
+                                    <FavoriteBorderIcon fontSize="small" />
                                 </ListItemIcon>
                                 Любими
                             </MenuItem>
@@ -132,11 +140,53 @@ export default function Header(props) {
                                 Изход
                             </MenuItem>
                         </Menu>
+                        <Badge badgeContent={0} color="alert">
+                        <IconButton onMouseEnter={handleClickWish}>
+                            <Badge badgeContent={0} color="alert">
+                                <FavoriteBorderIcon color="primary" />
+                            </Badge>
+                        </IconButton>
+                        <Menu
+                            anchorEl={wish}
+                            id="account-menu"
+                            open={openWish}
+                            onMouseLeave={() => handleClose(setWish)}
+                            onClose={() => handleClose(setWish)}
+                            PaperProps={{
+                                elevation: 0,
+                                sx: {
+                                    overflow: 'visible',
+                                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                                    mt: 1.5,
+                                    '& .MuiAvatar-root': {
+                                        width: 32,
+                                        height: 32,
+                                        ml: -0.5,
+                                        mr: 1,
+                                    },
+                                    '&:before': {
+                                        content: '""',
+                                        display: 'block',
+                                        position: 'absolute',
+                                        top: 0,
+                                        right: 14,
+                                        width: 10,
+                                        height: 10,
+                                        bgcolor: 'background.paper',
+                                        transform: 'translateY(-50%) rotate(45deg)',
+                                        zIndex: 0,
+                                    },
+                                },
+                            }}
+                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                            anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                        >   
+                            <MenuItemProduct/>
+                            <MenuItemProduct/>
+                            <MenuItemProduct/>
+                        </Menu>
 
-                        <Badge badgeContent={0} color="alert">
-                            <FavoriteBorderIcon color="primary" />
-                        </Badge>
-                        <Badge badgeContent={0} color="alert">
+                        <Badge badgeContent={5} color="alert">
                             <ShoppingCartOutlinedIcon color="primary" />
                         </Badge>
                     </Stack>
@@ -153,6 +203,6 @@ export default function Header(props) {
                     <ButtonLink href='#text-buttons' name='eMAG Help' startIcon={<HeadphonesOutlinedIcon />} />
                 </StyledNav>
             </Box>
-        </AppBar>
+        </AppBar >
     )
 }

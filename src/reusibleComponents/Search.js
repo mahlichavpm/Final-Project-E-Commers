@@ -19,22 +19,26 @@ const Search = styled("div")(({ theme }) => ({
 
 export default function autocomplitedSearch(props) {
     return (
-        
-    //     <Autocomplete
-    //     id="free-solo-demo"
-    //     // freeSolo
-    //     options={products.map((option) => option.title)}
-    //     renderInput={(params) => <TextField {...params} label="freeSolo" />}
-    //     width
-    //   />
-        <Search sx={{ display : {xs : "none", 
-        sm: "none", 
-        md:"flex", 
-        lg:"flex", 
-        xl: "flex"}}}>
-            <InputBase fullWidth = {true} 
-            placeholder='Какво търсиш днес?...'
-            autoFocus = {true} />
+
+        //     <Autocomplete
+        //     id="free-solo-demo"
+        //     // freeSolo
+        //     options={products.map((option) => option.title)}
+        //     renderInput={(params) => <TextField {...params} label="freeSolo" />}
+        //     width
+        //   />
+        <Search sx={{
+            display: {
+                xs: "none",
+                sm: "none",
+                md: "flex",
+                lg: "flex",
+                xl: "flex"
+            }
+        }}>
+            <InputBase fullWidth={true}
+                placeholder='Какво търсиш днес?...'
+                autoFocus={true} />
             <SearchOutlinedIcon color='primary' />
         </Search>
     )
