@@ -9,7 +9,7 @@ import styled from "@emotion/styled";
 import Search from './Search';
 import ButtonLink from './ButtonLinkOne';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
-import React, { useState } from "react";
+import React from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import HistoryIcon from '@mui/icons-material/History';

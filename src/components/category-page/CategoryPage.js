@@ -12,7 +12,7 @@ export default function CategoryPage (props) {
             <div className="categoryPageContainer">
                 <div className="sideMenu">  
                     <AnchorLink value={'Телевизори'}/>
-                    <h4>TV-Аудио аксесоари</h4>
+                    <h5>TV-Аудио аксесоари</h5>
                     <AnchorLink value={'Стойки'}/>
                     <AnchorLink value={'Кабели и адаптери'}/>
                     <AnchorLink value={'Комплекти за почистване'}/>
