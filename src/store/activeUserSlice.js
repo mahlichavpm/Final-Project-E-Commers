@@ -41,7 +41,8 @@ const initialState = {
   username: "",
   password: "",
   userRegistered: false,
-  sessionId: ''
+  sessionId: '',
+  admin: false
 };
 
 export const activeUserSlice = createSlice({
@@ -52,6 +53,9 @@ export const activeUserSlice = createSlice({
       state.username = action.payload.username;
       state.password = action.payload.password;
     },
+    adminLogin: (state,action) => {
+      state.admin = true;
+    }
   },
   extraReducers: builder => {
     builder.addCase(loginUser.pending, (state,action) => {
@@ -67,6 +71,7 @@ export const activeUserSlice = createSlice({
     })
     builder.addCase(registerUser.fulfilled, (state) => {
           state.userRegistered = true;
+          
         });
     builder.addCase(registerUser.rejected, (state, action) => {
       state.userRegistered = false;
@@ -78,6 +83,6 @@ export const activeUserSlice = createSlice({
 },
 });
 
-export const { changeUserData } = activeUserSlice.actions;
+export const { changeUserData, adminLogin } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

@@ -1,8 +1,8 @@
-import { AppBar, CardMedia, Divider, IconButton, ImageListItem, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
+import { AppBar, CardMedia, Divider, IconButton, ImageListItem, Menu, MenuItem, Badge, Toolbar, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
-import Badge from '@mui/material/Badge';
+
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from "@emotion/styled";
@@ -140,7 +140,7 @@ export default function Header(props) {
                                 Изход
                             </MenuItem>
                         </Menu>
-                        <Badge badgeContent={0} color="alert">
+                        <Badge badgeContent={0} color="alert"/>
                         <IconButton onMouseEnter={handleClickWish}>
                             <Badge badgeContent={0} color="alert">
                                 <FavoriteBorderIcon color="primary" />

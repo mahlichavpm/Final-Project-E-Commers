@@ -1,12 +1,9 @@
 import './Login.scss';
 import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
-import { Link, Navigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
-import { loginUser } from '../../store/activeUserSlice';
-import { useState } from 'react';
-
-
-
+import { loginUser, adminLogin } from '../../store/activeUserSlice';
+import { useEffect, useState } from 'react';
 
 export default function Login (){
 
@@ -16,6 +13,13 @@ export default function Login (){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    useEffect(()=> {
+        if(userId){
+            navigate('/home')
+        }
+    },[userId])
 
     const handleRememberMe = () => {
         if(!rememberMe){
@@ -23,14 +27,26 @@ export default function Login (){
         }
     }
 
-    const handleLogin = () => {
-        if(rememberMe){
-            localStorage.setItem('rememberUser',JSON.stringify(true))
+    const isAdmin = (username,password) => {
+        if(username === 'admin' && password === 'admin'){
+            return true
         }
-        setUsername('');
-        setPassword('');
-        dispatch(loginUser({ username, password }));
-        <Navigate to={'/home'}/>
+        return false
+    }
+
+    const handleLogin = () => {
+
+        if(isAdmin(username,password)){
+            dispatch(adminLogin())
+        } else {
+
+            if(rememberMe){
+                localStorage.setItem('rememberUser',JSON.stringify(true))
+            }
+            setUsername('');
+            setPassword('');
+            dispatch(loginUser({ username, password }));
+        }
     }
 
     return (
@@ -38,8 +54,8 @@ export default function Login (){
             <div className="loginContainer">
                 <form>
                     <h3>Здравей, влез в акаунта си:</h3>
-                    <TextField id={'username'} width='true' type={'text'} value={username} onChange={(e) => {setUsername(e.target.value)}} label={'Потребителско име'}/>
-                    <TextField id={'password'} width='true' type={'password'} value={password} onChange={(e) => {setPassword(e.target.value)}} label={'Парола'}/>
+                    <TextField size="small" id={'username'} width='true' type={'text'} value={username} onChange={(e) => {setUsername(e.target.value)}} label={'Потребителско име'}/>
+                    <TextField size="small" id={'password'} width='true' type={'password'} value={password} onChange={(e) => {setPassword(e.target.value)}} label={'Парола'}/>
                     <FormControlLabel control={<Checkbox onClick={handleRememberMe} />} label="Запомни ме" />
                     <Button onClick={handleLogin} variant='contained'>Вход</Button>
                     <Link to={'/register'}>Нямаш регистрация? Кликни тук. </Link>

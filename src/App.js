@@ -8,19 +8,26 @@ import Homepage from './components/Homepage/Homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './reusibleComponents/Header';
 import { useSelector } from 'react-redux';
+import AdminPage from './components/adminPage/AdminPage';
 
 function App() {
 
-  const loggedUser = localStorage.getItem('rememberUser')
+  const loggedUser = useSelector(state => state.activeUser.sessionId)
+  const admin = useSelector(state => state.activeUser.admin)
 
   return (
+    admin ?
+     <Routes>
+      <Route path='/admin' element={<AdminPage/>}/>
+      <Route path='*' element={<Navigate to={'/admin'}/>}/>
+    </Routes> :
     loggedUser ? 
     <>
       <Header/>
       <Routes>
         <Route path='/' element={<Navigate to={'/home'} />} />
         <Route path='/login' element={<Navigate to={'/home'} />} />
-        <Route path='/home' element={<Homepage link={ <Link to={'/products'}>Products</Link>}  />} />
+        <Route path='/home' element={<Homepage />} />
         <Route path='/products' element={<CategoryPage />} />
         <Route path='*' element={<div>404</div>} />
       </Routes>

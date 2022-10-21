@@ -1,15 +1,23 @@
 
 import './Login.scss'
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { registerUser } from '../../store/activeUserSlice';
 import { Button, TextField } from "@mui/material";
 import Login from './Login';
 
+
 export default function Register (){
 
-    const successfulRegister = useSelector(state => state.activeUser.userRegistered)
+    const successfulRegister = useSelector(state => state.activeUser.userRegistered);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if(successfulRegister){
+            navigate('/login')
+        }
+    },[successfulRegister])
 
 
     const dispatch = useDispatch();
@@ -19,14 +27,20 @@ export default function Register (){
     const [password1, setPassword1] = useState('');
     const [matchPassErr,setMatchPassErr] = useState(false)
 
+    useEffect(() => {
+        passCompare()
+    },[password,password1])
     const handleRegister = () => {
         dispatch(registerUser({ username, password }));
+        <Navigate to={'/login'}/>
     }
 
     const passCompare = () => {
         if (password === password1){
+            setMatchPassErr(false)
             return true
         }
+        setMatchPassErr(true)
         return false
     }
 
@@ -51,13 +65,14 @@ export default function Register (){
             <div className="loginContainer">
                 <form>
                     <h4>Моля въведи данните си за да се регистрираш:</h4>
-                    <TextField id={'username'} width='true'  value={username} onChange={(e) => {setUsername(e.target.value)}} type={'text'}label={'Потребителско име'}/>
-                    <TextField id={'password'} width='true' value={password} onChange={(e) => {setPassword(e.target.value)}} type={'password'} label={'Парола'}/>
-                    <TextField id={'password1'} error={matchPassErr} width='true' value={password1} onChange={(e) => {
+                    <TextField size="small" id={'username'} width='true'  value={username} onChange={(e) => {setUsername(e.target.value)}} type={'text'}label={'Потребителско име'}/>
+                    <TextField size="small" id={'password'} width='true' value={password} onChange={(e) => {setPassword(e.target.value)}} type={'password'} label={'Парола'}/>
+
+                    <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={(e) => {
                      setPassword1(e.target.value);
-                     passCompare()
+                    
                     }} type={'password'} label={'Потвърдете паролата'}/>
-                    <Button variant='contained' onClick={handleClick}>Регистрация</Button>
+                    <Button  variant='contained' onClick={handleClick}>Регистрация</Button>
                     <Link to={'/login'}>Вече имаш регистрация?</Link>
                     
                 </form>
