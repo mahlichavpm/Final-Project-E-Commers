@@ -9,11 +9,12 @@ import styled from "@emotion/styled";
 import Search from './Search';
 import ButtonLink from './ButtonLinkOne';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
-import React from "react";
+import React, {useState} from "react";
 import ListItemIcon from '@mui/material/ListItemIcon';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
+import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -28,8 +29,9 @@ const StyledNav = styled(Box)({
 })
 
 export default function Header(props) {
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+    
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -110,12 +112,7 @@ export default function Header(props) {
                                 </ListItemIcon>
                                 Любими
                             </MenuItem>
-                            <MenuItem>
-                                <ListItemIcon>
-                                    <ShoppingCartOutlinedIcon fontSize="small" />
-                                </ListItemIcon>
-                                Количка
-                            </MenuItem>
+
                             <MenuItem>
                                 <ListItemIcon>
                                     <HistoryIcon fontSize="small" />
@@ -128,18 +125,18 @@ export default function Header(props) {
                                 </ListItemIcon>
                                 Ревюта
                             </MenuItem>
-                            <MenuItem>
+                            <MenuItem  >
                                 <ListItemIcon>
                                     <Logout fontSize="small" />
                                 </ListItemIcon>
-                                Logout
+                                Изход
                             </MenuItem>
                         </Menu>
 
                         <Badge badgeContent={0} color="alert">
                             <FavoriteBorderIcon color="primary" />
                         </Badge>
-                        <Badge badgeContent={5} color="alert">
+                        <Badge badgeContent={0} color="alert">
                             <ShoppingCartOutlinedIcon color="primary" />
                         </Badge>
                     </Stack>
