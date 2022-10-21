@@ -1,10 +1,7 @@
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Autocomplete from '@mui/material/Autocomplete';
 import styled from "@emotion/styled";
-import { InputBase, InputLabel } from '@mui/material';
+import { InputBase } from '@mui/material';
 
 const Search = styled("div")(({ theme }) => ({
     textAlign: "center",
@@ -22,22 +19,26 @@ const Search = styled("div")(({ theme }) => ({
 
 export default function autocomplitedSearch(props) {
     return (
-        
-    //     <Autocomplete
-    //     id="free-solo-demo"
-    //     // freeSolo
-    //     options={products.map((option) => option.title)}
-    //     renderInput={(params) => <TextField {...params} label="freeSolo" />}
-    //     width
-    //   />
-        <Search sx={{ display : {xs : "none", 
-        sm: "none", 
-        md:"flex", 
-        lg:"flex", 
-        xl: "flex"}}}>
-            <InputBase fullWidth = {true} 
-            placeholder='Какво търсиш днес?...'
-            autoFocus = {true} />
+
+        //     <Autocomplete
+        //     id="free-solo-demo"
+        //     // freeSolo
+        //     options={products.map((option) => option.title)}
+        //     renderInput={(params) => <TextField {...params} label="freeSolo" />}
+        //     width
+        //   />
+        <Search sx={{
+            display: {
+                xs: "none",
+                sm: "none",
+                md: "flex",
+                lg: "flex",
+                xl: "flex"
+            }
+        }}>
+            <InputBase fullWidth={true}
+                placeholder='Какво търсиш днес?...'
+                autoFocus={true} />
             <SearchOutlinedIcon color='primary' />
         </Search>
     )

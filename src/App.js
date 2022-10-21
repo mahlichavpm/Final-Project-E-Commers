@@ -14,11 +14,6 @@ function App() {
   return (
     <>
       <Header />
-      <div className='nav'>
-        <Link to={'/login'}>Login</Link>
-        <br />
-        <Link to={'/register'}>Register</Link>
-      </div>
 
       <Routes>
         <Route path='/' element={<Navigate to={'/home'} />} />

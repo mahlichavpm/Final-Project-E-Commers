@@ -5,36 +5,53 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Rating } from '@mui/material';
+import { CardActionArea, Rating, Stack } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
+import ProductButton from './ProductButton';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-export default function ProductCard() {
+
+export default function ProductCard(props) {
     return (
-        <Card sx={{ maxWidth: 300 }}>
-            <CardMedia
-                component="img"
-                height="140"
-                image="https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"
-                alt="green iguana"
-            />
-            <Checkbox defaultChecked />
-            <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    Lizard
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
-                </Typography>
-                <Rating name="half-rating" defaultValue={3} precision={0.5} size= 'small'/>
-            </CardContent>
+        <Card sx={{ 
+            maxWidth: 300,
+            border: '1px solid  rgba(34, 34, 34, 0.2)',
+            borderRadius: '8px'
+            }}>
+            <CardActionArea>
+                <Stack>
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image= {props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
+                        alt={props.alt || "Mnogo bega"}
+                    />
+                    {/* <Checkbox defaultChecked />
+                    <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                </Stack>
+
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div" color='custom'>
+                        {props.title || "Има Проблем!"}
+                    </Typography>
+                    <Typography variant="body2" color="custom.light">
+                        {props.description || 'Има Проблем V2'}
+                    </Typography>
+                    <Rating name="half-rating" readOnly defaultValue={props.rating || 0} size='small' />
+                    <Typography variant="body2" color="custom.light">
+                        {props.stock || 'Няма си количество'}
+                    </Typography>
+                    <Typography variant="body1" color="alert.main">
+                        {props.price || 'Няма си цена'}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
             <CardActions>
-                <Button size="medium">Share</Button>
-                <Button size="medium">Learn More</Button>
+                <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
+
         </Card>
     )
 }

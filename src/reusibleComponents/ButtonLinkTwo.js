@@ -1,28 +1,27 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Button, { ButtonProps } from '@mui/material/Button';
+import Button from '@mui/material/Button';
 
 export default function ButtonLink (props) {
     const Link = styled(Button)({
-        // display: 'flex',
-        color: 'custom',
-        padding: '6px 10px',
+        color: '#222',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        padding: '6px 20px',
         fontSize: '12px',
         textTransform: 'none',
-        // boxSizing: 'border-box',
         borderTop: '1px solid transparent',
         borderBottom: '1px solid transparent',
         textDecoration: 'none',
-        width: '300px',
+        width: '250px',
         borderRadius: '0px',
-        direction: 'ltl',
         '&:hover': {
             borderTop: '1px solid  rgba(34, 34, 34, 0.2)',
             borderBottom: '1px solid  rgba(34, 34, 34, 0.2)',
-            color: 'primary !important',
+            color: '#0082e6',
         },
       });
     return (
-        <Link color={props.color} href={props.href} startIcon={props.startIcon} endIcon={props.endIcon}>{props.name}</Link>
+        <Link href={props.href} startIcon={props.startIcon} endIcon={props.endIcon} underline='none'>{props.name}</Link>
     )
 }
