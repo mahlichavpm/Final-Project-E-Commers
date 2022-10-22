@@ -15,7 +15,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
 import MenuItemProduct from "./MenuItemProduct";
-import SideCategory from './sideCategory/SideCategory'
+import SideCategory from '../sideCategory/SideCategory'
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",

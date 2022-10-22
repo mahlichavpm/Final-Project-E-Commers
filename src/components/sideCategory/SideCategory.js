@@ -12,13 +12,13 @@ export default function SideCategory() {
 
   return (
     <>
-      <Button size='sm' style={{ backgroundColor: "white", color: "black", borderColor: "black"}} variant="primary" onClick={handleShow}>
+      <Button size="sm" style={{ backgroundColor: "white", color: "black", borderColor: "black"}} variant="primary" onClick={handleShow}>
         <MenuRoundedIcon/> Категории
       </Button>
 
-      <Offcanvas style={{ zIndex: '1100'}} show={show} onHide={handleClose}>
+      <Offcanvas style={{ zIndex: "1100"}} show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title>Категории</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul>

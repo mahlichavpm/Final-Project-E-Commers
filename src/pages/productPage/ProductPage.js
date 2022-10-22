@@ -1,8 +1,8 @@
-import Header from "../../components/Header";
+import Header from "../../components/header/Header";
 import "./ProductPage.scss";
 import img from "../../img/banner_5.jpeg";
 import { Box, Container } from "@mui/system";
-import ProductButton from "../../components/ProductButton";
+import ProductButton from "../../components/buttons/ProductButton";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Footer from "../../components/footer/Footer";
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
@@ -26,7 +26,7 @@ export default function ProductPage(props) {
                     <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon/>}/>
                 </div>
                 <div className="imgGalery">
-                    <img src="https://s13emagst.akamaized.net/products/47963/47962589/images/res_fe87d6d6ba067ff9eb970984bf055585.jpg?width=450&height=450&hash=EB32526B87898425604133CEA813EB48"></img>
+                    <img src="https://s13emagst.akamaized.net/products/47963/47962589/images/res_fe87d6d6ba067ff9eb970984bf055585.jpg?width=450&height=450&hash=EB32526B87898425604133CEA813EB48" alt="qnko"/>
                 </div>
                 <div className="deliveryInfo">
                   <p>Доставка в: София-Град (Столична)</p>

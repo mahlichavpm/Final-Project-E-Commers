@@ -5,24 +5,25 @@ import Login from './pages/login-register/Login';
 import Register from './pages/login-register/Register';
 import Homepage from './pages/homePage/Homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
+import Header from './components/header/Header';
 import { useSelector } from 'react-redux';
 import Banner from './components/banner/Banner';
 import ProductPage from './pages/productPage/ProductPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import AllProductsList from './pages/allProducts/AllProductsList';
+import AdminPage from './pages/adminPage/AdminPage';
 
 function App() {
 
   const loggedUser = useSelector(state => state.activeUser.sessionId)
   const admin = useSelector(state => state.activeUser.admin)
 
-    // return (
-      // <ProfilePage/>
+    return (
+      <ProfilePage/>
       // <ProductPage/>
       // <AllProductsList/>
       // <Banner/>
-    // )
+    )
 
   // return (
   //   admin ?

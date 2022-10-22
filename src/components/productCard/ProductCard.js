@@ -1,36 +1,53 @@
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { Avatar, Card } from 'antd';
-import React from 'react';
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea, Rating, Stack } from '@mui/material';
+import ProductButton from '../buttons/ProductButton';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
-
-const { Meta } = Card;
-
-export default function ProductCard () {
-
+export default function ProductCard(props) {
     return (
-        <Card
-    style={{
-      width: 300,
-    }}
-    cover={
-      <img
-        alt="example"
-        src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-      />
-    }
-    actions={[
-      <SettingOutlined key="setting" />,
-      <EditOutlined key="edit" />,
-      <EllipsisOutlined key="ellipsis" />,
-    ]}
-  >
-    <Meta
-      avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-      title="Card title"
-      description="This is the description"
-    />
-  </Card>
+        <Card sx={{ 
+            maxWidth: 300,
+            border: '1px solid  rgba(34, 34, 34, 0.2)',
+            borderRadius: '8px'
+            }}>
+            <CardActionArea>
+                <Stack>
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image= {props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
+                        alt={props.alt || "Mnogo bega"}
+                    />
+                    {/* <Checkbox defaultChecked />
+                    <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                </Stack>
+
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div" color='custom'>
+                        {props.title || "Има Проблем!"}
+                    </Typography>
+                    <Typography variant="body2" color="custom.light">
+                        {props.description || 'Има Проблем V2'}
+                    </Typography>
+                    <Rating name="half-rating" readOnly defaultValue={props.rating || 0} size='small' />
+                    <Typography variant="body2" color="custom.light">
+                        {props.stock || 'Няма си количество'}
+                    </Typography>
+                    <Typography variant="body1" color="alert.main">
+                        {props.price || 'Няма си цена'}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+            </CardActions>
+
+        </Card>
     )
-  
 }

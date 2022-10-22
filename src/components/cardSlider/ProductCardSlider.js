@@ -10,7 +10,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Typography } from '@mui/material'
-import ProductCard from './ProductCard';
+import ProductCard from '../productCard/ProductCard';
 import { Stack } from '@mui/system';
 
 export default function Example(props) {

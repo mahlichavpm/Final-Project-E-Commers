@@ -1,11 +1,11 @@
 import React from 'react';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
 import { DollarOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import SortIcon from '@mui/icons-material/Sort';
-import Header from '../../components/Header';
-import ProductCard from '../../components/ProductCard';
+import Header from '../../components/header/Header';
+import ProductCard from '../../components/productCard/ProductCard';
 
 
 export default function AllProductsList () {

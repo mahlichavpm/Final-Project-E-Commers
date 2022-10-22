@@ -4,7 +4,7 @@ import bannerImg1 from '../../img/Banner_1.webp'
 import bannerImg2 from '../../img/Banner_2.webp'
 import bannerImg3 from '../../img/Banner_3.webp'
 import bannerImg4 from '../../img/Banner_4.webp'
-import ButtonLinkTwo from '../../components/ButtonLinkTwo';
+import ButtonLinkTwo from '../../components/buttons/ButtonLinkTwo';
 import { Stack } from '@mui/system';
 import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
@@ -19,7 +19,7 @@ import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
 import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
-import ProductCardSlider from '../../components/ProductCardSlider';
+import ProductCardSlider from '../../components/cardSlider/ProductCardSlider';
 import { Link } from 'react-router-dom';
 import { Box, TextField, Typography } from '@mui/material';
 import Footer from '../../components/footer/Footer';

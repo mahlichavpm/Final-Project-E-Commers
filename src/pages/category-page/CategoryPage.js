@@ -1,7 +1,7 @@
 import CategoryBanner from './categoryBanner/CategoryBanner.js';
 import './CategoryPage.scss';
 import GridBanners from './gridBanner/GridBanners.js';
-import AnchorLink from '../../components/AnchorLink.js';
+import AnchorLink from '../../components/link/AnchorLink.js';
 
 export default function CategoryPage (props) {
 
