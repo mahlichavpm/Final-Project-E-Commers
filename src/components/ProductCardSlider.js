@@ -9,7 +9,7 @@
 
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button, Typography, Slide } from '@mui/material'
+import { Typography } from '@mui/material'
 import ProductCard from './ProductCard';
 import { Stack } from '@mui/system';
 

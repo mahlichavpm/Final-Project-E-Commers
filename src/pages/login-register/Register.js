@@ -1,6 +1,6 @@
 
 import './Login.scss'
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { registerUser } from '../../store/activeUserSlice';
@@ -17,7 +17,9 @@ export default function Register (){
         if(successfulRegister){
             navigate('/login')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[successfulRegister])
+    
 
 
     const dispatch = useDispatch();
@@ -27,14 +29,6 @@ export default function Register (){
     const [password1, setPassword1] = useState('');
     const [matchPassErr,setMatchPassErr] = useState(false)
 
-    useEffect(() => {
-        passCompare()
-    },[password,password1])
-    const handleRegister = () => {
-        dispatch(registerUser({ username, password }));
-        <Navigate to={'/login'}/>
-    }
-
     const passCompare = () => {
         if (password === password1){
             setMatchPassErr(false)
@@ -43,6 +37,17 @@ export default function Register (){
         setMatchPassErr(true)
         return false
     }
+
+    useEffect(() => {
+        passCompare()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[password,password1])
+
+
+    const handleRegister = () => {
+        dispatch(registerUser({ username, password }));
+    }
+
 
     const handleClick = (e) => {
         e.preventDefault();

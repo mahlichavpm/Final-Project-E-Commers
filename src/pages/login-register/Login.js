@@ -1,6 +1,6 @@
 import './Login.scss';
 import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
 import { loginUser, adminLogin } from '../../store/activeUserSlice';
 import { useEffect, useState } from 'react';
@@ -19,6 +19,7 @@ export default function Login (){
         if(userId){
             navigate('/home')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[userId])
 
     const handleRememberMe = () => {

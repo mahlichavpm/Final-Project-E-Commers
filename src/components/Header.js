@@ -1,8 +1,7 @@
-import { AppBar, CardMedia, Divider, IconButton, ImageListItem, Menu, MenuItem, Badge, Toolbar, Typography } from "@mui/material";
+import { AppBar, Divider, IconButton, Menu, MenuItem, Badge, Toolbar} from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
-
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from "@emotion/styled";
@@ -15,7 +14,6 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
-import CloseIcon from '@mui/icons-material/Close';
 import MenuItemProduct from "./MenuItemProduct";
 
 const StyledToolbar = styled(Toolbar)({

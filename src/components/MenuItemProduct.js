@@ -19,6 +19,7 @@ export default function MenuItemProduct(props) {
                         src={props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
                         loading='lazy'
                         height='40px'
+                        alt="miata"
                     />
                     <Typography
                         variant="body2"
