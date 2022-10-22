@@ -7,7 +7,6 @@ export default function ProfilePage () {
 
     return (
         <>
-         <Header/>
         <div className='profilePageContainer'>
             <div className='profileInfoContainer'>
                 <div className='userInfo'>

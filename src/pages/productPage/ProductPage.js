@@ -11,7 +11,6 @@ import StarsSharpIcon from '@mui/icons-material/StarsSharp';
 export default function ProductPage(props) {
   return (
     <>
-      <Header />
       <div>
         <img className="bannerImg" src={img} alt='img'/>
         <div className="productContainer">
