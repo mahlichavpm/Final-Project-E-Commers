@@ -15,6 +15,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
 import MenuItemProduct from "./MenuItemProduct";
+import SideCategory from './sideCategory/SideCategory'
 
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
@@ -193,6 +194,7 @@ export default function Header(props) {
             <Box>
                 <StyledNav >
                     <Stack spacing={4} direction='row'>
+                        <SideCategory/>
                         <ButtonLink href='#text-buttons' name='еМАG кредитна карта от Fibank' />
                         <ButtonLink href='#text-buttons' name='eCREDIT' />
                         <ButtonLink href='#text-buttons' name='easybox в София' />

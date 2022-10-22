@@ -10,17 +10,19 @@ import { useSelector } from 'react-redux';
 import Banner from './components/banner/Banner';
 import ProductPage from './pages/productPage/ProductPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
+import AllProductsList from './pages/allProducts/AllProductsList';
 
 function App() {
 
   const loggedUser = useSelector(state => state.activeUser.sessionId)
   const admin = useSelector(state => state.activeUser.admin)
 
-    return (
+    // return (
       // <ProfilePage/>
-      <ProductPage/>
+      // <ProductPage/>
+      // <AllProductsList/>
       // <Banner/>
-    )
+    // )
 
   // return (
   //   admin ?

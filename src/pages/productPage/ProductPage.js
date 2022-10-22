@@ -8,7 +8,6 @@ import Footer from "../../components/footer/Footer";
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
 import StarsSharpIcon from '@mui/icons-material/StarsSharp';
 
-
 export default function ProductPage(props) {
   return (
     <>
@@ -41,8 +40,6 @@ export default function ProductPage(props) {
                     <li> 30 дни право на връщане</li>
                     <li> Включена гаранция: 24 месеца</li>
                   </ul>
-                  
-
                 </div>
               </div>
             </Box>
