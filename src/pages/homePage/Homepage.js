@@ -21,12 +21,21 @@ import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import ProductCardSlider from '../../components/cardSlider/ProductCardSlider';
 import { Link } from 'react-router-dom';
-import { Box, TextField, Typography } from '@mui/material';
+import { Box, Menu, TextField, Typography } from '@mui/material';
 import Footer from '../../components/footer/Footer';
 import AdminPage from '../adminPage/AdminPage';
+import React from 'react';
 
 
 export default function Homepage(props) {
+    const handleClose = (seter) => {
+        seter(null);
+    };
+    const [menuComp, setMenuComp] = React.useState(null);
+    const openMenuComp = Boolean(menuComp);
+    const handleClickMenuComp = (event) => {
+        setMenuComp(event.currentTarget);
+    };
     return (
         <Box>
             <main className='homepageWrapper'>
@@ -45,9 +54,30 @@ export default function Homepage(props) {
                             <ButtonLinkTwo
                                 name='Телефони, Таблети & Лаптопи'
                                 startIcon={<PhoneAndroidOutlinedIcon />}
+                                onMouseEnter={handleClickMenuComp}
                             >
                             </ButtonLinkTwo>
                         </Link>
+                        <Menu
+                            anchorEl={menuComp}
+                            id="category-menu"
+                            open={openMenuComp}
+                            onMouseLeave={() => handleClose(setMenuComp)}
+                            onClose={() => handleClose(setMenuComp)}
+                            transformOrigin={{ horizontal: 'top', vertical: 'left' }}
+                            anchorOrigin={{ horizontal: 'top ', vertical: 'left' }}
+                        >
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                        </Menu>
                         <ButtonLinkTwo name='Компютри & Периферия' href={'/products'} startIcon={<ComputerOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
@@ -97,27 +127,29 @@ export default function Homepage(props) {
                 <ProductCardSlider />
 
             </main>
-            <AdminPage/>
+            <AdminPage />
+
+            <Stack direction='row'>
+                <Stack direction='column'>
+                    <Typography variant='h4' >
+                        Свали приложението на eMAG
+                    </Typography>
+                    <Typography variant='p' >
+                        Попълни телефонния си номер и ще ти изпратим линк за
+                        сваляне на приложението.
+                    </Typography>
+                </Stack>
+                <Stack>
+
+                    <TextField placeholder='089 XXX XXXX'></TextField>
+                </Stack>
+
+            </Stack>
 
             <footer>
-                <Stack direction='row'>
-                    <Stack direction='column'>
-                        <Typography variant='h4' >
-                            Свали приложението на eMAG
-                        </Typography>
-                        <Typography variant='p' >
-                            Попълни телефонния си номер и ще ти изпратим линк за
-                            сваляне на приложението.
-                        </Typography>
-                    </Stack>
-                    <Stack>
-                        
-                        <TextField placeholder='089 XXX XXXX'></TextField>
-                    </Stack>
-
-                </Stack>
+                <Footer />
             </footer>
-            <Footer/>
+
         </Box >
     )
 }

@@ -1,6 +1,7 @@
-import { Avatar, TextField } from '@mui/material'
+import { TextField } from '@mui/material'
 import Header from '../../components/header/Header'
 import './ProfilePage.scss'
+import ProfileAvatar from '../../components/profileAvatar/ProfileAvatar'
 
 export default function ProfilePage () {
 
@@ -11,10 +12,9 @@ export default function ProfilePage () {
             <div className='profileInfoContainer'>
                 <div className='userInfo'>
                     <h3>Здравейте, Виктор Йорданов!</h3>
-                    <Avatar
-                            sx={{ fontSize: 120 ,bgcolor: 'orange', width: 240, height: 240, marginLeft: 15 }}
-                            id='avatar'
-                        >ВЙ</Avatar>
+                    <ProfileAvatar
+                            sx={{bgcolor: 'orange', width: 240, height: 240, marginLeft: 15, fontSize: '120px'}}
+                        />
                     <TextField variant="standard" size="small" id={'name'} width='true' value={'Виктор Йорданов'} type={'text'} label={'Име и Фамилия'}/>
                     <TextField variant="standard" size="small" id={'name'} width='true' value={'mahals'} type={'text'} label={'Потребителско име'}/>
                     <TextField variant="standard" size="small" id={'name'} width='true' value={'0896640646'} type={'text'} label={'Телефон'}/>

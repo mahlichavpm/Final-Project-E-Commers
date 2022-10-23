@@ -12,48 +12,59 @@ import ProductPage from './pages/productPage/ProductPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import AllProductsList from './pages/allProducts/AllProductsList';
 import AdminPage from './pages/adminPage/AdminPage';
+import LovePage from './pages/lovePage/love';
+import CartPage from './pages/cartPage/CartPage'
+import HistoryPage from './pages/historyPage/HistoryPage';
+import ReviewPage from './pages/reviewPage/ReviewPage';
 
 function App() {
 
   // const loggedUser = useSelector(state => state.activeUser.sessionId)
-  const loggedUser = localStorage.getItem('rememberUser')
-  const admin = useSelector(state => state.activeUser.admin)
+  // const loggedUser = localStorage.getItem('rememberUser')
+  // const admin = useSelector(state => state.activeUser.admin)
 
-    // return (
-    //   <ProfilePage/>
-    //   // <ProductPage/>
-    //   // <AllProductsList/>
-    //   // <Banner/>
-    // )
+  // return (
+  //   <ProfilePage/>
+  //   // <ProductPage/>
+  //   // <AllProductsList/>
+  //   // <Banner/>
+  // )
 
   return (
-    admin ?
-     <Routes>
-      <Route path='/admin' element={<AdminPage/>}/>
-      <Route path='*' element={<Navigate to={'/admin'}/>}/>
-    </Routes> :
-    loggedUser ? 
+    // admin ?
+    //  <Routes>
+    //   <Route path='/admin' element={<AdminPage/>}/>
+    //   <Route path='*' element={<Navigate to={'/admin'}/>}/>
+    // </Routes> :
+    // loggedUser ? 
     <>
-      <Header/>
-      <Routes>
-        <Route path='/' element={<Navigate to={'/home'} />} />
-        <Route path='/login' element={<Navigate to={'/home'} />} />
-        <Route path='/home' element={<Homepage/>} />
-        <Route path='/products' element={<CategoryPage/>} />
-        <Route path='/profile' element={<ProfilePage/>} />
-        <Route path='/product' element={<ProductPage/>} />
-        <Route path='/products/category' element={<AllProductsList/>} />
-        <Route path='*' element={<div>404</div>} />
-      </Routes>
+      <Header />
+      <main className='main'>
+        <Routes>
+          <Route path='/' element={<Navigate to={'/home'} />} />
+          <Route path='/login' element={<Navigate to={'/home'} />} />
+          <Route path='/home' element={<Homepage />} />
+          <Route path='/products' element={<CategoryPage />} />
+          <Route path='/history' element={<HistoryPage />} />
+          <Route path='/love' element={<LovePage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/review' element={<ReviewPage />} />
+          <Route path='/product' element={<ProductPage />} />
+          <Route path='/products/category' element={<AllProductsList />} />
+          <Route path='*' element={<div>404</div>} />
+        </Routes>
+      </main>
+    </>
 
-    </> :
+    /* </> :
     <>
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<Navigate to={'/login'}/>} />
       </Routes>
-    </>
+    </> */
   )
 }
 export default App
