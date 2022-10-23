@@ -26,7 +26,7 @@ export default function ButtonLink(props) {
             href={props.href}
             startIcon={props.startIcon}
             endIcon={props.endIcon}
-            onMouseEnter={(e) => {props.onMouseEnter(e)}}
+            // onMouseEnter={(e) => {props.onMouseEnter(e)}}
             onMouseLeave={props.onMouseLeave}
             underline='none'
         >

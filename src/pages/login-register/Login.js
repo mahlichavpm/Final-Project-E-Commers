@@ -4,10 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
 import { loginUser, adminLogin } from '../../store/activeUserSlice';
 import { useEffect, useState } from 'react';
+import Loader from '../../components/loader/Loader';
 
 export default function Login (){
 
     const userId = useSelector(state => state.activeUser.sessionId)
+    const loading = useSelector(state => state.activeUser.loginLoader)
 
     const [rememberMe,setRememberMe] = useState(false)
     const [username, setUsername] = useState('');
@@ -58,7 +60,8 @@ export default function Login (){
                     <TextField size="small" id={'username'} width='true' type={'text'} value={username} onChange={(e) => {setUsername(e.target.value)}} label={'Потребителско име'}/>
                     <TextField size="small" id={'password'} width='true' type={'password'} value={password} onChange={(e) => {setPassword(e.target.value)}} label={'Парола'}/>
                     <FormControlLabel control={<Checkbox onClick={handleRememberMe} />} label="Запомни ме" />
-                    <Button onClick={handleLogin} variant='contained'>Вход</Button>
+                    {loading ? <Button><Loader/></Button> :
+                    <Button onClick={handleLogin} variant='contained'>Вход</Button>}
                     <Link to={'/register'}>Нямаш регистрация? Кликни тук. </Link>
                 </form>
             </div>

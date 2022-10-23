@@ -12,6 +12,7 @@ export const loginUser = createAsyncThunk(
       },
     }).then((res) => {
       if(res.ok){
+        localStorage.setItem('loggedUser',JSON.stringify(username))
          return res.json()
       } 
       throw new Error('Wrong credentials')
@@ -37,12 +38,34 @@ export const registerUser = createAsyncThunk(
   }
 );
 
+
+
+export const logOut = createAsyncThunk(
+  "activeUser/logOut",
+  ({id}) => {
+    return fetch('https://itt-voting-api.herokuapp.com/logout',{
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id})
+  })
+  .then(r => {
+      
+  })
+  }
+)
+
+
+
 const initialState = {
   username: "",
   password: "",
   userRegistered: false,
   sessionId: '',
-  admin: false
+  admin: false,
+  loginLoader: false,
+  registerLoader: false,
 };
 
 export const activeUserSlice = createSlice({
@@ -53,12 +76,13 @@ export const activeUserSlice = createSlice({
       state.username = action.payload.username;
       state.password = action.payload.password;
     },
-    adminLogin: (state,action) => {
+    adminLogin: (state) => {
       state.admin = true;
     }
   },
   extraReducers: builder => {
     builder.addCase(loginUser.pending, (state,action) => {
+      state.loginLoader = true
 
     })
     builder.addCase(loginUser.fulfilled, (state, action) => {
@@ -78,8 +102,11 @@ export const activeUserSlice = createSlice({
       console.log(action.payload);
     });
     builder.addCase(registerUser.pending, (state, action) => {
-      state.userRegistered = false;
+      state.registerLoader = true;
     });
+    builder.addCase(logOut.fulfilled, (state,action) => {
+      localStorage.removeItem('activeUserId');
+    })
 },
 });
 

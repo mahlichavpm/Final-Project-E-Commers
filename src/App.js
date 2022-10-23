@@ -19,9 +19,11 @@ import ReviewPage from './pages/reviewPage/ReviewPage';
 
 function App() {
 
-  // const loggedUser = useSelector(state => state.activeUser.sessionId)
-  // const loggedUser = localStorage.getItem('rememberUser')
-  // const admin = useSelector(state => state.activeUser.admin)
+  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser') ;
+  // const loggedUser = localStorage.getItem('rememberUser');
+  const admin = useSelector(state => state.activeUser.admin);
+  // const userId = localStorage.getItem('accountId');
+  // za logOut ^
 
   // return (
   //   <ProfilePage/>
@@ -31,12 +33,12 @@ function App() {
   // )
 
   return (
-    // admin ?
-    //  <Routes>
-    //   <Route path='/admin' element={<AdminPage/>}/>
-    //   <Route path='*' element={<Navigate to={'/admin'}/>}/>
-    // </Routes> :
-    // loggedUser ? 
+    admin ?
+     <Routes>
+      <Route path='/admin' element={<AdminPage/>}/>
+      <Route path='*' element={<Navigate to={'/admin'}/>}/>
+    </Routes> :
+    loggedUser ? 
     <>
       <Header />
       <main className='main'>
@@ -55,16 +57,14 @@ function App() {
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </main>
-    </>
-
-    /* </> :
+     </> :
     <>
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='*' element={<Navigate to={'/login'}/>} />
       </Routes>
-    </> */
+    </>
   )
 }
 export default App

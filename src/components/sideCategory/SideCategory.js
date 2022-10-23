@@ -12,7 +12,7 @@ export default function SideCategory() {
 
   return (
     <>
-      <Button size="sm" style={{ backgroundColor: "white", color: "black", borderColor: "black"}} variant="primary" onClick={handleShow}>
+      <Button size="sm" style={{ backgroundColor: "white", color: "black", borderColor: "white"}} variant="primary" onClick={handleShow}>
         <MenuRoundedIcon/> Категории
       </Button>
 

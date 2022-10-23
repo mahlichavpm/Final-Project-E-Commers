@@ -88,10 +88,10 @@ export default function Header(props) {
             }}>
             <Box >
                 <StyledToolbar>
-                    <IconButton onMouseEnter={handleClickMenu}>
+                    {/* <IconButton onMouseEnter={handleClickMenu}>
                         <MenuIcon color="primary" />
-                    </IconButton>
-                    <Menu
+                    </IconButton> */}
+                    {/* <Menu
                         anchorEl={menu}
                         id="account-menu"
                         open={openMenu}
@@ -160,7 +160,7 @@ export default function Header(props) {
                         <ButtonLinkTwo color='custom' name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
-                    </Menu>
+                    </Menu> */}
 
 
                     <Link to={'/home'}>
@@ -233,9 +233,6 @@ export default function Header(props) {
                             </Link>
                             <Link className='link' to={'/history'} >
                                 <ButtonMenu startIcon={<HistoryIcon fontSize="small" />} name='Моите поръчки'></ButtonMenu>
-                            </Link>
-                            <Link className='link' to={'/review'} >
-                                <ButtonMenu startIcon={<StarBorderIcon fontSize="small" />} name='Ревюта'></ButtonMenu>
                             </Link>
                             <ButtonMenu startIcon={<Logout fontSize="small" />} name='Logout'></ButtonMenu>
                         </Menu>

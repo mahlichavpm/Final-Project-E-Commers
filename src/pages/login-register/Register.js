@@ -6,11 +6,14 @@ import { useEffect, useState } from "react";
 import { registerUser } from '../../store/activeUserSlice';
 import { Button, TextField } from "@mui/material";
 import Login from './Login';
+import Loader from '../../components/loader/Loader';
 
 
 export default function Register (){
 
     const successfulRegister = useSelector(state => state.activeUser.userRegistered);
+    const loading = useSelector(state => state.activeUser.registerLoader);
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -77,7 +80,8 @@ export default function Register (){
                      setPassword1(e.target.value);
                     
                     }} type={'password'} label={'Потвърдете паролата'}/>
-                    <Button  variant='contained' onClick={handleClick}>Регистрация</Button>
+                    {loading ? <Button><Loader/></Button> :
+                    <Button onClick={handleClick} variant='contained'>Регистрация</Button>}
                     <Link to={'/login'}>Вече имаш регистрация?</Link>
                     
                 </form>

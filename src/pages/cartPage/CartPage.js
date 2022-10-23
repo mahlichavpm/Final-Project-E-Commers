@@ -17,8 +17,8 @@ export default function Cart(props) {
             }}
             spacing={4}
         >
-            <Typography variant="h4">
-                Количка за пазаруване
+            <Typography sx={{marginTop: 2}} variant="h4">
+                Количка
             </Typography>
             <Stack
                 direction='row'

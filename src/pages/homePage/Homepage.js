@@ -54,11 +54,11 @@ export default function Homepage(props) {
                             <ButtonLinkTwo
                                 name='Телефони, Таблети & Лаптопи'
                                 startIcon={<PhoneAndroidOutlinedIcon />}
-                                onMouseEnter={handleClickMenuComp}
+                                // onMouseEnter={handleClickMenuComp}
                             >
                             </ButtonLinkTwo>
                         </Link>
-                        <Menu
+                        {/* <Menu
                             anchorEl={menuComp}
                             id="category-menu"
                             open={openMenuComp}
@@ -77,7 +77,7 @@ export default function Homepage(props) {
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        </Menu>
+                        </Menu> */}
                         <ButtonLinkTwo name='Компютри & Периферия' href={'/products'} startIcon={<ComputerOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
@@ -127,8 +127,6 @@ export default function Homepage(props) {
                 <ProductCardSlider />
 
             </main>
-            <AdminPage />
-
             <Stack direction='row'>
                 <Stack direction='column'>
                     <Typography variant='h4' >
