@@ -74,13 +74,17 @@ export const activeUserSlice = createSlice({
   reducers: {
 
     changeUserName: (state,action) => {
-      console.log(action.payload);
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      console.log(activeUser);
       activeUser.name = action.payload.name;
       localStorage.setItem('users',JSON.stringify(state.users));
     },
-    
+
+    changeUserPhone: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      activeUser.phone = action.payload.phone;
+      localStorage.setItem('users',JSON.stringify(state.users));
+    },
+
     adminLogin: (state) => {
       state.admin = true;
     }
@@ -114,6 +118,6 @@ export const activeUserSlice = createSlice({
 },
 });
 
-export const { changeUserName, adminLogin } = activeUserSlice.actions;
+export const { changeUserName, changeUserPhone, adminLogin } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

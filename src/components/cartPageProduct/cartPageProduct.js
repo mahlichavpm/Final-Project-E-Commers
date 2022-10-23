@@ -54,7 +54,7 @@ export default function CartPageProduct(props) {
                         <Stack
                             direction='row'
                         >
-                            <IconButton
+                            {/* <IconButton
                                 onClick={() => setRemove(false)}
                                 sx={{
                                     '&:hover': {
@@ -63,7 +63,7 @@ export default function CartPageProduct(props) {
                                 }}
                             >
                                 <FavoriteBorderIcon fontSize='small' />
-                            </IconButton>
+                            </IconButton> */}
                             <IconButton
                                 onClick={() => setRemove(false)}
                                 sx={{
