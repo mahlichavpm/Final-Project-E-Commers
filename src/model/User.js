@@ -1,9 +1,11 @@
-export class User {
-    constructor(username,password){
-        this.username = username,
-        this.password = password,
-        this.favourites = [],
-        this.history = [],
-        this.cart = []
-    }
+export const User = (username) => { 
+    return { username: username,
+             name:'',
+             phone: '', 
+             address: [],
+             favourites: [],
+             orderHistory: [],
+             cart: []
+            }
 }
+     

@@ -2,24 +2,30 @@
 import './Login.scss'
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { registerUser } from '../../store/activeUserSlice';
 import { Button, TextField } from "@mui/material";
 import Login from './Login';
 import Loader from '../../components/loader/Loader';
+import { User } from '../../model/User';
 
 
 export default function Register (){
 
     const successfulRegister = useSelector(state => state.activeUser.userRegistered);
     const loading = useSelector(state => state.activeUser.registerLoader);
-
+    let users = useSelector(state => state.activeUser.users)
     const navigate = useNavigate();
 
     useEffect(() => {
         if(successfulRegister){
+            let user = User(username)
+            users = [...users,user];
+            localStorage.setItem('users',JSON.stringify(users))
+            console.log(users);
             navigate('/login')
         }
+        setUsername('');
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[successfulRegister])
     
@@ -56,7 +62,6 @@ export default function Register (){
         e.preventDefault();
         let flag = passCompare();
         if(flag){
-            setUsername('');
             setPassword('');
             setPassword1('');
             setMatchPassErr(!flag)
@@ -68,7 +73,6 @@ export default function Register (){
     }
 
     return (
-        successfulRegister ? <Login/> :
         <div className="loginWrapper">
             <div className="loginContainer">
                 <form>
@@ -83,7 +87,6 @@ export default function Register (){
                     {loading ? <Button><Loader/></Button> :
                     <Button onClick={handleClick} variant='contained'>Регистрация</Button>}
                     <Link to={'/login'}>Вече имаш регистрация?</Link>
-                    
                 </form>
             </div>
         </div>

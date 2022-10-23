@@ -60,8 +60,8 @@ export const logOut = createAsyncThunk(
 
 const initialState = {
   username: "",
-  password: "",
-  userRegistered: false,
+  users: JSON.parse(localStorage.getItem('users')) || [],
+  userRegistered: null,
   sessionId: '',
   admin: false,
   loginLoader: false,
@@ -72,10 +72,15 @@ export const activeUserSlice = createSlice({
   name: "activeUser",
   initialState,
   reducers: {
-    changeUserData: (state, action) => {
-      state.username = action.payload.username;
-      state.password = action.payload.password;
+
+    changeUserName: (state,action) => {
+      console.log(action.payload);
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      console.log(activeUser);
+      activeUser.name = action.payload.name;
+      localStorage.setItem('users',JSON.stringify(state.users));
     },
+    
     adminLogin: (state) => {
       state.admin = true;
     }
@@ -93,9 +98,8 @@ export const activeUserSlice = createSlice({
     builder.addCase(loginUser.rejected, (state, action) => {
       console.log(action.payload);
     })
-    builder.addCase(registerUser.fulfilled, (state) => {
-          state.userRegistered = true;
-          
+    builder.addCase(registerUser.fulfilled, (state,action) => {
+      state.userRegistered = true;
         });
     builder.addCase(registerUser.rejected, (state, action) => {
       state.userRegistered = false;
@@ -110,6 +114,6 @@ export const activeUserSlice = createSlice({
 },
 });
 
-export const { changeUserData, adminLogin } = activeUserSlice.actions;
+export const { changeUserName, adminLogin } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;
