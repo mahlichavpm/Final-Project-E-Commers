@@ -2,7 +2,6 @@ import { TextField, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import ButtonLinkFooter from '../buttons/ButtonLinkFooter';
 import './Footer.scss';
-import FooterRow from './FooterRow';
 
 export default function Footer() {
   return (

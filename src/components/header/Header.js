@@ -33,6 +33,18 @@ import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined
 import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 
+
+
+// import * as React from 'react';
+// import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+
+function uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+        (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+}
+
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent: "space-between",
@@ -77,21 +89,22 @@ export default function Header(props) {
     };
 
     const [menuComp, setMenuComp] = React.useState(null);
-    const openMenuComp = Boolean(menuComp);
+    const openMenuComp = Boolean(null);
     const handleClickMenuComp = (event) => {
         setMenuComp(event.currentTarget);
     };
     return (
-        <AppBar position="sticky"
-            sx={{
-                bgcolor: "white",
-            }}>
-            <Box >
-                <StyledToolbar>
-                    {/* <IconButton onMouseEnter={handleClickMenu}>
+        <>
+            <AppBar position="sticky"
+                sx={{
+                    bgcolor: "white",
+                }}>
+                <Box >
+                    <StyledToolbar>
+                        {/* <IconButton onMouseEnter={handleClickMenu}>
                         <MenuIcon color="primary" />
                     </IconButton> */}
-                    {/* <Menu
+                        {/* <Menu
                         anchorEl={menu}
                         id="account-menu"
                         open={openMenu}
@@ -114,30 +127,65 @@ export default function Header(props) {
                         transformOrigin={{ horizontal: 'left', vertical: 'top' }}
                         anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
                     >
-                        <ButtonLinkTwo onMouseEnter={handleClickMenuComp} name='Компютри & Периферия' startIcon={<ComputerOutlinedIcon />} />
-                        <Menu
+                        {/* <ButtonLinkTwo
+                            onMouseEnter={(e) => handleClickMenuComp(e)}
+                            onMouseLeave={(e) => handleClose(e)}
+                            name='Компютри & Периферия'
+                            startIcon={<ComputerOutlinedIcon />}
+                        /> */}
+
+                        <Button
+                            sx={{
+                                color: '#222',
+                                display: 'flex',
+                                justifyContent: 'flex-start',
+                                padding: '6px 20px',
+                                fontSize: '12px',
+                                textTransform: 'none',
+                                borderTop: '1px solid transparent',
+                                borderBottom: '1px solid transparent',
+                                textDecoration: 'none',
+                                width: '250px',
+                                borderRadius: '0px',
+                                '&:hover': {
+                                    borderTop: '1px solid  rgba(34, 34, 34, 0.2)',
+                                    borderBottom: '1px solid  rgba(34, 34, 34, 0.2)',
+                                    color: '#0082e6',
+                                },
+                            }}
+                            underline='none'
+                            key={uuidv4()}
+                            startIcon={<ComputerOutlinedIcon />}
+                            onMouseEnter={(e) => handleClickMenuComp(e)}
+                            onMouseLeave={(e) => handleClose(e)}
+                        >
+                            Компютри & Периферия
+                        </Button>
+
+                        {/* <Menu
                             anchorEl={menuComp}
                             id="account-menu"
                             open={openMenuComp}
-                            onMouseLeave={() => handleClose(setMenuComp)}
-                            onClose={() => handleClose(setMenuComp)}
+                            // onMouseLeave={() => handleClose(setMenuComp)}
+                            // onClose={() => handleClose(setMenuComp)}
                             PaperProps={{
                                 elevation: 0,
                                 sx: {
                                     overflow: 'visible',
                                     filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
                                     mt: 1.5,
-                                    // '& .MuiAvatar-root': {
-                                    //     width: 32,
-                                    //     height: 32,
-                                    //     ml: -0.5,
-                                    //     mr: 1,
-                                    // },
+                                    '& .MuiAvatar-root': {
+                                        width: 320,
+                                        height: 32,
+                                        ml: -0.5,
+                                        mr: 1,
+                                    },
                                 },
                             }}
-                            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                            anchorOrigin={{ horizontal: 'left ', vertical: 'top' }}
+                            transformOrigin={{ horizontal: 'top', vertical: 'right' }}
+                            anchorOrigin={{ horizontal: 'top ', vertical: 'left' }}
                         >
+
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
@@ -148,7 +196,7 @@ export default function Header(props) {
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        </Menu>
+                        </Menu> */}{/* 
                         <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
@@ -160,7 +208,7 @@ export default function Header(props) {
                         <ButtonLinkTwo color='custom' name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
-                    </Menu> */}
+                        </Menu> */}
 
 
                     <Link to={'/home'}>
@@ -331,5 +379,6 @@ export default function Header(props) {
                 </StyledNav>
             </Box>
         </AppBar >
+        </>
     )
 }

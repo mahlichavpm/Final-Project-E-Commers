@@ -6,16 +6,15 @@ import Register from './pages/login-register/Register';
 import Homepage from './pages/homePage/Homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header';
-import { useSelector } from 'react-redux';
-import Banner from './components/banner/Banner';
 import ProductPage from './pages/productPage/ProductPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import AllProductsList from './pages/allProducts/AllProductsList';
 import AdminPage from './pages/adminPage/AdminPage';
-import LovePage from './pages/lovePage/love';
+import FavoritesPage from './pages/favoritesPage/favorites';
 import CartPage from './pages/cartPage/CartPage'
 import HistoryPage from './pages/historyPage/HistoryPage';
 import ReviewPage from './pages/reviewPage/ReviewPage';
+import { useSelector } from 'react-redux';
 
 function App() {
 
@@ -48,7 +47,7 @@ function App() {
           <Route path='/home' element={<Homepage />} />
           <Route path='/products' element={<CategoryPage />} />
           <Route path='/history' element={<HistoryPage />} />
-          <Route path='/love' element={<LovePage />} />
+          <Route path='/love' element={<FavoritesPage />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/review' element={<ReviewPage />} />
@@ -57,7 +56,8 @@ function App() {
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </main>
-     </> :
+      </>
+    :
     <>
       <Routes>
         <Route path='/login' element={<Login />} />
