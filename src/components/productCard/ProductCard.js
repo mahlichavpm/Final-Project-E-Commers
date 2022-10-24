@@ -17,17 +17,13 @@ export default function ProductCard(props) {
     // }
     return (
         <Card sx={{
-            maxWidth: 300,
-            minWidth: 300,
+            maxWidth: 288,
+            minWidth: 288,
             border: '1px solid  rgba(34, 34, 34, 0.2)',
             borderRadius: '8px'
         }}
         >
-            <CardActionArea
-                // onClick={
-
-                // }
-            >
+            <CardActionArea>
                 <Stack>
                     <CardMedia
                         component="img"
@@ -44,7 +40,12 @@ export default function ProductCard(props) {
                             backgroundColor: 'white',
                             color: 'primary.main'
                         }
-                    }}>
+                        }}
+                        onClick={(e)=>{
+                            e.stopPropagation()
+                            props.onClickFav(props.key)
+                        }}
+                    >
                         <FavoriteBorderIcon color="custom.light" />
                     </IconButton>
                 </Stack>
@@ -72,7 +73,10 @@ export default function ProductCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <ProductButton onClick={(e)=>{props.onClick(props.key)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                <ProductButton 
+                    onClick={(e)=>{props.onClick(props.key)}} 
+                    name='Добави в количката' 
+                    startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
 
         </Card>
