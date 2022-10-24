@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loginUser = createAsyncThunk(
@@ -56,8 +56,6 @@ export const logOut = createAsyncThunk(
   }
 )
 
-
-
 const initialState = {
   username: "",
   users: JSON.parse(localStorage.getItem('users')) || [],
@@ -75,6 +73,15 @@ export const activeUserSlice = createSlice({
   initialState,
   reducers: {
 
+    addToFavourites: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      console.log(current(activeUser));
+      if(activeUser.favourites.indexOf(action.payload.key) === -1){
+        activeUser.favourites.push(action.payload.key)
+      }
+      localStorage.setItem('users',JSON.stringify(state.users));
+
+    },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       activeUser.name = action.payload.name;
@@ -153,7 +160,8 @@ export const {
   changeUserManipulacity,
   loginErrorHandler,
   registerErrorHandler,
-  pushToLocalStorage
+  pushToLocalStorage,
+  addToFavourites
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

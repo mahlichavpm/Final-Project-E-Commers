@@ -33,8 +33,8 @@ export default function ButtonLink(props) {
             startIcon={props.startIcon}
             endIcon={props.endIcon}
             // onMouseEnter={(e) => {props.onMouseEnter(e)}}
-            onMouseLeave={props.onMouseLeave}
-            onMouseEnter={(e) => {props.onMouseEnter(e)}}
+            // onMouseLeave={props.onMouseLeave}
+            // onMouseEnter={(e) => {props.onMouseEnter(e)}}
             // onMouseLeave={(e) => {props.onMouseLeave(e)}}
             underline='none'
             key={uuidv4()}

@@ -5,8 +5,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export default function CartPageProduct(props) {
-    const [remove, setRemove] = useState(true);
-    if (remove) {
         return (
 
             <Stack
@@ -65,7 +63,7 @@ export default function CartPageProduct(props) {
                                 <FavoriteBorderIcon fontSize='small' />
                             </IconButton> */}
                             <IconButton
-                                onClick={() => setRemove(false)}
+                                onClick={() => props.removeItem()}
                                 sx={{
                                     '&:hover': {
                                         color: 'alert.main',
@@ -79,5 +77,4 @@ export default function CartPageProduct(props) {
                 </CardActions>
             </Stack>
         )
-    }
 }

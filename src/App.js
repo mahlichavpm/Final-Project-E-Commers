@@ -10,7 +10,7 @@ import ProductPage from './pages/productPage/ProductPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
 import AllProductsList from './pages/allProducts/AllProductsList';
 import AdminPage from './pages/adminPage/AdminPage';
-import FavoritesPage from './pages/favoritesPage/favorites';
+import FavoritesPage from './pages/favoritesPage/FavouritePage';
 import CartPage from './pages/cartPage/CartPage'
 import HistoryPage from './pages/historyPage/HistoryPage';
 import ReviewPage from './pages/reviewPage/ReviewPage';

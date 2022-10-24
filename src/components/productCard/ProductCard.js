@@ -23,7 +23,7 @@ export default function ProductCard(props) {
             borderRadius: '8px'
         }}
         >
-            <CardActionArea>
+            <CardActionArea onClick={() => {console.log('cartichka')}}>
                 <Stack>
                     <CardMedia
                         component="img"
@@ -42,7 +42,7 @@ export default function ProductCard(props) {
                         }
                     }}
                     onClick={(e)=>{
-                        e.stopImmediatePropagation()
+                        e.stopPropagation()
                         props.onClickFav()
                     }}>
                         <FavoriteBorderIcon color="custom.light" />

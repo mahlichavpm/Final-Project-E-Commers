@@ -273,7 +273,7 @@ export default function Header(props) {
                                 <ButtonMenu startIcon={<ProfileAvatar sx={{ bgcolor: 'orange' }} />} name='Профил'></ButtonMenu>
                             </Link>
                             <Divider />
-                            <Link className='link' to={'/love'} >
+                            <Link className='link' to={'/favourites'} >
                                 <ButtonMenu startIcon={<FavoriteBorderIcon fontSize="small" />} name='Любими'></ButtonMenu>
                             </Link>
                             <Link className='link' to={'/cart'} >

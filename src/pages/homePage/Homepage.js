@@ -127,23 +127,6 @@ export default function Homepage(props) {
                 <ProductCardSlider />
 
             </main>
-            <Stack direction='row'>
-                <Stack direction='column'>
-                    <Typography variant='h4' >
-                        Свали приложението на eMAG
-                    </Typography>
-                    <Typography variant='p' >
-                        Попълни телефонния си номер и ще ти изпратим линк за
-                        сваляне на приложението.
-                    </Typography>
-                </Stack>
-                <Stack>
-
-                    <TextField placeholder='089 XXX XXXX'></TextField>
-                </Stack>
-
-            </Stack>
-
             <footer>
                 <Footer />
             </footer>

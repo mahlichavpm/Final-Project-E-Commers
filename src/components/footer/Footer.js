@@ -1,4 +1,4 @@
-import { TextField, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import ButtonLinkFooter from '../buttons/ButtonLinkFooter';
 import './Footer.scss';
