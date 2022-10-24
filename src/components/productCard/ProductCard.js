@@ -74,7 +74,7 @@ export default function ProductCard(props) {
             </CardActionArea>
             <CardActions>
                 <ProductButton 
-                    onClick={(e)=>{props.onClick(props.key)}} 
+                    onClick={(e)=>{props.onClick()}} 
                     name='Добави в количката' 
                     startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
