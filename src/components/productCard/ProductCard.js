@@ -23,11 +23,7 @@ export default function ProductCard(props) {
             borderRadius: '8px'
         }}
         >
-            <CardActionArea
-                // onClick={
-
-                // }
-            >
+            <CardActionArea>
                 <Stack>
                     <CardMedia
                         component="img"

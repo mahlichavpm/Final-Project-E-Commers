@@ -108,20 +108,11 @@ export default function AllProductsList() {
               width={200}
               
             >
-              <Stack
-                sx={{
-                  backgroundColor: 'white',
-                  width: '100%',
-                  borderRadius: '8px',
-                  padding: '8px'
-                }}
-              >
-                <Menu
+               <Menu
                 mode="inline"
                 style={{ height: '100%' }}
                 items={items}
               />
-              </Stack>
               
             </Sider>
             <Content style={{ padding: '0 24px', minHeight: 280 }}>
@@ -138,7 +129,6 @@ export default function AllProductsList() {
                     key={e.key}
                     onClick={() => {console.log(e.key);}}
                     onClickFav={() => {console.log(e.key);}}
-                    
                   ></ProductCard>)}
               </div>
             </Content>
