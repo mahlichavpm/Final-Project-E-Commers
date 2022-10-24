@@ -49,7 +49,7 @@ export default function CartPageProduct(props) {
                                 overflow: 'hidden'
                             }}
                         >
-                            {props.price || '200лв'}
+                            {props.price || '20000лв'}
                         </Typography>
                         <Stack
                             direction='row'

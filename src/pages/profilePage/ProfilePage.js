@@ -27,7 +27,7 @@ export default function ProfilePage() {
     dispatch(changeUserAddress1({ loggedUser, address1 }));
     dispatch(changeUserAddress2({ loggedUser, address2 }));
     dispatch(changeUserManipulacity({ loggedUser, manipulacity }));
-
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, phone, city, manipulacity, address1, address2]);
 
   const handleNameChange = (e) => {
