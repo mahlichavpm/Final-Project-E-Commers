@@ -136,6 +136,7 @@ export default function AllProductsList() {
                     stock={e.stock}
                     price={e.price}
                     key={e.key}
+                    
                   ></ProductCard>)}
               </div>
             </Content>

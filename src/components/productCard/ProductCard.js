@@ -55,7 +55,7 @@ export default function ProductCard(props) {
                         variant="h5" 
                         component="div" 
                         color='custom'
-                        noWrap='true'
+                        noWrap={true}
                     >
                         {props.title || "Има Проблем!"}
                     </Typography>
@@ -72,7 +72,7 @@ export default function ProductCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                <ProductButton onClick={(e)=>{props.onClick(props.key)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
 
         </Card>

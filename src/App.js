@@ -14,6 +14,7 @@ import FavoritesPage from './pages/favoritesPage/favorites';
 import CartPage from './pages/cartPage/CartPage'
 import HistoryPage from './pages/historyPage/HistoryPage';
 import ReviewPage from './pages/reviewPage/ReviewPage';
+import { useSelector } from 'react-redux';
 
 function App() {
 
@@ -55,7 +56,8 @@ function App() {
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </main>
-     </> :
+      </>
+    :
     <>
       <Routes>
         <Route path='/login' element={<Login />} />

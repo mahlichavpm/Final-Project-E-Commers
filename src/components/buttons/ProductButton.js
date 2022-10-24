@@ -10,7 +10,6 @@ const ProductButton = styled(Button)({
     '&:hover': {
         background: 'linear-gradient(to right,#3147a8 10%,#206cc7)',
     }
-
 })
 
 export default function ProductCustomButton(props) {
@@ -19,6 +18,7 @@ export default function ProductCustomButton(props) {
             variant="contained"
             startIcon={props.startIcon}
             endIcon={props.endIcon}
+            onClick={(e)=>{props.onClick(e)}}
         >
             {props.name}
         </ProductButton>

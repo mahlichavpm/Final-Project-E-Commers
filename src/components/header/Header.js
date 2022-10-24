@@ -94,16 +94,17 @@ export default function Header(props) {
         setMenuComp(event.currentTarget);
     };
     return (
-        <AppBar position="sticky"
-            sx={{
-                bgcolor: "white",
-            }}>
-            <Box >
-                <StyledToolbar>
-                    {/* <IconButton onMouseEnter={handleClickMenu}>
+        <>
+            <AppBar position="sticky"
+                sx={{
+                    bgcolor: "white",
+                }}>
+                <Box >
+                    <StyledToolbar>
+                        {/* <IconButton onMouseEnter={handleClickMenu}>
                         <MenuIcon color="primary" />
                     </IconButton> */}
-                    {/* <Menu
+                        {/* <Menu
                         anchorEl={menu}
                         id="account-menu"
                         open={openMenu}
@@ -195,7 +196,7 @@ export default function Header(props) {
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                             <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        </Menu> */}
+                        </Menu> */}{/* 
                         <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
@@ -207,7 +208,7 @@ export default function Header(props) {
                         <ButtonLinkTwo color='custom' name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
                         <ButtonLinkTwo color='custom' name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
-                    </Menu> */}
+                        </Menu> */}
 
 
                     <Link to={'/home'}>
@@ -378,5 +379,6 @@ export default function Header(props) {
                 </StyledNav>
             </Box>
         </AppBar >
+        </>
     )
 }
