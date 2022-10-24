@@ -3,9 +3,8 @@ import './Login.scss'
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { registerUser } from '../../store/activeUserSlice';
+import { registerUser, registerErrorHandler } from '../../store/activeUserSlice';
 import { Button, TextField } from "@mui/material";
-import Login from './Login';
 import Loader from '../../components/loader/Loader';
 import { User } from '../../model/User';
 
@@ -14,6 +13,7 @@ export default function Register (){
 
     const successfulRegister = useSelector(state => state.activeUser.userRegistered);
     const loading = useSelector(state => state.activeUser.registerLoader);
+    const error = useSelector(state => state.activeUser.registerError)
     let users = useSelector(state => state.activeUser.users)
     const navigate = useNavigate();
 
@@ -72,12 +72,17 @@ export default function Register (){
 
     }
 
+    const handleInput = (e) => {
+        setUsername(e.target.value);
+        dispatch(registerErrorHandler);
+    }
+
     return (
         <div className="loginWrapper">
             <div className="loginContainer">
                 <form>
                     <h4>Моля въведи данните си за да се регистрираш:</h4>
-                    <TextField size="small" id={'username'} width='true'  value={username} onChange={(e) => {setUsername(e.target.value)}} type={'text'}label={'Потребителско име'}/>
+                    <TextField size="small" error={error} id={'username'} width='true'  value={username} onChange={handleInput} type={'text'}label={'Потребителско име'}/>
                     <TextField size="small" id={'password'} width='true' value={password} onChange={(e) => {setPassword(e.target.value)}} type={'password'} label={'Парола'}/>
 
                     <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={(e) => {

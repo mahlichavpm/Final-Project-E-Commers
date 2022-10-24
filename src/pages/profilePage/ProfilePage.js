@@ -1,9 +1,9 @@
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import "./ProfilePage.scss";
 import ProfileAvatar from "../../components/profileAvatar/ProfileAvatar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { changeUserName, changeUserPhone } from "../../store/activeUserSlice";
+import { changeUserName, pushToLocalStorage, changeUserPhone, changeUserAddress1, changeUserAddress2, changeUserManipulacity ,changeUserTown } from "../../store/activeUserSlice";
 
 export default function ProfilePage() {
   const users = useSelector((state) => state.activeUser.users);
@@ -14,11 +14,21 @@ export default function ProfilePage() {
   const [name, setName] = useState(activeUser.name);
   const [phone, setPhone] = useState(activeUser.phone);
   const [phoneError, setPhoneError] = useState(false);
+  const [manipulacity,setManipulacity] = useState(activeUser.address.manipulacity);
+  const [city,setCity] = useState(activeUser.address.city);
+  const [address1,setAddress1] = useState(activeUser.address.address1);
+  const [address2,setAddress2] = useState(activeUser.address.address2);
+  const [saveLoader,setSaveLoader] = useState(false)
 
   useEffect(() => {
     dispatch(changeUserName({ loggedUser, name }));
     dispatch(changeUserPhone({ loggedUser, phone }));
-  }, [name, phone]);
+    dispatch(changeUserTown({ loggedUser, city }));
+    dispatch(changeUserAddress1({ loggedUser, address1 }));
+    dispatch(changeUserAddress2({ loggedUser, address2 }));
+    dispatch(changeUserManipulacity({ loggedUser, manipulacity }));
+
+  }, [name, phone, city, manipulacity, address1, address2]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -26,13 +36,24 @@ export default function ProfilePage() {
 
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
-    // let input = phone;
-    // if (input.length === 10) {
-    //   setPhoneError(false);
-    // } else {
-    //   setPhoneError(true);
-    // }
   };
+
+  const handleCityChange = (e) => {
+    setCity(e.target.value);
+  };
+
+  const handleManipulacityChange = (e) => {
+    setManipulacity(e.target.value);
+  };
+
+  const handleAddress1Change = (e) => {
+    setAddress1(e.target.value);
+  };
+
+  const handleAddress2Change = (e) => {
+    setAddress2(e.target.value);
+  }
+
 
   useEffect(() => {
     let input = phone;
@@ -44,6 +65,14 @@ export default function ProfilePage() {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
 },[activeUser.phone])
+
+// const saveChanges = () => {
+//   let id = setTimeout(() => {setSaveLoader(true)},500);
+//   setSaveLoader(false)
+//   clearTimeout(id);
+//   dispatch(pushToLocalStorage())
+//   dobavi na buttona -- onClick={() => saveChanges}
+// }
 
   return (
     <>
@@ -97,6 +126,7 @@ export default function ProfilePage() {
             <TextField
               variant="standard"
               id={"country"}
+              disabled
               width="true"
               value={"България"}
               type={"text"}
@@ -106,7 +136,8 @@ export default function ProfilePage() {
               variant="standard"
               id={"manipulacity"}
               width="true"
-              value={"Бургас"}
+              value={manipulacity}
+              onInput={handleManipulacityChange}
               type={"text"}
               label={"Област"}
             />
@@ -114,7 +145,8 @@ export default function ProfilePage() {
               variant="standard"
               id={"city"}
               width="true"
-              value={"Поморие"}
+               value={city}
+              onInput={handleCityChange}
               type={"text"}
               label={"Град"}
             />
@@ -122,7 +154,8 @@ export default function ProfilePage() {
               variant="standard"
               id={"address1"}
               width="true"
-              value={"кв.Свобода"}
+              value={address1}
+              onInput={handleAddress1Change}
               type={"text"}
               label={"Адрес 1"}
             />
@@ -130,10 +163,12 @@ export default function ProfilePage() {
               variant="standard"
               id={"address2"}
               width="true"
-              value={"бл.16 вх.А ет.3"}
+              value={address2}
+              onInput={handleAddress2Change}
               type={"text"}
               label={"Адрес 2"}
             />
+            <Button size={'small'} sx={{color: "black"}}>Запази промените</Button>
           </div>
         </div>
       </div>

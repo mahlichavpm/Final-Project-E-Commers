@@ -3,7 +3,6 @@ export const User = (username) => {
              name:'',
              phone: '0800000000', 
              address: {
-                contry: 'България',
                 manipulacity: '',
                 city: '',
                 address1: '',

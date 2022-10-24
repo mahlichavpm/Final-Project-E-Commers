@@ -65,7 +65,9 @@ const initialState = {
   sessionId: '',
   admin: false,
   loginLoader: false,
+  loginError: false,
   registerLoader: false,
+  registerError: false,
 };
 
 export const activeUserSlice = createSlice({
@@ -78,21 +80,44 @@ export const activeUserSlice = createSlice({
       activeUser.name = action.payload.name;
       localStorage.setItem('users',JSON.stringify(state.users));
     },
-
     changeUserPhone: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       activeUser.phone = action.payload.phone;
       localStorage.setItem('users',JSON.stringify(state.users));
     },
-
+    changeUserTown: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      activeUser.address.city = action.payload.city;
+    },
+    changeUserAddress1: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      activeUser.address.address1 = action.payload.address1;
+    },
+    changeUserAddress2: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      activeUser.address.address2 = action.payload.address2;
+    },
+    changeUserManipulacity: (state,action) => {
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      activeUser.address.manipulacity = action.payload.manipulacity;
+    },
     adminLogin: (state) => {
       state.admin = true;
+    },
+    loginErrorHandler: (state) => {
+      state.loginError = false;
+    },
+    registerErrorHandler: (state,action) => {
+      state.registerError = false;
+    },
+    pushToLocalStorage: (state) => {
+      localStorage.setItem('users',JSON.stringify(state.users));
+      console.log('qm')
     }
   },
   extraReducers: builder => {
     builder.addCase(loginUser.pending, (state,action) => {
       state.loginLoader = true
-
     })
     builder.addCase(loginUser.fulfilled, (state, action) => {
       state.sessionId = action.payload.sessionId;
@@ -100,12 +125,15 @@ export const activeUserSlice = createSlice({
       state.loggedUser = true;
     })
     builder.addCase(loginUser.rejected, (state, action) => {
-      console.log(action.payload);
+      state.loginLoader = false;
+      state.loginError = true;
     })
     builder.addCase(registerUser.fulfilled, (state,action) => {
       state.userRegistered = true;
         });
     builder.addCase(registerUser.rejected, (state, action) => {
+      state.registerLoader = false;
+      state.registerError = true;
       state.userRegistered = false;
       console.log(action.payload);
     });
@@ -118,6 +146,14 @@ export const activeUserSlice = createSlice({
 },
 });
 
-export const { changeUserName, changeUserPhone, adminLogin } = activeUserSlice.actions;
+export const { 
+  changeUserName, changeUserPhone, 
+  changeUserTown, changeUserAddress1,
+  changeUserAddress2, adminLogin,
+  changeUserManipulacity,
+  loginErrorHandler,
+  registerErrorHandler,
+  pushToLocalStorage
+} = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;
