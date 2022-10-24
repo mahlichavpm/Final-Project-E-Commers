@@ -134,7 +134,7 @@ export default function Header(props) {
                             startIcon={<ComputerOutlinedIcon />}
                         /> */}
 
-                        <Button
+                        {/* <Button
                             sx={{
                                 color: '#222',
                                 display: 'flex',
@@ -160,7 +160,7 @@ export default function Header(props) {
                             onMouseLeave={(e) => handleClose(e)}
                         >
                             Компютри & Периферия
-                        </Button>
+                        </Button> */}
 
                         {/* <Menu
                             anchorEl={menuComp}

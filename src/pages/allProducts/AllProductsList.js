@@ -136,6 +136,8 @@ export default function AllProductsList() {
                     stock={e.stock}
                     price={e.price}
                     key={e.key}
+                    onClick={() => {console.log(e.key);}}
+                    onClickFav={() => {console.log(e.key);}}
                     
                   ></ProductCard>)}
               </div>

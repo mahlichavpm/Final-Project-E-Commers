@@ -47,7 +47,7 @@ function App() {
           <Route path='/home' element={<Homepage />} />
           <Route path='/products' element={<CategoryPage />} />
           <Route path='/history' element={<HistoryPage />} />
-          <Route path='/love' element={<FavoritesPage />} />
+          <Route path='/favourites' element={<FavoritesPage />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/review' element={<ReviewPage />} />
