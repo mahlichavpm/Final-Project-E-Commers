@@ -16,6 +16,7 @@ import HistoryPage from './pages/historyPage/HistoryPage';
 import ReviewPage from './pages/reviewPage/ReviewPage';
 import { useSelector } from 'react-redux';
 import Footer from './components/footer/Footer';
+import ErrorPage from './pages/errorPage/ErrorPage';
 
 function App() {
 
@@ -38,13 +39,12 @@ function App() {
       <Route path='/admin' element={<AdminPage/>}/>
       <Route path='*' element={<Navigate to={'/admin'}/>}/>
     </Routes> :
-    loggedUser ? 
-    <>
+         <>
       <Header />
       <main className='main'>
         <Routes>
           <Route path='/' element={<Navigate to={'/home'} />} />
-          <Route path='/login' element={<Navigate to={'/home'} />} />
+          <Route path='/login' element={<Login/>} />
           <Route path='/home' element={<Homepage />} />
           <Route path='/products' element={<CategoryPage />} />
           <Route path='/history' element={<HistoryPage />} />
@@ -54,21 +54,13 @@ function App() {
           <Route path='/review' element={<ReviewPage />} />
           <Route path='/product' element={<ProductPage />} />
           <Route path='/products/category' element={<AllProductsList />} />
-          <Route path='*' element={<div>404</div>} />
+          <Route path='*' element={<ErrorPage/>} />
         </Routes>
       </main>
       <footer>
                 <Footer />
       </footer>
       </>
-    :
-    <>
-      <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='*' element={<Navigate to={'/login'}/>} />
-      </Routes>
-    </>
   )
 }
 export default App

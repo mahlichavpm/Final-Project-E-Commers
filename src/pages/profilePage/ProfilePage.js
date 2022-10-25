@@ -4,6 +4,7 @@ import ProfileAvatar from "../../components/profileAvatar/ProfileAvatar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { changeUserName, pushToLocalStorage, changeUserPhone, changeUserAddress1, changeUserAddress2, changeUserManipulacity ,changeUserTown } from "../../store/activeUserSlice";
+import { useNavigate } from "react-router";
 
 export default function ProfilePage() {
   const users = useSelector((state) => state.activeUser.users);
@@ -19,6 +20,7 @@ export default function ProfilePage() {
   const [address1,setAddress1] = useState(activeUser.address.address1);
   const [address2,setAddress2] = useState(activeUser.address.address2);
   const [saveLoader,setSaveLoader] = useState(false)
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(changeUserName({ loggedUser, name }));
@@ -52,6 +54,14 @@ export default function ProfilePage() {
 
   const handleAddress2Change = (e) => {
     setAddress2(e.target.value);
+  }
+
+  const handleLogout = () => {
+    localStorage.removeItem('loggedUser');
+    localStorage.removeItem('rememberUser');
+    localStorage.removeItem('accountId');
+    navigate('/home');
+
   }
 
 
@@ -169,6 +179,7 @@ export default function ProfilePage() {
               label={"Адрес 2"}
             />
             <Button size={'small'} onClick={()=>{dispatch(pushToLocalStorage())}} sx={{color: "black"}}>Запази промените</Button>
+            <Button size={'small'} onClick={()=>{handleLogout()}} sx={{color: "black"}}>Изход от профила</Button>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loginUser = createAsyncThunk(
@@ -60,6 +60,8 @@ const initialState = {
   username: "",
   users: JSON.parse(localStorage.getItem('users')) || [],
   userRegistered: null,
+  cart: [],
+  favourites: [],
   sessionId: '',
   admin: false,
   loginLoader: false,
@@ -75,13 +77,9 @@ export const activeUserSlice = createSlice({
 
 
     removeItemFromCart: (state,action) => {
-      console.log('remove' + action.payload);
-      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      console.log(activeUser);
-      //undefined ???
-      let index = activeUser.cart.indexOf(action.payload)
-      if(index != -1){
-        activeUser.cart.splice(index,1);
+      let index = state.cart.indexOf(action.payload)
+      if(index !== -1){
+        state.cart.splice(index,1);
         console.log('Remove');
       } 
        localStorage.setItem('users',JSON.stringify(state.users));
@@ -96,9 +94,9 @@ export const activeUserSlice = createSlice({
     },
     addToCart: (state,action) => {
       console.log('cart');
-      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      if(activeUser.cart.indexOf(action.payload.key) === -1){
-        activeUser.cart.push(action.payload.key)
+      // let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      if(state.cart.indexOf(action.payload.key) === -1){
+        state.cart.push(action.payload.key)
       } 
       localStorage.setItem('users',JSON.stringify(state.users));
     },

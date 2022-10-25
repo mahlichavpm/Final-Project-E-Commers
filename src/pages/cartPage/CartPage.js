@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Button from "../../components/buttons/ProductButton";
 import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
@@ -12,7 +12,7 @@ export default function Cart(props) {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
-    const cartList = activeUser.cart;
+    const cartList = useSelector(state => state.activeUser.cart)
     const renderList = [];
 
     (() => {
@@ -23,8 +23,6 @@ export default function Cart(props) {
                 }
             }
         }
-        console.log(renderList);
-
     })();
 
 
@@ -39,9 +37,20 @@ export default function Cart(props) {
     const [finalPrice,setFinalPrice] = useState(totalPrice());
     const [deliveryPrice,setDeliveryPrice] = useState(10);
 
-    // setFinalPrice(totalPrice())
+    useEffect(() => {
+        setFinalPrice(totalPrice())
+    },[cartList])
+
+    useEffect(() => {
+        if(finalPrice >= 100){
+            setDeliveryPrice(0)
+        }
+    },[finalPrice])
 
     return (
+        // renderList ? 
+        // <div>HUI</div>
+        // :
         <Stack
             sx={{
                 maxWidth: '1240px',

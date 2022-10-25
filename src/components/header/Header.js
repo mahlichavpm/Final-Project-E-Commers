@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import MenuItemProduct from "./MenuItemProduct";
 import SideCategory from '../sideCategory/SideCategory';
 import ButtonMenu from './ButtonMenu';
@@ -68,6 +68,8 @@ const StyledNav = styled(Box)({
 })
 
 export default function Header(props) {
+
+    const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -96,13 +98,15 @@ export default function Header(props) {
     };
 
 
-    const users = JSON.parse(localStorage.getItem('users'));
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    const activeUser = users.find(e => e.username === loggedUser);
-    const productList = useSelector(state => state.product.product);
-    const cartList = activeUser.cart;
+    // const users = JSON.parse(localStorage.getItem('users'));
+    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    // const activeUser = users.find(e => e.username === loggedUser);
+    // const productList = useSelector(state => state.product.product);
+    // const cartList = activeUser.cart;
 
-    const [cartBadge,setCardBadge] = useState(cartList.length)
+    // const [cartBadge,setCardBadge] = useState(0)
+    const cartBadge = useSelector(state => state.activeUser.cart)
+    const favouritesCart = useSelector(state => state.activeUser.favourites)
 
     const [proba, setProba] = React.useState(null);
     const openProba = Boolean(proba);
@@ -207,12 +211,15 @@ export default function Header(props) {
                                 xl: "flex",
                             }
                         }}>
+                        <Button sx={{color: "black"}} onClick={() => {navigate('/profile')}}>
                         <ProfileAvatar
-                            sx={{ bgcolor: 'orange', width: 36, height: 36 }}
+                            sx={{ bgcolor: 'orange',fontSize: '14px',marginRight: 1 , width: 28, height: 28 }}
                             onMouseEnter={handleClick}
                         />
+                        <span>Профил</span>
+                        </Button>
 
-                        <Menu
+                        {/* <Menu
                             anchorEl={anchorEl}
                             id="account-menu"
                             open={open}
@@ -261,15 +268,15 @@ export default function Header(props) {
                                 <ButtonMenu startIcon={<HistoryIcon fontSize="small" />} name='Моите поръчки'></ButtonMenu>
                             </Link>
                             <ButtonMenu startIcon={<Logout fontSize="small" />} name='Logout'></ButtonMenu>
-                        </Menu>
+                        </Menu> */}
 
-                        <Badge badgeContent={0} color="alert" />
-                        <IconButton onMouseEnter={handleClickWish}>
-                            <Badge badgeContent={0} color="alert">
+                        <Button sx={{color: "black"}} onClick={() => {navigate("/favourites")}}>
+                            <Badge badgeContent={favouritesCart.length} color="error">
                                 <FavoriteBorderIcon color="primary" />
+                                <span>Любими</span>
                             </Badge>
-                        </IconButton>
-                        <Menu
+                        </Button>
+                        {/* <Menu
                             anchorEl={wish}
                             id="account-menu"
                             open={openWish}
@@ -307,11 +314,13 @@ export default function Header(props) {
                             <MenuItemProduct />
                             <MenuItemProduct />
                             <MenuItemProduct />
-                        </Menu>
+                        </Menu> */}
 
-                        <Badge badgeContent={cartBadge} color="alert">
+                        <Button onClick={() => {navigate('/cart')}}>
+                        <Badge badgeContent={cartBadge.length} color="error">
                             <ShoppingCartOutlinedIcon color="primary" />
                         </Badge>
+                        </Button>
                     </Stack>
                 </StyledToolbar>
             </Box>
