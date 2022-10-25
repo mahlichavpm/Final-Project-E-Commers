@@ -116,7 +116,7 @@ export const DATA = [
         'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
         'reviews': [],
         'averigeReview': 2,
-        'stock': 9,
+        'stock': 0,
         'key': 'Nabludavatni1'
     },
     {
@@ -146,7 +146,7 @@ export const DATA = [
         'descripton': '#bahur',
         'reviews': [],
         'averigeReview': 2,
-        'stock': 6,
+        'stock': 0,
         'key': 'JuniorProgrammerDay1'
     },
 ]

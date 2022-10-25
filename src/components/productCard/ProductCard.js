@@ -49,11 +49,12 @@ export default function ProductCard(props) {
                             backgroundColor: 'white',
                             color: 'primary.main'
                         }
-                    }}
-                    onClick={(e)=>{
-                        e.stopPropagation()
-                        props.onClickFav()
-                    }}>
+                        }}
+                        onClick={(e)=>{
+                            e.stopPropagation()
+                            props.onClickFav()
+                        }}
+                    >
                         <FavoriteBorderIcon color="custom.light" />
                     </IconButton>
                 </Stack>
