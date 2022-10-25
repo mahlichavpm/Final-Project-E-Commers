@@ -89,9 +89,17 @@ export default function Header(props) {
     };
 
     const [menuComp, setMenuComp] = React.useState(null);
-    const openMenuComp = Boolean(null);
+    const openMenuComp = Boolean(menuComp);
     const handleClickMenuComp = (event) => {
         setMenuComp(event.currentTarget);
+    };
+
+
+
+    const [proba, setProba] = React.useState(null);
+    const openProba = Boolean(proba);
+    const handleClickProba = (event) => {
+        setProba(event.currentTarget);
     };
     return (
         <>
@@ -101,121 +109,83 @@ export default function Header(props) {
                 }}>
                 <Box >
                     <StyledToolbar>
-                        {/* <IconButton onMouseEnter={handleClickMenu}>
-                        <MenuIcon color="primary" />
-                    </IconButton> */}
-                        {/* <Menu
-                        anchorEl={menu}
-                        id="account-menu"
-                        open={openMenu}
-                        onMouseLeave={() => handleClose(setMenu)}
-                        onClose={() => handleClose(setMenu)}
-                        PaperProps={{
-                            elevation: 0,
-                            sx: {
-                                overflow: 'visible',
-                                filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                                mt: 1.5,
-                                '& .MuiAvatar-root': {
-                                    width: 32,
-                                    height: 32,
-                                    ml: -0.5,
-                                    mr: 1,
-                                },
-                            },
-                        }}
-                        transformOrigin={{ horizontal: 'left', vertical: 'top' }}
-                        anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-                    >
-                        {/* <ButtonLinkTwo
-                            onMouseEnter={(e) => handleClickMenuComp(e)}
-                            onMouseLeave={(e) => handleClose(e)}
-                            name='Компютри & Периферия'
-                            startIcon={<ComputerOutlinedIcon />}
-                        /> */}
-
-                        {/* <Button
-                            sx={{
-                                color: '#222',
-                                display: 'flex',
-                                justifyContent: 'flex-start',
-                                padding: '6px 20px',
-                                fontSize: '12px',
-                                textTransform: 'none',
-                                borderTop: '1px solid transparent',
-                                borderBottom: '1px solid transparent',
-                                textDecoration: 'none',
-                                width: '250px',
-                                borderRadius: '0px',
-                                '&:hover': {
-                                    borderTop: '1px solid  rgba(34, 34, 34, 0.2)',
-                                    borderBottom: '1px solid  rgba(34, 34, 34, 0.2)',
-                                    color: '#0082e6',
-                                },
-                            }}
-                            underline='none'
-                            key={uuidv4()}
-                            startIcon={<ComputerOutlinedIcon />}
-                            onMouseEnter={(e) => handleClickMenuComp(e)}
-                            onMouseLeave={(e) => handleClose(e)}
+                        {/* <IconButton onMouseEnter={handleClickMenu}> */}
+                        <IconButton
+                            // onClick={handleClickMenu}
+                            aria-controls={openProba ? 'demo-positioned-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={openProba ? 'true' : undefined}
+                            onClick={handleClickProba}
                         >
-                            Компютри & Периферия
-                        </Button> */}
+                            <MenuIcon color="primary" />
+                        </IconButton>
 
-                        {/* <Menu
-                            anchorEl={menuComp}
-                            id="account-menu"
-                            open={openMenuComp}
-                            // onMouseLeave={() => handleClose(setMenuComp)}
-                            // onClose={() => handleClose(setMenuComp)}
-                            PaperProps={{
-                                elevation: 0,
-                                sx: {
-                                    overflow: 'visible',
-                                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                                    mt: 1.5,
-                                    '& .MuiAvatar-root': {
-                                        width: 320,
-                                        height: 32,
-                                        ml: -0.5,
-                                        mr: 1,
-                                    },
-                                },
-                            }}
-                            transformOrigin={{ horizontal: 'top', vertical: 'right' }}
-                            anchorOrigin={{ horizontal: 'top ', vertical: 'left' }}
-                        >
+                        <div>
 
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                            <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        </Menu> */}{/* 
-                        <ButtonLinkTwo color='custom' name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Малки електроуреди' startIcon={<BlenderOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Мода' startIcon={<CheckroomOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Здраве и красота' startIcon={<FaceRetouchingNaturalOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Дом, Градина & Petshop' startIcon={<HomeOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Играчки & Детски артикули' startIcon={<SmartToyOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
-                        <ButtonLinkTwo color='custom' name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
-                        </Menu> */}
+                            <Menu
+                                id="demo-positioned-menu"
+                                aria-labelledby="demo-positioned-button"
+                                anchorEl={proba}
+                                open={openProba}
+                                onClose={() => handleClose(setProba)}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                            >
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Телефони, Таблети & Лаптопи' startIcon={<PhoneAndroidOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Компютри & Периферия' startIcon={<ComputerOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Малки електроуреди' startIcon={<BlenderOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Мода' startIcon={<CheckroomOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Здраве и красота' startIcon={<FaceRetouchingNaturalOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Дом, Градина & Petshop' startIcon={<HomeOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Играчки & Детски артикули' startIcon={<SmartToyOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
+                                </Link>
+                                <Link className='homepageLink' to={'/products'}>
+                                    <ButtonLinkTwo name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
+                                </Link>
+                            </Menu>
+                        </div>
 
+                        
 
-                    <Link to={'/home'}>
-                        <img id="headerLogo" src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg" alt="logo" />
-                    </Link>
+                        <Link to={'/home'}>
+                            <img id="headerLogo" src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg" alt="logo" />
+                        </Link>
 
-                    <Search />
+                        <Search />
 
                     <Stack direction="row"
                         alignItems="center"
@@ -284,6 +254,7 @@ export default function Header(props) {
                             </Link>
                             <ButtonMenu startIcon={<Logout fontSize="small" />} name='Logout'></ButtonMenu>
                         </Menu>
+
                         <Badge badgeContent={0} color="alert" />
                         <IconButton onMouseEnter={handleClickWish}>
                             <Badge badgeContent={0} color="alert">
@@ -336,49 +307,52 @@ export default function Header(props) {
                     </Stack>
                 </StyledToolbar>
             </Box>
-            <Box sx={{ backgroundImage: 'linear-gradient(to right, rgb(255, 29, 37) 5%, rgb(160, 50, 140) 35%, rgb(112, 64, 164) 45%, rgb(67, 89, 199) 55%, rgb(0, 130, 230) 70%);', }}>
-                <StyledNav>
-                    <Stack spacing={2} direction='row'>
-                        {/* <SideCategory /> */}
-                        <ButtonLink href='#text-buttons' name='еМАG кредитна карта от Fibank' />
-                        <ButtonLink href='#text-buttons' name='eCREDIT' />
+
+
+            {/* ---------Bottom Menu------------- */}
+                <Box sx={{ backgroundImage: 'linear-gradient(to right, rgb(255, 29, 37) 5%, rgb(160, 50, 140) 35%, rgb(112, 64, 164) 45%, rgb(67, 89, 199) 55%, rgb(0, 130, 230) 70%);', }}>
+                    <StyledNav>
+                        <Stack spacing={2} direction='row'>
+                            {/* <SideCategory /> */}
+                            <ButtonLink href='#text-buttons' name='еМАG кредитна карта от Fibank' />
+                            <ButtonLink href='#text-buttons' name='eCREDIT' />
+                            <Stack
+                                spacing={2}
+                                direction='row'
+                                sx={{
+                                    display: {
+                                        xs: "none",
+                                        sm: "none",
+                                        md: "none",
+                                        lg: "flex",
+                                        xl: "flex",
+                                    }
+                                }}
+                            >
+                                <ButtonLink href='#text-buttons' name='easybox в София' />
+                                <ButtonLink href='#text-buttons' name='easybox в София' />
+                                <ButtonLink href='#text-buttons' name='easybox в София' />
+                            </Stack>
+                        </Stack>
                         <Stack
-                            spacing={2}
-                            direction='row'
                             sx={{
                                 display: {
                                     xs: "none",
                                     sm: "none",
-                                    md: "none",
+                                    md: "flex",
                                     lg: "flex",
                                     xl: "flex",
                                 }
                             }}
                         >
-                            <ButtonLink href='#text-buttons' name='easybox в София' />
-                            <ButtonLink href='#text-buttons' name='easybox в София' />
-                            <ButtonLink href='#text-buttons' name='easybox в София' />
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        sx={{
-                            display: {
-                                xs: "none",
-                                sm: "none",
-                                md: "flex",
-                                lg: "flex",
-                                xl: "flex",
-                            }
-                        }}
-                    >
-                        <ButtonLink
+                            <ButtonLink
 
-                            href='#text-buttons'
-                            name='eMAG Help' startIcon={<HeadphonesOutlinedIcon />} />
-                    </Stack>
-                </StyledNav>
-            </Box>
-        </AppBar >
+                                href='#text-buttons'
+                                name='eMAG Help' startIcon={<HeadphonesOutlinedIcon />} />
+                        </Stack>
+                    </StyledNav>
+                </Box>
+            </AppBar >
         </>
     )
 }
