@@ -13,8 +13,8 @@ export default function Register (){
 
     const successfulRegister = useSelector(state => state.activeUser.userRegistered);
     const loading = useSelector(state => state.activeUser.registerLoader);
-    const error = useSelector(state => state.activeUser.registerError)
-    let users = useSelector(state => state.activeUser.users)
+    let error = useSelector(state => state.activeUser.registerError);
+    let users = useSelector(state => state.activeUser.users);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,7 +22,6 @@ export default function Register (){
             let user = User(username)
             users = [...users,user];
             localStorage.setItem('users',JSON.stringify(users))
-            console.log(users);
             navigate('/login')
         }
         setUsername('');
@@ -36,7 +35,8 @@ export default function Register (){
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [password1, setPassword1] = useState('');
-    const [matchPassErr,setMatchPassErr] = useState(false)
+    const [matchPassErr,setMatchPassErr] = useState(false);
+    const [correctInput,setCorrectInput] = useState(true)
 
     const passCompare = () => {
         if (password === password1){
@@ -52,6 +52,15 @@ export default function Register (){
       // eslint-disable-next-line react-hooks/exhaustive-deps
     },[password,password1])
 
+
+    useEffect(() => {
+        if(username && password && password1){
+          setCorrectInput(false)
+        } else {
+            setCorrectInput(true)
+        }
+    },
+    [username,password,password1])
 
     const handleRegister = () => {
         dispatch(registerUser({ username, password }));
@@ -82,7 +91,12 @@ export default function Register (){
             <div className="loginContainer">
                 <form>
                     <h4>Моля въведи данните си за да се регистрираш:</h4>
-                    <TextField size="small" error={error} id={'username'} width='true'  value={username} onChange={handleInput} type={'text'}label={'Потребителско име'}/>
+                    <div className='errorWrapper'>
+                    {error ? <div className='errorContainer'>
+                        <p>Потребителското име е заето!</p>
+                    </div> : null}
+                    </div>
+                    <TextField helperText={''} size="small"  id={'username'} width='true'  value={username} onChange={handleInput} type={'text'}label={'Потребителско име'}/>
                     <TextField size="small" id={'password'} width='true' value={password} onChange={(e) => {setPassword(e.target.value)}} type={'password'} label={'Парола'}/>
 
                     <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={(e) => {
@@ -90,7 +104,7 @@ export default function Register (){
                     
                     }} type={'password'} label={'Потвърдете паролата'}/>
                     {loading ? <Button><Loader/></Button> :
-                    <Button onClick={handleClick} variant='contained'>Регистрация</Button>}
+                    <Button onClick={handleClick} disabled={correctInput} variant='contained'>Регистрация</Button>}
                     <Link to={'/login'}>Вече имаш регистрация?</Link>
                 </form>
             </div>

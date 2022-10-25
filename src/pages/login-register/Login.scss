@@ -7,6 +7,7 @@
     align-items: center;
 
     .loginContainer{
+        text-align: center;
         width: 450px;
         height: 450px;
         background-color: white;
@@ -15,6 +16,22 @@
         align-items: center;
         border-radius: 8px;
         box-shadow: 0 0 11px rgba(33,33,33,.6);
+        
+        .errorWrapper{
+
+            width: 100%;
+            height: 30px;
+
+            .errorContainer{
+                text-align: center;
+                padding: 5px;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #ff0000, $alpha: 0.5);
+            }
+
+        }
+        
         
     }
 

@@ -38,6 +38,7 @@ import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 // import * as React from 'react';
 // import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import { useSelector } from "react-redux";
 
 function uuidv4() {
     return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
@@ -95,6 +96,13 @@ export default function Header(props) {
     };
 
 
+    const users = JSON.parse(localStorage.getItem('users'));
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    const activeUser = users.find(e => e.username === loggedUser);
+    const productList = useSelector(state => state.product.product);
+    const cartList = activeUser.cart;
+
+    const [cartBadge,setCardBadge] = useState(cartList.length)
 
     const [proba, setProba] = React.useState(null);
     const openProba = Boolean(proba);
@@ -301,7 +309,7 @@ export default function Header(props) {
                             <MenuItemProduct />
                         </Menu>
 
-                        <Badge badgeContent={5} color="alert">
+                        <Badge badgeContent={cartBadge} color="alert">
                             <ShoppingCartOutlinedIcon color="primary" />
                         </Badge>
                     </Stack>

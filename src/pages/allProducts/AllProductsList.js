@@ -269,6 +269,7 @@ export default function AllProductsList() {
                     stock={e.stock}
                     price={e.price}
                     key={e.key}
+                    id={e.key}
                     onClick={() => {console.log(e.key);/*da se sloji link kum dadenata str s porduct */}}
                     onClickFav={() => {addToFavourite(e.key)}}
                   ></ProductCard>)}

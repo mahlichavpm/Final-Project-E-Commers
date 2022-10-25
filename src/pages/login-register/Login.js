@@ -15,8 +15,19 @@ export default function Login (){
     const [rememberMe,setRememberMe] = useState(false)
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [correctInput,setCorrectInput] = useState(true)
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if(username && password){
+          setCorrectInput(false)
+        } else {
+            setCorrectInput(true)
+        }
+    },
+    [username,password])
+
 
     useEffect(()=> {
         if(userId){
@@ -65,11 +76,16 @@ export default function Login (){
             <div className="loginContainer">
                 <form>
                     <h3>Здравей, влез в акаунта си:</h3>
+                    <div className='errorWrapper'>
+                    {error ? <div className='errorContainer'>
+                        <p>Грешни входни данни!</p>
+                    </div> : null}
+                    </div>
                     <TextField size="small" error={error} id={'username'} width='true' type={'text'} value={username} onChange={handleInput} label={'Потребителско име'}/>
                     <TextField size="small" error={error} id={'password'} width='true' type={'password'} value={password} onChange={(e) => {setPassword(e.target.value)}} label={'Парола'}/>
                     <FormControlLabel control={<Checkbox onClick={handleRememberMe} />} label="Запомни ме" />
                     {loading ? <Button><Loader/></Button> :
-                    <Button onClick={handleLogin} variant='contained'>Вход</Button>}
+                    <Button onClick={handleLogin} disabled={correctInput} variant='contained'>Вход</Button>}
                     <Link to={'/register'}>Нямаш регистрация? Кликни тук. </Link>
                 </form>
             </div>

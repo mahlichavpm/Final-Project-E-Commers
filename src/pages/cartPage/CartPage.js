@@ -30,8 +30,8 @@ export default function Cart(props) {
 
     const totalPrice = () => {
         let sum = 0;
-        for(let i = 0; i < productList.length; i++){
-           sum += productList[i].price; 
+        for(let i = 0; i < renderList.length; i++){
+           sum += renderList[i].price; 
         }
         return(sum);
     };
