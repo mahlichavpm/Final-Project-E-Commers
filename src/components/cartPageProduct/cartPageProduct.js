@@ -10,7 +10,7 @@ export default function CartPageProduct(props) {
 
     const dispatch = useDispatch();
 
-        const removeItem = (id) => {
+        const removeItem = (id,) => {
             dispatch(removeItemFromCart(id))
         }
 

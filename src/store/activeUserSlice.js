@@ -77,10 +77,14 @@ export const activeUserSlice = createSlice({
     removeItemFromCart: (state,action) => {
       console.log('remove' + action.payload);
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      // if(activeUser.cart.indexOf(action.payload.key) === -1){
-      //   activeUser.cart.push(action.payload.key)
-      // } 
-      // localStorage.setItem('users',JSON.stringify(state.users));
+      console.log(activeUser);
+      //undefined ???
+      let index = activeUser.cart.indexOf(action.payload)
+      if(index != -1){
+        activeUser.cart.splice(index,1);
+        console.log('Remove');
+      } 
+       localStorage.setItem('users',JSON.stringify(state.users));
     },
     addToFavourites: (state,action) => {
       console.log('fav');

@@ -32,7 +32,7 @@ export default function ProductCard(props) {
             borderRadius: '8px'
         }}
         >
-            <CardActionArea onClick={() => {props.onClick()}}>
+            <CardActionArea>
                 <Stack>
                     <CardMedia
                         component="img"
