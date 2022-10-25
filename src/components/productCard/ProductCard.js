@@ -8,13 +8,22 @@ import { Badge, CardActionArea, IconButton, Rating, Stack } from '@mui/material'
 import ProductButton from '../buttons/ProductButton';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../store/activeUserSlice';
+// import { useSelector } from 'react-redux';
 
 
 export default function ProductCard(props) {
     // const goToProduct = () => {
 
     // }
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    const dispatch = useDispatch();
+
+    const handleAddToCart = (key) => {
+        dispatch(addToCart({key,loggedUser}))
+      }
+
     return (
         <Card sx={{
             maxWidth: 288,
@@ -23,7 +32,7 @@ export default function ProductCard(props) {
             borderRadius: '8px'
         }}
         >
-            <CardActionArea onClick={() => {console.log('cartichka')}}>
+            <CardActionArea onClick={() => {props.onClick()}}>
                 <Stack>
                     <CardMedia
                         component="img"
@@ -72,7 +81,7 @@ export default function ProductCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <ProductButton onClick={()=>{props.onClick()}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                <ProductButton onClick={() => {handleAddToCart(props.id)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
 
         </Card>

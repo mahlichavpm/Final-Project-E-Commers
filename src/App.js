@@ -15,6 +15,7 @@ import CartPage from './pages/cartPage/CartPage'
 import HistoryPage from './pages/historyPage/HistoryPage';
 import ReviewPage from './pages/reviewPage/ReviewPage';
 import { useSelector } from 'react-redux';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -56,6 +57,9 @@ function App() {
           <Route path='*' element={<div>404</div>} />
         </Routes>
       </main>
+      <footer>
+                <Footer />
+      </footer>
       </>
     :
     <>

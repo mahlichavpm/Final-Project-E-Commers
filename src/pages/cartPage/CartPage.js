@@ -1,9 +1,46 @@
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import Button from "../../components/buttons/ProductButton";
 import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
 
 export default function Cart(props) {
+
+
+    const users = JSON.parse(localStorage.getItem('users'));
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    const activeUser = users.find(e => e.username === loggedUser);
+    const productList = useSelector(state => state.product.product);
+    const cartList = activeUser.cart;
+    const renderList = [];
+
+    (() => {
+        for(let i = 0; i < productList.length; i++){
+            for(let x = 0; x < cartList.length; x++){
+                if(productList[i].key === cartList[x]){
+                    renderList.push(productList[i]);
+                }
+            }
+        }
+        console.log(renderList);
+
+    })();
+
+
+    const totalPrice = () => {
+        let sum = 0;
+        for(let i = 0; i < productList.length; i++){
+           sum += productList[i].price; 
+        }
+        return(sum);
+    };
+
+    const [finalPrice,setFinalPrice] = useState(totalPrice());
+    const [deliveryPrice,setDeliveryPrice] = useState(10);
+
+    // setFinalPrice(totalPrice())
+
     return (
         <Stack
             sx={{
@@ -30,16 +67,20 @@ export default function Cart(props) {
                         width: '100%',
                     }}
                 >
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
-                    <CartPageProduct />
+                    {renderList.map((e,id) =>
+                  <CartPageProduct
+                    img={e.img.src}
+                    alt={e.img.alt}
+                    title={e.title}
+                    description={e.descripton}
+                    averigeReview={e.averigeReview}
+                    stock={e.stock}
+                    price={e.price}
+                    key={id}
+                    id={e.key}
+                    // removeItem={() => {removeItem(e.key)}}
+                    // addToCart={() => {handleAddToCart(e.key)}}
+                  ></CartPageProduct>)}
                 </Stack>
                 <Stack
                     spacing={2}
@@ -82,7 +123,7 @@ export default function Cart(props) {
                                     color: 'custom.light'
                                 }}
                             >
-                                {props.sumPrice || '200'} лв.
+                                {finalPrice.toFixed(2)} лв.
                             </Typography>
                         </Stack>
                         <Stack
@@ -103,7 +144,7 @@ export default function Cart(props) {
                                     color: 'custom.light'
                                 }}
                             >
-                                {props.sumPrice > '100' ? '0' : '10'} лв.
+                                {deliveryPrice} лв.
                             </Typography>
                         </Stack>
                     </Stack>
@@ -114,7 +155,7 @@ export default function Cart(props) {
                             fontWeight: 'bold'
                         }}
                     >
-                        Общо: {props.sumPrice > '100' ? props.sumPrice : (props.sumPrice + '10')} лв.
+                        Общо: {(finalPrice + deliveryPrice).toFixed(2)} лв.
                     </Typography>
                     <Button name='Продължи' />
                 </Stack>

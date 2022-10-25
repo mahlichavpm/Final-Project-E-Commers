@@ -36,7 +36,6 @@ export default function AllProductsList() {
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
   
   const addToFavourite = (key) => {
-    console.log(loggedUser);
     dispatch(addToFavourites({key,loggedUser}))
   }
   
@@ -74,7 +73,7 @@ export default function AllProductsList() {
                     stock={e.stock}
                     price={e.price}
                     key={e.key}
-                    onClick={() => {console.log(e.key);}}
+                    onClick={() => {console.log(e.key);/*da se sloji link kum dadenata str s porduct */}}
                     onClickFav={() => {addToFavourite(e.key)}}
                   ></ProductCard>)}
               </div>

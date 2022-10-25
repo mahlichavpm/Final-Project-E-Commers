@@ -1,9 +1,8 @@
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
+import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../components/productCard/ProductCard";
+import { addToCart } from "../../store/activeUserSlice";
 
 export default function FavouritePage (props) {
 
@@ -13,8 +12,9 @@ export default function FavouritePage (props) {
     const productList = useSelector(state => state.product.product);
     const favouriteList = activeUser.favourites;
     const renderList = [];
+    const dispatch = useDispatch();
 
-    const getLikedProducts = () => {
+    (() => {
         for(let i = 0; i < productList.length; i++){
             for(let x = 0; x < favouriteList.length; x++){
                 if(productList[i].key === favouriteList[x]){
@@ -22,14 +22,16 @@ export default function FavouritePage (props) {
                 }
             }
         }
-        console.log('zdr');
+    })();
+  
+    const handleAddToCart = (key) => {
+      dispatch(addToCart({key,loggedUser}))
     }
 
-    getLikedProducts();
 
     const removeItem = (key) => {
-        let id = key;
         console.log((renderList));
+        let id = key;
         const index = renderList.findIndex(e => e.id);
         renderList.splice(index,1);
         console.log((renderList));
@@ -49,7 +51,7 @@ export default function FavouritePage (props) {
         }}
         spacing={4}
     >
-        <Typography sx={{marginTop: 2}} variant="h4">
+        <Typography sx={{marginTop: 4}} variant="h4">
             Любими продукти
         </Typography>
             <Stack
@@ -58,8 +60,8 @@ export default function FavouritePage (props) {
                 }}
             >
             <div className='contentContainer'>
-                {renderList.map(e =>
-                  <CartPageProduct
+                {renderList.map((e,id) =>
+                  <ProductCard
                     img={e.img.src}
                     alt={e.img.alt}
                     title={e.title}
@@ -67,9 +69,11 @@ export default function FavouritePage (props) {
                     averigeReview={e.averigeReview}
                     stock={e.stock}
                     price={e.price}
-                    key={e.key}
+                    key={id}
+                    id={e.key}
                     removeItem={() => {removeItem(e.key)}}
-                  ></CartPageProduct>)}
+                    // addToCart={() => {handleAddToCart(e.key)}}
+                  ></ProductCard>)}
               </div>
             </Stack>
     </Stack>

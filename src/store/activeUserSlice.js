@@ -73,24 +73,38 @@ export const activeUserSlice = createSlice({
   initialState,
   reducers: {
 
-    addToFavourites: (state,action) => {
+
+    removeItemFromCart: (state,action) => {
+      console.log('remove' + action.payload);
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      console.log(current(activeUser));
+      // if(activeUser.cart.indexOf(action.payload.key) === -1){
+      //   activeUser.cart.push(action.payload.key)
+      // } 
+      // localStorage.setItem('users',JSON.stringify(state.users));
+    },
+    addToFavourites: (state,action) => {
+      console.log('fav');
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       if(activeUser.favourites.indexOf(action.payload.key) === -1){
         activeUser.favourites.push(action.payload.key)
       }
       localStorage.setItem('users',JSON.stringify(state.users));
-
+    },
+    addToCart: (state,action) => {
+      console.log('cart');
+      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      if(activeUser.cart.indexOf(action.payload.key) === -1){
+        activeUser.cart.push(action.payload.key)
+      } 
+      localStorage.setItem('users',JSON.stringify(state.users));
     },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       activeUser.name = action.payload.name;
-      localStorage.setItem('users',JSON.stringify(state.users));
     },
     changeUserPhone: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       activeUser.phone = action.payload.phone;
-      localStorage.setItem('users',JSON.stringify(state.users));
     },
     changeUserTown: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
@@ -119,7 +133,6 @@ export const activeUserSlice = createSlice({
     },
     pushToLocalStorage: (state) => {
       localStorage.setItem('users',JSON.stringify(state.users));
-      console.log('qm')
     }
   },
   extraReducers: builder => {
@@ -161,7 +174,9 @@ export const {
   loginErrorHandler,
   registerErrorHandler,
   pushToLocalStorage,
-  addToFavourites
+  addToFavourites,
+  addToCart,
+  removeItemFromCart
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

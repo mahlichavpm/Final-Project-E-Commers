@@ -18,7 +18,7 @@ export default function ProductCustomButton(props) {
             variant="contained"
             startIcon={props.startIcon}
             endIcon={props.endIcon}
-            onClick={(e)=>{props.onClick(e)}}
+            onClick={()=>{props.onClick()}}
         >
             {props.name}
         </ProductButton>

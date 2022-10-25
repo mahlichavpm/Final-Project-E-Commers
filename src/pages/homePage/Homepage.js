@@ -125,11 +125,8 @@ export default function Homepage(props) {
                 </Stack>
                 <ProductCardSlider />
                 <ProductCardSlider />
-
             </main>
-            <footer>
-                <Footer />
-            </footer>
+           
 
         </Box >
     )

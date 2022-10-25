@@ -168,7 +168,7 @@ export default function ProfilePage() {
               type={"text"}
               label={"Адрес 2"}
             />
-            <Button size={'small'} sx={{color: "black"}}>Запази промените</Button>
+            <Button size={'small'} onClick={()=>{dispatch(pushToLocalStorage())}} sx={{color: "black"}}>Запази промените</Button>
           </div>
         </div>
       </div>

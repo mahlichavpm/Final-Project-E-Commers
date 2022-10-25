@@ -3,8 +3,17 @@ import { Stack } from "@mui/system";
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { useDispatch } from "react-redux";
+import { removeItemFromCart } from "../../store/activeUserSlice";
 
 export default function CartPageProduct(props) {
+
+    const dispatch = useDispatch();
+
+        const removeItem = (id) => {
+            dispatch(removeItemFromCart(id))
+        }
+
         return (
 
             <Stack
@@ -63,7 +72,7 @@ export default function CartPageProduct(props) {
                                 <FavoriteBorderIcon fontSize='small' />
                             </IconButton> */}
                             <IconButton
-                                onClick={() => props.removeItem()}
+                                onClick={() => removeItem(props.id)}
                                 sx={{
                                     '&:hover': {
                                         color: 'alert.main',
