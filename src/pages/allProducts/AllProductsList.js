@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
-import { DollarOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu } from 'antd';
-import SortIcon from '@mui/icons-material/Sort';
+import { Breadcrumb, Layout} from 'antd';
 import ProductCard from '../../components/productCard/ProductCard';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToFavourites } from '../../store/activeUserSlice';
+import { useSelector } from 'react-redux';
 import { Checkbox, Divider, FormControlLabel, Radio, RadioGroup, Rating, TextField, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import InputLabel from '@mui/material/InputLabel';
@@ -114,19 +111,6 @@ export default function AllProductsList() {
   //   setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
   // }, [toPrice])
 
-  const dispatch = useDispatch();
-  // const onInputPriceTo = (e) => {
-  //   setToPrice(e.target.value)
-  //   console.log('Цена до ' + toPrice);
-  //   console.log('Цена от ' + fromPrice);
-  //   if (fromPrice) {
-  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
-  //   } else if (toPrice === '') {
-  //     setSortedProductList(productList.slice());
-  //   } else {
-  //     setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
-  //   }
-  // }
 
   const [checked, setChecked] = React.useState(true);
   const onStock = (e) => {
@@ -166,9 +150,9 @@ export default function AllProductsList() {
 
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
-  const addToFavourite = (key) => {
-    dispatch(addToFavourites({ key, loggedUser }))
-  }
+  // const addToFavourite = (key) => {
+  //   dispatch(addToFavourites({ key, loggedUser }))
+  // }
 
   return (
     <>
@@ -302,8 +286,6 @@ export default function AllProductsList() {
                     price={e.price}
                     key={e.key}
                     id={e.key}
-                    onClick={() => {console.log(e.key);/*da se sloji link kum dadenata str s porduct */}}
-                    // onClickFav={() => {addToFavourite(e.key)}}
                   ></ProductCard>)}
               </div>
             </Content>
@@ -314,18 +296,3 @@ export default function AllProductsList() {
   );
 }
 
-{/* <Layout className="site-layout-background" style={{ padding: '24px 0' }}> */ }
-{/* <Sider
-              className="site-layout-background"
-              width={248}
-
-            >
-              <Menu
-                mode="inline"
-                style={{ height: '100%' }}
-                items={items}
-              />
-
-              
-
-            </Sider> */}

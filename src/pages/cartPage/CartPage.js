@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Button from "../../components/buttons/ProductButton";
 import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
+import './CartPage.scss'
 
 export default function Cart(props) {
 
 
-    const users = JSON.parse(localStorage.getItem('users'));
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    const activeUser = users.find(e => e.username === loggedUser);
+    // const users = JSON.parse(localStorage.getItem('users'));
+    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    // const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
     const cartList = useSelector(state => state.activeUser.cart)
     const renderList = [];
@@ -18,7 +19,7 @@ export default function Cart(props) {
     (() => {
         for(let i = 0; i < productList.length; i++){
             for(let x = 0; x < cartList.length; x++){
-                if(productList[i].key === cartList[x]){
+                if(productList[i].key === cartList[x].id){
                     renderList.push(productList[i]);
                 }
             }
@@ -26,10 +27,16 @@ export default function Cart(props) {
     })();
 
 
+    for(let i = 0; i < renderList.length; i++){
+
+    }
+
     const totalPrice = () => {
         let sum = 0;
         for(let i = 0; i < renderList.length; i++){
-           sum += renderList[i].price; 
+            const id = renderList[i].title.replaceAll(' ','')
+            const obj = cartList.find(es => es.id === id);
+           sum += renderList[i].price * obj.qty; 
         }
         return(sum);
     };
@@ -44,13 +51,17 @@ export default function Cart(props) {
     useEffect(() => {
         if(finalPrice >= 100){
             setDeliveryPrice(0)
+        } else if(finalPrice < 100){
+            setDeliveryPrice(10)
         }
     },[finalPrice])
 
     return (
-        // renderList ? 
-        // <div>HUI</div>
-        // :
+        renderList.length === 0 ? 
+        <div className="pageContainer">
+            <h1>Нямате продукти в количката.</h1>
+        </div>
+        :
         <Stack
             sx={{
                 maxWidth: '1240px',

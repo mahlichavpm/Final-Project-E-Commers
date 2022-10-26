@@ -37,6 +37,11 @@ export default function FavouritePage (props) {
 
 
     return(
+        renderList.length === 0 ? 
+        <div className="pageContainer">
+            <h1>Нямате любими продукти.</h1>
+        </div>
+        :
         <Stack
         sx={{
             maxWidth: '1240px',

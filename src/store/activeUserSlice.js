@@ -75,9 +75,18 @@ export const activeUserSlice = createSlice({
   initialState,
   reducers: {
 
-
+    addQuantity: (state,action) => {
+      const index = state.cart.findIndex(e => e.id === action.payload);
+      state.cart[index].qty++;
+    },
+    removeQuantity: (state,action) => {
+      const index = state.cart.findIndex(e => e.id === action.payload);
+      if(state.cart[index].qty > 1){
+        state.cart[index].qty--;
+      }
+    },
     removeItemFromCart: (state,action) => {
-      let index = state.cart.indexOf(action.payload)
+      let index = state.cart.findIndex(e => e.id === action.payload);
       if(index !== -1){
         state.cart.splice(index,1);
       } 
@@ -91,16 +100,21 @@ export const activeUserSlice = createSlice({
       //  localStorage.setItem('users',JSON.stringify(state.users));
     },
     addToFavourites: (state,action) => {
-      console.log(action.payload);
       if(state.favourites.indexOf(action.payload.key) === -1){
         state.favourites.push(action.payload.key)
       } 
-      console.log(current(state.favourites));
     },
     addToCart: (state,action) => {
-      if(state.cart.indexOf(action.payload.key) === -1){
-        state.cart.push(action.payload.key)
-      } 
+      if(state.cart.findIndex(e => e.id === action.payload.key) === -1){
+        state.cart.push({
+          id: action.payload.key,
+          qty: 1
+        })
+      } else {
+        const index = state.cart.findIndex(e => e.id === action.payload.key);
+        state.cart[index].qty++;
+        console.log(current(state.cart[index]));
+      }
     },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
@@ -181,7 +195,9 @@ export const {
   addToFavourites,
   addToCart,
   removeItemFromCart,
-  removeItemFromFav
+  removeItemFromFav,
+  addQuantity,
+  removeQuantity
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

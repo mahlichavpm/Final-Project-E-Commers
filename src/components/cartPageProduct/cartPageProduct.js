@@ -1,17 +1,34 @@
-import { CardActions, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
+import { Button, CardActions, CardContent, CardMedia, IconButton, Input, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useDispatch } from "react-redux";
-import { removeItemFromCart } from "../../store/activeUserSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addQuantity, removeItemFromCart, removeQuantity } from "../../store/activeUserSlice";
 
 export default function CartPageProduct(props) {
 
     const dispatch = useDispatch();
+    const cart = useSelector(state => state.activeUser.cart);
 
-        const removeItem = (id,) => {
+    const [quantity,setQuantity] = useState(null)
+
+    useEffect(() => {
+       const obj = cart.find(e => e.id === props.id)
+       setQuantity(obj.qty)
+    },[cart])
+    
+    console.log(quantity);
+    
+
+        const removeItem = (id) => {
             dispatch(removeItemFromCart(id))
+        }
+
+        const increment = (id) => {
+            dispatch(addQuantity(id))
+        }
+        const decrement = (id) => {
+            dispatch(removeQuantity(id))
         }
 
         return (
@@ -43,44 +60,75 @@ export default function CartPageProduct(props) {
                     <Typography variant="body2" color="text.secondary">
                         {props.description || 'Има Проблем V2'}
                     </Typography>
-                </CardContent>
-                <CardActions>
-                    <Stack
-                        alignItems='center'
-                    >
-                        <Typography
+                    <Typography
                             variant='h6'
-                            color='primary.main'
+                            color='primary'
                             sx={{
                                 width: '100%',
                                 overflow: 'hidden'
                             }}
                         >
-                            {props.price || '20000лв'}
+                           Ед. цена: {props.price || '20000лв'}
+                        </Typography>
+                </CardContent>
+                <CardActions>
+                    <Stack
+                        alignItems='center'
+                    >
+                        
+                        <Typography
+                            variant='h6'
+                            color='black'
+                            sx={{
+                                width: '100%',
+                                overflow: 'hidden'
+                            }}
+                        >
+                           Общо:{(props.price*quantity).toFixed(2) || '20000лв'}лв.
                         </Typography>
                         <Stack
                             direction='row'
                         >
-                            {/* <IconButton
-                                onClick={() => setRemove(false)}
+                            <Input
+                            variant="standard"
+                            disabled
+                            size="small"
+                            sx={{
+                                textAlign: 'center'
+                            }}  
+                            value={quantity}/>
+                              <IconButton
+                               onClick={() => decrement(props.id)}
                                 sx={{
                                     '&:hover': {
                                         color: 'primary.main',
+                                        background: 'transparent'
                                     },
                                 }}
-                            >
-                                <FavoriteBorderIcon fontSize='small' />
-                            </IconButton> */}
+                            >-
+                            </IconButton>
+                            <IconButton
+                             onClick={() => increment(props.id)}
+                                sx={{
+                                    '&:hover': {
+                                        color: 'primary.main',
+                                        background: 'transparent'
+                                    },
+                                }}
+                            >+
+                            </IconButton>
                             <IconButton
                                 onClick={() => removeItem(props.id)}
                                 sx={{
                                     '&:hover': {
                                         color: 'alert.main',
+                                        background: 'transparent'
                                     },
                                 }}
                             >
                                 <CloseIcon fontSize='small'></CloseIcon>
                             </IconButton>
+                           
                         </Stack>
                     </Stack>
                 </CardActions>

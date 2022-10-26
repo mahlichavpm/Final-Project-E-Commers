@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart, addToFavourites, removeItemFromFav } from '../../store/activeUserSlice';
 import useSelection from 'antd/lib/table/hooks/useSelection';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 
 export default function ProductCard(props) {
@@ -21,6 +22,7 @@ export default function ProductCard(props) {
     // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     const favouriteList = useSelector(state => state.activeUser.favourites)
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleAddToCart = (key) => {
         dispatch(addToCart({key}))
@@ -53,7 +55,7 @@ export default function ProductCard(props) {
         }}
         // onClick={() => props.onClick() || 'none'}
         >
-            <CardActionArea onClick={() => { props.onClick() }}>
+            <CardActionArea onClick={() => { navigate(`/product/`) }}>
                 {/* <Stack sx={{ position: 'relative' }}> */}
                 <Stack>
                     <CardMedia

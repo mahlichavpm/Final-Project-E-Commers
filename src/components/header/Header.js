@@ -4,7 +4,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from "@emotion/styled";
 import Search from './Search';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
 import { Link, useNavigate } from 'react-router-dom';
@@ -86,9 +86,17 @@ export default function Header(props) {
     // const productList = useSelector(state => state.product.product);
     // const cartList = activeUser.cart;
 
-    // const [cartBadge,setCardBadge] = useState(0)
-    const cartBadge = useSelector(state => state.activeUser.cart)
-    const favouritesCart = useSelector(state => state.activeUser.favourites)
+    const cart = useSelector(state => state.activeUser.cart);
+    const [cartBadge,setCardBadge] = useState(0);
+    useEffect(() => {
+        let sum = 0;
+        cart.forEach(e => {
+            sum += e.qty
+        })
+        setCardBadge(sum)
+    },[cart])
+
+    const favouritesCart = useSelector(state => state.activeUser.favourites);
 
     const [proba, setProba] = React.useState(null);
     const openProba = Boolean(proba);
@@ -289,7 +297,7 @@ export default function Header(props) {
                            
 
                             <Button onClick={() => { navigate('/cart') }}>
-                                <Badge badgeContent={cartBadge.length} color="error">
+                                <Badge badgeContent={cartBadge} color="error">
                                     <ShoppingCartOutlinedIcon color="primary" />
                                 </Badge>
                             </Button>
