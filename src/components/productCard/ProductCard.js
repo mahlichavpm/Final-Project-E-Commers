@@ -4,12 +4,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Badge, CardActionArea, IconButton, Rating, Stack } from '@mui/material';
+import { Badge, CardActionArea, Checkbox, IconButton, Rating, Stack } from '@mui/material';
 import ProductButton from '../buttons/ProductButton';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../store/activeUserSlice';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 // import { useSelector } from 'react-redux';
 
 
@@ -21,8 +22,8 @@ export default function ProductCard(props) {
     const dispatch = useDispatch();
 
     const handleAddToCart = (key) => {
-        dispatch(addToCart({key,loggedUser}))
-      }
+        dispatch(addToCart({ key, loggedUser }))
+    }
 
     return (
         <Card sx={{
@@ -31,8 +32,10 @@ export default function ProductCard(props) {
             border: '1px solid  rgba(34, 34, 34, 0.2)',
             borderRadius: '8px'
         }}
+        // onClick={() => props.onClick() || 'none'}
         >
-            <CardActionArea>
+            <CardActionArea onClick={() => { props.onClick() }}>
+                {/* <Stack sx={{ position: 'relative' }}> */}
                 <Stack>
                     <CardMedia
                         component="img"
@@ -40,30 +43,33 @@ export default function ProductCard(props) {
                         image={props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
                         alt={props.alt || "Mnogo bega"}
                     />
-                    <IconButton sx={{
-                        position: 'absolute',
-                        right: '0px',
-                        backgroundColor: 'white',
-                        margin: '8px',
-                        '&:hover': {
-                            backgroundColor: 'white',
-                            color: 'primary.main'
-                        }
-                        }}
-                        onClick={(e)=>{
-                            e.stopPropagation()
-                            props.onClickFav()
+                    <CardActionArea
+                        sx={{
+                            position: 'absolute',
+                            display: 'flex',
+                            justifyContent: 'flex-end'
                         }}
                     >
-                        <FavoriteBorderIcon color="custom.light" />
-                    </IconButton>
+                        <Checkbox sx={{
+                            backgroundColor: 'white',
+                            margin: '8px',
+                            '&:hover': {
+                                backgroundColor: 'white',
+                                color: 'primary.main'
+                            }
+                        }}
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                props.onClickFav()
+                            }} icon={<FavoriteBorderIcon />} checkedIcon={<FavoriteIcon color='alert' />} />
+                    </CardActionArea>
                 </Stack>
 
                 <CardContent>
-                    <Typography 
-                        gutterBottom 
-                        variant="h5" 
-                        component="div" 
+                    <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
                         color='custom'
                         noWrap={true}
                     >
@@ -80,9 +86,10 @@ export default function ProductCard(props) {
                         {props.price || 'Няма си цена'}
                     </Typography>
                 </CardContent>
+                {/* </Stack> */}
             </CardActionArea>
             <CardActions>
-                <ProductButton onClick={() => {handleAddToCart(props.id)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                <ProductButton onClick={() => { handleAddToCart(props.id) }} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
             </CardActions>
 
         </Card>
