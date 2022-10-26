@@ -51,8 +51,10 @@ export default function ProductCard(props) {
             border: '1px solid  rgba(34, 34, 34, 0.2)',
             borderRadius: '8px'
         }}
+        // onClick={() => props.onClick() || 'none'}
         >
-            <CardActionArea>
+            <CardActionArea onClick={() => { props.onClick() }}>
+                {/* <Stack sx={{ position: 'relative' }}> */}
                 <Stack>
                     <CardMedia
                         component="img"
@@ -63,10 +65,10 @@ export default function ProductCard(props) {
                 </Stack>
 
                 <CardContent>
-                    <Typography 
-                        gutterBottom 
-                        variant="h5" 
-                        component="div" 
+                    <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
                         color='custom'
                         noWrap={true}
                     >
@@ -83,6 +85,7 @@ export default function ProductCard(props) {
                         {props.price || 'Няма си цена'}
                     </Typography>
                 </CardContent>
+                {/* </Stack> */}
             </CardActionArea>
             <CardActions>
                 <Stack sx={{gap: 1, width: '100%' }}>

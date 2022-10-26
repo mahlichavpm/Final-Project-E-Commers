@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
 import { DollarOutlined } from '@ant-design/icons';
@@ -22,15 +22,16 @@ export default function AllProductsList() {
 
   const handleChange = (event) => {
     setSort(event.target.value);
+    console.log(event.target.value);
     switch (event.target.value) {
       case 'descendingOrder':
-        setSortedProductList(productList.slice().sort((a, b) => a.price - b.price));
-        break;
-      case 'ascending':
         setSortedProductList(productList.slice().sort((a, b) => b.price - a.price));
         break;
+      case 'ascending':
+        setSortedProductList(productList.slice().sort((a, b) => a.price - b.price));
+        break;
       case 'aToZ':
-        setSortedProductList(productList.slice().sort((a, b) => a.title - b.title));
+        setSortedProductList(productList.slice().sort());
         break;
       case 'zToA':
         setSortedProductList(productList.slice().sort((a, b) => b.title - a.title));
@@ -66,42 +67,66 @@ export default function AllProductsList() {
   //   ]),
   // ];
 
-  let fromPrice = '';
-  let toPrice = '';
+  const [fromPrice, setFromPrice] = React.useState('');
+  const [toPrice, setToPrice] = React.useState('');
 
-  const onInputPriceFrom = (e) => {
-    fromPrice += e.target.value;
+  // const onInputPriceFrom = (e) => {
+  //   setFromPrice(e.target.value)
+  //   console.log('Цена от ' + fromPrice);
+  //   console.log('Цена до ' + toPrice);
+  //   if (toPrice) {
+  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
+  //   } else if (fromPrice === '') {
+  //     setSortedProductList(productList.slice());
+  //   } else {
+  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice)))
+  //   }
+  // }
 
-    if (toPrice) {
-      setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
-    } else if (fromPrice === '') {
-      setSortedProductList(productList.slice());
-    } else {
-      setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice)))
-    }
-  }
+  // useEffect(() => {
+  //   // console.log('Цена от ' + fromPrice);
+  //   // console.log('Цена до ' + toPrice);
+  //   if (toPrice) {
+  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
+  //   } else if (fromPrice === '') {
+  //     setSortedProductList(productList.slice());
+  //   } else {
+  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice)))
+  //   }
+  // })
 
-  // const items = [
-  //   getItem('По цена', 'sub1', <DollarOutlined />, [
-  //     getItem('Диапазон:', 'g1', null, [getItem('<500лв.', '1'), getItem('> 500лв.', '2')], 'group'),
-  //   ]),
-  //   getItem('По марка', 'sub2', <SortIcon />, [
-  //     getItem('Марки:', 'g1', null, [getItem('Apple', '3'), getItem('Samsung', '4')], 'group'),
-  //   ]),
-  // ];
-  // const productList = useSelector(state => state.product.product);
+  useEffect(() => {
+    setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
+   
+    console.log(fromPrice);
+  }, [fromPrice, toPrice])
+
+  useEffect(() => {
+    setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
+    console.log(fromPrice);
+  }, [fromPrice, toPrice])
+
+  useEffect(() => {
+    setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice)))
+    console.log(fromPrice);
+  }, [fromPrice, toPrice])
+  // useEffect(() => {
+  //   setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
+  // }, [toPrice])
+
   const dispatch = useDispatch();
-  const onInputPriceTo = (e) => {
-    toPrice += e.target.value
-
-    if (fromPrice) {
-      setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
-    } else if (toPrice === '') {
-      setSortedProductList(productList.slice());
-    } else {
-      setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
-    }
-  }
+  // const onInputPriceTo = (e) => {
+  //   setToPrice(e.target.value)
+  //   console.log('Цена до ' + toPrice);
+  //   console.log('Цена от ' + fromPrice);
+  //   if (fromPrice) {
+  //     setSortedProductList(productList.slice().filter(el => el.price > Number(fromPrice) && el.price < Number(toPrice)))
+  //   } else if (toPrice === '') {
+  //     setSortedProductList(productList.slice());
+  //   } else {
+  //     setSortedProductList(productList.slice().filter(el => el.price < Number(toPrice)))
+  //   }
+  // }
 
   const [checked, setChecked] = React.useState(true);
   const onStock = (e) => {
@@ -140,11 +165,11 @@ export default function AllProductsList() {
   })
 
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
-  
+
   const addToFavourite = (key) => {
-    dispatch(addToFavourites({key,loggedUser}))
+    dispatch(addToFavourites({ key, loggedUser }))
   }
-  
+
   return (
     <>
       <Stack
@@ -205,8 +230,15 @@ export default function AllProductsList() {
                 Цена
               </Typography>
               <Stack direction='row' spacing={2}>
-                <TextField sx={{ width: '100%' }} id="filled-basic" onInput={onInputPriceFrom} label="От" variant="filled" size='small' />
-                <TextField sx={{ width: '100%' }} id="filled-basic" onInput={onInputPriceTo} label="До" variant="filled" size='small' />
+                <TextField
+                  sx={{ width: '100%' }}
+                  id="filled-basic"
+                  onInput={(e) => setFromPrice(e.target.value)}
+                  label="От"
+                  variant="filled"
+                  size='small'
+                />
+                <TextField sx={{ width: '100%' }} id="filled-basic" onInput={(e) => setToPrice(e.target.value)} label="До" variant="filled" size='small' />
               </Stack>
               {/* ------Review Filter--------- */}
               <Stack>
