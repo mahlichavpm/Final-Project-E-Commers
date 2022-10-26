@@ -10,7 +10,7 @@ export default function FavouritePage (props) {
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
-    const favouriteList = activeUser.favourites;
+    const favouriteList = useSelector(state => state.activeUser.favourites);
     const renderList = [];
     const dispatch = useDispatch();
 
@@ -30,11 +30,9 @@ export default function FavouritePage (props) {
 
 
     const removeItem = (key) => {
-        console.log((renderList));
         let id = key;
         const index = renderList.findIndex(e => e.id);
         renderList.splice(index,1);
-        console.log((renderList));
     }
 
 
@@ -71,8 +69,6 @@ export default function FavouritePage (props) {
                     price={e.price}
                     key={id}
                     id={e.key}
-                    removeItem={() => {removeItem(e.key)}}
-                    // addToCart={() => {handleAddToCart(e.key)}}
                   ></ProductCard>)}
               </div>
             </Stack>

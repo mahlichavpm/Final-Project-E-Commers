@@ -4,25 +4,45 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Badge, CardActionArea, IconButton, Rating, Stack } from '@mui/material';
+import { Badge, Button, CardActionArea, IconButton, Rating, Stack } from '@mui/material';
 import ProductButton from '../buttons/ProductButton';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../store/activeUserSlice';
-// import { useSelector } from 'react-redux';
+import { addToCart, addToFavourites, removeItemFromFav } from '../../store/activeUserSlice';
+import useSelection from 'antd/lib/table/hooks/useSelection';
+import { useSelector } from 'react-redux';
 
 
 export default function ProductCard(props) {
     // const goToProduct = () => {
 
     // }
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    const favouriteList = useSelector(state => state.activeUser.favourites)
     const dispatch = useDispatch();
 
     const handleAddToCart = (key) => {
-        dispatch(addToCart({key,loggedUser}))
+        dispatch(addToCart({key}))
       }
+
+    const handleAddtoFavouritesBtn = (key) => {
+        if(favouriteList.indexOf(key) !== -1){
+            dispatch(removeItemFromFav(key))
+        }
+        else {
+            dispatch(addToFavourites({key}))
+        }
+        
+    }
+
+    const favBtnLabel = (key) => {
+        if(favouriteList.indexOf(key) !== -1){
+            return 'Премахни от любими'
+        }
+        return 'Добави в любими'
+    }
+ 
 
     return (
         <Card sx={{
@@ -40,23 +60,6 @@ export default function ProductCard(props) {
                         image={props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
                         alt={props.alt || "Mnogo bega"}
                     />
-                    <IconButton sx={{
-                        position: 'absolute',
-                        right: '0px',
-                        backgroundColor: 'white',
-                        margin: '8px',
-                        '&:hover': {
-                            backgroundColor: 'white',
-                            color: 'primary.main'
-                        }
-                        }}
-                        onClick={(e)=>{
-                            e.stopPropagation()
-                            props.onClickFav()
-                        }}
-                    >
-                        <FavoriteBorderIcon color="custom.light" />
-                    </IconButton>
                 </Stack>
 
                 <CardContent>
@@ -82,7 +85,10 @@ export default function ProductCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
+                <Stack sx={{gap: 1, width: '100%' }}>
+                <ProductButton onClick={()=>{handleAddtoFavouritesBtn(props.id)}} startIcon={<FavoriteBorderIcon color="custom.light" />}  name={favBtnLabel(props.id)} />
                 <ProductButton onClick={() => {handleAddToCart(props.id)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                </Stack>
             </CardActions>
 
         </Card>

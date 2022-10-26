@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loginUser = createAsyncThunk(
@@ -80,25 +80,27 @@ export const activeUserSlice = createSlice({
       let index = state.cart.indexOf(action.payload)
       if(index !== -1){
         state.cart.splice(index,1);
-        console.log('Remove');
       } 
-       localStorage.setItem('users',JSON.stringify(state.users));
+      //  localStorage.setItem('users',JSON.stringify(state.users));
+    },
+    removeItemFromFav: (state,action) => {
+      let index = state.favourites.indexOf(action.payload)
+      if(index !== -1){
+        state.favourites.splice(index,1);
+      } 
+      //  localStorage.setItem('users',JSON.stringify(state.users));
     },
     addToFavourites: (state,action) => {
-      console.log('fav');
-      let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      if(activeUser.favourites.indexOf(action.payload.key) === -1){
-        activeUser.favourites.push(action.payload.key)
-      }
-      localStorage.setItem('users',JSON.stringify(state.users));
+      console.log(action.payload);
+      if(state.favourites.indexOf(action.payload.key) === -1){
+        state.favourites.push(action.payload.key)
+      } 
+      console.log(current(state.favourites));
     },
     addToCart: (state,action) => {
-      console.log('cart');
-      // let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
       if(state.cart.indexOf(action.payload.key) === -1){
         state.cart.push(action.payload.key)
       } 
-      localStorage.setItem('users',JSON.stringify(state.users));
     },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
@@ -178,7 +180,8 @@ export const {
   pushToLocalStorage,
   addToFavourites,
   addToCart,
-  removeItemFromCart
+  removeItemFromCart,
+  removeItemFromFav
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

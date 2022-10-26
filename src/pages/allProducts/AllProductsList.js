@@ -169,9 +169,9 @@ export default function AllProductsList() {
             label="Age"
             onChange={(e) => handleChange(e)}
           >
-            <MenuItem value=''>
+            {/* <MenuItem value=''>
               <em>None</em>
-            </MenuItem>
+            </MenuItem> */}
             <MenuItem value={'aToZ'}>от А към З</MenuItem>
             <MenuItem value={'zToA'}>от З към А</MenuItem>
             <MenuItem value={'ascending'}>Възходящ ред</MenuItem>
@@ -271,7 +271,7 @@ export default function AllProductsList() {
                     key={e.key}
                     id={e.key}
                     onClick={() => {console.log(e.key);/*da se sloji link kum dadenata str s porduct */}}
-                    onClickFav={() => {addToFavourite(e.key)}}
+                    // onClickFav={() => {addToFavourite(e.key)}}
                   ></ProductCard>)}
               </div>
             </Content>
