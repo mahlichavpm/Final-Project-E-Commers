@@ -75,7 +75,7 @@ export default function ProductCard(props) {
                     >
                         {props.title || "Има Проблем!"}
                     </Typography>
-                    <Typography variant="body2" color="custom.light">
+                    <Typography variant="body2" color="custom.light" noWrap={true}>
                         {props.description || 'Има Проблем V2'}
                     </Typography>
                     <Rating name="half-rating" readOnly defaultValue={props.averigeReview || 0} size='small' />
@@ -83,7 +83,7 @@ export default function ProductCard(props) {
                         {props.stock || 'Няма си количество'}
                     </Typography>
                     <Typography variant="body1" color="alert.main">
-                        {props.price || 'Няма си цена'}
+                        {props.price + ' лв' || 'Няма си цена'}
                     </Typography>
                 </CardContent>
                 {/* </Stack> */}

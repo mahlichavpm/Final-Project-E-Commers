@@ -1,29 +1,24 @@
-// const needData = [
-//     [props.Data[0], props.Data[1], props.Data[2], props.Data[3]],
-//     [props.Data[4], props.Data[5], props.Data[6], props.Data[7]],
-//     [props.Data[8], props.Data[9], props.Data[10], props.Data[11]],
-//     [props.Data[12], props.Data[13], props.Data[14], props.Data[15]],
-//     [props.Data[16], props.Data[17], props.Data[18], props.Data[19]]
-// ];
-// needData.forEach(e => console.log(e))  
-
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Typography } from '@mui/material'
 import ProductCard from '../productCard/ProductCard';
 import { Stack } from '@mui/system';
+import { useSelector } from 'react-redux';
 
 export default function Example(props) {
-    // const needData = [
-    //     // [props.Data[0], props.Data[1], props.Data[2], props.Data[3]],
-    //     [props.Data[4], props.Data[5], props.Data[6], props.Data[7]],
-    //     [props.Data[8], props.Data[9], props.Data[10], props.Data[11]],
-    //     [props.Data[12], props.Data[13], props.Data[14], props.Data[15]],
-    //     [props.Data[16], props.Data[17], props.Data[18], props.Data[19]]
-    // ];
+    const productList = useSelector(state => state.product.product);
+    const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === props.id).splice(0, 20));
+    const [sliderPage, setSliderPage] = useState([
+        productSlider.slice().splice(0, 4),
+        productSlider.slice().splice(4, 4),
+        productSlider.slice().splice(8, 4),
+        productSlider.slice().splice(12, 4),
+        productSlider.slice().splice(16, 4)
+    ]);
+
     return (
-        <>
-            <Typography variant='h1'>Stava</Typography>
+        <Stack spacing={2} sx={{ marginTop: '36px' }}>
+            <Typography variant='h4'>{props.title || "Stava"}</Typography>
             <Carousel
                 autoPlay={false}
                 navButtonsAlwaysVisible={true}
@@ -35,31 +30,25 @@ export default function Example(props) {
                     } & React.AriaAttributes
                 }
             >
-
-                {/* <Stack direction='row' spacing={2}>
-                    {needData.map(
-                        (e,i) => <ProductCard 
-                                key={i}
-                                title={e.title} 
-                                description={e.description}
-                                rating={e.rating}
-
-                            > </ProductCard>
-                    )}
-                </Stack> */}
-                <Stack direction='row' spacing={2}>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                </Stack>
-                <Stack direction='row' spacing={2}>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                    <ProductCard></ProductCard>
-                </Stack>
+                {sliderPage.map((e, i) =>
+                    <Stack direction='row' spacing={2} key={i}>
+                        {e.map(e => <ProductCard
+                            img={e.img.src}
+                            alt={e.img.alt}
+                            title={e.title}
+                            description={e.descripton}
+                            averigeReview={e.averigeReview}
+                            stock={e.stock}
+                            price={e.price}
+                            key={e.key}
+                            id={e.key}
+                        // onClick={() =>  navigate(`/products/category/${e.key}`)}/*da se sloji link kum dadenata str s porduct */
+                        // onClickFav={() => {addToFavourite(e.key)}}
+                        ></ProductCard>)}
+                    </Stack>
+                )}
+                
             </Carousel>
-        </>
+        </Stack>
     )
 }
