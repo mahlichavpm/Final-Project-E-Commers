@@ -20,7 +20,7 @@ import ErrorPage from './pages/errorPage/ErrorPage';
 
 function App() {
 
-  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser') ;
+  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser');
   // const loggedUser = localStorage.getItem('rememberUser');
   const admin = useSelector(state => state.activeUser.admin);
   // const userId = localStorage.getItem('accountId');
@@ -35,31 +35,32 @@ function App() {
 
   return (
     admin ?
-     <Routes>
-      <Route path='/admin' element={<AdminPage/>}/>
-      <Route path='*' element={<Navigate to={'/admin'}/>}/>
-    </Routes> :
-         <>
-      <Header />
-      <main className='main'>
-        <Routes>
-          <Route path='/' element={<Navigate to={'/home'} />} />
-          <Route path='/login' element={<Login/>} />
-          <Route path='/home' element={<Homepage />} />
-          <Route path='/products' element={<CategoryPage />} />
-          <Route path='/history' element={<HistoryPage />} />
-          <Route path='/favourites' element={<FavoritesPage />} />
-          <Route path='/cart' element={<CartPage />} />
-          <Route path='/profile' element={<ProfilePage />} />
-          <Route path='/review' element={<ReviewPage />} />
-          <Route path='/product' element={<ProductPage />} />
-          <Route path='/products/category' element={<AllProductsList />} />
-          <Route path='*' element={<ErrorPage/>} />
-        </Routes>
-      </main>
-      <footer>
-                <Footer />
-      </footer>
+      <Routes>
+        <Route path='/admin' element={<AdminPage />} />
+        <Route path='*' element={<Navigate to={'/admin'} />} />
+      </Routes> :
+      <>
+        <Header />
+        <main className='main'>
+          <Routes>
+            <Route path='/' element={<Navigate to={'/home'} />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/home' element={<Homepage />} />
+            <Route path='/history' element={<HistoryPage />} />
+            <Route path='/favourites' element={<FavoritesPage />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='/profile' element={<ProfilePage />} />
+            <Route path='/review' element={<ReviewPage />} />
+            {/* <Route path='/product' element={<ProductPage />} /> */}
+            <Route path='/:globalCategory' element={<CategoryPage />} />
+            <Route path='/:globalCategory/:subCategory' element={<AllProductsList />} />
+            <Route path='/:globalCategory/:subCategory/:key' element={<ProductPage />} />
+            <Route path='*' element={<ErrorPage />} />
+          </Routes>
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </>
   )
 }
