@@ -6,26 +6,15 @@ import bannerImg3 from '../../img/Banner_3.webp'
 import bannerImg4 from '../../img/Banner_4.webp'
 import ButtonLinkTwo from '../../components/buttons/ButtonLinkTwo';
 import { Stack } from '@mui/system';
-import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
-import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
-import TvOutlinedIcon from '@mui/icons-material/TvOutlined';
-import VideogameAssetOutlinedIcon from '@mui/icons-material/VideogameAssetOutlined';
-import BlenderOutlinedIcon from '@mui/icons-material/BlenderOutlined';
-import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
-import CheckroomOutlinedIcon from '@mui/icons-material/CheckroomOutlined';
-import FaceRetouchingNaturalOutlinedIcon from '@mui/icons-material/FaceRetouchingNaturalOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
-import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 import ProductCardSlider from '../../components/cardSlider/ProductCardSlider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Box, Menu, TextField, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 
 export default function Homepage(props) {
+    const navigate = useNavigate()
     const handleClose = (seter) => {
         seter(null);
     };
@@ -34,6 +23,8 @@ export default function Homepage(props) {
     const handleClickMenuComp = (event) => {
         setMenuComp(event.currentTarget);
     };
+    const categories = useSelector(state => state.categories.categories);
+    const[categoriesCopy, setCategoriesCopy] = useState(categories.slice())
     return (
         <Box>
             <main className='homepageWrapper'>
@@ -49,45 +40,12 @@ export default function Homepage(props) {
                             },
                             backgroundColor: 'white',
                         }}>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Телефони, Таблети & Лаптопи' startIcon={<PhoneAndroidOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Компютри & Периферия' startIcon={<ComputerOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='ТВ, Аудио & Фото' startIcon={<TvOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Gaming' startIcon={<VideogameAssetOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Големи електроуреди' startIcon={<KitchenOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Малки електроуреди' startIcon={<BlenderOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Мода' startIcon={<CheckroomOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Здраве и красота' startIcon={<FaceRetouchingNaturalOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Дом, Градина & Petshop' startIcon={<HomeOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Играчки & Детски артикули' startIcon={<SmartToyOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Спорт & свободно време' startIcon={<SportsKabaddiOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Авто & Направи си сам' startIcon={<DirectionsCarOutlinedIcon />} />
-                        </Link>
-                        <Link className='homepageLink' to={'/products'}>
-                            <ButtonLinkTwo name='Книги, Офис & Храни' startIcon={<MenuBookOutlinedIcon />} />
-                        </Link>
+                        {categoriesCopy.map(e => <ButtonLinkTwo 
+                        name={e.name} 
+                        startIcon={e.icon} 
+                        key={e.key} 
+                        onClick={() =>  navigate(`/${e.key}`)} 
+                        />)}
                     </Stack>
 
                     <Carousel>
@@ -121,8 +79,7 @@ export default function Homepage(props) {
                         </Carousel.Item>
                     </Carousel>
                 </Stack>
-                <ProductCardSlider />
-                <ProductCardSlider />
+                {categoriesCopy.map((e, i) => <ProductCardSlider title={e.name} key={i} id={e.key}/>)}
             </main>
         </Box >
     )
