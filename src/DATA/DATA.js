@@ -488,201 +488,351 @@ export const DATA = [
         'stock':10,
         'key': 'ДънкиScotch&SodaTheNorm'
     },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni654',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni654'
-    },
-    {
-        'title': 'Junior Programmer8765',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer8765'
-    },
-    {
-        'title': 'Junior Programmer Day098',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay098'
-    },
-    {
-        'title': 'Technical Communications Corporation511',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation511'
-    },
-    {
-        'title': 'WageWorks, Inc.87653',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.87653'
-    },
-    {
-        'title': 'Nabludavat ni876',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni876'
-    },
-    {
-        'title': 'Junior Programmer14',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer14'
-    },
-    {
-        'title': 'Junior Programmer Day36',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay36'
-    },
-    {
-        'title': 'Technical Communications Corporation51',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation51'
-    },
-    {
-        'title': 'WageWorks, Inc.124',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.124'
-    },
-    {
-        'title': 'Nabludavat ni41',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni41'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
+    // {
+    //     'title': 'WageWorks, Inc.',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+    //         alt: 'boli',
+    //     },
+    //     'price': 75.75,
+    //     'descripton': 'Hydrocotyle americana L.',
+    //     'reviews': [],
+    //     'averigeReview': 3,
+    //     'stock': 19,
+    //     'key': 'WageWorks,Inc.'
+    // },
+    // {
+    //     'title': 'Nabludavat ni654',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+    //         alt: 'Slavi',
+    //     },
+    //     'price': 35.75,
+    //     'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 9,
+    //     'key': 'Nabludavatni654'
+    // },
+    // {
+    //     'title': 'Junior Programmer8765',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+    //         alt: 'Junior Programmer',
+    //     },
+    //     'price': 0.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 16,
+    //     'key': 'JuniorProgrammer8765'
+    // },
+    // {
+    //     'title': 'Junior Programmer Day098',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+    //         alt: 'Junior Programmer Day',
+    //     },
+    //     'price': 1.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 6,
+    //     'key': 'JuniorProgrammerDay098'
+    // },
+    // {
+    //     'title': 'Technical Communications Corporation511',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+    //         alt: 'ananas',
+    //     },
+    //     'price': 6.75,
+    //     'descripton': 'Alopecurus brachystachus M. Bieb.',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 2,
+    //     'key': 'TechnicalCommunicationsCorporation511'
+    // },
+    // {
+    //     'title': 'WageWorks, Inc.87653',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+    //         alt: 'boli',
+    //     },
+    //     'price': 75.75,
+    //     'descripton': 'Hydrocotyle americana L.',
+    //     'reviews': [],
+    //     'averigeReview': 3,
+    //     'stock': 19,
+    //     'key': 'WageWorks,Inc.87653'
+    // },
+    // {
+    //     'title': 'Nabludavat ni876',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+    //         alt: 'Slavi',
+    //     },
+    //     'price': 35.75,
+    //     'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 9,
+    //     'key': 'Nabludavatni876'
+    // },
+    // {
+    //     'title': 'Junior Programmer14',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+    //         alt: 'Junior Programmer',
+    //     },
+    //     'price': 0.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 16,
+    //     'key': 'JuniorProgrammer14'
+    // },
+    // {
+    //     'title': 'Junior Programmer Day36',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+    //         alt: 'Junior Programmer Day',
+    //     },
+    //     'price': 1.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 6,
+    //     'key': 'JuniorProgrammerDay36'
+    // },
+    // {
+    //     'title': 'Technical Communications Corporation51',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+    //         alt: 'ananas',
+    //     },
+    //     'price': 6.75,
+    //     'descripton': 'Alopecurus brachystachus M. Bieb.',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 2,
+    //     'key': 'TechnicalCommunicationsCorporation51'
+    // },
+    // {
+    //     'title': 'WageWorks, Inc.124',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+    //         alt: 'boli',
+    //     },
+    //     'price': 75.75,
+    //     'descripton': 'Hydrocotyle americana L.',
+    //     'reviews': [],
+    //     'averigeReview': 3,
+    //     'stock': 19,
+    //     'key': 'WageWorks,Inc.124'
+    // },
+    // {
+    //     'title': 'Nabludavat ni41',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'kompyutri-periferiya', 
+    //     'img': {
+    //         src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+    //         alt: 'Slavi',
+    //     },
+    //     'price': 35.75,
+    //     'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 9,
+    //     'key': 'Nabludavatni41'
+    // },
+    // {
+    //     'title': 'Junior Programmer',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+    //         alt: 'Junior Programmer',
+    //     },
+    //     'price': 0.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 16,
+    //     'key': 'JuniorProgrammer'
+    // },
+    // {
+    //     'title': 'Junior Programmer Day',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+    //         alt: 'Junior Programmer Day',
+    //     },
+    //     'price': 1.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 6,
+    //     'key': 'JuniorProgrammerDay'
+    // },
+    // {
+    //     'title': 'Technical Communications Corporation13',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+    //         alt: 'ananas',
+    //     },
+    //     'price': 6.75,
+    //     'descripton': 'Alopecurus brachystachus M. Bieb.',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 2,
+    //     'key': 'TechnicalCommunicationsCorporation13'
+    // },
+    // {
+    //     'title': 'WageWorks, Inc.3',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+    //         alt: 'boli',
+    //     },
+    //     'price': 75.75,
+    //     'descripton': 'Hydrocotyle americana L.',
+    //     'reviews': [],
+    //     'averigeReview': 3,
+    //     'stock': 19,
+    //     'key': 'WageWorks,Inc.3'
+    // },
+    // {
+    //     'title': 'Nabludavat ni21',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+    //         alt: 'Slavi',
+    //     },
+    //     'price': 35.75,
+    //     'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 9,
+    //     'key': 'Nabludavatni'
+    // },
+    // {
+    //     'title': 'Junior Programmer',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+    //         alt: 'Junior Programmer',
+    //     },
+    //     'price': 0.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 16,
+    //     'key': 'JuniorProgrammer'
+    // },
+    // {
+    //     'title': 'Junior Programmer Day',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+    //         alt: 'Junior Programmer Day',
+    //     },
+    //     'price': 1.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 6,
+    //     'key': 'JuniorProgrammerDay'
+    // },
+    // {
+    //     'title': 'Technical Communications Corporation',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+    //         alt: 'ananas',
+    //     },
+    //     'price': 6.75,
+    //     'descripton': 'Alopecurus brachystachus M. Bieb.',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 2,
+    //     'key': 'TechnicalCommunicationsCorporation'
+    // },
+    // {
+    //     'title': 'WageWorks, Inc.',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+    //         alt: 'boli',
+    //     },
+    //     'price': 75.75,
+    //     'descripton': 'Hydrocotyle americana L.',
+    //     'reviews': [],
+    //     'averigeReview': 3,
+    //     'stock': 19,
+    //     'key': 'WageWorks,Inc.'
+    // },
+    // {
+    //     'title': 'Nabludavat ni',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+    //         alt: 'Slavi',
+    //     },
+    //     'price': 35.75,
+    //     'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock': 9,
+    //     'key': 'Nabludavatni'
+    // },
+    // {
+    //     'title': 'Junior Programmer',
+    //     'globalCat': 'telefoni-tableti-laptopi',
+    //     'subCat': 'mobilni-telefoni', 
+    //     'img': {
+    //         src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+    //         alt: 'Junior Programmer',
+    //     },
+    //     'price': 0.75,
+    //     'descripton': '#bahur',
+    //     'reviews': [],
+    //     'averigeReview': 4,
+    //     'stock': 16,
+    //     'key': 'JuniorProgrammer'
+    // },
     {
         'title': 'Junior Programmer Day',
         'globalCat': 'telefoni-tableti-laptopi',
@@ -698,163 +848,9 @@ export const DATA = [
         'stock': 6,
         'key': 'JuniorProgrammerDay'
     },
+
     {
-        'title': 'Technical Communications Corporation13',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation13'
-    },
-    {
-        'title': 'WageWorks, Inc.3',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.3'
-    },
-    {
-        'title': 'Nabludavat ni21',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
-    },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'mobilni-telefoni',
-        'key': 'Nabludavatni21'
-    },
-    {
-        'title': 'Technical Communications Corporation',
+        'title': 'Technical Communications Corporationgas',
         'globalCat': 'kompyutri-periferiya',
         'subCat': 'tv', 
         'img': {
@@ -866,10 +862,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation1'
+        'key': 'TechnicalCommunicationsCorporationgas'
     },
     {
-        'title': 'WageWorks, Inc.',
+        'title': 'WageWorks, Inc.as',
         'globalCat': 'mobilni-telefoni',
         'subCat': 'tv', 
         'img': {
@@ -881,10 +877,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 3,
         'stock': 19,
-        'key': 'WageWorks,Inc.1'
+        'key': 'WageWorks,Inc.as'
     },
     {
-        'title': 'Nabludavat ni',
+        'title': 'Nabludavat ni21',
         'globalCat': 'mobilni-telefoni',
         'subCat': 'tv', 
         'img': {
@@ -896,10 +892,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock': 0,
-        'key': 'Nabludavatni1'
+        'key': 'Nabludavatni21'
     },
     {
-        'title': 'Junior Programmer',
+        'title': 'Junior Programmer125',
         'globalCat': 'mobilni-telefoni',
         'subCat': 'tv', 
         'img': {
@@ -911,10 +907,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock': 16,
-        'key': 'JuniorProgrammer1'
+        'key': 'JuniorProgrammer125'
     },
     {
-        'title': 'Junior Programmer Day',
+        'title': 'Junior Programmer Day1432',
         'globalCat': 'mobilni-telefoni',
         'subCat': 'tv', 
         'img': {
@@ -926,7 +922,7 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock': 0,
-        'key': 'JuniorProgrammerDay1'
+        'key': 'JuniorProgrammerDay1432'
     },
     {
         'title': 'Монитор Gaming Samsung LS32BG850NUXEN',

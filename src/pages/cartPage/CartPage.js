@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import Button from "../../components/buttons/ProductButton";
 import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
 import './CartPage.scss'
@@ -10,11 +11,12 @@ export default function Cart(props) {
 
 
     // const users = JSON.parse(localStorage.getItem('users'));
-    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     // const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
     const cartList = useSelector(state => state.activeUser.cart)
     const renderList = [];
+    const navigate = useNavigate();
 
     (() => {
         for(let i = 0; i < productList.length; i++){
@@ -57,7 +59,11 @@ export default function Cart(props) {
     },[finalPrice])
 
     const handleOrderFinalizing = () => {
-        console.log('hi');
+        if(loggedUser){
+            navigate('/order')
+        }else{
+            navigate('/login')
+        }
     }
 
     return (

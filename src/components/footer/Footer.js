@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
     
-    <Stack
+    {/* <Stack
       sx={{
         backgroundColor: '#e7eff8',
         maxWidth: '1240px',
@@ -45,7 +45,7 @@ export default function Footer() {
         </Stack>
       </Stack>
       {/* ---------------ROW 2------------------ */}
-      <Stack
+      {/* <Stack
         direction='column'
         alignItems='flex-start'
         spacing={0}
@@ -64,7 +64,7 @@ export default function Footer() {
         <ButtonLinkFooter name='Блог' />
       </Stack>
       {/* ---------------ROW 3------------------ */}
-      <Stack
+      {/* <Stack
         direction='column'
         alignItems='flex-start'
         spacing={0}
@@ -82,9 +82,9 @@ export default function Footer() {
         <ButtonLinkFooter name='Формуляр поправка на продукт'/>
         <ButtonLinkFooter name='Формуляр връщане на продукт'/>
         <ButtonLinkFooter name='Формуляр въпроси и рекламации'/>
-      </Stack>
+      </Stack> */}
       {/* ---------------ROW 4------------------ */}
-      <Stack
+      {/* <Stack
         direction='column'
         alignItems='flex-start'
         spacing={0}
@@ -104,7 +104,7 @@ export default function Footer() {
         <ButtonLinkFooter name='Платформа за ОРС'/>
         <ButtonLinkFooter name='Black Friday'/>
       </Stack>
-    </Stack>
+    </Stack> */}
     <div className="footer">
             <div className="justify-content-center d-flex">
            <div className="card-name">
