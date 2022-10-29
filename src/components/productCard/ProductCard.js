@@ -55,7 +55,7 @@ export default function ProductCard(props) {
         }}
         // onClick={() => props.onClick() || 'none'}
         >
-            <CardActionArea onClick={() => { navigate(`/product/`) }}>
+            <CardActionArea onClick={() => props.onCardClick()}>
                 {/* <Stack sx={{ position: 'relative' }}> */}
                 <Stack>
                     <CardMedia

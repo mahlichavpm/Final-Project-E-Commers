@@ -6,14 +6,19 @@ import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
 import StarsSharpIcon from '@mui/icons-material/StarsSharp';
 import { useSelector } from "react-redux";
 import { useParams } from "react-router";
+import { useState } from "react";
 
 export default function ProductPage() {
   const productList = useSelector(state => state.product.product);
-  let {key} = useParams()
+  let {key, subCategory} = useParams()
+  const [sortedProductList, setSortedProductList] = useState(productList.slice()
+    .filter(e => e.subCat === subCategory)
+    );
+  
   
   return (
     <>
-      {productList.slice().filter(e => e.key === key).map(e =>
+      {sortedProductList.filter(e => e.key === key).map(e =>
         <div>
           <div className="productContainer">
             <Container maxWidth="xl">

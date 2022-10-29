@@ -9,13 +9,13 @@ import { useSelector } from 'react-redux';
 export default function CategoryPage(props) {
     const categories = useSelector(state => state.categories.categories);
     const navigate = useNavigate()
-    let { globalCategory } = useParams()
+    let { globalCategory, subCategory } = useParams()
 
-    console.log(categories.slice().filter(e => {
-        console.log(e.key);
-        console.log(globalCategory);
-        return e.key === globalCategory
-    }));
+    // console.log(categories.slice().filter(e => {
+    //     console.log(e.key);
+    //     console.log(globalCategory);
+    //     return e.key === globalCategory
+    // }));
     return (
         <Stack
             sx={{
@@ -40,17 +40,19 @@ export default function CategoryPage(props) {
                         <Typography color="custom.main">{e.name}</Typography>
                     </Breadcrumbs>
                     <h2>{e.name}</h2>
-                    {/* //props to be */}
                     < div className="categoryPageContainer" >
                         <div className="sideMenu">
-                            {e.subCategory.map(e => <AnchorLink value={e.name} onClick={navigate(`/:globalCategory/${e.key}`)}/>)}
+                            {/* Ot tuk ne raboti wlizaneto wyw wytre[na kategoriq] */}
+                            {e.subCategory.map(e => <AnchorLink 
+                                value={e.name} 
+                                key={e.key}  
+                                onClick={() => navigate(`/${globalCategory}/${e.key}`)}
+                            />)}
                         </div>
                         <div className="contentBody">
-                            {/* // props to be inserted */}
                             {e.subCategory.map(e => <CategoryBanner
-                                // path={`/${globalCategory}/category`}
                                 key={e.key}
-                                onClick={navigate(`/:globalCategory/${e.key}`)}
+                                onClick={() => navigate(`/${globalCategory}/${e.key}`)}
                                 image={e.img}
                             />)}
                         </div>

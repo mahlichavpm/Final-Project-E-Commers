@@ -4,6 +4,7 @@ import { Typography } from '@mui/material'
 import ProductCard from '../productCard/ProductCard';
 import { Stack } from '@mui/system';
 import { useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router';
 
 export default function Example(props) {
     const productList = useSelector(state => state.product.product);
@@ -15,6 +16,10 @@ export default function Example(props) {
         productSlider.slice().splice(12, 4),
         productSlider.slice().splice(16, 4)
     ]);
+
+    const navigate = useNavigate()
+    const categories = useSelector(state => state.categories.categories);
+    let { subCategory, globalCategory } = useParams()
 
     return (
         <Stack spacing={2} sx={{ marginTop: '36px' }}>
@@ -42,12 +47,13 @@ export default function Example(props) {
                             price={e.price}
                             key={e.key}
                             id={e.key}
+                            onCardClick={() => navigate(`/${e.key}`)}
                         // onClick={() =>  navigate(`/products/category/${e.key}`)}/*da se sloji link kum dadenata str s porduct */
                         // onClickFav={() => {addToFavourite(e.key)}}
                         ></ProductCard>)}
                     </Stack>
                 )}
-                
+
             </Carousel>
         </Stack>
     )
