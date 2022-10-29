@@ -20,8 +20,8 @@ import ErrorPage from './pages/errorPage/ErrorPage';
 
 
 function App() {
-// ne znam dali stava
-  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser') ;
+//Stavaa li?
+  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser');
   // const loggedUser = localStorage.getItem('rememberUser');
   const admin = useSelector(state => state.activeUser.admin);
   const userId = useSelector(state => state.activeUser.sessionId || localStorage.getItem('accountId'));
