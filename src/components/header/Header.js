@@ -7,7 +7,7 @@ import Search from './Search';
 import React, { useEffect, useState } from "react";
 import HistoryIcon from '@mui/icons-material/History';
 import Logout from '@mui/icons-material/Logout';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuItemProduct from "./MenuItemProduct";
 import SideCategory from '../sideCategory/SideCategory';
 import ButtonMenu from './ButtonMenu';
@@ -103,6 +103,18 @@ export default function Header(props) {
     const handleClickProba = (event) => {
         setProba(event.currentTarget);
     };
+
+    const location = useLocation();
+    const [toggleMenu,setToggleMenu] = useState(location.pathname);
+
+    useEffect(() => {
+        if(location.pathname === '/home'){
+            setToggleMenu(false)
+        } else {
+            setToggleMenu(true)
+        }
+    },[location.pathname])
+
     return (
         <>
             <AppBar position="sticky"
@@ -111,14 +123,14 @@ export default function Header(props) {
                 }}>
                 <Box >
                     <StyledToolbar>
-                        <IconButton
-                            aria-controls={openProba ? 'demo-positioned-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={openProba ? 'true' : undefined}
-                            onClick={handleClickProba}
-                        >
-                            <MenuIcon color="primary" />
-                        </IconButton>
+                    {toggleMenu ? <IconButton
+                        aria-controls={openProba ? 'demo-positioned-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={openProba ? 'true' : undefined}
+                        onClick={handleClickProba}
+                    >
+                        <MenuIcon color="primary" />
+                    </IconButton> : null}
 
                         <div>
 

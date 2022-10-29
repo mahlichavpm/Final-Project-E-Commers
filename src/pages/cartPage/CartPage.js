@@ -56,6 +56,10 @@ export default function Cart(props) {
         }
     },[finalPrice])
 
+    const handleOrderFinalizing = () => {
+        console.log('hi');
+    }
+
     return (
         renderList.length === 0 ? 
         <div className="pageContainer">
@@ -177,7 +181,7 @@ export default function Cart(props) {
                     >
                         Общо: {(finalPrice + deliveryPrice).toFixed(2)} лв.
                     </Typography>
-                    <Button name='Продължи' />
+                    <Button onClick={() => {handleOrderFinalizing()}} name='Продължи' />
                 </Stack>
             </Stack>
         </Stack>

@@ -1,5 +1,19 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit'
+import rootReducer from './reducer'
+import { myCustomApiService } from './api'
+
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        extraArgument: myCustomApiService,
+      },
+      serializableCheck: false,
+    }),
+})
 
 export const loginUser = createAsyncThunk(
   "activeUser/login",
@@ -118,6 +132,7 @@ export const activeUserSlice = createSlice({
     },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
+      console.log(current(activeUser));
       activeUser.name = action.payload.name;
     },
     changeUserPhone: (state,action) => {
@@ -146,7 +161,7 @@ export const activeUserSlice = createSlice({
     loginErrorHandler: (state) => {
       state.loginError = false;
     },
-    registerErrorHandler: (state,action) => {
+    registerErrorHandler: (state) => {
       state.registerError = false;
     },
     pushToLocalStorage: (state) => {
@@ -154,7 +169,7 @@ export const activeUserSlice = createSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase(loginUser.pending, (state,action) => {
+    builder.addCase(loginUser.pending, (state) => {
       state.loginLoader = true
     })
     builder.addCase(loginUser.fulfilled, (state, action) => {
@@ -162,11 +177,11 @@ export const activeUserSlice = createSlice({
       localStorage.setItem('accountId',JSON.stringify(state.sessionId))
       state.loggedUser = true;
     })
-    builder.addCase(loginUser.rejected, (state, action) => {
+    builder.addCase(loginUser.rejected, (state) => {
       state.loginLoader = false;
       state.loginError = true;
     })
-    builder.addCase(registerUser.fulfilled, (state,action) => {
+    builder.addCase(registerUser.fulfilled, (state) => {
       state.userRegistered = true;
         });
     builder.addCase(registerUser.rejected, (state, action) => {
@@ -175,10 +190,13 @@ export const activeUserSlice = createSlice({
       state.userRegistered = false;
       console.log(action.payload);
     });
-    builder.addCase(registerUser.pending, (state, action) => {
+    builder.addCase(registerUser.pending, (state) => {
       state.registerLoader = true;
     });
-    builder.addCase(logOut.fulfilled, (state,action) => {
+    builder.addCase(logOut.fulfilled, (state) => {
+      state.sessionId = false;
+      state.loginLoader = false;
+      state.registerLoader = false;
       localStorage.removeItem('activeUserId');
     })
 },

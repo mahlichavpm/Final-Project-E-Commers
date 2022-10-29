@@ -8,7 +8,7 @@ export default function FavouritePage (props) {
 
     const users = JSON.parse(localStorage.getItem('users'));
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    const activeUser = users.find(e => e.username === loggedUser);
+    // const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
     const favouriteList = useSelector(state => state.activeUser.favourites);
     const renderList = [];
@@ -35,7 +35,7 @@ export default function FavouritePage (props) {
         renderList.splice(index,1);
     }
 
-
+    console.log(renderList);
     return(
         renderList.length === 0 ? 
         <div className="pageContainer">

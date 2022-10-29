@@ -3,8 +3,8 @@ import "./ProfilePage.scss";
 import ProfileAvatar from "../../components/profileAvatar/ProfileAvatar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { changeUserName, pushToLocalStorage, changeUserPhone, changeUserAddress1, changeUserAddress2, changeUserManipulacity ,changeUserTown } from "../../store/activeUserSlice";
-import { useNavigate } from "react-router";
+import { changeUserName, pushToLocalStorage, changeUserPhone, changeUserAddress1, changeUserAddress2, changeUserManipulacity ,changeUserTown, logOut } from "../../store/activeUserSlice";
+import { useLocation, useNavigate } from "react-router";
 
 export default function ProfilePage() {
   const users = useSelector((state) => state.activeUser.users);
@@ -12,7 +12,7 @@ export default function ProfilePage() {
   let activeUser = users.find((e) => e.username === loggedUser);
   const dispatch = useDispatch();
 
-  const [name, setName] = useState(activeUser.name);
+  const [name, setName] = useState(activeUser.name || '');
   const [phone, setPhone] = useState(activeUser.phone);
   const [phoneError, setPhoneError] = useState(false);
   const [manipulacity,setManipulacity] = useState(activeUser.address.manipulacity);
@@ -21,14 +21,10 @@ export default function ProfilePage() {
   const [address2,setAddress2] = useState(activeUser.address.address2);
   const [saveLoader,setSaveLoader] = useState(false)
   const navigate = useNavigate();
+  const userId = useSelector(state => state.activeUser.sessionId);
 
   useEffect(() => {
-    dispatch(changeUserName({ loggedUser, name }));
-    dispatch(changeUserPhone({ loggedUser, phone }));
-    dispatch(changeUserTown({ loggedUser, city }));
-    dispatch(changeUserAddress1({ loggedUser, address1 }));
-    dispatch(changeUserAddress2({ loggedUser, address2 }));
-    dispatch(changeUserManipulacity({ loggedUser, manipulacity }));
+   
       // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, phone, city, manipulacity, address1, address2]);
 
@@ -60,10 +56,19 @@ export default function ProfilePage() {
     localStorage.removeItem('loggedUser');
     localStorage.removeItem('rememberUser');
     localStorage.removeItem('accountId');
+    dispatch(logOut({id:userId}))
     navigate('/home');
-
   }
 
+  const handleSaveBtn= () => {
+    dispatch(changeUserName({ loggedUser, name }));
+    dispatch(changeUserPhone({ loggedUser, phone }));
+    dispatch(changeUserTown({ loggedUser, city }));
+    dispatch(changeUserAddress1({ loggedUser, address1 }));
+    dispatch(changeUserAddress2({ loggedUser, address2 }));
+    dispatch(changeUserManipulacity({ loggedUser, manipulacity }));
+    dispatch(pushToLocalStorage())
+  }
 
   useEffect(() => {
     let input = phone;
@@ -178,7 +183,7 @@ export default function ProfilePage() {
               type={"text"}
               label={"Адрес 2"}
             />
-            <Button size={'small'} onClick={()=>{dispatch(pushToLocalStorage())}} sx={{color: "black"}}>Запази промените</Button>
+            <Button size={'small'} onClick={()=>{handleSaveBtn()}} sx={{color: "black"}}>Запази промените</Button>
             <Button size={'small'} onClick={()=>{handleLogout()}} sx={{color: "black"}}>Изход от профила</Button>
           </div>
         </div>

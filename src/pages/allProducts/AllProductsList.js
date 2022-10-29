@@ -12,6 +12,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
 import usePagination from './pagination';
+import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
   const navigate = useNavigate()
@@ -101,10 +102,9 @@ export default function AllProductsList() {
   const dispatch = useDispatch();
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
-  // const addToFavourite = (key) => {
-  //   dispatch(addToFavourites({ key, loggedUser }))
-  // }
-  // .filter(e => e.subCategory.key === subCategory)
+  const addToFavourite = (key) => {
+    dispatch(addToFavourites({ key }))
+  }
 
   return (
     <>
