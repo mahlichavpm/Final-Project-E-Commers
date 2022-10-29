@@ -1,4 +1,308 @@
 export const DATA = [
+    // {
+    //     'title': '',
+    //     'globalCat': 'moda',
+    //     'subCat': '', 
+    //     'img': {
+    //         src: '',
+    //         src1: '',
+    //         src2: '',
+    //         src3: '',
+    //         src4: '',
+    //         alt: '',
+    //     },
+    //     'price': 111.99,
+    //     'descripton': '',
+    //     'reviews': [],
+    //     'averigeReview': 2,
+    //     'stock':10,
+    //     'key': ''
+    // },
+    {
+        'title': 'Дамска чанта Aleena GT1532',
+        'globalCat': 'moda',
+        'subCat': 'damski-chanti', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/42878/42877946/images/res_9f7492fc924929a788fbb1931c325510.jpg?width=450&height=450&hash=6EC803FF21F0649907CEBDBB8688D2E7',
+            src1: 'https://s13emagst.akamaized.net/products/42878/42877946/images/res_c2198fbdbc70610705b9b84183de78c3.jpg?width=450&height=450&hash=225D72A9458E8C4A25DF999AF7D802F0',
+            src2: 'https://s13emagst.akamaized.net/products/42878/42877946/images/res_0a25ffe404d4c46c3275fdacf3d24adb.jpg?width=450&height=450&hash=4C26C61BC2F3A4D6C0741FD68E7449B3',
+            src3: 'https://s13emagst.akamaized.net/products/42878/42877946/images/res_57072ebe92f8ea655636b1d516518d89.jpg?width=450&height=450&hash=D9185FC1AB8702C76B449959B83E4DDC',
+            src4: 'https://s13emagst.akamaized.net/products/42878/42877946/images/res_38728905ab22cf88844496e9411fbd66.png?width=450&height=450&hash=9FB6E57B94F558955ED53F69E71C6838',
+            alt: 'chanta1',
+        },
+        'price': 118.99,
+        'descripton': 'Чанта изработена от парчета кожа в различни цветове, поставени на случаен принцип (цветовата комбинация е различна - няма два еднакви продукта)',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock':10,
+        'key': 'ДамскачантаAleenaGT1532'
+    },
+    {
+        'title': 'Дамска Раница Vicuna Polo Unicorn',
+        'globalCat': 'moda',
+        'subCat': 'damski-chanti', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/18710/18709869/images/res_afeb0eecbc459b71ca9808d445e4a684.jpg?width=450&height=450&hash=F3F54D34893D552AB2513956DBB4792F',
+            src1: 'https://s13emagst.akamaized.net/products/18710/18709869/images/res_3081de31cad18c60a0e5c54125552fc7.jpg?width=450&height=450&hash=9E7EC37BF44E457447EC3248D76AB089',
+            src2: 'https://s13emagst.akamaized.net/products/18710/18709869/images/res_071c501f7a1f2f53e310cfc3c87d71c6.jpg?width=450&height=450&hash=27EF37833D17F3D8D50117AF26811C8F',
+            src3: 'https://s13emagst.akamaized.net/products/18710/18709869/images/res_d72f482d622e8a5d5e5e787d98a8f03f.jpg?width=450&height=450&hash=946F4E6B7706D4B205C5E1EF75AD3DF5',
+            src4: 'https://s13emagst.akamaized.net/products/18710/18709869/images/res_da22d8dc77567757246d75b0d0c5d363.jpg?width=450&height=450&hash=63E828351DBC1BCEEC42554D174C86EF',
+            alt: 'chanta2',
+        },
+        'price': 31.45,
+        'descripton': 'Елегантна дамска раница - Vicuna Polo Unicorns',
+        'reviews': [],
+        'averigeReview': 5,
+        'stock':10,
+        'key': 'ДамскаРаницаVicunaPoloUnicorn'
+    },
+    {
+        'title': 'Дамска чанта Otilia GT1651',
+        'globalCat': 'moda',
+        'subCat': 'damski-chanti', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/44815/44814984/images/res_7f9636f718d2cc91600b3701ef032138.jpg?width=450&height=450&hash=58031F98B981287686728320CBDA6168',
+            src1: 'https://s13emagst.akamaized.net/products/44815/44814984/images/res_ea81a8bee6359e47445bcde23c8968e4.png?width=450&height=450&hash=389B44A4A444302A7D441F67AF3F8A89',
+            src2: 'https://s13emagst.akamaized.net/products/44815/44814985/images/res_72f0ae6c323ad942924b2dba246ab5a4.jpg?width=450&height=450&hash=5A9E4E472B1FFC6851EEE6FDAE71A1AB',
+            src3: 'https://s13emagst.akamaized.net/products/44815/44814985/images/res_eebacd3c88968706bf1a0510f990bc92.jpg?width=450&height=450&hash=675633908B642B49E6F37233CBC09B3A',
+            src4: '',
+            alt: 'ranica3',
+        },
+        'price': 59.00,
+        'descripton': 'Важно: нюансът на продукта може да варира леко, поради яркостта на монитора, поради разнообразието от измервателни уреди, може да има леки грешки от cm!',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'ДамскачантаOtiliaGT1651'
+    },
+    {
+        'title': 'Дамска Чанта Vicuna Polo Pleuvoir',
+        'globalCat': 'moda',
+        'subCat': 'damski-chanti', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/33537/33536504/images/res_5cb2647648227df7aab825661cd7442c.jpg?width=450&height=450&hash=09C3D693BD8A0E6C34188590462DF63B',
+            src1: 'https://s13emagst.akamaized.net/products/33537/33536504/images/res_330f6bcc40110f63689503f35b33ea62.jpg?width=450&height=450&hash=71A538EAE001178FF9125E330CD22F79',
+            src2: 'https://s13emagst.akamaized.net/products/33537/33536504/images/res_a2c5143a3829241b1fdcc432ab66890e.jpg?width=450&height=450&hash=E828A1DE1F5632E7DC55E8CC4012F470',
+            src3: 'https://s13emagst.akamaized.net/products/33537/33536504/images/res_1ee010302a3f2d6b8269063a666b0617.jpg?width=450&height=450&hash=4BD3574198FDEC1A60F4C01BEF4DA9AD',
+            src4: 'https://s13emagst.akamaized.net/products/33537/33536504/images/res_dbabc35c3ffc1b61a076dac6928e38c1.jpg?width=450&height=450&hash=111A5AABEF8438AAC276B768AB57F6EA',
+            alt: 'chanta4',
+        },
+        'price': 59.99,
+        'descripton': 'Елегантна дамска чанта - Vicuna Polo Pleuvoir',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'ДамскаЧантаVicunaPoloPleuvoir'
+    },
+    {
+        'title': 'Дамска раница POABA',
+        'globalCat': 'moda',
+        'subCat': 'damski-chanti', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/32288/32287742/images/res_c77f7491c263d6f667286db9502ab299.jpg?width=450&height=450&hash=DEBA8252F68A0C39D14F754ED2C81F93',
+            src1: 'https://s13emagst.akamaized.net/products/32288/32287742/images/res_ab7998e64d028b02b97f8a5f8e39b30e.jpg?width=450&height=450&hash=20DAFCA9F8495E57240B8D754BA22B28',
+            src2: 'https://s13emagst.akamaized.net/products/32288/32287742/images/res_94d1cbeb4c34761696403951b4b90611.jpg?width=450&height=450&hash=06D1C894D37E897E02AAB8A8004303DE',
+            src3: 'https://s13emagst.akamaized.net/products/32288/32287742/images/res_b361341f4c20cfb84266a61c1ae429d0.jpg?width=450&height=450&hash=AC4BB134B3C671BC31A4756E8D90747E',
+            src4: '',
+            alt: 'chanta5',
+        },
+        'price': 111.99,
+        'descripton': 'Възможност за носене едновременно като чанта, или раница.',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'ДамскараницаPOABA'
+    },
+    {
+        'title': 'Emporio Armani, Кожен колан с релеф',
+        'globalCat': 'moda',
+        'subCat': 'myzhki-kolani', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/41238/41237208/images/res_cdf91c87ab6fe5d48cd694a1e228c866.jpg?width=450&height=450&hash=1528C145AFE5A288AFC8FC583F16B215',
+            src1: 'https://s13emagst.akamaized.net/products/41238/41237204/images/res_5e439b49b6591c28a2d00274d4da5dc7.jpg?width=450&height=450&hash=29EF2883DA0EC6555FC3DF6E6500B0B7',
+            src2: 'https://s13emagst.akamaized.net/products/41238/41237204/images/res_4e107758329c61074ac3ad7e4985209a.jpg?width=450&height=450&hash=98188F26379FAFF9AA63268B63067341',
+            src3: 'https://s13emagst.akamaized.net/products/41238/41237204/images/res_4ae5302ebdf6bf8bbddceabf96f5eb7b.jpg?width=450&height=450&hash=C745B2D6703642EB4795DD315066C63E',
+            src4: '',
+            alt: 'kolan1',
+        },
+        'price': 104.99,
+        'descripton': 'Производител: Emporio Armani',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'EmporioArmani,Коженколансрелеф'
+    },
+    {
+        'title': 'Мъжки колан Krister с автоматична катарама',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/42433/42432709/images/res_9d51df780ac17c76dac43bfad9ec2de8.jpg?width=450&height=450&hash=0DF4B2B37D9BAF0C13026C02A87F30D8',
+            src1: 'https://s13emagst.akamaized.net/products/42433/42432709/images/res_bf5308822962f2fae600e11886f10f6e.jpg?width=450&height=450&hash=74B9CF9C991B953228E8346CB51DA537',
+            src2: 'https://s13emagst.akamaized.net/products/42433/42432711/images/res_c0c91ae5d6c5c4555c7b9385d18df288.jpg?width=450&height=450&hash=35A5C1D11AACBFAD19D0A372087B53D6',
+            src3: 'https://s13emagst.akamaized.net/products/42433/42432711/images/res_b1dc29f2e5796604917281577d1ca17f.jpg?width=450&height=450&hash=3C9E5A1D13641D4F28A48D1FA830ED2B',
+            src4: 'https://s13emagst.akamaized.net/products/42433/42432711/images/res_f254d453c44878ba357c76246f67dc2b.jpg?width=450&height=450&hash=C8AD266B8B0F24545E9CCEDA86A3CACF',
+            alt: 'kolan2',
+        },
+        'price': 49.99,
+        'descripton': '',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'МъжкиколанKristerсавтоматичнакатарама'
+    },
+    {
+        'title': 'Кожен колан Diesel B-Carve',
+        'globalCat': 'moda',
+        'subCat': 'myzhki-kolani', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/41083/41082240/images/res_d3c611dc36a9908c3aa4676d1672f3a4.jpg?width=450&height=450&hash=F3363EA5A2F07980A1443541658E7A55',
+            src1: 'https://s13emagst.akamaized.net/products/41083/41082240/images/res_849935d64f32d2c18b4f3b839eadd88a.jpg?width=450&height=450&hash=1E16CACA5D2981B577E61A2E75A21542',
+            src2: 'https://s13emagst.akamaized.net/products/41083/41082240/images/res_fcedb879516500ceb8d962b83553f40e.jpg?width=450&height=450&hash=BC595DB4DFBF730CD47B37D132FCDB31',
+            src3: 'https://s13emagst.akamaized.net/products/41083/41082240/images/res_d5f1a3624db2c872c5dfef262df3f3fb.jpg?width=450&height=450&hash=FCED69CF9476C6DBF04568F5058D20DF',
+            src4: '',
+            alt: 'kolan3',
+        },
+        'price': 63.99,
+        'descripton': 'Производител: Diesel',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'КоженколанDieselB-Carve'
+    },
+    {
+        'title': 'TONNY BLACK Портфейл и колан',
+        'globalCat': 'moda',
+        'subCat': 'myzhki-kolani', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/42995/42994534/images/res_da1336445cc019ad764a2e37799051c5.jpg?width=450&height=450&hash=EB5355596A4D61F2428A0CECF1C2A95B',
+            src1: 'https://s13emagst.akamaized.net/products/42995/42994534/images/res_116b119f8ab071d645403bd4597f27f8.jpg?width=450&height=450&hash=F2056726C1CB292AAD70B3BF4B193C6E',
+            src2: 'https://s13emagst.akamaized.net/products/42995/42994534/images/res_1ac1422fbcb3a08cde38200eccd91426.jpg?width=450&height=450&hash=FD9AB36202A741DD3E06886F26B691D8',
+            src3: 'https://s13emagst.akamaized.net/products/42995/42994534/images/res_5160dd214c57f638afe0a59b149d43e9.jpg?width=450&height=450&hash=15C233651288028CD6A5F06F1FBC026C',
+            src4: 'https://s13emagst.akamaized.net/products/42995/42994534/images/res_6a00f1bff90291119e57f7a0a8022c74.jpg?width=450&height=450&hash=C8EA7D4DFE5CABD50FDCF15DF4D62A49',
+            alt: 'kolan4',
+        },
+        'price': 38.40,
+        'descripton': '',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'TONNYBLACKПортфейликолан'
+    },
+    {
+        'title': 'Колан Pufo Tactical Combat',
+        'globalCat': 'moda',
+        'subCat': 'myzhki-kolani', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/41343/41342587/images/res_254aa23e9505ee1383fd3960bea92ae5.jpg?width=450&height=450&hash=346F5D6E0973B0C991AAB7D2E628F35F',
+            src1: 'https://s13emagst.akamaized.net/products/41343/41342587/images/res_caa11725c8dbd8e227d3f94054616c21.jpg?width=450&height=450&hash=667823426F8A2CF1988786FBD56982AA',
+            src2: 'https://s13emagst.akamaized.net/products/41343/41342587/images/res_192ec9a5027228ddb89c1c793a7dd5bc.jpg?width=450&height=450&hash=96E759E5DB2E375CAE200946252E001A',
+            src3: 'https://s13emagst.akamaized.net/products/41343/41342587/images/res_1bdd5bf042457e0a24aea7c7b193bbb7.jpg?width=450&height=450&hash=C73B17EA0A7A64185679F662E6D2DBD2',
+            src4: 'https://s13emagst.akamaized.net/products/41343/41342587/images/res_6368878753a94fd298d29d00ca61b178.jpg?width=450&height=450&hash=99DC45E2D8BB35BCF1C68BF6E405E881',
+            alt: 'ranica4',
+        },
+        'price': 111.99,
+        'descripton': '',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'КоланPufoTacticalCombat'
+    },
+    {
+        'title': 'Puma, Раница Edge Ruckpack',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/42785/42784702/images/res_7388fa44c53e70b8c138e9a77cacaa1d.jpg?width=450&height=450&hash=E78C6B758DF8BE2C837EF5CC4ADB2154',
+            src1: 'https://s13emagst.akamaized.net/products/42785/42784702/images/res_58382463c418152131ce634079ca57f0.jpg?width=450&height=450&hash=70B6075E747E4A48F3E2636025332A6B',
+            src2: 'https://s13emagst.akamaized.net/products/42785/42784702/images/res_9c0e93f9d22bb70822911e51bf0a1d46.jpg?width=450&height=450&hash=DE041861B4B9302F5E1E30A7C8DCF12C',
+            src3: 'https://s13emagst.akamaized.net/products/42785/42784702/images/res_35f200d4de9a1a3acd880f32074514fc.jpg?width=450&height=450&hash=7247F3C75E33044D71C31C34B732CA1D',
+            src4: 'https://s13emagst.akamaized.net/products/42785/42784702/images/res_3f0af20bc355dfefdeb04390dc0d4947.jpg?width=450&height=450&hash=94AD1F0425021919C3767E794C7D4E89',
+            alt: 'ranica4',
+        },
+        'price': 62.99,
+        'descripton': 'Раница Edge Ruckpack с външни джобове - 21л, Светлосив',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock':10,
+        'key': 'Puma,РаницаEdgeRuckpack'
+    },
+    {
+        'title': ' Многофункционална раница Bange',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/34325/34324798/images/res_bcc1b16492da6bf088d9ad1cd3eb715f.jpg?width=450&height=450&hash=F544D90C7649E44C14F7F99531287B02',
+            src1: 'https://s13emagst.akamaized.net/products/34325/34324798/images/res_d18ff5abc8a924251d2354664ef34883.jpg?width=450&height=450&hash=EFFF1559066C81F56206666241DAE0D8',
+            src2: 'https://s13emagst.akamaized.net/products/34325/34324798/images/res_4f7ab42ac4f31222297fde8270ab16a9.jpg?width=450&height=450&hash=19F87964D33BD28D1E416F949EDB8157',
+            src3: 'https://s13emagst.akamaized.net/products/34325/34324798/images/res_5648166b6f4abe53b3c32ae37dc3e701.jpg?width=450&height=450&hash=D9F8C9E2F71EF6821823CF5EBFF5B1FA',
+            src4: 'https://s13emagst.akamaized.net/products/34325/34324798/images/res_8793c3efd85f1ca90b23983208ca22ec.jpg?width=450&height=450&hash=B7C01DBF270E2ADFE9FC91745066426C',
+            alt: 'ranica5',
+        },
+        'price': 74.18,
+        'descripton': '',
+        'reviews': [],
+        'averigeReview': 1,
+        'stock':10,
+        'key': 'МногофункционалнараницаBange'
+    },
+    {
+        'title': 'Раница Bange BG1909BK',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/47929/47928525/images/res_4802d33cf8651ec576966b4278c8768d.jpg?width=450&height=450&hash=114F9F0FA799E9C20E3BF9435030ABC7',
+            src1: 'https://s13emagst.akamaized.net/products/47929/47928525/images/res_468330f27d96ea9ff6e222c58c91e88c.jpg?width=450&height=450&hash=65FE68576E302D66E6ADD875F891287B',
+            src2: 'https://s13emagst.akamaized.net/products/47929/47928525/images/res_16caed07a3773590d61cb52ca0d3f45d.jpg?width=450&height=450&hash=5726CEBEDCB45D4185EA61192781F9AA',
+            src3: 'https://s13emagst.akamaized.net/products/47929/47928525/images/res_a0f4f0e69d10d3723519c61c4d254d34.jpg?width=450&height=450&hash=5E2DFA43BD455C30F0272A6A517410CC',
+            src4: 'https://s13emagst.akamaized.net/products/47929/47928525/images/res_7aa46f7a72130a60cea7fdd50f71cba2.jpg?width=450&height=450&hash=38D68B4AFFEF90E3ED5833F8C30FD03D',
+            alt: 'dunki5',
+        },
+        'price': 74.18,
+        'descripton': 'Унисекс раница за рамо, изработена от специални материали, устойчив на износване цип, има здрава материя и добре проектиран дизайн, с издръжливост до няколко години.',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock':10,
+        'key': 'РаницаBangeBG1909BK'
+    },
+    {
+        'title': 'Водоустойчива раница Crossbody',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/34325/34324823/images/res_048fcb1a68b8df99d7536b23ffbf5e57.jpg?width=450&height=450&hash=190564FE30EAD390BC8FC370FB795CF5',
+            src1: 'https://s13emagst.akamaized.net/products/34325/34324823/images/res_c742a88108911e9981dbdbc584bee1ca.jpg?width=450&height=450&hash=FB1C66AED5AB32F4E12D05AF6BFDA3F3',
+            src2: 'https://s13emagst.akamaized.net/products/34325/34324823/images/res_e8325e828f453033ecafa6adf84ed226.jpg?width=450&height=450&hash=EF136C295B50D4B0184203E4450DCF19',
+            src3: 'https://s13emagst.akamaized.net/products/34325/34324823/images/res_3a6f82b7adb556d08097a2768a3f6808.jpg?width=450&height=450&hash=799CA6780CD011502DD03CEA49857C6B',
+            src4: 'https://s13emagst.akamaized.net/products/34325/34324823/images/res_93eb66ee5dd2c0dae363c51a2b3edad7.jpg?width=450&height=450&hash=9319A224FBA144ED7CDE798F06F68B93',
+            alt: 'ranica2',
+        },
+        'price': 66.33,
+        'descripton': 'Раницата е направена от плътен материал, който ще предпази съдържанието от удари и повреди.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock':10,
+        'key': 'ВодоустойчивараницаCrossbody'
+    },
+    {
+        'title': 'Раница за лаптоп Mark Ryden Protector',
+        'globalCat': 'moda',
+        'subCat': 'ranici', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/35799/35798960/images/res_9d85044fc4fbae022ed7ddca4cb3a312.jpg?width=450&height=450&hash=EA6C8CCC9A7426EF6DFC9EB81023BEA3',
+            src1: 'https://s13emagst.akamaized.net/products/35799/35798960/images/res_94f4331295b33b97be0ae8b5a33b4aa4.jpg?width=450&height=450&hash=E0EEE1E9751D68083EA410A1801B8FA7',
+            src2: 'https://s13emagst.akamaized.net/products/35799/35798960/images/res_aeea91d1a9e241b158d9ece2f875f5a3.jpg?width=450&height=450&hash=BA92D1F4AB7BD7957C995756CEB6473D',
+            src3: 'https://s13emagst.akamaized.net/products/35799/35798960/images/res_20b563c14167967a666e9b723fc7e2a7.jpg?width=450&height=450&hash=454E52D53071BAB8B2CF91F76B2E1F47',
+            src4: 'https://s13emagst.akamaized.net/products/35799/35798960/images/res_c0126800d2540d47fba9940bca784375.jpg?width=450&height=450&hash=75C9DAEAB03C4E2F264A2382C8F15985',
+            alt: 'ranica3',
+        },
+        'price': 166.99,
+        'descripton': 'Раницата притежава отлична водоустойчивост, независимо от метерологичните условия вещите ви са на сигурно място. Невъзможно е да попадането на вода или прах в раницата.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock':10,
+        'key': 'РаницазалаптопMarkRydenProtector'
+    },
     {
         'title': 'Technical Communications Corporation',
         'globalCat': 'telefoni-tableti-laptopi',
@@ -13,6 +317,101 @@ export const DATA = [
         'averigeReview': 4,
         'stock': 2,
         'key': 'TechnicalCommunicationsCorporation'
+    },
+    {
+        'title': 'Дънки Trendyol',
+        'globalCat': 'moda',
+        'subCat': 'dunki', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/39864/39863310/images/res_1811d8a2691d28079f1cd3ddd63ac832.jpg?width=450&height=450&hash=C8F9AB66989C4322AC15F04982155B38',
+            src1: 'https://s13emagst.akamaized.net/products/39864/39863310/images/res_b921ef95df28ba8c491bab188452275a.jpg?width=450&height=450&hash=F8D1A5EAEEBC3993E22D71C469157A6D',
+            src2: 'https://s13emagst.akamaized.net/products/39864/39863310/images/res_92a783d78a6111698bbc0d400480186e.jpg?width=450&height=450&hash=20594C76986DFA2031CAD847E75A2922',
+            src3: 'https://s13emagst.akamaized.net/products/39864/39863310/images/res_33811e9266a26ec025e2c5390f64d603.jpg?width=450&height=450&hash=228311E45FFA3634F6B042EBC6703AB4',
+            src4: 'https://s13emagst.akamaized.net/products/39864/39863310/images/res_9a8d3af1d6926246f149bffa77a951b1.jpg?width=450&height=450&hash=ABF96920BD37ED79E77B16FBFDAF2698',
+            alt: 'dunki1',
+        },
+        'price': 30.99,
+        'descripton': 'Светло сини дънки на марката Trendyol',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock':10,
+        'key': 'ДънкиTrendyol'
+    },
+    {
+        'title': 'Прилепнали дънки GAP със захабен ефект',
+        'globalCat': 'moda',
+        'subCat': 'dunki', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/24167/24166871/images/res_42346202d2960663a293c5b1cf746950.jpg?width=450&height=450&hash=9D26AD8178DB378E5F48671E6BBB5F51',
+            src1: 'https://s13emagst.akamaized.net/products/24167/24166871/images/res_1a6ab4ef0b72e1a2318de1fe3f21248f.jpg?width=450&height=450&hash=C33E8CA152D7503DE8B1A69476CC7111',
+            src2: 'https://s13emagst.akamaized.net/products/24167/24166873/images/res_fe77b08281e38cc3a88c8328020c7b8f.jpg?width=450&height=450&hash=58FA2FFFD9C1E2022DEFD289A243F0A6',
+            src3: 'https://s13emagst.akamaized.net/products/24167/24166871/images/res_447ea959cbf983f62dc415242d203409.jpg?width=450&height=450&hash=9CE38EAB7863FC7F2F65CAAE8FE7C536',
+            src4: 'https://s13emagst.akamaized.net/products/24167/24166871/images/res_5ba137b6ef55bad2ed79033aa52dd9a5.jpg?width=450&height=450&hash=01A11D7E5E25C55CDA8138A513F9B61E',
+            alt: 'dunki2',
+        },
+        'price': 32.99,
+        'descripton': 'Сини прилепнали дънки на марката GAP',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock':10,
+        'key': 'ПрилепналидънкиGAPсъсзахабенефект'
+    },
+    {
+        'title': 'Дънки Boyfriend Marc O\'Polo с 5 джоба',
+        'globalCat': 'moda',
+        'subCat': 'dunki', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/46515/46514020/images/res_17bcbe726ee3c74cee717a8b52f3d450.jpg?width=450&height=450&hash=28FFABF92D1C05B794AFBB2F7AC62EEB',
+            src1: 'https://s13emagst.akamaized.net/products/46515/46514020/images/res_304e80f4bf74e1741bd0891037c4cd0a.jpg?width=450&height=450&hash=711918F0AC8CF806AE4A12DEAC11C006',
+            src2: 'https://s13emagst.akamaized.net/products/46515/46514020/images/res_813b4c9c93fe806adc92f4715cddfdc4.jpg?width=450&height=450&hash=717978CBA0BA6CC1F9928E8324665C80',
+            src3: 'https://s13emagst.akamaized.net/products/46515/46514020/images/res_c835cc96a3302c1b3094fafa73020466.jpg?width=450&height=450&hash=AE316BB8B721FBCD013F6F382D1C4C35',
+            src4: 'https://s13emagst.akamaized.net/products/46515/46514020/images/res_5b87369419490ea3e09c2a8d5eb411a9.jpg?width=450&height=450&hash=01F9C14ACD1B28866EB31059432A0CD7',
+            alt: 'dunki3',
+        },
+        'price': 124.99,
+        'descripton': 'Дънките на Marc O\'Polo с 5 джоба',
+        'reviews': [],
+        'averigeReview': 5,
+        'stock':10,
+        'key': 'ДънкиBoyfriendMarcO\'Poloс5джоба'
+    },
+    {
+        'title': 'Дънки Love Moschino с надпис и бродерии',
+        'globalCat': 'moda',
+        'subCat': 'dunki', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/34598/34597454/images/res_509b10bb845d87fe6d1eeacc791177e8.jpg?width=450&height=450&hash=6847F0221CEB30978E5C4EF00064CFCC',
+            src1: 'https://s13emagst.akamaized.net/products/34598/34597454/images/res_ae11afb7fd3e3dc6bf20f22d2fd932f6.jpg?width=450&height=450&hash=ADD9606F9D895181CB7E20C7495FF039',
+            src2: 'https://s13emagst.akamaized.net/products/34598/34597454/images/res_69c882401f2da43e3f689d94df237625.jpg?width=450&height=450&hash=742C2958A259151C721138F3B568AE20',
+            src3: 'https://s13emagst.akamaized.net/products/34598/34597454/images/res_f07821b25325ba72b17d8c438e0dd47d.jpg?width=450&height=450&hash=50B668D9219C051D101FBE04575E4E7E',
+            src4: 'https://s13emagst.akamaized.net/products/34598/34597454/images/res_43f3e9387ef06a999075e9e717ea76ce.jpg?width=450&height=450&hash=D532BF7F9D3F4E640A8EFA7AF80D3847',
+            alt: 'dunki4',
+        },
+        'price': 131.99,
+        'descripton': 'Дънки Love Moschino в стил Boyfriend',
+        'reviews': [],
+        'averigeReview': 5,
+        'stock':10,
+        'key': 'ДънкиLoveMoschinoснадписибродерии'
+    },
+    {
+        'title': 'Дънки Scotch & Soda The Norm',
+        'globalCat': 'moda',
+        'subCat': 'dunki', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/34920/34919153/images/res_d831671e8e20b01c5183b98a52062c03.jpg?width=450&height=450&hash=C8648AD3EC67A05F974D6E6660A3EE24',
+            src1: 'https://s13emagst.akamaized.net/products/34920/34919153/images/res_89cef40b9a6a1e5ac7e9c2a595d999e7.jpg?width=450&height=450&hash=396860EA42F540F654DC3AD9F07E62D4',
+            src2: 'https://s13emagst.akamaized.net/products/34920/34919153/images/res_e81335e17a4d7ef43e5cce4375641951.jpg?width=450&height=450&hash=090F3F4C4FD3E707B816148D824EDB10',
+            src3: 'https://s13emagst.akamaized.net/products/34920/34919153/images/res_27bb0aa26c118506ce80b847e1e3d639.jpg?width=450&height=450&hash=7D9F5A8E674A4FE412E172D64CE8FF9E',
+            src4: 'https://s13emagst.akamaized.net/products/34920/34919153/images/res_2f951bae8c40b4d4b758fdd33e6bb74b.jpg?width=450&height=450&hash=5F287200E2A00F19547977464B67EE1B',
+            alt: 'dunki5',
+        },
+        'price': 111.99,
+        'descripton': 'Мъжки дънки Scotch & Soda The Norm',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock':10,
+        'key': 'ДънкиScotch&SodaTheNorm'
     },
     {
         'title': 'WageWorks, Inc.',
@@ -30,7 +429,7 @@ export const DATA = [
         'key': 'WageWorks,Inc.'
     },
     {
-        'title': 'Nabludavat ni',
+        'title': 'Nabludavat ni654',
         'globalCat': 'telefoni-tableti-laptopi',
         'subCat': 'kompyutri-periferiya', 
         'img': {
@@ -42,7 +441,157 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock': 9,
-        'key': 'Nabludavatni'
+        'key': 'Nabludavatni654'
+    },
+    {
+        'title': 'Junior Programmer8765',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+            alt: 'Junior Programmer',
+        },
+        'price': 0.75,
+        'descripton': '#bahur',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 16,
+        'key': 'JuniorProgrammer8765'
+    },
+    {
+        'title': 'Junior Programmer Day098',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+            alt: 'Junior Programmer Day',
+        },
+        'price': 1.75,
+        'descripton': '#bahur',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock': 6,
+        'key': 'JuniorProgrammerDay098'
+    },
+    {
+        'title': 'Technical Communications Corporation511',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+            alt: 'ananas',
+        },
+        'price': 6.75,
+        'descripton': 'Alopecurus brachystachus M. Bieb.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 2,
+        'key': 'TechnicalCommunicationsCorporation511'
+    },
+    {
+        'title': 'WageWorks, Inc.87653',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+            alt: 'boli',
+        },
+        'price': 75.75,
+        'descripton': 'Hydrocotyle americana L.',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock': 19,
+        'key': 'WageWorks,Inc.87653'
+    },
+    {
+        'title': 'Nabludavat ni876',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+            alt: 'Slavi',
+        },
+        'price': 35.75,
+        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock': 9,
+        'key': 'Nabludavatni876'
+    },
+    {
+        'title': 'Junior Programmer14',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+            alt: 'Junior Programmer',
+        },
+        'price': 0.75,
+        'descripton': '#bahur',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 16,
+        'key': 'JuniorProgrammer14'
+    },
+    {
+        'title': 'Junior Programmer Day36',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
+            alt: 'Junior Programmer Day',
+        },
+        'price': 1.75,
+        'descripton': '#bahur',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock': 6,
+        'key': 'JuniorProgrammerDay36'
+    },
+    {
+        'title': 'Technical Communications Corporation51',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+            alt: 'ananas',
+        },
+        'price': 6.75,
+        'descripton': 'Alopecurus brachystachus M. Bieb.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 2,
+        'key': 'TechnicalCommunicationsCorporation51'
+    },
+    {
+        'title': 'WageWorks, Inc.124',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+            alt: 'boli',
+        },
+        'price': 75.75,
+        'descripton': 'Hydrocotyle americana L.',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock': 19,
+        'key': 'WageWorks,Inc.124'
+    },
+    {
+        'title': 'Nabludavat ni41',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'kompyutri-periferiya', 
+        'img': {
+            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+            alt: 'Slavi',
+        },
+        'price': 35.75,
+        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock': 9,
+        'key': 'Nabludavatni41'
     },
     {
         'title': 'Junior Programmer',
@@ -75,7 +624,7 @@ export const DATA = [
         'key': 'JuniorProgrammerDay'
     },
     {
-        'title': 'Technical Communications Corporation',
+        'title': 'Technical Communications Corporation13',
         'globalCat': 'telefoni-tableti-laptopi',
         'subCat': 'kompyutri-periferiya', 
         'img': {
@@ -87,10 +636,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
+        'key': 'TechnicalCommunicationsCorporation13'
     },
     {
-        'title': 'WageWorks, Inc.',
+        'title': 'WageWorks, Inc.3',
         'globalCat': 'telefoni-tableti-laptopi',
         'subCat': 'kompyutri-periferiya', 
         'img': {
@@ -102,10 +651,10 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 3,
         'stock': 19,
-        'key': 'WageWorks,Inc.'
+        'key': 'WageWorks,Inc.3'
     },
     {
-        'title': 'Nabludavat ni',
+        'title': 'Nabludavat ni21',
         'globalCat': 'telefoni-tableti-laptopi',
         'subCat': 'kompyutri-periferiya', 
         'img': {
@@ -117,187 +666,7 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
-    },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
-    },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
+        'key': 'Nabludavatni21'
     },
     {
         'title': 'Technical Communications Corporation',
@@ -375,18 +744,18 @@ export const DATA = [
         'key': 'JuniorProgrammerDay1'
     },
     {
-        'title': 'Монитор Gaming Samsung LS32BG850NUXEN, Извит, 4K, 32", 240Hz, VA, 16:9, 1000cd/m2, 1ms, DisplayPort, HDMI, HDCP, USB, Pivot, Черен',
+        'title': 'Монитор Gaming Samsung LS32BG850NUXEN',
         'globalCat': 'kompyutri-periferiya',
         'subCat': 'tv', 
         'img': {
             src: 'https://s13emagst.akamaized.net/products/47977/47976202/images/res_0fa687a03022edc703ab297bb39ec7c6.jpg?width=450&height=450&hash=FE4BF06C7800B76CCC5233F551684BC6',
-            alt: 'monitor-gaming-samsung-ls32bg850nuxen-izvit-4k-32-240hz-va-16-9-1000cd-m2-1ms-displayport-hdmi-hdcp-usb-pivot-cheren',
+            alt: 'monitor-gaming-samsung-ls32bg850nuxen',
         },
         'price': 2799.99,
         'descripton': 'Очарователно визуално качество Quantum Mini-LED, който достига дълбочината на следващото поколение с Quantum HDR2000, предлага изключително качество на изображението, поставяйки Odyssey Neo в свой собствен клас.',
         'reviews': [],
-        'averigeReview': 2,
+        'averigeReview': 4,
         'stock': 10,
-        'key': 'monitor-gaming-samsung-ls32bg850nuxen-izvit-4k-32-240hz-va-16-9-1000cd-m2-1ms-displayport-hdmi-hdcp-usb-pivot-cheren'
+        'key': 'МониторGamingSamsungLS32BG850NUXEN'
     },
 ]

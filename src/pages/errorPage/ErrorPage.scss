@@ -18,6 +18,15 @@ body {
       position:absolute;
       left: 30%;
       top: 8%;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
     }
   
   .far {
@@ -47,11 +56,3 @@ body {
       width: 75%;
     }
   
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }

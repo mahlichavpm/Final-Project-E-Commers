@@ -3,7 +3,7 @@ import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
 import { Breadcrumb, Layout, Menu } from 'antd';
 import ProductCard from '../../components/productCard/ProductCard';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Checkbox, Divider, FormControlLabel, Radio, RadioGroup, Rating, TextField, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import InputLabel from '@mui/material/InputLabel';
@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
+import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
   const navigate = useNavigate()
@@ -95,9 +96,9 @@ export default function AllProductsList() {
 
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
-  // const addToFavourite = (key) => {
-  //   dispatch(addToFavourites({ key, loggedUser }))
-  // }
+  const addToFavourite = (key) => {
+    dispatch(addToFavourites({ key }))
+  }
 
   return (
     <>

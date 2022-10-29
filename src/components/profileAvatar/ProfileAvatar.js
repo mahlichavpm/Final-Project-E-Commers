@@ -10,7 +10,7 @@ export default function ProfileAvatar(props) {
  
     const getInitials = (username) => {
         if(typeof username === 'undefined'){
-            return '';
+            return null;
         }
         if(username.split(' ').length <= 1){
             return;
@@ -19,7 +19,7 @@ export default function ProfileAvatar(props) {
         const initials = fullName.shift().charAt(0) + fullName.pop().charAt(0);
         return initials.toUpperCase();
     }
-    let initials = getInitials(activeUser?.name) || ''; 
+    let initials = getInitials(activeUser?.name); 
 
     return (
         <Avatar

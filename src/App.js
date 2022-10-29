@@ -18,12 +18,13 @@ import { useSelector } from 'react-redux';
 import Footer from './components/footer/Footer';
 import ErrorPage from './pages/errorPage/ErrorPage';
 
+
 function App() {
 // ne znam dali stava
   const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser') ;
   // const loggedUser = localStorage.getItem('rememberUser');
   const admin = useSelector(state => state.activeUser.admin);
-  // const userId = localStorage.getItem('accountId');
+  const userId = useSelector(state => state.activeUser.sessionId || localStorage.getItem('accountId'));
   // za logOut ^
 
   // return (
@@ -45,16 +46,17 @@ function App() {
           <Routes>
             <Route path='/' element={<Navigate to={'/home'} />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
             <Route path='/home' element={<Homepage />} />
             <Route path='/history' element={<HistoryPage />} />
             <Route path='/favourites' element={<FavoritesPage />} />
             <Route path='/cart' element={<CartPage />} />
-            <Route path='/profile' element={<ProfilePage />} />
-            <Route path='/review' element={<ReviewPage />} />
+            <Route path='/profile' element={ userId ? <ProfilePage /> : <Navigate to={'/login'}/>} />
+            <Route path='/product' element={<ProductPage />} />
             {/* <Route path='/product' element={<ProductPage />} /> */}
-            <Route path='/:globalCategory' element={<CategoryPage />} />
-            <Route path='/:globalCategory/:subCategory' element={<AllProductsList />} />
-            <Route path='/:globalCategory/:subCategory/:key' element={<ProductPage />} />
+            <Route path='/?:globalCategory' element={<CategoryPage />} />
+            <Route path='/?:globalCategory/?:subCategory' element={<AllProductsList />} />
+            <Route path='/?:globalCategory/?:subCategory/:key' element={<ProductPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>
