@@ -1,19 +1,5 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from './reducer'
-import { myCustomApiService } from './api'
-
-const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      thunk: {
-        extraArgument: myCustomApiService,
-      },
-      serializableCheck: false,
-    }),
-})
 
 export const loginUser = createAsyncThunk(
   "activeUser/login",
