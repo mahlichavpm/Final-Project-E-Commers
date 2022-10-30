@@ -26,10 +26,12 @@ export default function ProductPage() {
                 <div className="product">
                   <h4>{e.title}</h4>
                   <div className="priceDiv">
-                    <span className="price">{e.price}</span> <br />
-                    <span className='deliveryText'>Предлаган и с доставка от: eMAG</span><br />
+                    <span className="price">{e.price}лв.</span> <br />
+                    <span className='deliveryText'>Предлаган с доставка от: eMAG</span><br />
                     <span className="availability">в наличност</span>
-                    <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                    <ProductButton name='Добави в количката' onClick={() => {
+                      console.log(e)
+                    }} startIcon={<ShoppingCartOutlinedIcon />} />
                   </div>
                   <div className="imgGalery">
                     <img src={e.img.src} width='400' alt="qnko" />
