@@ -7,12 +7,10 @@ import Button from "../../components/buttons/ProductButton";
 import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
 import './CartPage.scss'
 
-export default function Cart(props) {
+export default function Cart() {
 
 
-    // const users = JSON.parse(localStorage.getItem('users'));
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    // const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
     const cartList = useSelector(state => state.activeUser.cart)
     const renderList = [];
@@ -27,11 +25,6 @@ export default function Cart(props) {
             }
         }
     })();
-
-
-    for(let i = 0; i < renderList.length; i++){
-
-    }
 
     const totalPrice = () => {
         let sum = 0;

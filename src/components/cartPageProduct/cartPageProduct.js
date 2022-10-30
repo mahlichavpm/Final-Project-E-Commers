@@ -10,16 +10,13 @@ export default function CartPageProduct(props) {
     const dispatch = useDispatch();
     const cart = useSelector(state => state.activeUser.cart);
 
-    const [quantity,setQuantity] = useState(null)
+    const [quantity,setQuantity] = useState('')
 
     useEffect(() => {
        const obj = cart.find(e => e.id === props.id)
        setQuantity(obj.qty)
     },[cart])
-    
-    console.log(quantity);
-    
-
+  
         const removeItem = (id) => {
             dispatch(removeItemFromCart(id))
         }

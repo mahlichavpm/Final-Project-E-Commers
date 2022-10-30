@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 
     .orderInfoWrapper{
         width: 1200px;
@@ -14,24 +15,34 @@
         flex-direction: column;
         align-items: center;
         padding: 20px;
-
+        gap: 50px;
 
         .orderInfo{
             display: flex;
+            flex-direction: column;
             gap: 20px;
 
             .userInfoContainer{
-                width: 500px;
-                height: 700px;
-                background-color: khaki;
-                padding: 20px;
+                width: 1000px;
+                height: 200px;
+                background-color: rgb(232, 232, 232);
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .heading{
+                    font-weight: 700;
+                }
             }
 
             .orderInfoContainer{
-                width: 500px;
-                height: 700px;
-                background-color: rebeccapurple;
+                width: 1000px;
+                height: 300px;
+                background-color: rgb(232, 232, 232);
                 padding: 20px;
+                max-height: 300px;
+                overflow: scroll;
+                overflow-x: hidden;
             }
         }
     }

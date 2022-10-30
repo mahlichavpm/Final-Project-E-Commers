@@ -45,10 +45,10 @@ function App() {
             <Route path='/cart' element={<CartPage />} />
             <Route path='/profile' element={ userId ? <ProfilePage /> : <Navigate to={'/login'}/>} />
             {/* <Route path='/product' element={<ProductPage />} /> */}
-            <Route path='/order' element={<OrderPage />} />
-            <Route path='/?:globalCategory' element={<CategoryPage />} />
-            <Route path='/?:globalCategory/?:subCategory' element={<AllProductsList />} />
-            <Route path='/?:globalCategory/?:subCategory/:key' element={<ProductPage />} />
+            <Route path='/order' element={ userId ? <OrderPage /> : <Navigate to={'/home'}/>} />
+            <Route path='/:globalCategory' element={<CategoryPage />} />
+            <Route path='/:globalCategory/:subCategory' element={<AllProductsList />} />
+            <Route path='/:globalCategory/:subCategory/:key' element={<ProductPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>

@@ -24,7 +24,14 @@
             gap: 20px;
             padding: 40px;
             border-radius: 20px 0px 0px 20px;
+            
+            .avatarContainer{
+                display: flex;
+                justify-content: center;
+            }
         }
+
+        
     
         .adressInfo {
             text-align: center;
