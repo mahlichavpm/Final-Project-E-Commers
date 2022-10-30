@@ -4,29 +4,35 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Badge, Button, CardActionArea, IconButton, Rating, Stack } from '@mui/material';
+import { Badge, Button, CardActionArea, Rating, Stack } from '@mui/material';
 import ProductButton from '../buttons/ProductButton';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useDispatch } from 'react-redux';
 import { addToCart, addToFavourites, removeItemFromFav } from '../../store/activeUserSlice';
-import useSelection from 'antd/lib/table/hooks/useSelection';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 export default function ProductCard(props) {
-    // const goToProduct = () => {
-
-    // }
-    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    const favouriteList = useSelector(state => state.activeUser.favourites)
+  
+    const favouriteList = useSelector(state => state.activeUser.favourites);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [heartIcon,setHeartIcon] = React.useState(false);
 
     const handleAddToCart = (key) => {
         dispatch(addToCart({key}))
       }
+
+    React.useEffect(() => {
+        if(favouriteList.indexOf(props.id) !== -1){
+            setHeartIcon(true)
+        } else {
+            setHeartIcon(false)
+        }
+    },[favouriteList])
 
     const handleAddtoFavouritesBtn = (key) => {
         if(favouriteList.indexOf(key) !== -1){
@@ -39,6 +45,7 @@ export default function ProductCard(props) {
     }
 
     const favBtnLabel = (key) => {
+
         if(favouriteList.indexOf(key) !== -1){
             return 'Премахни от любими'
         }
@@ -53,10 +60,8 @@ export default function ProductCard(props) {
             border: '1px solid  rgba(34, 34, 34, 0.2)',
             borderRadius: '8px'
         }}
-        // onClick={() => props.onClick() || 'none'}
         >
             <CardActionArea onClick={() => props.onCardClick()}>
-                {/* <Stack sx={{ position: 'relative' }}> */}
                 <Stack>
                     <CardMedia
                         component="img"
@@ -80,22 +85,17 @@ export default function ProductCard(props) {
                         {props.description || 'Има Проблем V2'}
                     </Typography>
                     <Rating name="half-rating" readOnly defaultValue={props.averigeReview || 0} size='small' />
-                    <Typography variant="body2" color="custom.light">
-                        {props.stock || 'Изчерпано количество'}
-                    </Typography>
                     <Typography variant="body1" color="alert.main">
                         {props.price + ' лв' || 'Няма си цена'}
                     </Typography>
                 </CardContent>
-                {/* </Stack> */}
             </CardActionArea>
             <CardActions>
                 <Stack sx={{gap: 1, width: '100%' }}>
-                <ProductButton onClick={()=>{handleAddtoFavouritesBtn(props.id)}} startIcon={<FavoriteBorderIcon color="custom.light" />}  name={favBtnLabel(props.id)} />
+                <ProductButton onClick={()=>{handleAddtoFavouritesBtn(props.id)}} startIcon={heartIcon ? <FavoriteIcon color='custom.light'/> :<FavoriteBorderIcon color="custom.light" />}  name={favBtnLabel(props.id)} />
                 <ProductButton onClick={() => {handleAddToCart(props.id)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
                 </Stack>
             </CardActions>
-
         </Card>
     )
 }

@@ -18,7 +18,7 @@ export default function Homepage(props) {
     const handleClose = (seter) => {
         seter(null);
     };
-    const [menuComp, setMenuComp] = React.useState(null);
+    const [menuComp, setMenuComp] = useState(null);
     const openMenuComp = Boolean(menuComp);
     const handleClickMenuComp = (event) => {
         setMenuComp(event.currentTarget);

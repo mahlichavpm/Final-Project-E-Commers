@@ -17,22 +17,14 @@ import ReviewPage from './pages/reviewPage/ReviewPage';
 import { useSelector } from 'react-redux';
 import Footer from './components/footer/Footer';
 import ErrorPage from './pages/errorPage/ErrorPage';
+import OrderPage from './pages/orderPage/OrderPage';
 
 
 function App() {
-//Stavaa li?
   const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser');
   // const loggedUser = localStorage.getItem('rememberUser');
   const admin = useSelector(state => state.activeUser.admin);
   const userId = useSelector(state => state.activeUser.sessionId || localStorage.getItem('accountId'));
-  // za logOut ^
-
-  // return (
-  //   <ProfilePage/>
-  //   // <ProductPage/>
-  //   // <AllProductsList/>
-  //   // <Banner/>
-  // )
 
   return (
     admin ?
@@ -52,12 +44,10 @@ function App() {
             <Route path='/favourites' element={<FavoritesPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/profile' element={ userId ? <ProfilePage /> : <Navigate to={'/login'}/>} />
-            <Route path='/product' element={<ProductPage />} />
-            {/* <Route path='/product' element={<ProductPage />} /> */}
+            <Route path='/order' element={ userId ? <OrderPage /> : <Navigate to={'/home'}/>} />
             <Route path='/:globalCategory' element={<CategoryPage />} />
             <Route path='/:globalCategory/:subCategory' element={<AllProductsList />} />
             <Route path='/:globalCategory/:subCategory/:key' element={<ProductPage />} />
-            <Route path='/:key' element={<ProductPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>

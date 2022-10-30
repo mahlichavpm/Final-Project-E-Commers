@@ -274,7 +274,7 @@ export default function Header(props) {
                             <img id="headerLogo"
                                 src="https://s13emagst.akamaized.net/layout/bg/images/logo//18/26930.svg"
                                 alt="logo"
-                                ß />
+                                />
                         </Link>
 
                         <Search />

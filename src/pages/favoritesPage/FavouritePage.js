@@ -35,7 +35,6 @@ export default function FavouritePage (props) {
         renderList.splice(index,1);
     }
 
-    console.log(renderList);
     return(
         renderList.length === 0 ? 
         <div className="pageContainer">

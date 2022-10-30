@@ -10,16 +10,13 @@ export default function CartPageProduct(props) {
     const dispatch = useDispatch();
     const cart = useSelector(state => state.activeUser.cart);
 
-    const [quantity,setQuantity] = useState(null)
+    const [quantity,setQuantity] = useState('')
 
     useEffect(() => {
        const obj = cart.find(e => e.id === props.id)
        setQuantity(obj.qty)
     },[cart])
-    
-    console.log(quantity);
-    
-
+  
         const removeItem = (id) => {
             dispatch(removeItemFromCart(id))
         }
@@ -39,6 +36,7 @@ export default function CartPageProduct(props) {
                     border: '1px solid  rgba(34, 34, 34, 0.2)',
                     borderRadius: '8px',
                     width: '100%',
+                    height: '300px',
                     backgroundColor: 'white'
                 }}
             >
@@ -47,7 +45,9 @@ export default function CartPageProduct(props) {
                     height="140"
                     image={props.img || "https://hips.hearstapps.com/hmg-prod/images/ls1-swapped-miata-bat-lead-1656530832.png"}
                     alt={props.alt || "Mnogo bega"}
-                    sx={{ maxWidth: '300px' }}
+                    sx={{ maxWidth: '300px', 
+                          height: '100%'
+                }}
                 />
                 <CardContent
                     sx={{
@@ -56,9 +56,6 @@ export default function CartPageProduct(props) {
                 >
                     <Typography gutterBottom variant="h5" component="div">
                         {props.title || "Има Проблем!"}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {props.description || 'Има Проблем V2'}
                     </Typography>
                     <Typography
                             variant='h6'

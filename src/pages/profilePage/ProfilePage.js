@@ -95,15 +95,16 @@ export default function ProfilePage() {
         <div className="profileInfoContainer">
           <div className="userInfo">
             <h3>{`Здравейте, ${activeUser.name}!`}</h3>
+            <div className="avatarContainer">
             <ProfileAvatar
               sx={{
                 bgcolor: "orange",
                 width: 240,
                 height: 240,
-                marginLeft: 15,
                 fontSize: "120px",
               }}
             />
+            </div>
             <TextField
               variant="standard"
               size="small"

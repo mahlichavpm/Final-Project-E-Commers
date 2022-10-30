@@ -35,7 +35,7 @@ export default function ButtonLink(props) {
                 // onMouseLeave={(e) => {props.onMouseLeave(e)}}
                 onClick={props.onClick}
                 underline='none'
-                key={props.key}
+                // key={props.key}   greshkata s key -> undefined
             >
                 {props.name}
             </CategoryBtn>

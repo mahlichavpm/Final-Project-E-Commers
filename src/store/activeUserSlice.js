@@ -113,12 +113,10 @@ export const activeUserSlice = createSlice({
       } else {
         const index = state.cart.findIndex(e => e.id === action.payload.key);
         state.cart[index].qty++;
-        console.log(current(state.cart[index]));
       }
     },
     changeUserName: (state,action) => {
       let activeUser = state.users.find(e => e.username === action.payload.loggedUser);
-      console.log(current(activeUser));
       activeUser.name = action.payload.name;
     },
     changeUserPhone: (state,action) => {
@@ -152,6 +150,9 @@ export const activeUserSlice = createSlice({
     },
     pushToLocalStorage: (state) => {
       localStorage.setItem('users',JSON.stringify(state.users));
+    },
+    finalizeOrder: (state) => {
+      state.cart = [];
     }
   },
   extraReducers: builder => {
@@ -174,7 +175,6 @@ export const activeUserSlice = createSlice({
       state.registerLoader = false;
       state.registerError = true;
       state.userRegistered = false;
-      console.log(action.payload);
     });
     builder.addCase(registerUser.pending, (state) => {
       state.registerLoader = true;
@@ -189,9 +189,12 @@ export const activeUserSlice = createSlice({
 });
 
 export const { 
-  changeUserName, changeUserPhone, 
-  changeUserTown, changeUserAddress1,
-  changeUserAddress2, adminLogin,
+  changeUserName, 
+  changeUserPhone, 
+  changeUserTown, 
+  changeUserAddress1,
+  changeUserAddress2, 
+  adminLogin,
   changeUserManipulacity,
   loginErrorHandler,
   registerErrorHandler,
@@ -201,7 +204,8 @@ export const {
   removeItemFromCart,
   removeItemFromFav,
   addQuantity,
-  removeQuantity
+  removeQuantity,
+  finalizeOrder
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;
