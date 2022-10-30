@@ -18,6 +18,7 @@ export const DATA = [
     //     'stock':10,
     //     'key': ''
     // },
+    // --------------MODA--------------------
     {
         'title': 'Дамска чанта Aleena GT1532',
         'globalCat': 'moda',
@@ -35,7 +36,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock':10,
-        'key': 'ДамскачантаAleenaGT1532'
+        'key': 'ДамскачантаAleenaGT1532',
+        'url': 'damska-chanta-aleena-gt1532'
     },
     {
         'title': 'Дамска Раница Vicuna Polo Unicorn',
@@ -54,7 +56,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 5,
         'stock':10,
-        'key': 'ДамскаРаницаVicunaPoloUnicorn'
+        'key': 'ДамскаРаницаVicunaPoloUnicorn',
+        'url': 'damska-ranica-vicuna-polo-unicorn'
     },
     {
         'title': 'Дамска чанта Otilia GT1651',
@@ -73,7 +76,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'ДамскачантаOtiliaGT1651'
+        'key': 'ДамскачантаOtiliaGT1651',
+        'url': 'damska-chanta-otilia-gt1651'
     },
     {
         'title': 'Дамска Чанта Vicuna Polo Pleuvoir',
@@ -92,7 +96,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'ДамскаЧантаVicunaPoloPleuvoir'
+        'key': 'ДамскаЧантаVicunaPoloPleuvoir',
+        'url': 'damska-chanta-vicuna-polo-pleuvoir'
     },
     {
         'title': 'Дамска раница POABA',
@@ -111,7 +116,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'ДамскараницаPOABA'
+        'key': 'ДамскараницаPOABA',
+        'url': 'damska-ranica-poaba'
     },
     {
         'title': 'Emporio Armani, Кожен колан с релеф',
@@ -130,7 +136,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'EmporioArmani,Коженколансрелеф'
+        'key': 'EmporioArmani,Коженколансрелеф',
+        'url': 'emporio-armani-kojen-kolan-s-relef'
     },
     {
         'title': 'Мъжки колан Krister с автоматична катарама',
@@ -149,7 +156,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'МъжкиколанKristerсавтоматичнакатарама'
+        'key': 'МъжкиколанKristerсавтоматичнакатарама',
+        'url': 'majki-kolan-krister-s-avtomatichna-katarama'
     },
     {
         'title': 'Кожен колан Diesel B-Carve',
@@ -168,7 +176,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'КоженколанDieselB-Carve'
+        'key': 'КоженколанDieselB-Carve',
+        'url': 'kojen-kolan-diesel-b-carve'
     },
     {
         'title': 'TONNY BLACK Портфейл и колан',
@@ -187,7 +196,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'TONNYBLACKПортфейликолан'
+        'key': 'TONNYBLACKПортфейликолан',
+        'url': 'tonny-black-portfeyl-i-kolan'
     },
     {
         'title': 'Колан Pufo Tactical Combat',
@@ -206,7 +216,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'КоланPufoTacticalCombat'
+        'key': 'КоланPufoTacticalCombat',
+        'url': 'kolan-pufo-tactical-combat'
     },
     {
         'title': 'Puma, Раница Edge Ruckpack',
@@ -225,7 +236,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 2,
         'stock':10,
-        'key': 'Puma,РаницаEdgeRuckpack'
+        'key': 'Puma,РаницаEdgeRuckpack',
+        'url': 'puma-ranica-edge-ruckpack'
     },
     {
         'title': ' Многофункционална раница Bange',
@@ -244,7 +256,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 1,
         'stock':10,
-        'key': 'МногофункционалнараницаBange'
+        'key': 'МногофункционалнараницаBange',
+        'url': 'mnogofunkcionalna-ranica-bange'
     },
     {
         'title': 'Раница Bange BG1909BK',
@@ -263,7 +276,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 3,
         'stock':10,
-        'key': 'РаницаBangeBG1909BK'
+        'key': 'РаницаBangeBG1909BK',
+        'url': 'ranica-bange-bg1909bk'
     },
     {
         'title': 'Водоустойчива раница Crossbody',
@@ -282,7 +296,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock':10,
-        'key': 'ВодоустойчивараницаCrossbody'
+        'key': 'ВодоустойчивараницаCrossbody',
+        'url': 'vodoustoychiva-ranica-crossbody'
     },
     {
         'title': 'Раница за лаптоп Mark Ryden Protector',
@@ -301,97 +316,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock':10,
-        'key': 'РаницазалаптопMarkRydenProtector'
-    },
-    {
-        'title': 'Technical Communications Corporation1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
-    },
-    {
-        'title': 'WageWorks, Inc.1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.1',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation1',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
+        'key': 'РаницазалаптопMarkRydenProtector',
+        'url': 'ranica-za-laptop-mark-ryden-protector'
     },
     {
         'title': 'Дънки Trendyol',
@@ -410,7 +336,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 3,
         'stock':10,
-        'key': 'ДънкиTrendyol'
+        'key': 'ДънкиTrendyol',
+        'url': 'danki-trendyol'
     },
     {
         'title': 'Прилепнали дънки GAP със захабен ефект',
@@ -429,7 +356,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 3,
         'stock':10,
-        'key': 'ПрилепналидънкиGAPсъсзахабенефект'
+        'key': 'ПрилепналидънкиGAPсъсзахабенефект',
+        'url': 'prilepnali-danki-gap-sas-zahaben-efekt'
     },
     {
         'title': 'Дънки Boyfriend Marc O\'Polo с 5 джоба',
@@ -448,7 +376,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 5,
         'stock':10,
-        'key': 'ДънкиBoyfriendMarcO\'Poloс5джоба'
+        'key': 'ДънкиBoyfriendMarcO\'Poloс5джоба',
+        'url': 'danki-boyfriend-marc-o-polo-s-5-djoba'
     },
     {
         'title': 'Дънки Love Moschino с надпис и бродерии',
@@ -467,7 +396,8 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 5,
         'stock':10,
-        'key': 'ДънкиLoveMoschinoснадписибродерии'
+        'key': 'ДънкиLoveMoschinoснадписибродерии',
+        'url': 'danki-love-moschino-s-nadpis-i-broderii'
     },
     {
         'title': 'Дънки Scotch & Soda The Norm',
@@ -486,422 +416,132 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock':10,
-        'key': 'ДънкиScotch&SodaTheNorm'
+        'key': 'ДънкиScotch&SodaTheNorm',
+        'url': 'danki-scotch-soda-the-norm'
     },
+
+
+    
+    // --------------PHONES--------------------
     {
-        'title': 'WageWorks, Inc.',
+        'title': 'Смартфон Apple iPhone 11, 64 GB, Black',
         'globalCat': 'telefoni-tableti-laptopi',
         'subCat': 'mobilni-telefoni', 
         'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
+            src: 'https://s13emagst.akamaized.net/products/25344/25343941/images/res_99d57ec9e3d9bb8d3242f384288ce0a3.jpg?width=450&height=450&hash=786B6F02C39C1B12EDCE7B0392025549',
+            src1: 'https://s13emagst.akamaized.net/products/25344/25343941/images/res_39c68da0545f283c81a61022f0d8dbe4.jpg?width=450&height=450&hash=F4C1D44DFF7A8E706EA572551882914E',
+            src2: 'https://s13emagst.akamaized.net/products/25344/25343941/images/res_740c58803b83028467bb7da9652b9017.jpg?width=450&height=450&hash=5A5005E239684AF0D6ED9E13B226517E',
+            src3: 'https://s13emagst.akamaized.net/products/25344/25343941/images/res_3757198bb6755490fd6b8b75570c8aa3.jpg?width=450&height=450&hash=AB3988F1F0104E3645070FF3B3153C2F',
+            src4: 'https://s13emagst.akamaized.net/products/25344/25343946/images/res_acb415d088f5c52ac29e3aa8f8f88cd5.jpg?width=450&height=450&hash=1CF6A348705D242768578DE79F3F8A7C',
+            alt: 'Смартфон Apple iPhone 11, 64 GB, Black',
         },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni654',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni654'
-    },
-    {
-        'title': 'Junior Programmer8765',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer8765'
-    },
-    {
-        'title': 'Junior Programmer Day098',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay098'
-    },
-    {
-        'title': 'Technical Communications Corporation511',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
+        'price': 989.99,
+        'descripton': 'Нова система с две камери. Батерия за цял ден. Най-издръжливото стъкло, използвано някога в смартфон. Най-бързият процесор Apple за всички времена. Шест нови разкошни цвята. 6.1-инчов LCD дисплей Liquid Retina. Водоустойчивост на дълбочина до 2 метра за 30 минути.',
         'reviews': [],
         'averigeReview': 4,
         'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation511'
+        'key': 'СмартфонAppleiPhone11,64GB,Black',
+        'url': 'smartfon-apple-iphone-11-64-gb-black'
     },
     {
-        'title': 'WageWorks, Inc.87653',
+        'title': 'Смартфон Apple iPhone 13 Pro, 128GB, 5G, Graphite',
         'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
+        'subCat': 'mobilni-telefoni', 
         'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
+            src: 'https://s13emagst.akamaized.net/products/40685/40684397/images/res_9aa260aaaa84abf7f2a3db2bd2f85a8e.jpg?width=450&height=450&hash=E0DAEFC55242E20912D93D61E9D3C782',
+            src1: 'https://s13emagst.akamaized.net/products/40685/40684428/images/res_4ddfcf30bbe34261b9e32e2adccf07fb.jpg?width=450&height=450&hash=249094D6E4AB5AD0D0DBFD1C1D3F9269',
+            src2: 'https://s13emagst.akamaized.net/products/40685/40684397/images/res_cd3de17bf9fd0abb8c5e238ba5da97ca.jpg?width=450&height=450&hash=184ED38B95ECCC2878D72CEBCD668F8D',
+            src3: 'https://s13emagst.akamaized.net/products/40685/40684428/images/res_4b9b224255ec3e708788bc0d9a8f822f.jpg?width=450&height=450&hash=F90EE59727D574681210D13B06DDCC3E',
+            src4: 'https://s13emagst.akamaized.net/products/40685/40684397/images/res_b564d930d6836802bbaabdf02cbfa954.jpg?width=450&height=450&hash=9EAB88590280E618C3B89425FB5FD428',
+            alt: 'Смартфон Apple iPhone 13 Pro, 128GB, 5G, Graphite',
         },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.87653'
-    },
-    {
-        'title': 'Nabludavat ni876',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni876'
-    },
-    {
-        'title': 'Junior Programmer14',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
+        'price': 2279.99,
+        'descripton': 'Чудесен. Продуктивен. Pro Екран Super Retina XDR с ProMotion за плавни изображения и бързи реакции. Значително надграждане на системата от камери за невероятни нови възможности. Изключителна издръжливост. Ултра бърз чип A15 Bionic. Сензационна автономия на батерията. Накратко, Pro. Дизайн Превъзходен и издръжлив дизайн Дизайн, толкова омагьосващ, колкото и издръжлив, с хирургическа неръждаема стомана, керамичен щит и водоустойчивост.',
         'reviews': [],
         'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer14'
-    },
-    {
-        'title': 'Junior Programmer Day36',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay36'
-    },
-    {
-        'title': 'Technical Communications Corporation51',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation51'
-    },
-    {
-        'title': 'WageWorks, Inc.124',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.124'
-    },
-    {
-        'title': 'Nabludavat ni41',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'kompyutri-periferiya', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni41'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation13',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation13'
-    },
-    {
-        'title': 'WageWorks, Inc.3',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.3'
-    },
-    {
-        'title': 'Nabludavat ni21',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation'
-    },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.'
-    },
-    {
-        'title': 'Nabludavat ni',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 9,
-        'key': 'Nabludavatni'
-    },
-    {
-        'title': 'Junior Programmer',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-            alt: 'Junior Programmer',
-        },
-        'price': 0.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 16,
-        'key': 'JuniorProgrammer'
-    },
-    {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'telefoni-tableti-laptopi',
-        'subCat': 'mobilni-telefoni', 
-        'img': {
-            src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
-            alt: 'Junior Programmer Day',
-        },
-        'price': 1.75,
-        'descripton': '#bahur',
-        'reviews': [],
-        'averigeReview': 2,
-        'stock': 6,
-        'key': 'JuniorProgrammerDay'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'mobilni-telefoni',
-        'key': 'Nabludavatni21'
-    },
-    {
-        'title': 'Technical Communications Corporation',
-        'globalCat': 'kompyutri-periferiya',
-        'subCat': 'tv', 
-        'img': {
-            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
-            alt: 'ananas',
-        },
-        'price': 6.75,
-        'descripton': 'Alopecurus brachystachus M. Bieb.',
-        'reviews': [],
-        'averigeReview': 4,
-        'stock': 2,
-        'key': 'TechnicalCommunicationsCorporation1'
-    },
-    {
-        'title': 'WageWorks, Inc.',
-        'globalCat': 'mobilni-telefoni',
-        'subCat': 'tv', 
-        'img': {
-            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
-            alt: 'boli',
-        },
-        'price': 75.75,
-        'descripton': 'Hydrocotyle americana L.',
-        'reviews': [],
-        'averigeReview': 3,
-        'stock': 19,
-        'key': 'WageWorks,Inc.1'
-    },
-    {
-        'title': 'Nabludavat ni',
-        'globalCat': 'mobilni-telefoni',
-        'subCat': 'tv', 
-        'img': {
-            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
-            alt: 'Slavi',
-        },
-        'price': 35.75,
-        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
-        'reviews': [],
-        'averigeReview': 2,
         'stock': 0,
-        'key': 'Nabludavatni1'
+        'key': 'СмартфонAppleiPhone13Pro,128GB,5G,Graphite',
+        'url': 'smartfon-apple-iphone-13-pro-128gb-5g-graphite'
     },
     {
-        'title': 'Junior Programmer',
-        'globalCat': 'mobilni-telefoni',
-        'subCat': 'tv', 
+        'title': 'Смартфон Apple iPhone 14 Pro, 128GB, 5G, Space Black',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/48592/48591222/images/res_12362c60d3c74a4ac96f0ae792cf673b.jpg?width=450&height=450&hash=21353ECBB32BF3E470CC23A1211B80D9',
+            src1: 'https://s13emagst.akamaized.net/products/48592/48591222/images/res_3c7906a11c7e573117d2bceb24250385.jpg?width=450&height=450&hash=77871FB04514898321CB0A74926D1F73',
+            src2: 'https://s13emagst.akamaized.net/products/48592/48591222/images/res_5515b152f3298aadbc7a329d6a60cc1c.jpg?width=450&height=450&hash=105ADEA06AC3266A938834DCE3D77EF5',
+            src3: 'https://s13emagst.akamaized.net/products/48592/48591222/images/res_50603b9c7ced676f5bb8e2ae7a9af8fb.jpg?width=450&height=450&hash=1F8D3EFB8346979C2618BDE361ADEF63',
+            src4: 'https://s13emagst.akamaized.net/products/48592/48591222/images/res_335c708d2b3ca8fa699ac590333515d3.jpg?width=450&height=450&hash=67D6083F911CADCDA0B412450C7705E6',
+            alt: 'Смартфон Apple iPhone 14 Pro, 128GB, 5G, Space Black',
+        },
+        'price': 2649.00,
+        'descripton': 'Чудесен. Продуктивен. Pro Екран Super Retina XDR с ProMotion за плавни изображения и бързи реакции. Значително надграждане на системата от камери за невероятни нови възможности. Изключителна издръжливост. Ултра бърз чип A15 Bionic. Сензационна автономия на батерията. Накратко, Pro. Дизайн Превъзходен и издръжлив дизайн Дизайн, толкова омагьосващ, колкото и издръжлив, с хирургическа неръждаема стомана, керамичен щит и водоустойчивост.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 0,
+        'key': 'СмартфонAppleiPhone14Pro,128GB,5G,SpaceBlack',
+        'url': 'smartfon-apple-iphone-14-pro-128gb-5g-space-black'
+    },
+    {
+        'title': 'Смартфон Apple iPhone SE 3, 64GB, 5G, Midnight',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/44324/44323616/images/res_785693cc5aece7b5c5a31914aee8965e.png?width=450&height=450&hash=E271A29CA9DA980BDB935123215945F2',
+            src1: 'https://s13emagst.akamaized.net/products/44324/44323613/images/res_afde22df83b74a185d4ea15877a81415.jpg?width=450&height=450&hash=248090E4A02352E7AE1B14C678DBBA2E',
+            src2: 'https://s13emagst.akamaized.net/products/44324/44323614/images/res_e38fd2336268582547fcbbadc8671bb2.jpg?width=450&height=450&hash=B831A576C71B3651C3C3952A2BEA4F0D',
+            alt: 'Смартфон Apple iPhone SE 3, 64GB, 5G, Midnight',
+        },
+        'price': 899.00,
+        'descripton': 'Скоростта е семейна черта В сърцето на iPhone SE ще намерите същия супер мощен чип A15 Bionic, който е в iPhone 13. A15 Bionic подобрява почти всичко, което правите. Приложенията се зареждат за миг и са изключително плавни. Насладете се на невероятно плавна графична производителност за игри.',
+        'reviews': [],
+        'averigeReview': 4,
+        'stock': 2,
+        'key': 'СмартфонAppleiPhoneSE3,64GB,5G,Midnight',
+        'url': 'smartfon-apple-iphone-se-3-64gb-5g-midnight'
+    },
+    {
+        'title': 'Смартфон Apple iPhone 12, 128GB, 5G, Green',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
+        'img': {
+            src: 'https://s13emagst.akamaized.net/products/33382/33381518/images/res_0c08e3adb517cf669ac0ad7794875dd4.jpg?width=450&height=450&hash=688A71D0A7AE13EEC60EDAE47FF23CE4',
+            src1: 'https://s13emagst.akamaized.net/products/33382/33381508/images/res_8b13a2aa436f8a7d3b0f12380fdcb86b.jpg?width=450&height=450&hash=FFD04DF1888D276BA30F7B80C98926F1',
+            src2: 'https://s13emagst.akamaized.net/products/33382/33381518/images/res_cf3ccb57b53caf5304830b763647bf27.jpg?width=450&height=450&hash=A7CF2FDA06488D21246DA606FF7A27D8',
+            src3: 'https://s13emagst.akamaized.net/products/33382/33381518/images/res_61d2fc0a9ca736c4f682232abac0c89c.jpg?width=450&height=450&hash=21DA46EB3B27B6D948CADB1B40B5EE16',
+            src4: 'https://s13emagst.akamaized.net/products/33382/33381518/images/res_cce57a26fee735c3b90ee317a3bb6c88.jpg?width=450&height=450&hash=E041EBD6F53FA007B5C4D3A91E1F5D3B',
+            alt: 'Смартфон Apple iPhone 12, 128GB, 5G, Green',
+        },
+        'price': 1449.00,
+        'descripton': 'A14 Bionic, най-бързият чип, виждан някога на смартфон. OLED екран, който се простира от единия край до другия. Ceramic Shield, четири пъти по-устойчив на падане. И Нощен режим във всяка камера. iPhone 12 има всичко.',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock': 19,
+        'key': 'СмартфонAppleiPhone12,128GB,5G,Green',
+        'url': 'smartfon-apple-iphone-12-128gb-5g-green'
+
+    },
+    {
+        'title': 'Nabludavat ni1',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
+        'img': {
+            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg',
+            alt: 'Slavi',
+        },
+        'price': 35.75,
+        'descripton': 'Mirabilis nyctaginea (Michx.) MacMill.',
+        'reviews': [],
+        'averigeReview': 2,
+        'stock': 9,
+        'key': 'Nabludavatni1',
+        'url': 'Nabludavatni'
+    },
+    {
+        'title': 'Junior Programmer1',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
         'img': {
             src: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
             alt: 'Junior Programmer',
@@ -911,12 +551,13 @@ export const DATA = [
         'reviews': [],
         'averigeReview': 4,
         'stock': 16,
-        'key': 'JuniorProgrammer1'
+        'key': 'JuniorProgrammer1',
+        'url': 'JuniorProgrammer'
     },
     {
-        'title': 'Junior Programmer Day',
-        'globalCat': 'mobilni-telefoni',
-        'subCat': 'tv', 
+        'title': 'Junior Programmer Day1',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
         'img': {
             src: 'https://assets-global.website-files.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png',
             alt: 'Junior Programmer Day',
@@ -925,22 +566,40 @@ export const DATA = [
         'descripton': '#bahur',
         'reviews': [],
         'averigeReview': 2,
-        'stock': 0,
-        'key': 'JuniorProgrammerDay1'
+        'stock': 6,
+        'key': 'JuniorProgrammerDay1',
+        'url': 'JuniorProgrammerDay'
     },
     {
-        'title': 'Монитор Gaming Samsung LS32BG850NUXEN',
-        'globalCat': 'kompyutri-periferiya',
-        'subCat': 'tv', 
+        'title': 'Technical Communications Corporation1',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
         'img': {
-            src: 'https://s13emagst.akamaized.net/products/47977/47976202/images/res_0fa687a03022edc703ab297bb39ec7c6.jpg?width=450&height=450&hash=FE4BF06C7800B76CCC5233F551684BC6',
-            alt: 'monitor-gaming-samsung-ls32bg850nuxen',
+            src: 'https://petapixel.com/assets/uploads/2022/07/DALLEcopy.jpg',
+            alt: 'ananas',
         },
-        'price': 2799.99,
-        'descripton': 'Очарователно визуално качество Quantum Mini-LED, който достига дълбочината на следващото поколение с Quantum HDR2000, предлага изключително качество на изображението, поставяйки Odyssey Neo в свой собствен клас.',
+        'price': 6.75,
+        'descripton': 'Alopecurus brachystachus M. Bieb.',
         'reviews': [],
         'averigeReview': 4,
-        'stock': 10,
-        'key': 'МониторGamingSamsungLS32BG850NUXEN'
+        'stock': 2,
+        'key': 'TechnicalCommunicationsCorporation1',
+        'url': 'TechnicalCommunicationsCorporation'
+    },
+    {
+        'title': 'WageWorks, Inc.',
+        'globalCat': 'telefoni-tableti-laptopi',
+        'subCat': 'mobilni-telefoni', 
+        'img': {
+            src: 'https://thumbs.dreamstime.com/b/d-image-abstract-tunnel-diagonal-black-white-stripes-optical-illusion-168695979.jpg',
+            alt: 'boli',
+        },
+        'price': 75.75,
+        'descripton': 'Hydrocotyle americana L.',
+        'reviews': [],
+        'averigeReview': 3,
+        'stock': 19,
+        'key': 'WageWorks,Inc.',
+        'url': 'WageWorks,Inc.'
     },
 ]

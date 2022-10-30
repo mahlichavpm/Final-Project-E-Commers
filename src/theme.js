@@ -11,7 +11,8 @@ export const theme = createTheme ({
 
         custom:{
             main: "#222",
-            light: "#888888"
+            light: "#888888",
+            green: '#008000'
         },
 
         alert: {

@@ -18,11 +18,9 @@ export default function Example(props) {
     ]);
 
     const navigate = useNavigate()
-    const categories = useSelector(state => state.categories.categories);
-    let { subCategory, globalCategory } = useParams()
 
     return (
-        <Stack spacing={2} sx={{ marginTop: '36px' }}>
+        <Stack spacing={2} sx={{ marginTop: '36px' }} key={props.key}>
             <Typography variant='h4'>{props.title || "Stava"}</Typography>
             <Carousel
                 autoPlay={false}
@@ -47,7 +45,7 @@ export default function Example(props) {
                             price={e.price}
                             key={e.key}
                             id={e.key}
-                            onCardClick={() => navigate(`/${e.key}`)}
+                            onCardClick={() => navigate(`/${e.globalCat}/${e.subCat}/${e.key}`)}
                         // onClick={() =>  navigate(`/products/category/${e.key}`)}/*da se sloji link kum dadenata str s porduct */
                         // onClickFav={() => {addToFavourite(e.key)}}
                         ></ProductCard>)}

@@ -6,16 +6,11 @@ import { Breadcrumbs, Link, Stack, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 
-export default function CategoryPage(props) {
+export default function CategoryPage() {
     const categories = useSelector(state => state.categories.categories);
     const navigate = useNavigate()
     let { globalCategory, subCategory } = useParams()
 
-    // console.log(categories.slice().filter(e => {
-    //     console.log(e.key);
-    //     console.log(globalCategory);
-    //     return e.key === globalCategory
-    // }));
     return (
         <Stack
             sx={{
@@ -42,7 +37,6 @@ export default function CategoryPage(props) {
                     <h2>{e.name}</h2>
                     < div className="categoryPageContainer" >
                         <div className="sideMenu">
-                            {/* Ot tuk ne raboti wlizaneto wyw wytre[na kategoriq] */}
                             {e.subCategory.map(e => <AnchorLink 
                                 value={e.name} 
                                 key={e.key}  
@@ -50,8 +44,8 @@ export default function CategoryPage(props) {
                             />)}
                         </div>
                         <div className="contentBody">
-                            {e.subCategory.map(e => <CategoryBanner
-                                key={e.key}
+                            {e.subCategory.map((e, i) => <CategoryBanner
+                                key={i}
                                 onClick={() => navigate(`/${globalCategory}/${e.key}`)}
                                 image={e.img}
                             />)}
@@ -63,11 +57,3 @@ export default function CategoryPage(props) {
 
     )
 }
-
-
-
-// img1 = 'https://s13emagst.akamaized.net/layout/bg/images/db/23/34105.jpg' span1 = { 'Gaming мишки'}
-// img2 = 'https://s13emagst.akamaized.net/layout/bg/images/db/23/34106.jpg' span2 = { 'Gaming подложки за мишка'}
-// img3 = 'https://s13emagst.akamaized.net/layout/bg/images/db/23/34107.jpg' span3 = { 'Gaming столове'}
-// img4 = 'https://s13emagst.akamaized.net/layout/bg/images/db/23/34108.jpg' span4 = { 'Gaming клавиатури'}
-// img5 = 'https://s13emagst.akamaized.net/layout/bg/images/db/23/34109.jpg' span5 = { 'Gaming слушалки'}

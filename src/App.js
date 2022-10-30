@@ -54,9 +54,10 @@ function App() {
             <Route path='/profile' element={ userId ? <ProfilePage /> : <Navigate to={'/login'}/>} />
             <Route path='/product' element={<ProductPage />} />
             {/* <Route path='/product' element={<ProductPage />} /> */}
-            <Route path='/?:globalCategory' element={<CategoryPage />} />
-            <Route path='/?:globalCategory/?:subCategory' element={<AllProductsList />} />
-            <Route path='/?:globalCategory/?:subCategory/:key' element={<ProductPage />} />
+            <Route path='/:globalCategory' element={<CategoryPage />} />
+            <Route path='/:globalCategory/:subCategory' element={<AllProductsList />} />
+            <Route path='/:globalCategory/:subCategory/:key' element={<ProductPage />} />
+            <Route path='/:key' element={<ProductPage />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>

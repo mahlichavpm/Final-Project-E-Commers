@@ -81,7 +81,7 @@ export default function ProductCard(props) {
                     </Typography>
                     <Rating name="half-rating" readOnly defaultValue={props.averigeReview || 0} size='small' />
                     <Typography variant="body2" color="custom.light">
-                        {props.stock || 'Няма си количество'}
+                        {props.stock || 'Изчерпано количество'}
                     </Typography>
                     <Typography variant="body1" color="alert.main">
                         {props.price + ' лв' || 'Няма си цена'}

@@ -7,8 +7,8 @@ import bannerImg4 from '../../img/Banner_4.webp'
 import ButtonLinkTwo from '../../components/buttons/ButtonLinkTwo';
 import { Stack } from '@mui/system';
 import ProductCardSlider from '../../components/cardSlider/ProductCardSlider';
-import { Link, useNavigate } from 'react-router-dom';
-import { Box, Menu, TextField, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
