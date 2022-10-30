@@ -191,7 +191,7 @@ export const CategoriesDATA = [
     },
     {
         name: 'Дом, Градина & Petshop',
-        key: 'dom-gradina-petshop',
+        key: 'dom-gradina-i-petshop',
         icon: <HomeOutlinedIcon />,
         subCategory: [
             {

@@ -43,7 +43,7 @@ export default function Homepage(props) {
                         {categoriesCopy.map(e => <ButtonLinkTwo 
                         name={e.name} 
                         startIcon={e.icon} 
-                        key={e.key} 
+                        key={e.key}
                         onClick={() =>  navigate(`/${e.key}`)} 
                         />)}
                     </Stack>

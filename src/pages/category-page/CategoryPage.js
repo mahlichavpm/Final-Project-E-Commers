@@ -1,6 +1,5 @@
 import CategoryBanner from './categoryBanner/CategoryBanner.js';
 import './CategoryPage.scss';
-import GridBanners from './gridBanner/GridBanners.js';
 import AnchorLink from '../../components/link/AnchorLink.js';
 import { Breadcrumbs, Link, Stack, Typography } from '@mui/material';
 import { useNavigate, useParams } from 'react-router';
@@ -21,8 +20,8 @@ export default function CategoryPage() {
                 paddingRight: '20px',
             }}
         >
-            {categories.slice().filter(e => e.key === globalCategory).map(e =>
-                <>
+            {categories.slice().filter(e => e.key === globalCategory).map((e,i) =>
+                <div key={i}>
                     <Breadcrumbs aria-label="breadcrumb" sx={{marginTop: '12px', marginBottom: '24px'}}>
                         <Link 
                             sx={{'&:hover':{color: 'primary.main'}}} 
@@ -51,7 +50,7 @@ export default function CategoryPage() {
                             />)}
                         </div>
                     </div>
-                </>
+                </div>
             )}
         </Stack >
 
