@@ -3,12 +3,10 @@ import { Box, Container } from "@mui/system";
 import ProductButton from "../../components/buttons/ProductButton";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
-import StarsSharpIcon from '@mui/icons-material/StarsSharp';
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import Carousel from "react-material-ui-carousel";
 import React, { useState } from 'react';
 
 export default function ProductPage() {
@@ -21,10 +19,11 @@ export default function ProductPage() {
     .filter(e => e.subCat === subCategory)
   );
 
+  const [selectedImage, setSelectedImage] = useState(`${sortedProductList.filter(e => e.key === key)[0].img.src}`);
 
   return (
     <>
-      {sortedProductList.filter(e => e.key === key).map(e =>
+      {sortedProductList.filter(e => e.key === key).map((e, i) =>
         <Stack
           sx={{
             maxWidth: '1240px',
@@ -33,6 +32,7 @@ export default function ProductPage() {
             paddingLeft: '20px',
             paddingRight: '20px',
           }}
+          key={i}
         >
           <Breadcrumbs aria-label="breadcrumb" sx={{ marginTop: '12px', marginBottom: '24px' }}>
             <Link
@@ -61,22 +61,22 @@ export default function ProductPage() {
             </Link>
             <Typography color="custom.main">{e.title}</Typography>
           </Breadcrumbs>
-          {/* <div className="productContainer"> */}
           <Container maxWidth="xl">
             <Box sx={{ minHeight: "100vh" }}>
               <Typography color="custom.main" variant='h4' sx={{ margin: '0 0 15px 0' }}>{e.title}</Typography>
               <Stack direction='row' spacing={4}>
-            <Stack spacing={2}>
-                <div className="imgGalery">
-                  <img src={e.img.src} width='400' alt="qnko" />
-                </div>
-                <Stack direction='row' spacing={2}>
-                    <img src={e.img.src1} width='80' alt="qnko" />
-                    <img src={e.img.src2} width='80' alt="qnko" />
-                    <img src={e.img.src3} width='80' alt="qnko" />
-                    <img src={e.img.src4} width='80' alt="qnko" />
+                <Stack spacing={2}>
+                  <div className="imgGalery">
+                    <img src={selectedImage || e.img.src} width='400' alt="qnko" />
+                  </div>
+                  <Stack direction='row' spacing={2} sx={{ width: '400px', overflowX: 'auto', }}>
+                    <img src={e.img.src} className={e.img.src === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src) }} width='80' alt="qnko" />
+                    {e.img.src1 ? <img src={e.img.src1} className={e.img.src1 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src1) }} width='80' alt="qnko" /> : <></>}
+                    {e.img.src2 ? <img src={e.img.src2} className={e.img.src2 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src2) }} width='80' alt="qnko" /> : <></>}
+                    {e.img.src3 ? <img src={e.img.src3} className={e.img.src3 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src3) }} width='80' alt="qnko" /> : <></>}
+                    {e.img.src4 ? <img src={e.img.src4} className={e.img.src4 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src4) }} width='80' alt="qnko" /> : <></>}
                   </Stack>
-                  </Stack>
+                </Stack>
                 <Stack spacing={2}>
                   <Stack sx={{
                     backgroundColor: 'white',
@@ -127,12 +127,10 @@ export default function ProductPage() {
                   spacing={2}
                 >
                   <Typography variant='h6' color='custom.green'>в наличност</Typography>
-                  {/* <span className="price">{e.price}</span> <br /> */}
                   <Stack direction='row' spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography variant='subtitle1' color='custom.main'>Цена:</Typography>
-                    <Typography variant='h5' color='alert.main'>{e.price} лв</Typography>
+                    <Typography variant='h5' color='alert.main'>{e.price} лв.</Typography>
                   </Stack>
-                  {/* <span className='deliveryText'>Предлаган и с доставка от: eMAG</span><br /> */}
                   <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
                   <ProductButton startIcon={<FavoriteBorderIcon color="custom.light" />} name={'Добави в любими'} />
                 </Stack>
@@ -150,25 +148,7 @@ export default function ProductPage() {
                 <Typography variant="h6" color="custom.main">Описание:</Typography>
                 <Typography variant='subtitle1' color='custom.light'>{e.descripton}:</Typography>
               </Stack>
-              {/* <Carousel
-                  autoPlay={false}
-                  navButtonsAlwaysVisible={true}
-                  animation='slide'
-                  sx={{maxWidth: '368px'}}
-                  navButtonsWrapperProps={
-                    {
-                      className: 'button',
-                      style: React.CSSProperties
-                    } & React.AriaAttributes
-                  }
-                >
-                  <Stack direction='row' spacing={2}>
-                    <img src={e.img.src1} width='80' alt="qnko" />
-                    <img src={e.img.src2} width='80' alt="qnko" />
-                    <img src={e.img.src3} width='80' alt="qnko" />
-                    <img src={e.img.src4} width='80' alt="qnko" />
-                  </Stack>
-                </Carousel> */}
+              {/* Slider */}
             </Box>
           </Container>
           {/* </div> */}

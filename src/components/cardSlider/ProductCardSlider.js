@@ -4,7 +4,8 @@ import { Typography } from '@mui/material'
 import ProductCard from '../productCard/ProductCard';
 import { Stack } from '@mui/system';
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate } from 'react-router';
+import './ProductCardSlider.scss'
 
 export default function Example(props) {
     const productList = useSelector(state => state.product.product);
@@ -20,7 +21,7 @@ export default function Example(props) {
     const navigate = useNavigate()
 
     return (
-        <Stack spacing={2} sx={{ marginTop: '36px' }} key={props.key}>
+        <Stack spacing={2} sx={{ marginTop: '36px' }} >
             <Typography variant='h4'>{props.title || "Stava"}</Typography>
             <Carousel
                 autoPlay={false}
@@ -28,7 +29,7 @@ export default function Example(props) {
                 animation='slide'
                 navButtonsWrapperProps={
                     {
-                        className: 'button',
+                        className: 'button', 
                         style: React.CSSProperties
                     } & React.AriaAttributes
                 }

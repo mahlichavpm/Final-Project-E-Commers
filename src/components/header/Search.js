@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { Autocomplete, InputBase, TextField } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router';
+import { width } from '@mui/system';
 
 const Search = styled("div")(({ theme }) => ({
     textAlign: "center",
@@ -26,6 +27,7 @@ export default function AutocomplitedSearch(props) {
     return (
 
 
+        <TextField sx={{width: '100%', borderRadius: "16px", backgroundColor:'primary', }}></TextField>
         //     <Autocomplete
         //     id="free-solo-demo"
         //     // freeSolo
@@ -33,59 +35,63 @@ export default function AutocomplitedSearch(props) {
         //     renderInput={(params) => <TextField {...params} label="freeSolo" />}
         //     width
         //   />
-        <Autocomplete
-            id="free-solo-demo"
-            freeSolo
-            options={productList.map((option) => option.title)}
-            sx={{
-                textAlign: "center",
-                color: "#666666",
-                padding: "0 10px",
-                display: "flex",
-                border: "1px solid rgb(0, 130, 230)",
-                borderRadius: "16px",
-                height: "34px",
-                width: "100%",
-                margin: "0 40px",
-                alignItems: "center",
-                justifyContent: "space-between",
-            }}
-            renderInput={(params) => <TextField
-                // sx={{
-                //     border: 'none',
+        // <Autocomplete
 
-                //         textAlign: "center",
-                //         color: "#666666",
-                //         padding: "0 10px",
-                //         display: "flex",
-                //         border: "1px solid rgb(0, 130, 230)",
-                //         borderRadius: "16px",
-                //         height: "34px",
-                //         width: "100%",
-                //         margin: "0 40px",
-                //         alignItems: "center",
-                //         justifyContent: "space-between",
+        //     id="free-solo-demo"
+        //     // freeSolo
+        //     options={productList.map((option) => option.title)}
+        //     sx={{
+        //         textAlign: "center",
+        //         color: "#666666",
+        //         padding: "0 10px",
+        //         display: "flex",
+        //         border: "1px solid rgb(0, 130, 230)",
+        //         borderRadius: "16px",
+        //         height: "34px",
+        //         width: "100%",
+        //         margin: "0 40px",
+        //         alignItems: "center",
+        //         justifyContent: "space-between",
+        //     }}
+        //     renderInput={(params) =>
+        //         {<Search sx={{
+        //             display: {
+        //                 xs: "none",
+        //                 sm: "none",
+        //                 md: "flex",
+        //                 lg: "flex",
+        //                 xl: "flex"
+        //             }
+        //         }}>
+        //             <InputBase fullWidth={true}
+        //                 placeholder='Какво търсиш днес?...'
+        //                 autoFocus={true} />
+        //             <SearchOutlinedIcon color='primary' />
+        //         </Search>}
+        //     }/>
+        // <TextField
+        //     // sx={{
+        //     //     border: 'none',
 
-                // }}
-                variant='filled'
-                // onClick = {(e) => navigate(`/${globalCategory}/${subCategory}/${e.target.value}`)}
-                onClick= {e => console.log(e.target.value)}
-                fullWidth={true} {...params} />}
-        />
-        // <Search sx={{
-        //     display: {
-        //         xs: "none",
-        //         sm: "none",
-        //         md: "flex",
-        //         lg: "flex",
-        //         xl: "flex"
-        //     }
-        // }}>
-        //     <InputBase fullWidth={true}
-        //         placeholder='Какво търсиш днес?...'
-        //         autoFocus={true} />
-        //     <SearchOutlinedIcon color='primary' />
-        // </Search>
+        //     //         textAlign: "center",
+        //     //         color: "#666666",
+        //     //         padding: "0 10px",
+        //     //         display: "flex",
+        //     //         border: "1px solid rgb(0, 130, 230)",
+        //     //         borderRadius: "16px",
+        //     //         height: "34px",
+        //     //         width: "100%",
+        //     //         margin: "0 40px",
+        //     //         alignItems: "center",
+        //     //         justifyContent: "space-between",
+
+        //     // }}
+        //     variant='filled'
+        //     // onClick = {(e) => navigate(`/${globalCategory}/${subCategory}/${e.target.value}`)}
+        //     onInput= {e => console.log(e.target.value)}
+        //     fullWidth={true} {...params} />}
+
+
     )
 }
 

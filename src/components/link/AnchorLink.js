@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import './AnchorLink.scss'
 
 export default function AnchorLink (props) {

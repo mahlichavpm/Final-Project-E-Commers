@@ -126,7 +126,7 @@ export const CategoriesDATA = [
             },
             {
                 name: 'Игри конзоли pc',
-                key: 'konzoli-igri',
+                key: 'igri-konzoli-pc',
                 img: 'https://gepig.com/game_cover_460w/432.jpg'
             },
             {

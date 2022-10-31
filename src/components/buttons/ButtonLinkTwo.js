@@ -24,21 +24,14 @@ export default function ButtonLink(props) {
         },
     });
     return (
-        // <Link className='link' to={props.to || '/products'}>
-            <CategoryBtn
+            <CategoryBtn 
                 href={props.href}
                 startIcon={props.startIcon}
                 endIcon={props.endIcon}
-                // onMouseEnter={(e) => {props.onMouseEnter(e)}}
-                // onMouseLeave={props.onMouseLeave}
-                // onMouseEnter={(e) => {props.onMouseEnter(e)}}
-                // onMouseLeave={(e) => {props.onMouseLeave(e)}}
                 onClick={props.onClick}
                 underline='none'
-                // key={props.key}   greshkata s key -> undefined
             >
                 {props.name}
             </CategoryBtn>
-        // </Link>
     )
 }
