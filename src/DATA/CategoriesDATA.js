@@ -90,7 +90,7 @@ export const CategoriesDATA = [
             {
                 name: 'Стойки',
                 key: 'stoyki',
-                img: 'https://s13emagst.akamaized.net/products/8198/8197621/images/res_7da3af405db59cbff86685b975fcf011.jpg?width=210&height=230&hash=CDD716DFB72B54D2F2EA1ACAE98D3F0F'
+                img: 'https://besto.bg/wp-content/uploads/2019/07/stojka-za-televizor.jpg'
             },
             {
                 name: 'Кабели и адаптери',
@@ -162,7 +162,7 @@ export const CategoriesDATA = [
                 name: '',
                 key: '',
                 img: ''
-            }
+            },
         ]
     },
     {
@@ -206,10 +206,30 @@ export const CategoriesDATA = [
         icon: <FaceRetouchingNaturalOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Епилатори',
+                key: 'epilatori',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25085.jpg'
+            },
+            {
+                name: 'Термометри',
+                key: 'termometri',
+                img: 'https://besto.bg/wp-content/uploads/2020/07/detski-termometri.jpg'
+            },
+            {
+                name: 'Масажори',
+                key: 'masajori',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25090.jpg'
+            },
+            {
+                name: 'Сешоари',
+                key: 'seshoari',
+                img: 'https://bgchoice.com/wp-content/uploads/2020/11/%D0%BD%D0%B0%D0%B9-%D0%B4%D0%BE%D0%B1%D1%80%D0%B8-%D1%81%D0%B5%D1%88%D0%BE%D0%B0%D1%80%D0%B8.jpg'
+            },
+            {
+                name: 'Машинки за подстригване и тримери',
+                key: 'mashinki-za-podstrigvane-i-trimeri',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25091.jpg'
+            },
         ]
     },
     {
@@ -218,10 +238,30 @@ export const CategoriesDATA = [
         icon: <HomeOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Бюра',
+                key: 'biura',
+                img: 'https://www.gaminggear.bg/uploads/com_article/gallery/c05719c86391627bdcf94c981497a985a5af79ea.png'
+            },
+            {
+                name: 'Килими',
+                key: 'kilimi',
+                img: 'https://videnov.bg/uploads/product_category/images/Vid_Deko_zone_LP_category_kilimi_banner_2.png'
+            },
+            {
+                name: 'Дивани',
+                key: 'divani',
+                img: 'https://veko.bg/image/cache/catalog/01_Sofi_Sun-21_C1_R-1024x768.jpg'
+            },
+            {
+                name: 'Тенджери',
+                key: 'tendjeri',
+                img: 'https://solingen-outlet.com/images/mi.JPG'
+            },
+            {
+                name: 'Градински мебели',
+                key: 'gradinski-mebeli',
+                img: 'https://jysk.bg/sites/jysk.bg/files/styles/full_optimized/public/image/tooltips/2022-02/3795000-VONGE.jpg?itok=IBG2jHR6'
+            },
         ]
     },
     {

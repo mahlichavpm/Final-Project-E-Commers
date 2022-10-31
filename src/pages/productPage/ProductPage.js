@@ -3,11 +3,13 @@ import { Box, Container } from "@mui/system";
 import ProductButton from "../../components/buttons/ProductButton";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import React, { useState } from 'react';
+import { addToCart, addToFavourites, removeItemFromFav } from "../../store/activeUserSlice";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function ProductPage() {
   const productList = useSelector(state => state.product.product);
@@ -15,11 +17,31 @@ export default function ProductPage() {
   const navigate = useNavigate();
   const categories = useSelector(state => state.categories.categories);
   const globalCategoryName = categories.filter(e => e.key === globalCategory)[0];
-  const [sortedProductList, setSortedProductList] = useState(productList.slice()
-    .filter(e => e.subCat === subCategory)
-  );
+  const [sortedProductList, setSortedProductList] = useState(productList.slice().filter(e => e.subCat === subCategory));
+  const dispatch = useDispatch();
+  const [favBtnText,setFavBtnText] = useState('Добави в любими');
+  const [favBtnIcon,setFavBtnIcon] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(`${sortedProductList.filter(e => e.key === key)[0].img.src}`);
+  const favouriteList = useSelector(state => state.activeUser.favourites);
+
+  const handleAddtoFavouritesBtn = (key) => {
+    if(favouriteList.indexOf(key) !== -1){
+        dispatch(removeItemFromFav(key));
+        setFavBtnIcon(false);
+        setFavBtnText('Добави в любими');
+    }
+    else {
+        dispatch(addToFavourites({key}));
+        setFavBtnText('Премахни от любими');
+        setFavBtnIcon(true);
+    }
+
+    
+  }
+  const handleAddToCart = (key) => {
+    dispatch(addToCart({key}))
+  }
 
   return (
     <>
@@ -131,8 +153,8 @@ export default function ProductPage() {
                     <Typography variant='subtitle1' color='custom.main'>Цена:</Typography>
                     <Typography variant='h5' color='alert.main'>{e.price} лв.</Typography>
                   </Stack>
-                  <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
-                  <ProductButton startIcon={<FavoriteBorderIcon color="custom.light" />} name={'Добави в любими'} />
+                  <ProductButton onClick={() => {handleAddToCart(e.key)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                  <ProductButton startIcon={favBtnIcon ? <FavoriteIcon color='custom.light'/> :<FavoriteBorderIcon color="custom.light" />} onClick={()=>{handleAddtoFavouritesBtn(e.key)}} name={favBtnText} />
                 </Stack>
               </Stack>
               <Stack
