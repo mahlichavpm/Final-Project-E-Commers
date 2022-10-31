@@ -20,6 +20,106 @@ export const DATA = [
   // },
   // --------------MODA--------------------
   {
+      'title': 'Часовник и гривна ARMANI EXCHANGE',
+      'globalCat': 'moda',
+      'subCat': 'muzhki-chasovnici', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/24912/24911522/images/res_f80a6c08f0b26fc13357063d48758ab0.jpg?width=450&height=450&hash=07F82B0EB97444BC095F539D94D3CCD7',
+          src1: 'https://s13emagst.akamaized.net/products/24912/24911522/images/res_85097b65597c0135d2b9775174e3bf6d.jpg?width=450&height=450&hash=D33E9C1975A162AE7EEC4D72A347DF2D',
+          src2: 'https://s13emagst.akamaized.net/products/24912/24911522/images/res_768c2f86388a0ac8141b12bf120f55dc.jpg?width=450&height=450&hash=BAAF25FFC7F2630DA6D5C7F91975C160',
+          src3: 'https://s13emagst.akamaized.net/products/24912/24911522/images/res_b310f72a57ca5ffe7abed4b0765f8a41.jpg?width=450&height=450&hash=E5F7A0DA22DBD4ED9C55FCF9B949504E',
+          src4: '',
+          alt: 'chasovnik',
+      },
+      'price': 322.99,
+      'descripton': 'Производител: ARMANI EXCHANGE',
+      'reviews': [],
+      'averigeReview': 2,
+      'stock':10,
+      'key': 'ЧасовникигривнаARMANIEXCHANGE',
+      'url': 'chasovnik-grivna-armani-exchange'
+  },
+  {
+      'title': 'Мъжки часовник Curren Tattum',
+      'globalCat': 'moda',
+      'subCat': 'muzhki-chasovnici', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/39611/39610049/images/res_6afb732e88c6a805de0d9de7e7ce106e.jpg?width=450&height=450&hash=471E41DEAE0DC85A7774C648D4D8C2DD',
+          src1: 'https://s13emagst.akamaized.net/products/39611/39610049/images/res_3ccb84c1398363af4895149dcfb71e01.jpg?width=450&height=450&hash=8710D7C40AB70F13C0EF7A0672EE8029',
+          src2: 'https://s13emagst.akamaized.net/products/39611/39610049/images/res_7c1c51314f1195170ddf8413ddc358fc.jpg?width=450&height=450&hash=D42E5A153024B96D12D41916CCE36A1F',
+          src3: 'https://s13emagst.akamaized.net/products/39611/39610049/images/res_4c152173363e2cee54779820d75c04ba.jpg?width=450&height=450&hash=2EF7C4B31FCE4C66E2FE5F6BAA2C9CDE',
+          src4: 'https://s13emagst.akamaized.net/products/39663/39662074/images/res_98bc510abf8106213b4d4eeb5e12fcdf.jpg?width=450&height=450&hash=AAA88C3E6F6192FF4A6AC85A98CB8BA6',
+          alt: 'chasovnik',
+      },
+      'price': 69.00,
+      'descripton': 'Корпус и циферблат от неръждаема стомана. Стъклото на циферблата е Hardlex, устойчиво на надраскване.',
+      'reviews': [],
+      'averigeReview': 2,
+      'stock':10,
+      'key': 'МъжкичасовникCurrenTattum',
+      'url': 'majki-chasovnik-curren-tattum'
+  },
+  {
+      'title': 'Спортен мъжки часовник SKMEI Unique',
+      'globalCat': 'moda',
+      'subCat': 'muzhki-chasovnici', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/15377/15376881/images/res_c8f8900a8189595a508dec32c7f9e1c9.jpg?width=450&height=450&hash=1D70BAE31497666C1C1259670BC43835',
+          src1: 'https://s13emagst.akamaized.net/products/15377/15376881/images/res_575b6b1073c1644d187d661bc5f3745c.jpg?width=450&height=450&hash=371220693A351D43709B04910CA64C67',
+          src2: 'https://s13emagst.akamaized.net/products/15377/15376881/images/res_ddfd89b4090e1b12eb88a5c42beda257.jpg?width=450&height=450&hash=3C2EEA0FBFABAF88E4AC495D0B5ABCC4',
+          src3: 'https://s13emagst.akamaized.net/products/15377/15376881/images/res_86d0ad9b7980df19b65ebefa7a2a644c.jpg?width=450&height=450&hash=C439D7D9EEA4C482703F45F724553B9A',
+          src4: 'https://s13emagst.akamaized.net/products/14882/14881037/images/res_6bade69d6f12902e270159d7930168d1.jpg?width=450&height=450&hash=486A84790F45FEDE4B79826C357564BA',
+          alt: 'chasovnik',
+      },
+      'price': 33.85,
+      'descripton': 'Подходящ за спорт: бягане, колоездене, катерене',
+      'reviews': [],
+      'averigeReview': 2,
+      'stock':10,
+      'key': 'СпортенмъжкичасовникSKMEIUnique',
+      'url': 'sporten-majki-chasovnik-skmei-unique'
+  },
+  {
+      'title': 'Автоматичен часовник с иноксова верижка Tissot',
+      'globalCat': 'moda',
+      'subCat': 'muzhki-chasovnici', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/28754/28753107/images/res_13dc952a6a986646dc91e5a9f9c4659c.jpg?width=450&height=450&hash=5DFA6BED21FC064BF6B4AE79F6403AB6',
+          src1: 'https://s13emagst.akamaized.net/products/28754/28753107/images/res_d7cba39598be1c576af284a3242e782e.jpg?width=450&height=450&hash=45CE3648323FF7F81B1673692FEB16B6',
+          src2: 'https://s13emagst.akamaized.net/products/28754/28753107/images/res_1aff6e48c5ec9bca273fc401a3695440.jpg?width=450&height=450&hash=F99C337A306DC5FDC6129DF55E8655B4',
+          src3: 'https://s13emagst.akamaized.net/products/28754/28753107/images/res_33d1633460e4348278d8c1f53546559a.jpg?width=450&height=450&hash=23D703122B81EDF31C77DF81B0A4171E',
+          src4: '',
+          alt: 'chasovnik',
+      },
+      'price': 548.99,
+      'descripton': 'Производител: Tissot',
+      'reviews': [],
+      'averigeReview': 2,
+      'stock':10,
+      'key': 'АвтоматиченчасовниксиноксоваверижкаTissot',
+      'url': 'avtomatichen-chasovnik-inoksova-verijka-tissot'
+  },
+  {
+      'title': 'Мъжки часовник Fossil Nate',
+      'globalCat': 'moda',
+      'subCat': 'muzhki-chasovnici', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/4384/4383083/images/res_7ac1cdeb9d08edbf87c9ec80c501b511.jpg?width=450&height=450&hash=26720DC09E9C5E37B14865A4F8C77880',
+          src1: 'https://s13emagst.akamaized.net/products/4384/4383083/images/res_710b8c93beecb56974c5c579a7ba9d00.jpg?width=450&height=450&hash=F1265F71932D704871C1ADF427786008',
+          src2: 'https://s13emagst.akamaized.net/products/4384/4383083/images/res_14897be6847eac5db42a0fd2b79d6a5f.jpg?width=450&height=450&hash=9FEB927277DF2FD831FFD37570EB5A3B',
+          src3: 'https://s13emagst.akamaized.net/products/4384/4383083/images/res_3723440c3c0b5179472893272bf96466.jpg?width=450&height=450&hash=197BF5F0E5D9BDFBC882BAE20F4235A5',
+          src4: '',
+          alt: 'chasovnik',
+      },
+      'price': 241.99,
+      'descripton': 'Производител: Fossil',
+      'reviews': [],
+      'averigeReview': 2,
+      'stock':10,
+      'key': 'Мъжки часовник Fossil Nate',
+      'url': 'majki-chasovnik-fossil-nate'
+  },
+  {
     title: "Дамска чанта Aleena GT1532",
     globalCat: "moda",
     subCat: "damski-chanti",
@@ -124,7 +224,7 @@ export const DATA = [
   {
     title: "Emporio Armani, Кожен колан с релеф",
     globalCat: "moda",
-    subCat: "myzhki-kolani",
+    subCat: "muzhki-aksesoari",
     img: {
       src: "https://s13emagst.akamaized.net/products/41238/41237208/images/res_cdf91c87ab6fe5d48cd694a1e228c866.jpg?width=450&height=450&hash=1528C145AFE5A288AFC8FC583F16B215",
       src1: "https://s13emagst.akamaized.net/products/41238/41237204/images/res_5e439b49b6591c28a2d00274d4da5dc7.jpg?width=450&height=450&hash=29EF2883DA0EC6555FC3DF6E6500B0B7",
@@ -144,7 +244,7 @@ export const DATA = [
   {
     title: "Мъжки колан Krister с автоматична катарама",
     globalCat: "moda",
-    subCat: "ranici",
+    subCat: "muzhki-aksesoari",
     img: {
       src: "https://s13emagst.akamaized.net/products/42433/42432709/images/res_9d51df780ac17c76dac43bfad9ec2de8.jpg?width=450&height=450&hash=0DF4B2B37D9BAF0C13026C02A87F30D8",
       src1: "https://s13emagst.akamaized.net/products/42433/42432709/images/res_bf5308822962f2fae600e11886f10f6e.jpg?width=450&height=450&hash=74B9CF9C991B953228E8346CB51DA537",
@@ -164,7 +264,7 @@ export const DATA = [
   {
     title: "Кожен колан Diesel B-Carve",
     globalCat: "moda",
-    subCat: "myzhki-kolani",
+    subCat: "muzhki-aksesoari",
     img: {
       src: "https://s13emagst.akamaized.net/products/41083/41082240/images/res_d3c611dc36a9908c3aa4676d1672f3a4.jpg?width=450&height=450&hash=F3363EA5A2F07980A1443541658E7A55",
       src1: "https://s13emagst.akamaized.net/products/41083/41082240/images/res_849935d64f32d2c18b4f3b839eadd88a.jpg?width=450&height=450&hash=1E16CACA5D2981B577E61A2E75A21542",
@@ -184,7 +284,7 @@ export const DATA = [
   {
     title: "TONNY BLACK Портфейл и колан",
     globalCat: "moda",
-    subCat: "myzhki-kolani",
+    subCat: "muzhki-aksesoari",
     img: {
       src: "https://s13emagst.akamaized.net/products/42995/42994534/images/res_da1336445cc019ad764a2e37799051c5.jpg?width=450&height=450&hash=EB5355596A4D61F2428A0CECF1C2A95B",
       src1: "https://s13emagst.akamaized.net/products/42995/42994534/images/res_116b119f8ab071d645403bd4597f27f8.jpg?width=450&height=450&hash=F2056726C1CB292AAD70B3BF4B193C6E",
@@ -204,7 +304,7 @@ export const DATA = [
   {
     title: "Колан Pufo Tactical Combat",
     globalCat: "moda",
-    subCat: "myzhki-kolani",
+    subCat: "muzhki-aksesoari",
     img: {
       src: "https://s13emagst.akamaized.net/products/41343/41342587/images/res_254aa23e9505ee1383fd3960bea92ae5.jpg?width=450&height=450&hash=346F5D6E0973B0C991AAB7D2E628F35F",
       src1: "https://s13emagst.akamaized.net/products/41343/41342587/images/res_caa11725c8dbd8e227d3f94054616c21.jpg?width=450&height=450&hash=667823426F8A2CF1988786FBD56982AA",
@@ -609,6 +709,7 @@ export const DATA = [
     key: "WageWorks,Inc.",
     url: "WageWorks,Inc.",
   },
+  //---------------HEALTH & BEAUTY--------------
   {
     title: "Фотоепилатор IPL Philips Lumea Seria 9000 BRI955/00",
     globalCat: "zdrave-i-krasota",
@@ -1473,6 +1574,111 @@ export const DATA = [
     stock: 10,
     key: "БюроHoms",
     url: "byuro-homs",
+  },
+
+  {
+    'title': 'Касерола Tefal Simply Clean',
+    'globalCat': 'dom-gradina-i-petshop',
+    'subCat': 'tendjeri', 
+    'img': {
+        src: 'https://s13emagst.akamaized.net/products/34016/34015965/images/res_8fe64bd3b2c1a2437ee2e8724cba07e4.jpg?width=450&height=450&hash=EF093649FF23C470B231646C029F6163',
+        src1: 'https://s13emagst.akamaized.net/products/34016/34015965/images/res_6d342d26a22ea22ff64fb67070398fc5.jpg?width=450&height=450&hash=75269210AB190E06D5EF768D6B576D0C',
+        src2: 'https://s13emagst.akamaized.net/products/34016/34015965/images/res_01f7ea274cebfb4054778b71cdcf5ad9.jpg?width=450&height=450&hash=9DAAFF81ECB34FDBE6EEF0DA75BFBCE1',
+        src3: 'https://s13emagst.akamaized.net/products/34016/34015965/images/res_164e4cd0f701e236ff4da2f62af305d0.jpg?width=450&height=450&hash=3AA5B8B3EFCEA7E5AEE4C568B10F0D1D',
+        src4: '',
+        alt: 'tendjera',
+    },
+    'price': 36.79,
+    'descripton': 'Производител: Tefal',
+    'reviews': [],
+    'averigeReview': 2,
+    'stock':10,
+    'key': 'КасеролаTefalSimplyClean',
+    'url': 'kaserola-tefal-simply-clean'
+  },
+
+  {
+      'title': 'Тенджера за фурна и котлон Kinghoff',
+      'globalCat': 'dom-gradina-i-petshop',
+      'subCat': 'tendjeri', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/37918/37917112/images/res_3d6b88abda55a8ffdf5fef28409dffca.jpg?width=450&height=450&hash=C3C2AF66FAA1FA567DDE901871F252E3',
+          src1: 'https://s13emagst.akamaized.net/products/37918/37917108/images/res_68e1b58e546c4e065d05a2eccd3b7325.jpg?width=450&height=450&hash=2FEFEFC4A72A8B464F2C71E7949E9F25',
+          src2: 'https://s13emagst.akamaized.net/products/37918/37917108/images/res_7c43abfcdacf3281b3e81f53fb3b94cc.jpg?width=450&height=450&hash=B75F92179DE8DD43E8E420EEFFF9D831',
+          src3: 'https://s13emagst.akamaized.net/products/37918/37917112/images/res_531d86b5b1f04772452108ef86deb59a.jpg?width=450&height=450&hash=66E5E798FBD56DCDAF868141293B9005',
+          src4: 'https://s13emagst.akamaized.net/products/37918/37917112/images/res_88a0c844c864aff56051a93da5d1d0d1.jpg?width=450&height=450&hash=36753C0ED3B8737285A183AAB4831BB1',
+          alt: 'tendjera',
+      },
+      'price': 54.90,
+      'descripton': 'Производител: KINGHOFF',
+      'reviews': [],
+      'averigeReview': 3,
+      'stock':10,
+      'key': 'ТенджеразафурнаикотлонKinghoff',
+      'url': 'tendjera-furna-kotlon-kinghoff'
+  },
+
+  {
+      'title': 'Тенджера с капак Cooking by Heinner Myra',
+      'globalCat': 'dom-gradina-i-petshop',
+      'subCat': 'tendjeri', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/27118/27117684/images/res_bbc748d5287192edeb95faef5af4475d.jpg?width=450&height=450&hash=F88BD332BF17D2E38E8327032A1D202B',
+          src1: 'https://s13emagst.akamaized.net/products/27118/27117684/images/res_5369239867a8ff78359edb24eb1f8a62.jpg?width=450&height=450&hash=DC7AE707549894438D7929875437788B',
+          src2: 'https://s13emagst.akamaized.net/products/27118/27117684/images/res_1ac3408769a5e16d193fa3df5e5e5dfd.jpg?width=450&height=450&hash=5C8A79657AC7B1F6BA3AAE398950A621',
+          src3: 'https://s13emagst.akamaized.net/products/27118/27117684/images/res_17514a73c25f5396787f34236ac160ea.jpg?width=450&height=450&hash=122B5C6DD2F5F0B5748882E86AF61BBF',
+          src4: '',
+          alt: 'tendjera',
+      },
+      'price': 33.99,
+      'descripton': 'Производител: Cooking by Heinner',
+      'reviews': [],
+      'averigeReview': 4,
+      'stock':10,
+      'key': 'ТенджераскапакCookingbyHeinnerMyra',
+      'url': 'tendjera-kapak-cooking-by-heinner-myra'
+  },
+
+  {
+      'title': 'Комплект 7 части Tefal Duetto Plus',
+      'globalCat': 'dom-gradina-i-petshop',
+      'subCat': 'tendjeri', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/25133/25132668/images/res_cf469cb582c022a72afca5bd6e2fc922.jpg?width=450&height=450&hash=1C50A4243BFDE30DFF0418EA7B78C22E',
+          src1: 'https://s13emagst.akamaized.net/products/25133/25132668/images/res_4ffdb920872d800b74c4a919d85854aa.jpg?width=450&height=450&hash=EE12C5859A155AAB3A3441FA386DEA7A',
+          src2: 'https://s13emagst.akamaized.net/products/25133/25132668/images/res_55d73a6cd647dd09f59194d65e33da57.jpg?width=450&height=450&hash=11AB72EC749D547906E28A4338F52CDC',
+          src3: 'https://s13emagst.akamaized.net/products/25133/25132668/images/res_694e2bd9529be601bc60168d1f272185.jpg?width=450&height=450&hash=4B4F9D549BF53CF1937AAB1AEF11A52E',
+          src4: 'https://s13emagst.akamaized.net/products/25133/25132668/images/res_42916f29bbc89855765eafdcbeec1871.jpg?width=450&height=450&hash=E1F5F50CA2C54B83DC62E91B9491DC1D',
+          alt: 'tendjera',
+      },
+      'price': 167.00,
+      'descripton': 'Производител: Tefal',
+      'reviews': [],
+      'averigeReview': 5,
+      'stock':10,
+      'key': 'Комплект7частиTefalDuettoPlus',
+      'url': 'komplekt-7-chasti-tefal-duetto-plus'
+  },
+
+  {
+      'title': 'Тенджера Amercook Brittany',
+      'globalCat': 'dom-gradina-i-petshop',
+      'subCat': 'tendjeri', 
+      'img': {
+          src: 'https://s13emagst.akamaized.net/products/34309/34308968/images/res_bb717a90ef7c8e41820a172edd930de3.jpg?width=450&height=450&hash=2D5D6259F72D682C04BFC300A65F2020',
+          src1: 'https://s13emagst.akamaized.net/products/34309/34308968/images/res_ee7cc507e890629e112f2fea0bd8daba.jpg?width=450&height=450&hash=4DB1FBB1F3FC35AA05F889510A336FB6',
+          src2: 'https://s13emagst.akamaized.net/products/34309/34308968/images/res_618adee1bf9edb8e4dc12119071cfe1d.jpg?width=450&height=450&hash=59996B35AF552B91F8C76F66329BAF25',
+          src3: 'https://s13emagst.akamaized.net/products/34309/34308968/images/res_bf98e8d16606dd4ccc53ef70b47f35ac.jpg?width=450&height=450&hash=4C56C183C5E6D239E1C368CB0BD65A30',
+          src4: 'https://s13emagst.akamaized.net/products/34309/34308968/images/res_2d655cc5d46446cf709a2d2246bc23f8.jpg?width=450&height=450&hash=B9F3A45F894E4251BEE59F966E6D39A1',
+          alt: 'tendjera',
+      },
+      'price': 45.49,
+      'descripton': 'Производител: Amercook',
+      'reviews': [],
+      'averigeReview': 3,
+      'stock':10,
+      'key': 'ТенджераAmercookBrittany',
+      'url': 'tendjera-amercook-brittany'
   },
   // VIKTOR
 ];

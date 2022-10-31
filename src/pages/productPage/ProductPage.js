@@ -149,7 +149,7 @@ export default function ProductPage() {
                 }}
               >
                 <Typography variant="h6" color="custom.main">Описание:</Typography>
-                <Typography variant='subtitle1' color='custom.light'>{e.descripton}:</Typography>
+                <Typography variant='subtitle1' color='custom.light'>{e.descripton}</Typography>
               </Stack>
               {/* <Carousel
                   autoPlay={false}
