@@ -23,7 +23,7 @@ export default function ProductPage() {
 
   return (
     <>
-      {sortedProductList.filter(e => e.key === key).map((e, i) =>
+      {sortedProductList.filter(e => e.key === key).map((e,i) =>
         <Stack
           sx={{
             maxWidth: '1240px',
@@ -32,7 +32,7 @@ export default function ProductPage() {
             paddingLeft: '20px',
             paddingRight: '20px',
           }}
-          key={i}
+          key= {i}
         >
           <Breadcrumbs aria-label="breadcrumb" sx={{ marginTop: '12px', marginBottom: '24px' }}>
             <Link
@@ -146,7 +146,7 @@ export default function ProductPage() {
                 }}
               >
                 <Typography variant="h6" color="custom.main">Описание:</Typography>
-                <Typography variant='subtitle1' color='custom.light'>{e.descripton}:</Typography>
+                <Typography variant='subtitle1' color='custom.light'>{e.descripton}</Typography>
               </Stack>
               {/* Slider */}
             </Box>

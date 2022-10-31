@@ -21,7 +21,7 @@ export default function Example(props) {
     const navigate = useNavigate()
 
     return (
-        <Stack spacing={2} sx={{ marginTop: '36px' }} >
+        <Stack spacing={2} sx={{ marginTop: '36px' }}>
             <Typography variant='h4'>{props.title || "Stava"}</Typography>
             <Carousel
                 autoPlay={false}

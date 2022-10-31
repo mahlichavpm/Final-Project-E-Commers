@@ -171,10 +171,33 @@ export const CategoriesDATA = [
         icon: <CheckroomOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Дамски чанти',
+                key: 'damski-chanti',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//32/48144.jpg'
+            },
+            {
+                name: 'Мъжки аксесоари',
+                key: 'muzhki-aksesoari',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//32/48202.jpg'
+            },
+            {
+                name: 'Раници',
+                key: 'ranici',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//32/48201.jpg'
+            },
+            {
+                name: 'Дънки',
+                key: 'dunki',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//34/51648.jpg'
+            },
+            {
+                name: 'Мъжки часовници',
+                key: 'muzhki-chasovnici',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//32/48200.jpg'
+            },
+
+
+            
         ]
     },
     {
@@ -191,7 +214,7 @@ export const CategoriesDATA = [
     },
     {
         name: 'Дом, Градина & Petshop',
-        key: 'dom-gradina-petshop',
+        key: 'dom-gradina-i-petshop',
         icon: <HomeOutlinedIcon />,
         subCategory: [
             {
