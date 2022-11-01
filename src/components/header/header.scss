@@ -13,7 +13,8 @@
     border: transparent;
     &:focus-visible{
         border-color: none;
-        border: none;
+        border: none !important;
+        outline: none;
     }
 }
 
