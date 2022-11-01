@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from "react-material-ui-carousel";
 import ProductCard from "../../components/productCard/ProductCard";
 
@@ -79,10 +79,10 @@ export default function ProductPage() {
               <Stack direction='row' spacing={4}>
                 <Stack spacing={2}>
                   <div className="imgGalery">
-                    <img src={selectedImage || e.img.src} width='400' alt="qnko" />
+                    <img src={selectedImage} width='400' alt="qnko" />
                   </div>
                   <Stack direction='row' spacing={2} sx={{ width: '400px', overflowX: 'auto', }}>
-                    <img src={e.img.src} className={e.img.src === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src) }} width='80' alt="qnko" />
+                    <img src={e.img.src !== selectedImage ? setSelectedImage(e.img.src) : e.img.src} className={e.img.src === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src) }} width='80' alt="qnko" />
                     {e.img.src1 ? <img src={e.img.src1} className={e.img.src1 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src1) }} width='80' alt="qnko" /> : <></>}
                     {e.img.src2 ? <img src={e.img.src2} className={e.img.src2 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src2) }} width='80' alt="qnko" /> : <></>}
                     {e.img.src3 ? <img src={e.img.src3} className={e.img.src3 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src3) }} width='80' alt="qnko" /> : <></>}
@@ -225,7 +225,6 @@ export default function ProductPage() {
               </Stack>
             </Box>
           </Container>
-          {/* </div> */}
         </Stack>)}
     </>
   );
