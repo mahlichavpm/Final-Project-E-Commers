@@ -266,24 +266,64 @@ export const CategoriesDATA = [
     },
     {
         name: 'Играчки & Детски артикули',
-        key: 'igrachki-detski-artikuli',
+        key: 'igrachki-i-detski-artikuli',
         icon: <SmartToyOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
+                name: 'Столчета за хранене',
+                key: 'stolcheta-za-hranene',
                 img: ''
-            }
+            },
+            {
+                name: 'Детски колички',
+                key: 'kolichki',
+                img: ''
+            },
+            {
+                name: 'Конструктори',
+                key: 'konstruktori',
+                img: ''
+            },
+            {
+                name: 'Пъзели',
+                key: 'pazeli',
+                img: ''
+            },
+            {
+                name: 'Бебешки легла и кошари',
+                key: 'bebeshki-legla-i-koshari',
+                img: ''
+            },
         ]
     },
     {
         name: 'Спорт & свободно време',
-        key: 'sport-svobodno-vreme',
+        key: 'sport-i-svobodno-vreme',
         icon: <SportsKabaddiOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
+                name: 'Тежести',
+                key: 'tejesti',
+                img: ''
+            },
+            {
+                name: 'Бягащи пътеки',
+                key: 'bqgashti-puteki',
+                img: ''
+            },
+            {
+                name: 'Велоергометри',
+                key: 'veloargometri',
+                img: ''
+            },
+            {
+                name: 'Велосипеди',
+                key: 'velosipedi',
+                img: ''
+            },
+            {
+                name: 'Смит машини',
+                key: 'smit-mashini',
                 img: ''
             }
         ]
