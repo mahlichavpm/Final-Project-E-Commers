@@ -77,94 +77,94 @@ export const CategoriesDATA = [
             },
         ]
     },
-    {
-        name: 'ТВ, Аудио & Фото',
-        key: 'tv-audio-foto',
-        icon: <TvOutlinedIcon />,
-        subCategory: [
-            {
-                name: 'Телевизори',
-                key: 'televizori',
-                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//18/26735.jpg'
-            },
-            {
-                name: 'Стойки',
-                key: 'stoyki',
-                img: 'https://besto.bg/wp-content/uploads/2019/07/stojka-za-televizor.jpg'
-            },
-            {
-                name: 'Кабели и адаптери',
-                key: 'kabeli-i-adapteri',
-                img: 'https://dice.bg/content/pics/26598_kanex-digital-audio-adapter-adapter-za-svyrzvane-na-apple-tv-4th-gen-kym-televizor-s-hdmi-i-audio-sistema-s-optichen-vhod_-666642148.jpg'
-            },
-            {
-                name: 'Дистанционни',
-                key: 'distancionni',
-                img: 'https://cdncloudcart.com/10875/product_categories/images/368/368_600x600.jpeg?1659706145'
-            },
-            {
-                name: 'TV тунери',
-                key: 'tv-tuneri',
-                img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210_FMT_WHH?wid=640&hei=600&fmt=jpeg&qlt=90&.v=1664896361164'
-            },
-        ]
-    },
-    {
-        name: 'Gaming',
-        key: 'gaming',
-        icon: <VideogameAssetOutlinedIcon />,
-        subCategory: [
-            {
-                name: 'Конзоли & игри',
-                key: 'konzoli-igri',
-                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29408.jpg'
-            },
-            {
-                name: 'Геймпадове, Джойстици и Слушалки',
-                key: 'geympadove-djoystici-i-slushalki',
-                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29416.jpg'
-            },
-            {
-                name: 'Игри конзоли pc',
-                key: 'igri-konzoli-pc',
-                img: 'https://gepig.com/game_cover_460w/432.jpg'
-            },
-            {
-                name: 'PC компоненти',
-                key: 'pc-komponenti',
-                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29414.jpg'
-            },
-            {
-                name: 'Gaming мишки',
-                key: 'gaming-mishki',
-                img: 'http://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/peripherals/input-devices/dell/mouse/aw610m/pdp/mouse_aw_aw610m_white_responisve_pdp_hero.jpg?fmt=jpg'
-            },
-        ]
-    },
-    {
-        name: 'Големи електроуреди',
-        key: 'golemi-elektrouredi',
-        icon: <KitchenOutlinedIcon />,
-        subCategory: [
-            {
-                name: '',
-                key: '',
-                img: ''
-            }
-        ]
-    },
-    {
-        name: 'Малки електроуреди',
-        key: 'malki-elektrouredi',
-        icon: <BlenderOutlinedIcon />,
-        subCategory: [
-            {
-                name: '',
-                key: '',
-                img: ''
-            },
-        ]
-    },
+    // {
+    //     name: 'ТВ, Аудио & Фото',
+    //     key: 'tv-audio-foto',
+    //     icon: <TvOutlinedIcon />,
+    //     subCategory: [
+    //         {
+    //             name: 'Телевизори',
+    //             key: 'televizori',
+    //             img: 'https://s13emagst.akamaized.net/layout/bg/images/db//18/26735.jpg'
+    //         },
+    //         {
+    //             name: 'Стойки',
+    //             key: 'stoyki',
+    //             img: 'https://besto.bg/wp-content/uploads/2019/07/stojka-za-televizor.jpg'
+    //         },
+    //         {
+    //             name: 'Кабели и адаптери',
+    //             key: 'kabeli-i-adapteri',
+    //             img: 'https://dice.bg/content/pics/26598_kanex-digital-audio-adapter-adapter-za-svyrzvane-na-apple-tv-4th-gen-kym-televizor-s-hdmi-i-audio-sistema-s-optichen-vhod_-666642148.jpg'
+    //         },
+    //         {
+    //             name: 'Дистанционни',
+    //             key: 'distancionni',
+    //             img: 'https://cdncloudcart.com/10875/product_categories/images/368/368_600x600.jpeg?1659706145'
+    //         },
+    //         {
+    //             name: 'TV тунери',
+    //             key: 'tv-tuneri',
+    //             img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210_FMT_WHH?wid=640&hei=600&fmt=jpeg&qlt=90&.v=1664896361164'
+    //         },
+    //     ]
+    // },
+    // {
+    //     name: 'Gaming',
+    //     key: 'gaming',
+    //     icon: <VideogameAssetOutlinedIcon />,
+    //     subCategory: [
+    //         {
+    //             name: 'Конзоли & игри',
+    //             key: 'konzoli-igri',
+    //             img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29408.jpg'
+    //         },
+    //         {
+    //             name: 'Геймпадове, Джойстици и Слушалки',
+    //             key: 'geympadove-djoystici-i-slushalki',
+    //             img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29416.jpg'
+    //         },
+    //         {
+    //             name: 'Игри конзоли pc',
+    //             key: 'igri-konzoli-pc',
+    //             img: 'https://gepig.com/game_cover_460w/432.jpg'
+    //         },
+    //         {
+    //             name: 'PC компоненти',
+    //             key: 'pc-komponenti',
+    //             img: 'https://s13emagst.akamaized.net/layout/bg/images/db//20/29414.jpg'
+    //         },
+    //         {
+    //             name: 'Gaming мишки',
+    //             key: 'gaming-mishki',
+    //             img: 'http://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/peripherals/input-devices/dell/mouse/aw610m/pdp/mouse_aw_aw610m_white_responisve_pdp_hero.jpg?fmt=jpg'
+    //         },
+    //     ]
+    // },
+    // {
+    //     name: 'Големи електроуреди',
+    //     key: 'golemi-elektrouredi',
+    //     icon: <KitchenOutlinedIcon />,
+    //     subCategory: [
+    //         {
+    //             name: '',
+    //             key: '',
+    //             img: ''
+    //         }
+    //     ]
+    // },
+    // {
+    //     name: 'Малки електроуреди',
+    //     key: 'malki-elektrouredi',
+    //     icon: <BlenderOutlinedIcon />,
+    //     subCategory: [
+    //         {
+    //             name: '',
+    //             key: '',
+    //             img: ''
+    //         },
+    //     ]
+    // },
     {
         name: 'Мода',
         key: 'moda',

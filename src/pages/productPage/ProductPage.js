@@ -7,13 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 import React, { useState } from 'react';
 import { addToCart, addToFavourites, removeItemFromFav } from "../../store/activeUserSlice";
 import FavoriteIcon from '@mui/icons-material/Favorite';
->>>>>>> 46fa0cb8e43bab833fc7561884ca2760fe903066
 import Carousel from "react-material-ui-carousel";
 import ProductCard from "../../components/productCard/ProductCard";
 

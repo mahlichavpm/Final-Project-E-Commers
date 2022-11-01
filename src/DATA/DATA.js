@@ -809,7 +809,7 @@ export const DATA = [
       src4: "https://s13emagst.akamaized.net/products/14409/14408588/images/res_fbdc1b72c348f62f438e102dc1e5a0d8.jpg?width=450&height=450&hash=1732A3951E76CA428724E1246CA6E29F",
       alt: "epilator",
     },
-    price: 206.0,
+    price: 206.00,
     descripton:
       "Braun Silk-épil 9 SensoSmart™ е първият смарт епилатор в света, който предлага иновативен смарт сензор за натиск. ",
     reviews: [],
@@ -1102,7 +1102,7 @@ export const DATA = [
   },
 
   {
-    title: "Сешоар Philips Prestige BHD827/00",
+    title: "Сешоар Philips Prestige BHD82700",
     globalCat: "zdrave-i-krasota",
     subCat: "seshoari",
     img: {
@@ -1119,7 +1119,7 @@ export const DATA = [
     reviews: [],
     averigeReview: 3,
     stock: 10,
-    key: "СешоарPhilipsPrestigeBHD827/00",
+    key: "СешоарPhilipsPrestigeBHD82700",
     url: "seshoar-philips-prestige-bhd827-00",
   },
 
@@ -1550,7 +1550,6 @@ export const DATA = [
     key: "СтъкленпротекторPanzerGlassзаApple",
     url: "staklen-protektor-panzerglass-za-apple",
   },
-  // subCat zaryadni-ustroystva-za-mobilni-telefoni
   {
     title: "Зарядно Apple за iPhone",
     globalCat: "telefoni-tableti-laptopi",
@@ -1976,27 +1975,6 @@ export const DATA = [
       src4: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_37dd0c8380f9dbab51ec46eacdc7863e.jpg?width=450&height=450&hash=8268E8DE8ACBF4172F2B0A24F148C8F9",
       alt: "divan",
     },
-    price: 219.98,
-    descripton:
-      "L-образно компютърно бюро VASAGLE, Mark Adler, Kiwi, Ъглово бюро за учене, Домашно бюро, Игри, Спестяване на място, 168см x 120см, MDF, Черен",
-    reviews: [],
-    averigeReview: 4,
-    stock: 10,
-    key: "L-образнокомпютърнобюроVASAGLE",
-    url: "l-obrazno-kompyutarno-byuro-vasagle",
-  },
-  {
-    title: "Канапе Sani Merry",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "divani",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_820ceb8c5403a342a98e78f53ef36dca.jpg?width=450&height=450&hash=AF408C37CA2716FF805CA94ADBC56CF2",
-      src1: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_7f533a08b34909efa6dd906c1dabe9af.jpg?width=450&height=450&hash=25F8E3F916C142FA6E17CA1E71749534",
-      src2: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_8a2bf0884beca3027d2faeb018da5482.jpg?width=450&height=450&hash=01110E4F03E7F71916F119AC0BC3347E",
-      src3: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_7e1acfad53bd867e0da66fb2d8fc3ec8.jpg?width=450&height=450&hash=5669DD23FEEB1FA54B3F5864E632F080",
-      src4: "https://s13emagst.akamaized.net/products/30476/30475286/images/res_37dd0c8380f9dbab51ec46eacdc7863e.jpg?width=450&height=450&hash=8268E8DE8ACBF4172F2B0A24F148C8F9",
-      alt: "divan",
-    },
     price: 381.0,
     descripton:
       "Диван Merry ще намери своето място в дома Ви и ще ви осигури приятни мигове на комфорт и блаженство.",
@@ -2246,69 +2224,6 @@ export const DATA = [
   },
 
   {
-    title: "Тенджера за фурна и котлон Kinghoff",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "tendjeri",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/37918/37917112/images/res_3d6b88abda55a8ffdf5fef28409dffca.jpg?width=450&height=450&hash=C3C2AF66FAA1FA567DDE901871F252E3",
-      src1: "https://s13emagst.akamaized.net/products/37918/37917108/images/res_68e1b58e546c4e065d05a2eccd3b7325.jpg?width=450&height=450&hash=2FEFEFC4A72A8B464F2C71E7949E9F25",
-      src2: "https://s13emagst.akamaized.net/products/37918/37917108/images/res_7c43abfcdacf3281b3e81f53fb3b94cc.jpg?width=450&height=450&hash=B75F92179DE8DD43E8E420EEFFF9D831",
-      src3: "https://s13emagst.akamaized.net/products/37918/37917112/images/res_531d86b5b1f04772452108ef86deb59a.jpg?width=450&height=450&hash=66E5E798FBD56DCDAF868141293B9005",
-      src4: "https://s13emagst.akamaized.net/products/37918/37917112/images/res_88a0c844c864aff56051a93da5d1d0d1.jpg?width=450&height=450&hash=36753C0ED3B8737285A183AAB4831BB1",
-      alt: "tendjera",
-    },
-    price: 54.9,
-    descripton: "Производител: KINGHOFF",
-    reviews: [],
-    averigeReview: 3,
-    stock: 10,
-    key: "ТенджеразафурнаикотлонKinghoff",
-    url: "tendjera-furna-kotlon-kinghoff",
-  },
-
-  {
-    title: "Тенджера с капак Cooking by Heinner Myra",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "tendjeri",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/27118/27117684/images/res_bbc748d5287192edeb95faef5af4475d.jpg?width=450&height=450&hash=F88BD332BF17D2E38E8327032A1D202B",
-      src1: "https://s13emagst.akamaized.net/products/27118/27117684/images/res_5369239867a8ff78359edb24eb1f8a62.jpg?width=450&height=450&hash=DC7AE707549894438D7929875437788B",
-      src2: "https://s13emagst.akamaized.net/products/27118/27117684/images/res_1ac3408769a5e16d193fa3df5e5e5dfd.jpg?width=450&height=450&hash=5C8A79657AC7B1F6BA3AAE398950A621",
-      src3: "https://s13emagst.akamaized.net/products/27118/27117684/images/res_17514a73c25f5396787f34236ac160ea.jpg?width=450&height=450&hash=122B5C6DD2F5F0B5748882E86AF61BBF",
-      src4: "",
-      alt: "tendjera",
-    },
-    price: 33.99,
-    descripton: "Производител: Cooking by Heinner",
-    reviews: [],
-    averigeReview: 4,
-    stock: 10,
-    key: "ТенджераскапакCookingbyHeinnerMyra",
-    url: "tendjera-kapak-cooking-by-heinner-myra",
-  },
-
-  {
-    title: "Комплект 7 части Tefal Duetto Plus",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "tendjeri",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/25133/25132668/images/res_cf469cb582c022a72afca5bd6e2fc922.jpg?width=450&height=450&hash=1C50A4243BFDE30DFF0418EA7B78C22E",
-      src1: "https://s13emagst.akamaized.net/products/25133/25132668/images/res_4ffdb920872d800b74c4a919d85854aa.jpg?width=450&height=450&hash=EE12C5859A155AAB3A3441FA386DEA7A",
-      src2: "https://s13emagst.akamaized.net/products/25133/25132668/images/res_55d73a6cd647dd09f59194d65e33da57.jpg?width=450&height=450&hash=11AB72EC749D547906E28A4338F52CDC",
-      src3: "https://s13emagst.akamaized.net/products/25133/25132668/images/res_694e2bd9529be601bc60168d1f272185.jpg?width=450&height=450&hash=4B4F9D549BF53CF1937AAB1AEF11A52E",
-      src4: "https://s13emagst.akamaized.net/products/25133/25132668/images/res_42916f29bbc89855765eafdcbeec1871.jpg?width=450&height=450&hash=E1F5F50CA2C54B83DC62E91B9491DC1D",
-      alt: "tendjera",
-    },
-    price: 167.0,
-    descripton: "Производител: Tefal",
-    reviews: [],
-    averigeReview: 5,
-    stock: 10,
-    key: "Комплект7частиTefalDuettoPlus",
-    url: "komplekt-7-chasti-tefal-duetto-plus",
-  },
-
-  {
     title: "Тенджера Amercook Brittany",
     globalCat: "dom-gradina-i-petshop",
     subCat: "tendjeri",
@@ -2328,8 +2243,6 @@ export const DATA = [
     key: "ТенджераAmercookBrittany",
     url: "tendjera-amercook-brittany",
   },
-  // VIKTOR
-  // Subcategory nastolni-kompyutri
   {
     title: "Apple Mac Studio (2022), Apple M1 Max",
     globalCat: "kompyutri-periferiya",
@@ -2539,49 +2452,6 @@ export const DATA = [
   },
 
   {
-    title: "Бюро Homs",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "biura",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/28408/28407059/images/res_6e631d01bc543fe4ead6f860fa3e82a5.jpg?width=450&height=450&hash=914B5E7284E6D660D48DC875D5AF9869",
-      src1: "https://s13emagst.akamaized.net/products/28408/28407059/images/res_e26c716bd75c30c6c36acc9f85c5745e.jpg?width=450&height=450&hash=70F38D17A1A77A6F4A779998DDB3A2C0",
-      src2: "https://s13emagst.akamaized.net/products/28408/28407059/images/res_045ef1b9aa5993fa18d411910a9428fa.jpg?width=450&height=450&hash=187267367A5F1CECC5EA22822FBE21ED",
-      src3: "https://s13emagst.akamaized.net/products/28408/28407059/images/res_f051399c4a173317066ea0a4725ee1b1.jpg?width=450&height=450&hash=D2758E8D45629148495F2B0ADF664CBC",
-      src4: "https://s13emagst.akamaized.net/products/28408/28407059/images/res_31d7b41a3caf9e1a45b8d9dd66fa9d66.jpg?width=450&height=450&hash=F4028BE9EFBE6AF4C6E3316A21FC843D",
-      alt: "biuro",
-    },
-    price: 74.73,
-    descripton:
-      "Бюро в индустриален стил Corby Homs с модерен дизайн както за възрастни, така и за училищна стая. ",
-    reviews: [],
-    averigeReview: 2,
-    stock: 10,
-    key: "БюроHoms",
-    url: "byuro-homs",
-  },
-
-  {
-    title: "Касерола Tefal Simply Clean",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "tendjeri",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/34016/34015965/images/res_8fe64bd3b2c1a2437ee2e8724cba07e4.jpg?width=450&height=450&hash=EF093649FF23C470B231646C029F6163",
-      src1: "https://s13emagst.akamaized.net/products/34016/34015965/images/res_6d342d26a22ea22ff64fb67070398fc5.jpg?width=450&height=450&hash=75269210AB190E06D5EF768D6B576D0C",
-      src2: "https://s13emagst.akamaized.net/products/34016/34015965/images/res_01f7ea274cebfb4054778b71cdcf5ad9.jpg?width=450&height=450&hash=9DAAFF81ECB34FDBE6EEF0DA75BFBCE1",
-      src3: "https://s13emagst.akamaized.net/products/34016/34015965/images/res_164e4cd0f701e236ff4da2f62af305d0.jpg?width=450&height=450&hash=3AA5B8B3EFCEA7E5AEE4C568B10F0D1D",
-      src4: "",
-      alt: "tendjera",
-    },
-    price: 36.79,
-    descripton: "Производител: Tefal",
-    reviews: [],
-    averigeReview: 2,
-    stock: 10,
-    key: "КасеролаTefalSimplyClean",
-    url: "kaserola-tefal-simply-clean",
-  },
-
-  {
     title: "Тенджера за фурна и котлон Kinghoff",
     globalCat: "dom-gradina-i-petshop",
     subCat: "tendjeri",
@@ -2644,26 +2514,6 @@ export const DATA = [
     url: "komplekt-7-chasti-tefal-duetto-plus",
   },
 
-  {
-    title: "Тенджера Amercook Brittany",
-    globalCat: "dom-gradina-i-petshop",
-    subCat: "tendjeri",
-    img: {
-      src: "https://s13emagst.akamaized.net/products/34309/34308968/images/res_bb717a90ef7c8e41820a172edd930de3.jpg?width=450&height=450&hash=2D5D6259F72D682C04BFC300A65F2020",
-      src1: "https://s13emagst.akamaized.net/products/34309/34308968/images/res_ee7cc507e890629e112f2fea0bd8daba.jpg?width=450&height=450&hash=4DB1FBB1F3FC35AA05F889510A336FB6",
-      src2: "https://s13emagst.akamaized.net/products/34309/34308968/images/res_618adee1bf9edb8e4dc12119071cfe1d.jpg?width=450&height=450&hash=59996B35AF552B91F8C76F66329BAF25",
-      src3: "https://s13emagst.akamaized.net/products/34309/34308968/images/res_bf98e8d16606dd4ccc53ef70b47f35ac.jpg?width=450&height=450&hash=4C56C183C5E6D239E1C368CB0BD65A30",
-      src4: "https://s13emagst.akamaized.net/products/34309/34308968/images/res_2d655cc5d46446cf709a2d2246bc23f8.jpg?width=450&height=450&hash=B9F3A45F894E4251BEE59F966E6D39A1",
-      alt: "tendjera",
-    },
-    price: 45.49,
-    descripton: "Производител: Amercook",
-    reviews: [],
-    averigeReview: 3,
-    stock: 10,
-    key: "ТенджераAmercookBrittany",
-    url: "tendjera-amercook-brittany",
-  },
   // VIKTOR
   {
     title: "Люлеещ се стол Kring, Сгъваем, Височина 195см",

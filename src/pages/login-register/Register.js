@@ -73,17 +73,34 @@ export default function Register (){
         if(flag){
             setPassword('');
             setPassword1('');
-            setMatchPassErr(!flag)
-            handleRegister()
+            setMatchPassErr(!flag);
+            handleRegister();
         } else {
-            setMatchPassErr(!flag)
+            setMatchPassErr(!flag);
         }
 
     }
 
     const handleInput = (e) => {
-        setUsername(e.target.value);
-        dispatch(registerErrorHandler);
+        if(e.target.value !== ' '){
+            const value = e.target.value.trim();
+            setUsername(value);
+            dispatch(registerErrorHandler);
+        }
+    }
+
+    const handleInputPassword = (e) => {
+        if(e.target.value !== ' '){
+        const value = e.target.value.trim();
+        setPassword(value);
+        }
+    }
+
+    const handleInputPasswordMatch= (e) => {
+        if(e.target.value !== ' '){
+        const value = e.target.value.trim();
+        setPassword1(value);
+        }
     }
 
     return (
@@ -97,12 +114,9 @@ export default function Register (){
                     </div> : null}
                     </div>
                     <TextField helperText={''} size="small"  id={'username'} width='true'  value={username} onChange={handleInput} type={'text'}label={'Потребителско име'}/>
-                    <TextField size="small" id={'password'} width='true' value={password} onChange={(e) => {setPassword(e.target.value)}} type={'password'} label={'Парола'}/>
+                    <TextField size="small" id={'password'} width='true' value={password} onChange={handleInputPassword} type={'password'} label={'Парола'}/>
 
-                    <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={(e) => {
-                     setPassword1(e.target.value);
-                    
-                    }} type={'password'} label={'Потвърдете паролата'}/>
+                    <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={handleInputPasswordMatch} type={'password'} label={'Потвърдете паролата'}/>
                     {loading ? <Button><Loader/></Button> :
                     <Button onClick={handleClick} disabled={correctInput} variant='contained'>Регистрация</Button>}
                     <Link to={'/login'}>Вече имаш регистрация?</Link>
