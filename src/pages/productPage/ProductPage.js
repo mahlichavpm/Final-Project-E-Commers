@@ -163,7 +163,7 @@ export default function ProductPage() {
                   <Typography variant='h6' color='custom.green'>в наличност</Typography>
                   <Stack direction='row' spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography variant='subtitle1' color='custom.main'>Цена:</Typography>
-                    <Typography variant='h5' color='alert.main'>{e.price} лв.</Typography>
+                    <Typography variant='h5' color='alert.main'>{(e.price).toFixed(2)}лв.</Typography>
                   </Stack>
                   <ProductButton onClick={() => {handleAddToCart(e.key)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
                   <ProductButton startIcon={favBtnIcon ? <FavoriteIcon color='custom.light'/> :<FavoriteBorderIcon color="custom.light" />} onClick={()=>{handleAddtoFavouritesBtn(e.key)}} name={favBtnText} />

@@ -29,7 +29,7 @@ export default function AllProductsList() {
 
   //--------------Pagination----------------
   let [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(2)
+  const [perPage, setPerPage] = useState(5)
   const PER_PAGE = perPage;
 
   const count = Math.ceil(sortedProductList.length / PER_PAGE);
