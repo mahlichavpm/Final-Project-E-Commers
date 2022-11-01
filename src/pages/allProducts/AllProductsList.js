@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
-import { Breadcrumb, Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import ProductCard from '../../components/productCard/ProductCard';
 import { useDispatch, useSelector } from 'react-redux';
-import { Breadcrumbs, Checkbox, Divider, FormControlLabel, Link, Pagination, Radio, RadioGroup, Rating, TextField, Typography } from '@mui/material';
+import { Breadcrumbs, Checkbox, FormControlLabel, Link, Pagination, Radio, RadioGroup, Rating, TextField, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -13,7 +13,6 @@ import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
 import usePagination from './pagination';
 import { addToFavourites } from '../../store/activeUserSlice';
-import { PropaneSharp } from '@mui/icons-material';
 
 export default function AllProductsList() {
   const navigate = useNavigate();
