@@ -27,12 +27,56 @@ export default function Example(props) {
                 autoPlay={false}
                 navButtonsAlwaysVisible={true}
                 animation='slide'
-                navButtonsWrapperProps={
-                    {
-                        className: 'button', 
-                        style: React.CSSProperties
-                    } & React.AriaAttributes
-                }
+                // navButtonsWrapperProps={
+                //     {
+                //         className: 'button', 
+                //         style: React.CSSProperties
+                //     } & React.AriaAttributes
+                // }
+                //  width: 12px;
+                // height: 12px;
+                // background-color: #888;
+                // border-radius: 50%;
+                // margin: 6px 10px 4px 0;
+                // text-align: center;
+                // Za tezi otdolu
+                indicatorIconButtonProps={{
+                    style: {
+                        width: '18px',
+                        height: '18px',
+                        color: '#888',
+                        borderRadius: '50%',
+                        textAlign: 'center',
+                    }
+                }}
+                activeIndicatorIconButtonProps={{
+                    style: {
+                        color: '#0082e6',
+                        // backgroundColor: 'primary.main',
+                    }
+                }}
+                indicatorContainerProps={{
+                    style: {
+                        marginTop: '24px', // 5
+                    }
+
+                }}
+                fullHeightHover={false}  
+                navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
+                    style: {
+                        padding: '50px'
+                        
+                    }
+                }} 
+                navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+                    style: {
+                        backgroundColor: 'cornflowerblue',
+                        borderRadius: 20,
+                        next: {
+                            marginRight: '60px'
+                        }
+                    },
+                }} 
             >
                 {sliderPage.map((e, i) =>
                     <Stack direction='row' spacing={2} key={i}>

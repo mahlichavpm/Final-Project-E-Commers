@@ -8,6 +8,8 @@ import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import React, { useState } from 'react';
+import Carousel from "react-material-ui-carousel";
+import ProductCard from "../../components/productCard/ProductCard";
 
 export default function ProductPage() {
   const productList = useSelector(state => state.product.product);
@@ -19,11 +21,21 @@ export default function ProductPage() {
     .filter(e => e.subCat === subCategory)
   );
 
+  // ---------Slider------------
+  const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === globalCategory).splice(0, 20));
+  const [sliderPage, setSliderPage] = useState([
+    productSlider.slice().splice(0, 4),
+    productSlider.slice().splice(4, 4),
+    productSlider.slice().splice(8, 4),
+    productSlider.slice().splice(12, 4),
+    productSlider.slice().splice(16, 4)
+  ]);
+
   const [selectedImage, setSelectedImage] = useState(`${sortedProductList.filter(e => e.key === key)[0].img.src}`);
 
   return (
     <>
-      {sortedProductList.filter(e => e.key === key).map((e,i) =>
+      {sortedProductList.filter(e => e.key === key).map((e, i) =>
         <Stack
           sx={{
             maxWidth: '1240px',
@@ -32,7 +44,7 @@ export default function ProductPage() {
             paddingLeft: '20px',
             paddingRight: '20px',
           }}
-          key= {i}
+          key={i}
         >
           <Breadcrumbs aria-label="breadcrumb" sx={{ marginTop: '12px', marginBottom: '24px' }}>
             <Link
@@ -149,6 +161,68 @@ export default function ProductPage() {
                 <Typography variant='subtitle1' color='custom.light'>{e.descripton}</Typography>
               </Stack>
               {/* Slider */}
+              <Stack spacing={2} sx={{ marginTop: '36px' }}>
+                <Typography variant='h4'>Сходни продукти</Typography>
+                <Carousel
+                  autoPlay={false}
+                  navButtonsAlwaysVisible={true}
+                  animation='slide'
+                  indicatorIconButtonProps={{
+                    style: {
+                      width: '18px',
+                      height: '18px',
+                      color: '#888',
+                      borderRadius: '50%',
+                      textAlign: 'center',
+                    }
+                  }}
+                  activeIndicatorIconButtonProps={{
+                    style: {
+                      color: '#0082e6',
+                    }
+                  }}
+                  indicatorContainerProps={{
+                    style: {
+                      marginTop: '24px',
+                    }
+
+                  }}
+                  fullHeightHover={false}
+                  navButtonsWrapperProps={{
+                    style: {
+                      padding: '50px'
+
+                    }
+                  }}
+                  navButtonsProps={{
+                    style: {
+                      backgroundColor: 'cornflowerblue',
+                      borderRadius: 20,
+                      next: {
+                        marginRight: '60px'
+                      }
+                    },
+                  }}
+                >
+                  {sliderPage.map((e, i) =>
+                    <Stack direction='row' spacing={2} key={i}>
+                      {e.map(e => <ProductCard
+                        img={e.img.src}
+                        alt={e.img.alt}
+                        title={e.title}
+                        description={e.descripton}
+                        averigeReview={e.averigeReview}
+                        stock={e.stock}
+                        price={e.price}
+                        key={e.key}
+                        id={e.key}
+                        onCardClick={() => navigate(`/${e.globalCat}/${e.subCat}/${e.key}`)}
+                      ></ProductCard>)}
+                    </Stack>
+                  )}
+
+                </Carousel>
+              </Stack>
             </Box>
           </Container>
           {/* </div> */}
