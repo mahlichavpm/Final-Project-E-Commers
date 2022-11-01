@@ -58,7 +58,7 @@ export default function AllProductsList() {
       (filtredSorted.fromPrice && filtredSorted.toPrice ? el.price > Number(filtredSorted.fromPrice) && el.price < Number(filtredSorted.toPrice) : true) &&
       (filtredSorted.fromPrice || filtredSorted.toPrice ? el.price > Number(filtredSorted.fromPrice) || el.price < Number(filtredSorted.toPrice) : true)
     ).sort((a, b) => {
-      switch (filtredSorted.sort) {
+      switch(filtredSorted.sort) {
         case 'descendingOrder':
           return b.price - a.price;
         case 'ascending':
@@ -75,14 +75,9 @@ export default function AllProductsList() {
     setSortedProductList(filtredSortedProductList)
   }, [filtredSorted])
 
-  const { Content, Sider } = Layout;
+  const { Content } = Layout;
   const dispatch = useDispatch();
-  const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
   const globalCategoryName = categories.filter(e => e.key === globalCategory)[0]
-
-  const addToFavourite = (key) => {
-    dispatch(addToFavourites({ key }))
-  }
 
   return (
     <>
@@ -95,7 +90,6 @@ export default function AllProductsList() {
           paddingRight: '20px',
         }}
       >
-        {/* <Stack sx={{ minHeight: '100Vh' }} spacing={2}> */}
         <Breadcrumbs aria-label="breadcrumb" sx={{ marginTop: '12px', marginBottom: '24px' }}>
           <Link
             sx={{ '&:hover': { color: 'primary.main' } }}
@@ -126,9 +120,6 @@ export default function AllProductsList() {
               // label="Age"
               onChange={(e) => setFiltredSorted({ ...filtredSorted, sort: e.target.value })}
             >
-              {/* <MenuItem value=''>
-                <em>None</em>
-              </MenuItem> */}
               <MenuItem value={'aToZ'}>от А към З</MenuItem>
               <MenuItem value={'zToA'}>от З към А</MenuItem>
               <MenuItem value={'ascending'}>Възходящ ред</MenuItem>
@@ -142,7 +133,6 @@ export default function AllProductsList() {
               labelId="demo-select-small"
               id="demo-select-small"
               value={perPage}
-              // label="Age"
               onChange={(e) => setPerPage(e.target.value)}
             >
               <MenuItem value={2}>2</MenuItem>
