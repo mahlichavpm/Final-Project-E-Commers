@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import Button from "../../components/buttons/ProductButton";
-import CartPageProduct from "../../components/cartPageProduct/cartPageProduct";
+import CartPageProduct from "../../components/cartPageProduct/CartPageProduct";
 import './CartPage.scss'
 
 export default function Cart() {

@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
-import usePagination from './pagination';
+import usePagination from './Pagination';
 import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
