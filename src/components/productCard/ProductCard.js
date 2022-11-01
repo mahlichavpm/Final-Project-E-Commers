@@ -11,7 +11,6 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useDispatch } from 'react-redux';
 import { addToCart, addToFavourites, removeItemFromFav } from '../../store/activeUserSlice';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
@@ -19,7 +18,6 @@ export default function ProductCard(props) {
   
     const favouriteList = useSelector(state => state.activeUser.favourites);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [heartIcon,setHeartIcon] = React.useState(false);
 
     const handleAddToCart = (key) => {
@@ -86,7 +84,7 @@ export default function ProductCard(props) {
                     </Typography>
                     <Rating name="half-rating" readOnly defaultValue={props.averigeReview || 0} size='small' />
                     <Typography variant="body1" color="alert.main">
-                        {props.price + ' лв' || 'Няма си цена'}
+                        {(props.price).toFixed(2) + ' лв' || 'Няма си цена'}
                     </Typography>
                 </CardContent>
             </CardActionArea>

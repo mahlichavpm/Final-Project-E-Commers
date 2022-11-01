@@ -90,7 +90,7 @@ export const CategoriesDATA = [
             {
                 name: 'Стойки',
                 key: 'stoyki',
-                img: 'https://s13emagst.akamaized.net/products/8198/8197621/images/res_7da3af405db59cbff86685b975fcf011.jpg?width=210&height=230&hash=CDD716DFB72B54D2F2EA1ACAE98D3F0F'
+                img: 'https://besto.bg/wp-content/uploads/2019/07/stojka-za-televizor.jpg'
             },
             {
                 name: 'Кабели и адаптери',
@@ -162,7 +162,7 @@ export const CategoriesDATA = [
                 name: '',
                 key: '',
                 img: ''
-            }
+            },
         ]
     },
     {
@@ -206,10 +206,30 @@ export const CategoriesDATA = [
         icon: <FaceRetouchingNaturalOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Епилатори',
+                key: 'epilatori',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25085.jpg'
+            },
+            {
+                name: 'Термометри',
+                key: 'termometri',
+                img: 'https://besto.bg/wp-content/uploads/2020/07/detski-termometri.jpg'
+            },
+            {
+                name: 'Масажори',
+                key: 'masajori',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25090.jpg'
+            },
+            {
+                name: 'Сешоари',
+                key: 'seshoari',
+                img: 'https://bgchoice.com/wp-content/uploads/2020/11/%D0%BD%D0%B0%D0%B9-%D0%B4%D0%BE%D0%B1%D1%80%D0%B8-%D1%81%D0%B5%D1%88%D0%BE%D0%B0%D1%80%D0%B8.jpg'
+            },
+            {
+                name: 'Машинки за подстригване и тримери',
+                key: 'mashinki-za-podstrigvane-i-trimeri',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//17/25091.jpg'
+            },
         ]
     },
     {
@@ -218,33 +238,93 @@ export const CategoriesDATA = [
         icon: <HomeOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Бюра',
+                key: 'biura',
+                img: 'https://www.gaminggear.bg/uploads/com_article/gallery/c05719c86391627bdcf94c981497a985a5af79ea.png'
+            },
+            {
+                name: 'Килими',
+                key: 'kilimi',
+                img: 'https://videnov.bg/uploads/product_category/images/Vid_Deko_zone_LP_category_kilimi_banner_2.png'
+            },
+            {
+                name: 'Дивани',
+                key: 'divani',
+                img: 'https://veko.bg/image/cache/catalog/01_Sofi_Sun-21_C1_R-1024x768.jpg'
+            },
+            {
+                name: 'Тенджери',
+                key: 'tendjeri',
+                img: 'https://solingen-outlet.com/images/mi.JPG'
+            },
+            {
+                name: 'Градински мебели',
+                key: 'gradinski-mebeli',
+                img: 'https://jysk.bg/sites/jysk.bg/files/styles/full_optimized/public/image/tooltips/2022-02/3795000-VONGE.jpg?itok=IBG2jHR6'
+            },
         ]
     },
     {
         name: 'Играчки & Детски артикули',
-        key: 'igrachki-detski-artikuli',
+        key: 'igrachki-i-detski-artikuli',
         icon: <SmartToyOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Столчета за хранене',
+                key: 'stolcheta-za-hranene',
+                img: 'https://bgbaby.net/wp-content/uploads/stolcheta-za-hranene-emag.jpg'
+            },
+            {
+                name: 'Детски колички',
+                key: 'kolichki',
+                img: 'https://cdn.baby.bg/media/wysiwyg/cat-small_01.jpg'
+            },
+            {
+                name: 'Конструктори',
+                key: 'konstruktori',
+                img: 'https://comsed.net/image/cache/catalog/toys/735014/735014-1-1200x1000.jpg'
+            },
+            {
+                name: 'Пъзели',
+                key: 'pazeli',
+                img: 'https://cdn.ozone.bg/media/description/c/m/cms_puzzles_02_3941.jpg'
+            },
+            {
+                name: 'Бебешки легла и кошари',
+                key: 'bebeshki-legla-i-koshari',
+                img: 'https://bremennost.bg/wp-content/uploads/2018/12/bebeshki-legla.jpg'
+            },
         ]
     },
     {
         name: 'Спорт & свободно време',
-        key: 'sport-svobodno-vreme',
+        key: 'sport-i-svobodno-vreme',
         icon: <SportsKabaddiOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
+                name: 'Тежести',
+                key: 'tejesti',
+                img: 'https://frankfurt.apollo.olxcdn.com/v1/files/t212zeiw92sz2-BG/image;s=700x250'
+            },
+            {
+                name: 'Бягащи пътеки',
+                key: 'bqgashti-puteki',
+                img: 'https://www.vistafitnessstore.com/image/catalog/56.jpg'
+            },
+            {
+                name: 'Велоергометри',
+                key: 'veloargometri',
+                img: 'https://www.insportline.bg/upload/image/category/category_rotoped.jpg'
+            },
+            {
+                name: 'Велосипеди',
+                key: 'velosipedi',
+                img: 'https://www.bikecenter.bg/media/catalog/category/velosipedi_1.jpg'
+            },
+            {
+                name: 'Смит машини',
+                key: 'smit-mashini',
+                img: 'https://besto.bg/wp-content/uploads/2020/08/lostove-za-vrata.png'
             }
         ]
     },
@@ -254,22 +334,62 @@ export const CategoriesDATA = [
         icon: <DirectionsCarOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Гуми & Джанти',
+                key: 'gumi-i-djanti',
+                img: 'https://static.ogi.bg/resources/newmomo2.jpg'
+            },
+            {
+                name: 'Авто козметика',
+                key: 'avto-kozmetika',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//18/27557.jpg'
+            },
+            {
+                name: 'Мотофрези и мотокултиватори',
+                key: 'motofrezi-i-motokultivatori',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//16/24051.jpg'
+            },
+            {
+                name: 'Верижни триони',
+                key: 'verijni-trioni',
+                img: 'https://s13emagst.akamaized.net/layout/bg/images/db//16/24052.jpg'
+            },
+            {
+                name: 'Моторни масла',
+                key: 'motorni-masla',
+                img: 'https://besto.bg/wp-content/uploads/2019/12/motorni-masla-tsena-onlajn.jpg'
+            },
         ]
     },
     {
         name: 'Книги, Офис & Храни',
-        key: 'knigi-ofis-hrani',
+        key: 'knigi-ofis-i-hrani',
         icon: <MenuBookOutlinedIcon />,
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Конферентни дъски',
+                key: 'konferentni-daski',
+                img: 'https://s13emagst.akamaized.net/products/14640/14639568/media/res_ac07bd776bb27b8a5cb777d42f2d07ef.png?width=810&height=381&hash=2E4022B022987321282347990ED68EE5'
+            },
+            {
+                name: 'Ламинатори',
+                key: 'laminatori',
+                img: 'https://expertevolux.com/wp-content/uploads/2019/06/laminatory-main2.jpg'
+            },
+            {
+                name: 'Ученически раници',
+                key: 'uchenicheski-ranici',
+                img: 'https://paolobags.com/images/school2019.jpg'
+            },
+            {
+                name: 'Уиски',
+                key: 'whiskey',
+                img: 'https://martimarbg.bg/wp-content/uploads/2017/03/vidowe-uski.jpg'
+            },
+            {
+                name: 'Сладка и компоти',
+                key: 'sladka-i-kompoti',
+                img: 'https://zatugaku-egg.com/wp-content/uploads/2017/12/3527eea0b80ec37eb537af7d946b303f.jpg'
+            },
         ]
     },
 ];

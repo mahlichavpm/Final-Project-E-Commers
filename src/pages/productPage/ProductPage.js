@@ -3,11 +3,17 @@ import { Box, Container } from "@mui/system";
 import ProductButton from "../../components/buttons/ProductButton";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocalShippingTwoToneIcon from '@mui/icons-material/LocalShippingTwoTone';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React, { useState } from 'react';
+import { addToCart, addToFavourites, removeItemFromFav } from "../../store/activeUserSlice";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+>>>>>>> 46fa0cb8e43bab833fc7561884ca2760fe903066
 import Carousel from "react-material-ui-carousel";
 import ProductCard from "../../components/productCard/ProductCard";
 
@@ -17,9 +23,10 @@ export default function ProductPage() {
   const navigate = useNavigate();
   const categories = useSelector(state => state.categories.categories);
   const globalCategoryName = categories.filter(e => e.key === globalCategory)[0];
-  const [sortedProductList, setSortedProductList] = useState(productList.slice()
-    .filter(e => e.subCat === subCategory)
-  );
+  const [sortedProductList, setSortedProductList] = useState(productList.slice().filter(e => e.subCat === subCategory));
+  const dispatch = useDispatch();
+  const [favBtnText,setFavBtnText] = useState('Добави в любими');
+  const [favBtnIcon,setFavBtnIcon] = useState(false);
 
   // ---------Slider------------
   const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === globalCategory).splice(0, 20));
@@ -32,6 +39,25 @@ export default function ProductPage() {
   ]);
 
   const [selectedImage, setSelectedImage] = useState(`${sortedProductList.filter(e => e.key === key)[0].img.src}`);
+  const favouriteList = useSelector(state => state.activeUser.favourites);
+
+  const handleAddtoFavouritesBtn = (key) => {
+    if(favouriteList.indexOf(key) !== -1){
+        dispatch(removeItemFromFav(key));
+        setFavBtnIcon(false);
+        setFavBtnText('Добави в любими');
+    }
+    else {
+        dispatch(addToFavourites({key}));
+        setFavBtnText('Премахни от любими');
+        setFavBtnIcon(true);
+    }
+
+    
+  }
+  const handleAddToCart = (key) => {
+    dispatch(addToCart({key}))
+  }
 
   return (
     <>
@@ -141,10 +167,10 @@ export default function ProductPage() {
                   <Typography variant='h6' color='custom.green'>в наличност</Typography>
                   <Stack direction='row' spacing={1} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography variant='subtitle1' color='custom.main'>Цена:</Typography>
-                    <Typography variant='h5' color='alert.main'>{e.price} лв.</Typography>
+                    <Typography variant='h5' color='alert.main'>{(e.price).toFixed(2)}лв.</Typography>
                   </Stack>
-                  <ProductButton name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
-                  <ProductButton startIcon={<FavoriteBorderIcon color="custom.light" />} name={'Добави в любими'} />
+                  <ProductButton onClick={() => {handleAddToCart(e.key)}} name='Добави в количката' startIcon={<ShoppingCartOutlinedIcon />} />
+                  <ProductButton startIcon={favBtnIcon ? <FavoriteIcon color='custom.light'/> :<FavoriteBorderIcon color="custom.light" />} onClick={()=>{handleAddtoFavouritesBtn(e.key)}} name={favBtnText} />
                 </Stack>
               </Stack>
               <Stack

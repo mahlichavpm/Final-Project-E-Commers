@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
-import usePagination from './pagination';
+import usePagination from './Pagination';
 import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
@@ -29,7 +29,7 @@ export default function AllProductsList() {
 
   //--------------Pagination----------------
   let [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(2)
+  const [perPage, setPerPage] = useState(5)
   const PER_PAGE = perPage;
 
   const count = Math.ceil(sortedProductList.length / PER_PAGE);
