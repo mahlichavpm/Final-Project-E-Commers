@@ -242,7 +242,6 @@ export default function ProductPage() {
                       ></ProductCard>)}
                     </Stack>
                   )}
-
                 </Carousel>
               </Stack>
             </Box>
