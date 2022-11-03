@@ -7,15 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Breadcrumbs, Link, Rating, Stack, Typography } from "@mui/material";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-import React, { useState } from 'react';
 import { addToCart, addToFavourites, removeItemFromFav } from "../../store/activeUserSlice";
 import FavoriteIcon from '@mui/icons-material/Favorite';
->>>>>>> 46fa0cb8e43bab833fc7561884ca2760fe903066
 import Carousel from "react-material-ui-carousel";
 import ProductCard from "../../components/productCard/ProductCard";
+import ProductPageSlider from "./Slider";
 
 export default function ProductPage() {
   const productList = useSelector(state => state.product.product);
@@ -29,16 +26,18 @@ export default function ProductPage() {
   const [favBtnIcon,setFavBtnIcon] = useState(false);
 
   // ---------Slider------------
-  const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === globalCategory).splice(0, 20));
-  const [sliderPage, setSliderPage] = useState([
-    productSlider.slice().splice(0, 4),
-    productSlider.slice().splice(4, 4),
-    productSlider.slice().splice(8, 4),
-    productSlider.slice().splice(12, 4),
-    productSlider.slice().splice(16, 4)
-  ]);
+  // const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === globalCategory).splice(0, 20));
+  // const [sliderPage, setSliderPage] = useState([
+  //   productSlider.slice().splice(0, 4),
+  //   productSlider.slice().splice(4, 4),
+  //   productSlider.slice().splice(8, 4),
+  //   productSlider.slice().splice(12, 4),
+  //   productSlider.slice().splice(16, 4)
+  // ]);
 
-  const [selectedImage, setSelectedImage] = useState(`${sortedProductList.filter(e => e.key === key)[0].img.src}`);
+  const [selectedImage, setSelectedImage] = useState(`${key !== key ? sortedProductList.filter(e => e.key === key)[0].img.src : sortedProductList.filter(e => e.key === key)[0].img.src}`);
+  console.log(sortedProductList.filter(e => e.key === key)[0].img.src);
+  
   const favouriteList = useSelector(state => state.activeUser.favourites);
 
   const handleAddtoFavouritesBtn = (key) => {
@@ -108,14 +107,14 @@ export default function ProductPage() {
                     <img src={selectedImage} width='400' alt="qnko" />
                   </div>
                   <Stack direction='row' spacing={2} sx={{ width: '400px', overflowX: 'auto', }}>
-                    <img src={e.img.src !== selectedImage ? setSelectedImage(e.img.src) : e.img.src} className={e.img.src === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src) }} width='80' alt="qnko" />
+                    <img src={e.img.src} className={e.img.src === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src) }} width='80' alt="qnko" />
                     {e.img.src1 ? <img src={e.img.src1} className={e.img.src1 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src1) }} width='80' alt="qnko" /> : <></>}
                     {e.img.src2 ? <img src={e.img.src2} className={e.img.src2 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src2) }} width='80' alt="qnko" /> : <></>}
                     {e.img.src3 ? <img src={e.img.src3} className={e.img.src3 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src3) }} width='80' alt="qnko" /> : <></>}
                     {e.img.src4 ? <img src={e.img.src4} className={e.img.src4 === selectedImage ? 'selctedImage' : ''} onClick={() => { setSelectedImage(e.img.src4) }} width='80' alt="qnko" /> : <></>}
                   </Stack>
                 </Stack>
-                <Stack spacing={2}>
+                <Stack spacing={2} sx={{minWidth: '391px'}}>
                   <Stack sx={{
                     backgroundColor: 'white',
                     padding: '12px',
@@ -159,7 +158,7 @@ export default function ProductPage() {
                     backgroundColor: 'white',
                     padding: '12px',
                     borderRadius: '12px',
-                    width: '300px',
+                    minWidth: '345px',
                     height: 'min-content'
                   }}
                   spacing={2}
@@ -178,7 +177,7 @@ export default function ProductPage() {
                   backgroundColor: 'white',
                   padding: '12px',
                   borderRadius: '12px',
-                  width: '100%',
+                  minWidth: '1200px',
                   height: 'min-content',
                   margin: '36px 0'
                 }}
@@ -187,68 +186,7 @@ export default function ProductPage() {
                 <Typography variant='subtitle1' color='custom.light'>{e.descripton}</Typography>
               </Stack>
               {/* Slider */}
-              <Stack spacing={2} sx={{ marginTop: '36px' }}>
-                <Typography variant='h4'>Сходни продукти</Typography>
-                <Carousel
-                  autoPlay={false}
-                  navButtonsAlwaysVisible={true}
-                  animation='slide'
-                  indicatorIconButtonProps={{
-                    style: {
-                      width: '18px',
-                      height: '18px',
-                      color: '#888',
-                      borderRadius: '50%',
-                      textAlign: 'center',
-                    }
-                  }}
-                  activeIndicatorIconButtonProps={{
-                    style: {
-                      color: '#0082e6',
-                    }
-                  }}
-                  indicatorContainerProps={{
-                    style: {
-                      marginTop: '24px',
-                    }
-
-                  }}
-                  fullHeightHover={false}
-                  navButtonsWrapperProps={{
-                    style: {
-                      padding: '50px'
-
-                    }
-                  }}
-                  navButtonsProps={{
-                    style: {
-                      backgroundColor: 'cornflowerblue',
-                      borderRadius: 20,
-                      next: {
-                        marginRight: '60px'
-                      }
-                    },
-                  }}
-                >
-                  {sliderPage.map((e, i) =>
-                    <Stack direction='row' spacing={2} key={i}>
-                      {e.map(e => <ProductCard
-                        img={e.img.src}
-                        alt={e.img.alt}
-                        title={e.title}
-                        description={e.descripton}
-                        averigeReview={e.averigeReview}
-                        stock={e.stock}
-                        price={e.price}
-                        key={e.key}
-                        id={e.key}
-                        onCardClick={() => navigate(`/${e.globalCat}/${e.subCat}/${e.key}`)}
-                      ></ProductCard>)}
-                    </Stack>
-                  )}
-
-                </Carousel>
-              </Stack>
+                <ProductPageSlider></ProductPageSlider>
             </Box>
           </Container>
         </Stack>)}

@@ -1,22 +1,8 @@
-import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
-import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
-import TvOutlinedIcon from '@mui/icons-material/TvOutlined';
-import VideogameAssetOutlinedIcon from '@mui/icons-material/VideogameAssetOutlined';
-import BlenderOutlinedIcon from '@mui/icons-material/BlenderOutlined';
-import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
-import CheckroomOutlinedIcon from '@mui/icons-material/CheckroomOutlined';
-import FaceRetouchingNaturalOutlinedIcon from '@mui/icons-material/FaceRetouchingNaturalOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
-import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
-
 export const CategoriesDATA = [
     {
         name: 'Телефони, Таблети & Лаптопи',
         key: 'telefoni-tableti-laptopi',
-        icon: <PhoneAndroidOutlinedIcon/>,
+        icon: 'phone',
         subCategory: [
             {
                 name: 'Мобилни телефони',
@@ -48,7 +34,7 @@ export const CategoriesDATA = [
     {
         name: 'Компютри & Периферия',
         key: 'kompyutri-periferiya',
-        icon: <ComputerOutlinedIcon />,
+        icon: 'computer',
         subCategory: [
             {
                 name: 'Процесори',
@@ -80,7 +66,7 @@ export const CategoriesDATA = [
     {
         name: 'ТВ, Аудио & Фото',
         key: 'tv-audio-foto',
-        icon: <TvOutlinedIcon />,
+        icon: 'tv',
         subCategory: [
             {
                 name: 'Телевизори',
@@ -98,21 +84,21 @@ export const CategoriesDATA = [
                 img: 'https://dice.bg/content/pics/26598_kanex-digital-audio-adapter-adapter-za-svyrzvane-na-apple-tv-4th-gen-kym-televizor-s-hdmi-i-audio-sistema-s-optichen-vhod_-666642148.jpg'
             },
             {
-                name: 'Дистанционни',
-                key: 'distancionni',
-                img: 'https://cdncloudcart.com/10875/product_categories/images/368/368_600x600.jpeg?1659706145'
+                name: 'Фотоапарати',
+                key: 'fotoaparati',
+                img: 'https://besto.bg/wp-content/uploads/2018/09/evtin-fotoaparat.jpg'
             },
             {
-                name: 'TV тунери',
-                key: 'tv-tuneri',
-                img: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-tv-4k-hero-select-202210_FMT_WHH?wid=640&hei=600&fmt=jpeg&qlt=90&.v=1664896361164'
+                name: 'Грамофони',
+                key: 'gramofoni',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj8zdpQWBVKE16MmhwhU_8AksgP_4bvqJiHA&usqp=CAU'
             },
         ]
     },
     {
         name: 'Gaming',
         key: 'gaming',
-        icon: <VideogameAssetOutlinedIcon />,
+        icon: 'games',
         subCategory: [
             {
                 name: 'Конзоли & игри',
@@ -144,31 +130,71 @@ export const CategoriesDATA = [
     {
         name: 'Големи електроуреди',
         key: 'golemi-elektrouredi',
-        icon: <KitchenOutlinedIcon />,
+        icon:'kitchen',
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
-            }
+                name: 'Хладилници',
+                key: 'hladilnici',
+                img: 'https://buyoutside.com/wp-content/uploads/2019/06/nai-dobri-hladilnici-2019.jpg'
+            },
+            {
+                name: 'Готварски печки',
+                key: 'gotvarski-pechki',
+                img: 'https://buyoutside.com/wp-content/uploads/2019/12/shutterstock_1035164959-e1576340777941.jpg'
+            },
+            {
+                name: 'Сушилни за дрехи',
+                key: 'sushilni-za-drehi',
+                img: 'https://nstatic.nova.bg/public/pics/anysize/1645616111.jpg'
+            },
+            {
+                name: 'Абсорбатори за вграждане',
+                key: 'absorbatori-za-vgrajdane',
+                img: 'https://www.aeg.bg/siteassets/common-assets/02.-product-section-updated/cx-ladder/taste/hoods/sub-category/integrated/aeg-built-in-benefit-604x340.jpg?width=600&height=340&quality=70&mode=crop'
+            },
+            {
+                name: 'Климатици',
+                key: 'klimatici',
+                img: 'https://www.freshclima.bg/pub/pictures/big/air_condition-62a3c83f3eeb1.webp'
+            },
         ]
     },
     {
         name: 'Малки електроуреди',
         key: 'malki-elektrouredi',
-        icon: <BlenderOutlinedIcon />,
+        icon: 'blender',
         subCategory: [
             {
-                name: '',
-                key: '',
-                img: ''
+                name: 'Прахосмукачки',
+                key: 'prahosmukachki',
+                img: 'https://s1.kaercher-media.com/images/pim/T_15_1_floor_app_8_CI15-118965-CMYK_PHB.jpg'
+            },
+            {
+                name: 'Кафемашини и автомати',
+                key: 'kafemashini-i-avtomati',
+                img: 'https://www.najdobriyatmagazin.bg/wp-content/uploads/2021/08/%D0%BA%D0%B0%D1%84%D0%B5-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8-%D1%86%D0%B5%D0%BD%D0%B8.jpg'
+            },
+            {
+                name: 'Водоструйки и парочистачки',
+                key: 'vodostruyki-i-parochistachki',
+                img: 'https://www.onlinemashini.bg/uploads/rich_images/3-62b5ad0e2d200.jpeg'
+            },
+            {
+                name: 'Микровълнови',
+                key: 'mikrovalnovi',
+                img: 'https://technodom.net/media/7/2411.jpg'
+            },
+            {
+                name: 'За кухнята',
+                key: 'za-kuhnyata',
+                img: 'https://cache1.24chasa.bg/Images/cache/724/Image_6909724_128_0.jpg'
             },
         ]
     },
     {
         name: 'Мода',
         key: 'moda',
-        icon: <CheckroomOutlinedIcon />,
+        icon: 'modaIcon',
         subCategory: [
             {
                 name: 'Дамски чанти',
@@ -203,7 +229,7 @@ export const CategoriesDATA = [
     {
         name: 'Здраве и красота',
         key: 'zdrave-i-krasota',
-        icon: <FaceRetouchingNaturalOutlinedIcon />,
+        icon: 'beauty',
         subCategory: [
             {
                 name: 'Епилатори',
@@ -235,7 +261,7 @@ export const CategoriesDATA = [
     {
         name: 'Дом, Градина & Petshop',
         key: 'dom-gradina-i-petshop',
-        icon: <HomeOutlinedIcon />,
+        icon: 'home',
         subCategory: [
             {
                 name: 'Бюра',
@@ -267,7 +293,7 @@ export const CategoriesDATA = [
     {
         name: 'Играчки & Детски артикули',
         key: 'igrachki-i-detski-artikuli',
-        icon: <SmartToyOutlinedIcon />,
+        icon: 'toy',
         subCategory: [
             {
                 name: 'Столчета за хранене',
@@ -299,7 +325,7 @@ export const CategoriesDATA = [
     {
         name: 'Спорт & свободно време',
         key: 'sport-i-svobodno-vreme',
-        icon: <SportsKabaddiOutlinedIcon />,
+        icon: 'sport',
         subCategory: [
             {
                 name: 'Тежести',
@@ -331,7 +357,7 @@ export const CategoriesDATA = [
     {
         name: 'Авто & Направи си сам',
         key: 'avto-napravi-si-sam',
-        icon: <DirectionsCarOutlinedIcon />,
+        icon: 'car',
         subCategory: [
             {
                 name: 'Гуми & Джанти',
@@ -363,7 +389,7 @@ export const CategoriesDATA = [
     {
         name: 'Книги, Офис & Храни',
         key: 'knigi-ofis-i-hrani',
-        icon: <MenuBookOutlinedIcon />,
+        icon: 'book',
         subCategory: [
             {
                 name: 'Конферентни дъски',

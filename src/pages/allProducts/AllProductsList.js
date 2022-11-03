@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
-import usePagination from './Pagination';
+import usePagination from './pagination';
 import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
@@ -23,9 +23,6 @@ export default function AllProductsList() {
   //------------------Data------------------
   const productList = useSelector(state => state.product.product);
   const [sortedProductList, setSortedProductList] = useState(productList.slice().filter(e => e.subCat === subCategory));
-  // useEffect(() => {
-  //   setSortedProductList(sortedProductList)
-  // }, [sortedProductList])
 
   //--------------Pagination----------------
   let [page, setPage] = useState(1);
@@ -67,8 +64,10 @@ export default function AllProductsList() {
           return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
         case 'zToA':
           return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
-        // case '':
-        //   return  
+        case '':
+          return false;
+        default:
+          return false;
       }
     })
 
@@ -117,26 +116,26 @@ export default function AllProductsList() {
         </Breadcrumbs>
         <Stack sx={{ width: '100%', height: 'min-height', marginBottom: '16px' }} direction='row' justifyContent='flex-end'>
           {/* -----------SORT------------------- */}
-          <FormControl sx={{ m: 1, minWidth: 180, maxWidth: 200, }} size="small">
+          <FormControl sx={{ m: 1, minWidth: 180, maxWidth: 200, }} size="small" variant="standard">
             <InputLabel id="demo-select-small">Сортирай по:</InputLabel>
             <Select
               labelId="demo-select-small"
               id="demo-select-small"
               value={filtredSorted.sort}
-              // label="Age"
+              // defaultValue=''
+              // label=""
               onChange={(e) => setFiltredSorted({ ...filtredSorted, sort: e.target.value })}
             >
-              {/* <MenuItem value=''>
-                <em>None</em>
-              </MenuItem> */}
-              <MenuItem value={'aToZ'}>от А към З</MenuItem>
-              <MenuItem value={'zToA'}>от З към А</MenuItem>
-              <MenuItem value={'ascending'}>Възходящ ред</MenuItem>
-              <MenuItem value={'descendingOrder'}>Низходящ ред</MenuItem>
+
+              <MenuItem value=''><em>По подразбиране</em></MenuItem>
+              <MenuItem value={'aToZ'}>от А към Я</MenuItem>
+              <MenuItem value={'zToA'}>от Я към А</MenuItem>
+              <MenuItem value={'ascending'}>Цена възходящ ред</MenuItem>
+              <MenuItem value={'descendingOrder'}>Цена низходящ ред</MenuItem>
             </Select>
           </FormControl>
         {/* ---------------Product per page--------------- */}
-          <FormControl sx={{ m: 1, minWidth: 180, maxWidth: 200, }} size="small">
+          <FormControl sx={{ m: 1, minWidth: 180, maxWidth: 200, }} size="small" variant="standard">
             <InputLabel id="demo-select-small">Брой:</InputLabel>
             <Select
               labelId="demo-select-small"

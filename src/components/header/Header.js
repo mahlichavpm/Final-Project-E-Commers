@@ -38,12 +38,6 @@ export default function Header() {
 
     const categories = useSelector(state => state.categories.categories);
 
-    // const users = JSON.parse(localStorage.getItem('users'));
-    // const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    // const activeUser = users.find(e => e.username === loggedUser);
-    // const productList = useSelector(state => state.product.product);
-    // const cartList = activeUser.cart;
-
     const cart = useSelector(state => state.activeUser.cart);
     const [cartBadge, setCardBadge] = useState(0);
     useEffect(() => {
@@ -144,7 +138,6 @@ export default function Header() {
                             <Button sx={{ color: "black" }} onClick={() => { navigate("/favourites") }}>
                                 <Badge badgeContent={favouritesCart.length} color="error">
                                     <FavoriteBorderIcon color="primary" />
-                                    {/* <span>Любими</span> */}
                                 </Badge>
                             </Button>
 

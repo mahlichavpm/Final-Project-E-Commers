@@ -12,19 +12,21 @@ import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-
 export default function Homepage(props) {
+
     const navigate = useNavigate()
     const handleClose = (seter) => {
         seter(null);
     };
+
+    const [buttonArray, setButtonArray] = useState()
     const [menuComp, setMenuComp] = useState(null);
     const openMenuComp = Boolean(menuComp);
     const handleClickMenuComp = (event) => {
         setMenuComp(event.currentTarget);
     };
     const categories = useSelector(state => state.categories.categories);
-    const[categoriesCopy, setCategoriesCopy] = useState(categories.slice())
+    const [categoriesCopy, setCategoriesCopy] = useState(categories.slice())
     return (
         <Box>
             <main className='homepageWrapper'>
@@ -40,11 +42,11 @@ export default function Homepage(props) {
                             },
                             backgroundColor: 'white',
                         }}>
-                        {categoriesCopy.map(e => <ButtonLinkTwo 
-                        name={e.name} 
-                        startIcon={e.icon}
-                        key={e.key}
-                        onClick={() =>  navigate(`/${e.key}`)} 
+                        {categoriesCopy.map(e => <ButtonLinkTwo
+                            name={e.name}
+                            key={e.key}
+                            startIcon={e.icon}
+                            onClick={() => navigate(`/${e.key}`)}
                         />)}
                     </Stack>
 
@@ -79,7 +81,7 @@ export default function Homepage(props) {
                         </Carousel.Item>
                     </Carousel>
                 </Stack>
-                {categoriesCopy.map((e, i) => <ProductCardSlider title={e.name} key={i} id={e.key}/>)}
+                {categoriesCopy.map((e, i) => <ProductCardSlider title={e.name} key={i} id={e.key} />)}
             </main>
         </Box >
     )

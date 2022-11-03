@@ -50,7 +50,7 @@ export default function AutocomplitedSearch(props) {
             options={productList.map((option) => option.title)}
             renderInput={(params) =>
                 // <Stack ref={params.InputProps.ref}>
-                    <div ref={params.InputProps.ref} className='search' >
+                    <div ref={params.InputProps.ref} className='search' onClick={e => setSearchProduct(e.target.value)}>
                         {/* onClick={e => setSearchProduct(e.target.value)} */}
                         {/* <label {...params.InputLabelProps} >My Label </label> */}
                         <input {...params.inputProps} autoFocus className='label' onClick={e => setSearchProduct(e.target.value)}/>

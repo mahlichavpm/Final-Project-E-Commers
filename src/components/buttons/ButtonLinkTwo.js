@@ -3,8 +3,76 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import './ButtonLinkTwo.scss';
+import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import TvOutlinedIcon from '@mui/icons-material/TvOutlined';
+import VideogameAssetOutlinedIcon from '@mui/icons-material/VideogameAssetOutlined';
+import BlenderOutlinedIcon from '@mui/icons-material/BlenderOutlined';
+import KitchenOutlinedIcon from '@mui/icons-material/KitchenOutlined';
+import CheckroomOutlinedIcon from '@mui/icons-material/CheckroomOutlined';
+import FaceRetouchingNaturalOutlinedIcon from '@mui/icons-material/FaceRetouchingNaturalOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import DirectionsCarOutlinedIcon from '@mui/icons-material/DirectionsCarOutlined';
+import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
+import SportsKabaddiOutlinedIcon from '@mui/icons-material/SportsKabaddiOutlined';
+import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
 
 export default function ButtonLink(props) {
+    const iconArray = [
+        {
+            icon: <PhoneAndroidOutlinedIcon />,
+            key: 'phone'
+        },
+        {
+            icon: <ComputerOutlinedIcon />,
+            key: 'computer'
+        },
+        {
+            icon: <TvOutlinedIcon />,
+            key: 'tv'
+        },
+        {
+            icon: <VideogameAssetOutlinedIcon />,
+            key: 'games'
+        },
+        {
+            icon: <BlenderOutlinedIcon />,
+            key: 'blender'
+        },
+        {
+            icon: <KitchenOutlinedIcon />,
+            key: 'kitchen'
+        },
+        {
+            icon: <CheckroomOutlinedIcon />,
+            key: 'modaIcon'
+        },
+        {
+            icon: <FaceRetouchingNaturalOutlinedIcon />,
+            key: 'beauty'
+        },
+        {
+            icon: <HomeOutlinedIcon />,
+            key: 'home'
+        },
+        {
+            icon: <DirectionsCarOutlinedIcon />,
+            key: 'car'
+        },
+        {
+            icon: <MenuBookOutlinedIcon />,
+            key: 'book'
+        },
+        {
+            icon: <SportsKabaddiOutlinedIcon />,
+            key: 'sport'
+        },
+        {
+            icon: <SmartToyOutlinedIcon />,
+            key: 'toy'
+        },
+    ];
+
     const CategoryBtn = styled(Button)({
         color: '#222',
         display: 'flex',
@@ -23,10 +91,11 @@ export default function ButtonLink(props) {
             color: '#0082e6',
         },
     });
+    console.log(iconArray.find(e => e.key === props.startIcon));
     return (
             <CategoryBtn 
                 href={props.href}
-                startIcon={props.startIcon}
+                startIcon={iconArray.find(e => e.key === props.startIcon).icon}
                 endIcon={props.endIcon}
                 onClick={props.onClick}
                 underline='none'
