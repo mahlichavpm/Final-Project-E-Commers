@@ -38,22 +38,6 @@ export const registerUser = createAsyncThunk(
   }
 );
 
-export const logOut = createAsyncThunk(
-  "activeUser/logOut",
-  ({id}) => {
-    return fetch('https://itt-voting-api.herokuapp.com/logout',{
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({id})
-  })
-  .then(r => {
-      
-  })
-  }
-)
-
 const initialState = {
   username: "",
   users: JSON.parse(localStorage.getItem('users')) || [],
@@ -149,6 +133,13 @@ export const activeUserSlice = createSlice({
     },
     finalizeOrder: (state) => {
       state.cart = [];
+    },
+    logOut: (state) => {
+      state.sessionId = false;
+      state.loginLoader = false;
+      state.registerLoader = false;
+      state.cart= [];
+      state.favourites = [];
     }
   },
   extraReducers: builder => {
@@ -175,12 +166,6 @@ export const activeUserSlice = createSlice({
     builder.addCase(registerUser.pending, (state) => {
       state.registerLoader = true;
     });
-    builder.addCase(logOut.fulfilled, (state) => {
-      state.sessionId = false;
-      state.loginLoader = false;
-      state.registerLoader = false;
-      localStorage.removeItem('activeUserId');
-    })
 },
 });
 
@@ -201,7 +186,8 @@ export const {
   removeItemFromFav,
   addQuantity,
   removeQuantity,
-  finalizeOrder
+  finalizeOrder,
+  logOut
 } = activeUserSlice.actions;
 
 export default activeUserSlice.reducer;

@@ -12,7 +12,6 @@ export default function AutocomplitedSearch() {
     const navigate = useNavigate()
     const [searchProduct, setSearchProduct] = useState('');
 
-
     useEffect(()=>{
         const product = productList.filter(el => el.title === searchProduct);
         if(product[0]){

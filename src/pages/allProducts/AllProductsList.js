@@ -17,7 +17,7 @@ export default function AllProductsList() {
   const navigate = useNavigate();
   const categories = useSelector(state => state.categories.categories);
   let { subCategory, globalCategory } = useParams();
-
+ 
   //------------------Data------------------
   const productList = useSelector(state => state.product.product);
   const [sortedProductList, setSortedProductList] = useState(productList.slice().filter(e => e.subCat === subCategory));
@@ -181,6 +181,8 @@ export default function AllProductsList() {
               </Typography>
               <Stack direction='row' spacing={2}>
                 <TextField
+                  type='number'
+                  InputProps={{ inputProps: { min: 0 } }}
                   sx={{ width: '100%' }}
                   id="filled-basic"
                   onInput={(e) => setFiltredSorted({ ...filtredSorted, fromPrice: e.target.value })}
@@ -188,7 +190,7 @@ export default function AllProductsList() {
                   variant="filled"
                   size='small'
                 />
-                <TextField sx={{ width: '100%' }} id="filled-basic" onInput={(e) => setFiltredSorted({ ...filtredSorted, toPrice: e.target.value })} label="До" variant="filled" size='small' />
+                <TextField type='number' InputProps={{ inputProps: { min: 0 } }} sx={{ width: '100%' }} id="filled-basic" onInput={(e) => setFiltredSorted({ ...filtredSorted, toPrice: e.target.value })} label="До" variant="filled" size='small' />
               </Stack>
             </Stack>
             {/* ------Review Filter--------- */}

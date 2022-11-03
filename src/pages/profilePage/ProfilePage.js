@@ -12,7 +12,7 @@ export default function ProfilePage() {
   let activeUser = users.find((e) => e.username === loggedUser);
   const dispatch = useDispatch();
 
-  const [name, setName] = useState(activeUser.name || '');
+  const [name, setName] = useState(activeUser?.name || '');
   const [phone, setPhone] = useState(activeUser.phone);
   const [phoneError, setPhoneError] = useState(false);
   const [manipulacity,setManipulacity] = useState(activeUser.address.manipulacity);
@@ -21,13 +21,16 @@ export default function ProfilePage() {
   const [address2,setAddress2] = useState(activeUser.address.address2);
   const navigate = useNavigate();
   const userId = useSelector(state => state.activeUser.sessionId);
+  const regex = /^[0-9]*$/g
 
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
 
   const handlePhoneChange = (e) => {
-    setPhone(e.target.value);
+    if(regex.test(e.target.value)){
+      setPhone(e.target.value);
+    }
   };
 
   const handleCityChange = (e) => {
@@ -50,7 +53,7 @@ export default function ProfilePage() {
     localStorage.removeItem('loggedUser');
     localStorage.removeItem('rememberUser');
     localStorage.removeItem('accountId');
-    dispatch(logOut({id:userId}))
+    dispatch(logOut(userId))
     navigate('/home');
   }
 
@@ -73,7 +76,7 @@ export default function ProfilePage() {
       setPhoneError(true);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-},[activeUser.phone])
+},[phone])
 
   return (
     <>
@@ -113,7 +116,7 @@ export default function ProfilePage() {
             />
             <TextField
               variant="standard"
-              type={"number"}
+              // type={"number"}
               error={phoneError}
               size="small"
               id={"phone"}

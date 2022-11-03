@@ -35,10 +35,18 @@ export default function Register (){
     const [password, setPassword] = useState('');
     const [password1, setPassword1] = useState('');
     const [matchPassErr,setMatchPassErr] = useState(false);
-    const [correctInput,setCorrectInput] = useState(true)
+    const [correctInput,setCorrectInput] = useState(true);
+    const [validPassword,setValidPassword] = useState(false);
+
+    const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/gm
 
     const passCompare = () => {
-        if (password === password1){
+
+        if(password1 === ''){
+            return false
+        }
+
+        if(password === password1){
             setMatchPassErr(false)
             return true
         }
@@ -49,11 +57,26 @@ export default function Register (){
     useEffect(() => {
         passCompare()
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[password,password1])
+    },[password1])
+
+    useEffect(() => {
+        if(password)
+
+        if(regex.test(password)){
+            console.log("minava");
+            setValidPassword(false)
+        } else {
+            setValidPassword(true)
+            console.log("ne minava");
+
+        }
+
+    },[password])
 
 
     useEffect(() => {
-        if(username && password && password1){
+
+        if(username && !validPassword && passCompare()){
           setCorrectInput(false)
         } else {
             setCorrectInput(true)
@@ -64,7 +87,6 @@ export default function Register (){
     const handleRegister = () => {
         dispatch(registerUser({ username, password }));
     }
-
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -113,8 +135,7 @@ export default function Register (){
                     </div> : null}
                     </div>
                     <TextField helperText={''} size="small"  id={'username'} width='true'  value={username} onChange={handleInput} type={'text'}label={'Потребителско име'}/>
-                    <TextField size="small" id={'password'} width='true' value={password} onChange={handleInputPassword} type={'password'} label={'Парола'}/>
-
+                    <TextField size="small" error={validPassword} id={'password'} helperText={'Паролата трябва да е поне 6 символа, да съдържа буква, число и специален символ.'} width='true' value={password} onChange={handleInputPassword} type={'password'} label={'Парола'}/>
                     <TextField size="small" id={'password1'} error={matchPassErr} width='true' value={password1} onInput={handleInputPasswordMatch} type={'password'} label={'Потвърдете паролата'}/>
                     {loading ? <Button><Loader/></Button> :
                     <Button onClick={handleClick} disabled={correctInput} variant='contained'>Регистрация</Button>}
