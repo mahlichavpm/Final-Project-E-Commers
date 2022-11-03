@@ -65,10 +65,19 @@ export default function Login (){
     }
 
     const handleInput = (e) => {
-        setUsername(e.target.value);
-        dispatch(loginErrorHandler())
+        if(e.target.value !== ' '){
+        const value = e.target.value.trim();
+        setUsername(value);
+        dispatch(loginErrorHandler());
+        }
 
+    }
 
+    const handleInputPassword = (e) => {
+        if(e.target.value !== ' '){
+        const value = e.target.value.trim();
+        setPassword(value);
+        }
     }
 
     return (
@@ -82,7 +91,7 @@ export default function Login (){
                     </div> : null}
                     </div>
                     <TextField size="small" error={error} id={'username'} width='true' type={'text'} value={username} onChange={handleInput} label={'Потребителско име'}/>
-                    <TextField size="small" error={error} id={'password'} width='true' type={'password'} value={password} onChange={(e) => {setPassword(e.target.value)}} label={'Парола'}/>
+                    <TextField size="small" error={error} id={'password'} width='true' type={'password'} value={password} onChange={handleInputPassword} label={'Парола'}/>
                     <FormControlLabel control={<Checkbox onClick={handleRememberMe} />} label="Запомни ме" />
                     {loading ? <Button><Loader/></Button> :
                     <Button onClick={handleLogin} disabled={correctInput} variant='contained'>Вход</Button>}

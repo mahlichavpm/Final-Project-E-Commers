@@ -13,7 +13,6 @@ import AdminPage from './pages/adminPage/AdminPage';
 import FavoritesPage from './pages/favoritesPage/FavouritePage';
 import CartPage from './pages/cartPage/CartPage'
 import HistoryPage from './pages/historyPage/HistoryPage';
-import ReviewPage from './pages/reviewPage/ReviewPage';
 import { useSelector } from 'react-redux';
 import Footer from './components/footer/Footer';
 import ErrorPage from './pages/errorPage/ErrorPage';
@@ -21,8 +20,6 @@ import OrderPage from './pages/orderPage/OrderPage';
 
 
 function App() {
-  const loggedUser = useSelector(state => state.activeUser.sessionId) || localStorage.getItem('rememberUser');
-  // const loggedUser = localStorage.getItem('rememberUser');
   const admin = useSelector(state => state.activeUser.admin);
   const userId = useSelector(state => state.activeUser.sessionId || localStorage.getItem('accountId'));
 
