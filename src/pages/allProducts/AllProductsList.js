@@ -12,13 +12,11 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
 import usePagination from './pagination';
-import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
   const navigate = useNavigate();
   const categories = useSelector(state => state.categories.categories);
   let { subCategory, globalCategory } = useParams();
-  // console.log(subCategory, globalCategory);
 
   //------------------Data------------------
   const productList = useSelector(state => state.product.product);
@@ -39,7 +37,7 @@ export default function AllProductsList() {
 
   // --------------Sort/Filter---------------
   const [filtredSorted, setFiltredSorted] = useState({
-    sort: '',
+    sort: '0',
     fromPrice: '',
     toPrice: '',
     onStock: false,
@@ -53,7 +51,8 @@ export default function AllProductsList() {
       (filtredSorted.onStock ? el.stock !== 0 : true) &&
       (filtredSorted.review > 0 ? el.averigeReview === Number(filtredSorted.review) : true) &&
       (filtredSorted.fromPrice && filtredSorted.toPrice ? el.price > Number(filtredSorted.fromPrice) && el.price < Number(filtredSorted.toPrice) : true) &&
-      (filtredSorted.fromPrice || filtredSorted.toPrice ? el.price > Number(filtredSorted.fromPrice) || el.price < Number(filtredSorted.toPrice) : true)
+      (filtredSorted.fromPrice ? el.price > Number(filtredSorted.fromPrice) : true) &&
+      (filtredSorted.toPrice ? el.price < Number(filtredSorted.toPrice) : true)
     ).sort((a, b) => {
       switch(filtredSorted.sort) {
         case 'descendingOrder':
@@ -116,12 +115,13 @@ export default function AllProductsList() {
               labelId="demo-select-small"
               id="demo-select-small"
               value={filtredSorted.sort}
-              // defaultValue=''
+              // value={''}
+              // value=''
               // label=""
               onChange={(e) => setFiltredSorted({ ...filtredSorted, sort: e.target.value })}
             >
 
-              <MenuItem value=''><em>По подразбиране</em></MenuItem>
+              <MenuItem value='0'><em>По подразбиране</em></MenuItem>
               <MenuItem value={'aToZ'}>от А към Я</MenuItem>
               <MenuItem value={'zToA'}>от Я към А</MenuItem>
               <MenuItem value={'ascending'}>Цена възходящ ред</MenuItem>
