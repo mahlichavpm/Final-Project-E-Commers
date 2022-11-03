@@ -41,6 +41,7 @@ export default function Cart() {
 
     useEffect(() => {
         setFinalPrice(totalPrice())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[cartList])
 
     useEffect(() => {
@@ -101,8 +102,6 @@ export default function Cart() {
                     price={e.price}
                     key={id}
                     id={e.key}
-                    // removeItem={() => {removeItem(e.key)}}
-                    // addToCart={() => {handleAddToCart(e.key)}}
                   ></CartPageProduct>)}
                 </Stack>
                 <Stack

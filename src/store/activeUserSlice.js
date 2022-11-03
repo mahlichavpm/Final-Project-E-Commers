@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const loginUser = createAsyncThunk(
@@ -37,8 +37,6 @@ export const registerUser = createAsyncThunk(
     });
   }
 );
-
-
 
 export const logOut = createAsyncThunk(
   "activeUser/logOut",
@@ -90,14 +88,12 @@ export const activeUserSlice = createSlice({
       if(index !== -1){
         state.cart.splice(index,1);
       } 
-      //  localStorage.setItem('users',JSON.stringify(state.users));
     },
     removeItemFromFav: (state,action) => {
       let index = state.favourites.indexOf(action.payload)
       if(index !== -1){
         state.favourites.splice(index,1);
       } 
-      //  localStorage.setItem('users',JSON.stringify(state.users));
     },
     addToFavourites: (state,action) => {
       if(state.favourites.indexOf(action.payload.key) === -1){

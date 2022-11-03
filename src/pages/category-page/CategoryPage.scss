@@ -4,10 +4,8 @@
 
 .categoryPageContainer{
     width:98%;
-    height: 330vh;
+    height: min-content;
     display: flex;
-    // background-color: rgb(228, 230, 231);
-
 
     .sideMenu{
         width: 15%;
@@ -26,7 +24,7 @@
 
     .contentBody{
         width: 85%;
-        height: 300vh;
+        height: min-content;
         display: inline-block;
         display: flex;
         flex-direction: column;

@@ -4,7 +4,7 @@ import ProfileAvatar from "../../components/profileAvatar/ProfileAvatar";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { changeUserName, pushToLocalStorage, changeUserPhone, changeUserAddress1, changeUserAddress2, changeUserManipulacity ,changeUserTown, logOut } from "../../store/activeUserSlice";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function ProfilePage() {
   const users = useSelector((state) => state.activeUser.users);
@@ -19,14 +19,8 @@ export default function ProfilePage() {
   const [city,setCity] = useState(activeUser.address.city);
   const [address1,setAddress1] = useState(activeUser.address.address1);
   const [address2,setAddress2] = useState(activeUser.address.address2);
-  const [saveLoader,setSaveLoader] = useState(false)
   const navigate = useNavigate();
   const userId = useSelector(state => state.activeUser.sessionId);
-
-  useEffect(() => {
-   
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [name, phone, city, manipulacity, address1, address2]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -80,14 +74,6 @@ export default function ProfilePage() {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
 },[activeUser.phone])
-
-// const saveChanges = () => {
-//   let id = setTimeout(() => {setSaveLoader(true)},500);
-//   setSaveLoader(false)
-//   clearTimeout(id);
-//   dispatch(pushToLocalStorage())
-//   dobavi na buttona -- onClick={() => saveChanges}
-// }
 
   return (
     <>

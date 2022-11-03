@@ -43,41 +43,6 @@ export default function ProductPageSlider() {
                     }
                 }}
                 fullHeightHover={false}
-                // navButtonsWrapperProps={{
-                //     style: {
-                //         // padding: '50px'
-                //     }
-                // }}
-                // navButtonsProps={{
-                //     style: {
-                //         backgroundColor: 'cornflowerblue',
-                //         borderRadius: 20,
-                //         position: 'absolute',
-                //         next: {
-                //             marginRight: '60px'
-                //         }
-                //     },
-                //     next: {
-                //         right: 0
-                //     },
-                //     // Applies to the "prev" button wrapper
-                //     prev: {
-                //         left: 150
-                //     },
-                //     buttonWrapper: {
-                //         position: "absolute",
-                //         height: "100px",
-                //         backgroundColor: "transparent",
-                //         top: "calc(50% - 70px)",
-                //         '&:hover': {
-                //             '& $button': {
-                //                 backgroundColor: "black",
-                //                 filter: "brightness(120%)",
-                //                 opacity: "0.4"
-                //             }
-                //         }
-                //     },
-                // }}
             >
                 {sliderPage.map((e, i) =>
                     <Stack direction='row' spacing={2} key={i}>
@@ -95,7 +60,6 @@ export default function ProductPageSlider() {
                         ></ProductCard>)}
                     </Stack>
                 )}
-
             </Carousel>
         </Stack>
     )

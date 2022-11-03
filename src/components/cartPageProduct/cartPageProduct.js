@@ -1,4 +1,4 @@
-import { Button, CardActions, CardContent, CardMedia, IconButton, Input, Typography } from "@mui/material";
+import { CardActions, CardContent, CardMedia, IconButton, Input, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
@@ -9,12 +9,12 @@ export default function CartPageProduct(props) {
 
     const dispatch = useDispatch();
     const cart = useSelector(state => state.activeUser.cart);
-
     const [quantity,setQuantity] = useState('')
 
     useEffect(() => {
        const obj = cart.find(e => e.id === props.id)
        setQuantity(obj.qty)
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[cart])
   
         const removeItem = (id) => {

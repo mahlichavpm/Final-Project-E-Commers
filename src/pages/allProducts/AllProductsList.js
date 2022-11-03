@@ -3,7 +3,7 @@ import 'antd/dist/antd.min.css';
 import './AllProductsList.scss'
 import { Layout } from 'antd';
 import ProductCard from '../../components/productCard/ProductCard';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Breadcrumbs, Checkbox, FormControlLabel, Link, Pagination, Radio, RadioGroup, Rating, TextField, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import InputLabel from '@mui/material/InputLabel';
@@ -12,7 +12,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useNavigate, useParams } from 'react-router';
 import usePagination from './Pagination';
-import { addToFavourites } from '../../store/activeUserSlice';
 
 export default function AllProductsList() {
   const navigate = useNavigate();
@@ -72,10 +71,10 @@ export default function AllProductsList() {
     })
 
     setSortedProductList(filtredSortedProductList)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtredSorted])
 
   const { Content } = Layout;
-  const dispatch = useDispatch();
   const globalCategoryName = categories.filter(e => e.key === globalCategory)[0]
 
   return (
@@ -116,9 +115,6 @@ export default function AllProductsList() {
               labelId="demo-select-small"
               id="demo-select-small"
               value={filtredSorted.sort}
-              // value={''}
-              // value=''
-              // label=""
               onChange={(e) => setFiltredSorted({ ...filtredSorted, sort: e.target.value })}
             >
 
@@ -264,7 +260,6 @@ export default function AllProductsList() {
                     key={e.key}
                     id={e.key}
                     onCardClick={() => navigate(`/${globalCategory}/${subCategory}/${e.key}`)}
-                  // onClickFav={() => { addToFavourite(e.key) }}
                   ></ProductCard>)}
               </div>
             </Content>
@@ -285,7 +280,6 @@ export default function AllProductsList() {
             shape="rounded"
             onChange={(e, page) => handleChange(e, page)} />
         </Stack>
-        {/* </Stack> */}
       </Stack>
     </>
   );

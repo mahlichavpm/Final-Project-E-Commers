@@ -90,7 +90,7 @@ export default function ButtonLink(props) {
             color: '#0082e6',
         },
     });
-    console.log(iconArray.find(e => e.key === props.startIcon));
+    
     return (
             <CategoryBtn 
                 href={props.href}

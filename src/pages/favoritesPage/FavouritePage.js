@@ -1,18 +1,13 @@
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import ProductCard from "../../components/productCard/ProductCard";
-import { addToCart } from "../../store/activeUserSlice";
 
-export default function FavouritePage (props) {
+export default function FavouritePage () {
 
-    const users = JSON.parse(localStorage.getItem('users'));
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    // const activeUser = users.find(e => e.username === loggedUser);
     const productList = useSelector(state => state.product.product);
     const favouriteList = useSelector(state => state.activeUser.favourites);
     const renderList = [];
-    const dispatch = useDispatch();
 
     (() => {
         for(let i = 0; i < productList.length; i++){
@@ -24,16 +19,6 @@ export default function FavouritePage (props) {
         }
     })();
   
-    const handleAddToCart = (key) => {
-      dispatch(addToCart({key,loggedUser}))
-    }
-
-
-    const removeItem = (key) => {
-        let id = key;
-        const index = renderList.findIndex(e => e.id);
-        renderList.splice(index,1);
-    }
 
     return(
         renderList.length === 0 ? 

@@ -27,19 +27,6 @@ export default function Example(props) {
                 autoPlay={false}
                 navButtonsAlwaysVisible={true}
                 animation='slide'
-                // navButtonsWrapperProps={
-                //     {
-                //         className: 'button', 
-                //         style: React.CSSProperties
-                //     } & React.AriaAttributes
-                // }
-                //  width: 12px;
-                // height: 12px;
-                // background-color: #888;
-                // border-radius: 50%;
-                // margin: 6px 10px 4px 0;
-                // text-align: center;
-                // Za tezi otdolu
                 indicatorIconButtonProps={{
                     style: {
                         width: '18px',
@@ -52,50 +39,8 @@ export default function Example(props) {
                 activeIndicatorIconButtonProps={{
                     style: {
                         color: '#0082e6',
-                        // backgroundColor: 'primary.main',
                     }
                 }}
-                indicatorContainerProps={{
-                    style: {
-                        marginTop: '24px', // 5
-                    }
-
-                }}
-                fullHeightHover={false}
-                navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
-                    style: {
-                        padding: '50px'
-
-                    }
-                }}
-                navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
-                    style: {
-                        backgroundColor: 'cornflowerblue',
-                        borderRadius: 20,
-                        next: {
-                            marginRight: '60px'
-                        }
-                    },
-                }}
-                // navButtonsProps={{
-                //     style: {
-                //         // backgroundColor: 'cornflowerblue',
-                //         borderRadius: 20,
-                //         position: 'absolute',
-                //         // next: {
-                //             // marginRight: '60px'
-                //         // }
-                //         // next: {
-                //         //     right: 0
-                //         // },
-                //         // // Applies to the "prev" button wrapper
-                //         // prev: {
-                //         //     left: 0
-                //         // },
-                //     },
-                    
-                    
-                // }}
             >
                 {sliderPage.map((e, i) =>
                     <Stack direction='row' spacing={2} key={i}>
@@ -110,12 +55,9 @@ export default function Example(props) {
                             key={e.key}
                             id={e.key}
                             onCardClick={() => navigate(`/${e.globalCat}/${e.subCat}/${e.key}`)}
-                        // onClick={() =>  navigate(`/products/category/${e.key}`)}/*da se sloji link kum dadenata str s porduct */
-                        // onClickFav={() => {addToFavourite(e.key)}}
                         ></ProductCard>)}
                     </Stack>
                 )}
-
             </Carousel>
         </Stack>
     )

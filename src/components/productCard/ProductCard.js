@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Badge, Button, CardActionArea, Rating, Stack } from '@mui/material';
+import { CardActionArea, Rating, Stack } from '@mui/material';
 import ProductButton from '../buttons/ProductButton';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -30,6 +30,7 @@ export default function ProductCard(props) {
         } else {
             setHeartIcon(false)
         }
+          // eslint-disable-next-line react-hooks/exhaustive-deps
     },[favouriteList])
 
     const handleAddtoFavouritesBtn = (key) => {
@@ -68,7 +69,6 @@ export default function ProductCard(props) {
                         alt={props.alt || "Mnogo bega"}
                     />
                 </Stack>
-
                 <CardContent>
                     <Typography
                         gutterBottom

@@ -12,7 +12,6 @@ import AllProductsList from './pages/allProducts/AllProductsList';
 import AdminPage from './pages/adminPage/AdminPage';
 import FavoritesPage from './pages/favoritesPage/FavouritePage';
 import CartPage from './pages/cartPage/CartPage'
-import HistoryPage from './pages/historyPage/HistoryPage';
 import { useSelector } from 'react-redux';
 import Footer from './components/footer/Footer';
 import ErrorPage from './pages/errorPage/ErrorPage';
@@ -37,7 +36,6 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/home' element={<Homepage />} />
-            <Route path='/history' element={<HistoryPage />} />
             <Route path='/favourites' element={<FavoritesPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/profile' element={ userId ? <ProfilePage /> : <Navigate to={'/login'}/>} />
@@ -48,9 +46,7 @@ function App() {
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>
-        <footer>
           <Footer />
-        </footer>
       </>
   )
 }

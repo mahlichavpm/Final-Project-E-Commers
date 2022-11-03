@@ -1,4 +1,4 @@
-import { AppBar, Divider, IconButton, Menu, MenuItem, Badge, Toolbar } from "@mui/material";
+import { AppBar, IconButton, Menu, Badge, Toolbar } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';

@@ -8,9 +8,10 @@ import { useSelector } from 'react-redux';
 export default function CategoryPage() {
     const categories = useSelector(state => state.categories.categories);
     const navigate = useNavigate()
-    let { globalCategory, subCategory } = useParams()
+    let { globalCategory } = useParams()
 
     return (
+        <>
         <Stack
             sx={{
                 maxWidth: '1240px',
@@ -18,6 +19,7 @@ export default function CategoryPage() {
                 marginRight: 'auto',
                 paddingLeft: '20px',
                 paddingRight: '20px',
+                height: 'min-content'
             }}
         >
             {categories.slice().filter(e => e.key === globalCategory).map((e,i) =>
@@ -34,7 +36,7 @@ export default function CategoryPage() {
                         <Typography color="custom.main">{e.name}</Typography>
                     </Breadcrumbs>
                     <h2>{e.name}</h2>
-                    < div className="categoryPageContainer" >
+                    <div className="categoryPageContainer" >
                         <div className="sideMenu">
                             {e.subCategory.map(e => <AnchorLink 
                                 value={e.name} 
@@ -53,6 +55,6 @@ export default function CategoryPage() {
                 </div>
             )}
         </Stack >
-
+        </>
     )
 }

@@ -12,19 +12,9 @@ import { Box } from '@mui/material';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-export default function Homepage(props) {
+export default function Homepage() {
 
     const navigate = useNavigate()
-    const handleClose = (seter) => {
-        seter(null);
-    };
-
-    const [buttonArray, setButtonArray] = useState()
-    const [menuComp, setMenuComp] = useState(null);
-    const openMenuComp = Boolean(menuComp);
-    const handleClickMenuComp = (event) => {
-        setMenuComp(event.currentTarget);
-    };
     const categories = useSelector(state => state.categories.categories);
     const [categoriesCopy, setCategoriesCopy] = useState(categories.slice())
     return (

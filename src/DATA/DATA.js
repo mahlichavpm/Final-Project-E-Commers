@@ -1,23 +1,4 @@
 export const DATA = [
-  // {
-  //     'title': '',
-  //     'globalCat': 'moda',
-  //     'subCat': '',
-  //     'img': {
-  //         src: '',
-  //         src1: '',
-  //         src2: '',
-  //         src3: '',
-  //         src4: '',
-  //         alt: '',
-  //     },
-  //     'price': 111.99,
-  //     'descripton': '',
-  //     'reviews': [],
-  //     'averigeReview': 2,
-  //     'stock':10,
-  //     'key': ''
-  // },
   // --------------MODA--------------------
   {
     title: "Часовник и гривна ARMANI EXCHANGE",
@@ -1338,8 +1319,6 @@ export const DATA = [
     url: "divan-sani-levy",
   },
 
-  // VIKTOR
-
   // subCat kalafi-za-mobilni-telefoni
   {
     title: "Предпазен калъф Apple Clear Case with MagSafe за iPhone 14",
@@ -2514,7 +2493,6 @@ export const DATA = [
     url: "komplekt-7-chasti-tefal-duetto-plus",
   },
 
-  // VIKTOR
   {
     title: "Люлеещ се стол Kring, Сгъваем, Височина 195см",
     globalCat: "dom-gradina-i-petshop",
