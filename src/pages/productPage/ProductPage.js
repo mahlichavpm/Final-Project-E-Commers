@@ -10,34 +10,24 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import React, { useEffect, useState } from 'react';
 import { addToCart, addToFavourites, removeItemFromFav } from "../../store/activeUserSlice";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Carousel from "react-material-ui-carousel";
-import ProductCard from "../../components/productCard/ProductCard";
 import ProductPageSlider from "./Slider";
 
 export default function ProductPage() {
+
   const productList = useSelector(state => state.product.product);
   let { key, subCategory, globalCategory } = useParams();
   const navigate = useNavigate();
   const categories = useSelector(state => state.categories.categories);
   const globalCategoryName = categories.filter(e => e.key === globalCategory)[0];
-  const [sortedProductList, setSortedProductList] = useState(productList.slice().filter(e => e.subCat === subCategory));
   const dispatch = useDispatch();
   const [favBtnText,setFavBtnText] = useState('Добави в любими');
   const [favBtnIcon,setFavBtnIcon] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(`${key !== key ? productList.slice().filter(e => e.subCat === subCategory).filter(e => e.key === key)[0].img.src : productList.slice().filter(e => e.subCat === subCategory).filter(e => e.key === key)[0].img.src}`);
 
-  // ---------Slider------------
-  // const [productSlider, setProductSlider] = useState(productList.filter(e => e.globalCat === globalCategory).splice(0, 20));
-  // const [sliderPage, setSliderPage] = useState([
-  //   productSlider.slice().splice(0, 4),
-  //   productSlider.slice().splice(4, 4),
-  //   productSlider.slice().splice(8, 4),
-  //   productSlider.slice().splice(12, 4),
-  //   productSlider.slice().splice(16, 4)
-  // ]);
+  useEffect(() => {
+    setSelectedImage(`${key !== key ? productList.slice().filter(e => e.subCat === subCategory).filter(e => e.key === key)[0].img.src : productList.slice().filter(e => e.subCat === subCategory).filter(e => e.key === key)[0].img.src}`)
+  },[key])
 
-  const [selectedImage, setSelectedImage] = useState(`${key !== key ? sortedProductList.filter(e => e.key === key)[0].img.src : sortedProductList.filter(e => e.key === key)[0].img.src}`);
-  console.log(sortedProductList.filter(e => e.key === key)[0].img.src);
-  
   const favouriteList = useSelector(state => state.activeUser.favourites);
 
   const handleAddtoFavouritesBtn = (key) => {
@@ -51,16 +41,15 @@ export default function ProductPage() {
         setFavBtnText('Премахни от любими');
         setFavBtnIcon(true);
     }
-
-    
   }
+
   const handleAddToCart = (key) => {
     dispatch(addToCart({key}))
   }
 
   return (
     <>
-      {sortedProductList.filter(e => e.key === key).map((e, i) =>
+      {productList.slice().filter(e => e.subCat === subCategory).filter(e => e.key === key).map((e, i) =>
         <Stack
           sx={{
             maxWidth: '1240px',
@@ -135,7 +124,7 @@ export default function ProductPage() {
                       borderRadius: '12px'
                     }}>
                     <Typography variant='h6' color='custom'>Рейтинг:</Typography>
-                    <Rating name="half-rating" readOnly defaultValue={e.averigeReview} size='medium' />
+                    <Rating name="half-rating" disabled readOnly value={e.averigeReview} size='medium' />
                   </Stack>
 
                   <Stack direction='row' spacing={1}
@@ -185,7 +174,6 @@ export default function ProductPage() {
                 <Typography variant="h6" color="custom.main">Описание:</Typography>
                 <Typography variant='subtitle1' color='custom.light'>{e.descripton}</Typography>
               </Stack>
-              {/* Slider */}
                 <ProductPageSlider></ProductPageSlider>
             </Box>
           </Container>
